@@ -1,0 +1,25 @@
+#import <AVFoundation/AVBase.h>
+#import <AVFoundation/AVAssetTrack.h>
+#import <CoreMedia/CMTime.h>
+#import <CoreMedia/CMTimeRange.h>
+
+@import AVFoundation;
+@import JavaScriptCore;
+
+@protocol JSBAVAssetTrack;
+
+@protocol JSBAVCompositionTrack <JSExport, JSBAVAssetTrack>
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
+@property (nonatomic) float preferredVolume;
+@property (nonatomic) CGAffineTransform preferredTransform;
+@property (nonatomic, copy) NSString *extendedLanguageTag;
+@property (nonatomic, copy) NSString *languageCode;
+@property (nonatomic, copy, readonly) NSArray *segments;
+@property (nonatomic) CMTimeScale naturalTimeScale;
+
+#pragma clang diagnostic pop
+
+@end
