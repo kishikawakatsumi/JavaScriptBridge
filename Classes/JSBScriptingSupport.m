@@ -210,11 +210,18 @@ static BOOL respondsToSelector(id self, SEL _cmd, SEL selector)
             
         };
         
+        [globalContext evaluateScript:
+         @"JSB.Class = {};"
+         @""
+         @"JSB.Class.define = function(declaration, instanceMembers, staticMembers) {"
+         @"  JSB.defineClass(declaration, instanceMembers, staticMembers);"
+         @"};"
+         ];
+        globalContext[@"JSB"] = [JSBScriptingSupport class];
+        
         [globalContext addScriptingSupport:@"Foundation"];
         [globalContext addScriptingSupport:@"UIKit"];
         [globalContext addScriptingSupport:@"QuartzCore"];
-        
-        globalContext[@"JSB"] = [JSBScriptingSupport class];
     });
 }
 
