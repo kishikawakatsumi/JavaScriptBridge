@@ -11,8 +11,8 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '7.0'
   s.requires_arc          = true
 
-  s.source_files          = 'Classes'
+  s.source_files          = 'Classes/**/*'
 
-  s.private_header_files  = 'Classes/ios/FrameworkSupport/**/*.h'
+  s.private_header_files  = 'Classes/**/FrameworkSupport/**/*.h'
   s.frameworks            = 'JavaScriptCore'
 end
