@@ -2,6 +2,7 @@
 #import <Foundation/NSDictionary.h>
 
 @import Foundation;
+@import UIKit;
 @import JavaScriptCore;
 
 @protocol JSBNSAttributedString;
@@ -24,6 +25,16 @@
 - (void)setAttributedString:(NSAttributedString *)attrString;
 - (void)beginEditing;
 - (void)endEditing;
+
+#pragma mark - UIKit
+
+- (void)fixAttributesInRange:(NSRange)range;
+- (id)initWithFileURL:(NSURL *)url options:(NSDictionary *)options documentAttributes:(NSDictionary **)dict error:(NSError **)error;
+- (id)initWithData:(NSData *)data options:(NSDictionary *)options documentAttributes:(NSDictionary **)dict error:(NSError **)error;
+- (NSData *)dataFromRange:(NSRange)range documentAttributes:(NSDictionary *)dict error:(NSError **)error;
+- (NSFileWrapper *)fileWrapperFromRange:(NSRange)range documentAttributes:(NSDictionary *)dict error:(NSError **)error;
+- (BOOL)readFromFileURL:(NSURL *)url options:(NSDictionary *)opts documentAttributes:(NSDictionary **)dict error:(NSError **)error;
+- (BOOL)readFromData:(NSData *)data options:(NSDictionary *)opts documentAttributes:(NSDictionary **)dict error:(NSError **)error;
 
 #pragma clang diagnostic pop
 

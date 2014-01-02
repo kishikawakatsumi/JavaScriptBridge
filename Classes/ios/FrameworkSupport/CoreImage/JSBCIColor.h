@@ -2,6 +2,7 @@
 #import <Foundation/Foundation.h>
 
 @import CoreImage;
+@import UIKit;
 @import JavaScriptCore;
 
 @protocol JSBNSObject;
@@ -25,6 +26,13 @@
 - (CGFloat)green;
 - (CGFloat)blue;
 - (NSString *)stringRepresentation;
+
+#pragma mark - UIKit
+
+@property (nonatomic, readonly) CGColorRef CGColor;
+@property (nonatomic, readonly) CIColor *CIColor;
+
+- (id)initWithColor:(UIColor *)color;
 
 #pragma clang diagnostic pop
 

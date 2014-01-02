@@ -1,6 +1,11 @@
 #import <Foundation/NSObject.h>
 
 @import Foundation;
+@import UIKit;
+@import QuartzCore;
+@import AVFoundation;
+@import MapKit;
+
 @import JavaScriptCore;
 
 @protocol JSBNSObject;
@@ -23,6 +28,46 @@
 - (void *)pointerValue;
 - (BOOL)isEqualToValue:(NSValue *)value;
 - (NSRange)rangeValue;
+
+#pragma mark - UIKit
+
++ (NSValue *)valueWithCGPoint:(CGPoint)point;
++ (NSValue *)valueWithCGSize:(CGSize)size;
++ (NSValue *)valueWithCGRect:(CGRect)rect;
++ (NSValue *)valueWithCGAffineTransform:(CGAffineTransform)transform;
++ (NSValue *)valueWithUIEdgeInsets:(UIEdgeInsets)insets;
++ (NSValue *)valueWithUIOffset:(UIOffset)insets;
+
+- (CGPoint)CGPointValue;
+- (CGSize)CGSizeValue;
+- (CGRect)CGRectValue;
+- (CGAffineTransform)CGAffineTransformValue;
+- (UIEdgeInsets)UIEdgeInsetsValue;
+- (UIOffset)UIOffsetValue;
+
+#pragma mark - QuartzCore
+
++ (NSValue *)valueWithCATransform3D:(CATransform3D)t;
+
+- (CATransform3D)CATransform3DValue;
+
+#pragma mark - AVFoundation
+
++ (NSValue *)valueWithCMTime:(CMTime)time;
++ (NSValue *)valueWithCMTimeRange:(CMTimeRange)timeRange;
++ (NSValue *)valueWithCMTimeMapping:(CMTimeMapping)timeMapping;
+
+- (CMTime)CMTimeValue;
+- (CMTimeRange)CMTimeRangeValue;
+- (CMTimeMapping)CMTimeMappingValue;
+
+#pragma mark - MapKit
+
++ (NSValue *)valueWithMKCoordinate:(CLLocationCoordinate2D)coordinate;
++ (NSValue *)valueWithMKCoordinateSpan:(MKCoordinateSpan)span;
+
+- (CLLocationCoordinate2D)MKCoordinateValue;
+- (MKCoordinateSpan)MKCoordinateSpanValue;
 
 #pragma clang diagnostic pop
 

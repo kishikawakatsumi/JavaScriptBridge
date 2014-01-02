@@ -1,6 +1,7 @@
 #import <Foundation/NSObject.h>
 
 @import Foundation;
+@import UIKit;
 @import JavaScriptCore;
 
 @protocol JSBNSObject;
@@ -69,6 +70,10 @@
 - (NSArray *)localizations;
 - (NSString *)developmentLocalization;
 - (NSArray *)executableArchitectures;
+
+#pragma mark - UIKit
+
+- (NSArray *)loadNibNamed:(NSString *)name owner:(id)owner options:(NSDictionary *)options;
 
 #pragma clang diagnostic pop
 

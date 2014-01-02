@@ -3,6 +3,7 @@
 #import <Foundation/NSCharacterSet.h>
 
 @import Foundation;
+@import QuickLook;
 @import JavaScriptCore;
 
 @protocol JSBNSObject;
@@ -104,6 +105,11 @@
 - (NSURL *)URLByDeletingPathExtension;
 - (NSURL *)URLByStandardizingPath;
 - (NSURL *)URLByResolvingSymlinksInPath;
+
+#pragma mark - QuickLook
+
+@property (readonly) NSURL *previewItemURL;
+@property (readonly) NSString *previewItemTitle;
 
 #pragma clang diagnostic pop
 

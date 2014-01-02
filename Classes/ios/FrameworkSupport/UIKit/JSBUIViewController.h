@@ -4,6 +4,8 @@
 #import <UIKit/UIStateRestoration.h>
 
 @import UIKit;
+@import iAd;
+@import MediaPlayer;
 @import JavaScriptCore;
 
 @protocol JSBUIResponder;
@@ -108,6 +110,26 @@
 - (void)updateViewConstraints;
 - (void)setToolbarItems:(NSArray *)toolbarItems animated:(BOOL)animated;
 - (id <UIViewControllerTransitionCoordinator>)transitionCoordinator;
+
+#pragma mark - iAd
+
+@property (nonatomic, assign) ADInterstitialPresentationPolicy interstitialPresentationPolicy;
+@property (nonatomic, assign) BOOL canDisplayBannerAds;
+@property (nonatomic, readonly, getter = isPresentingFullScreenAd) BOOL presentingFullScreenAd;
+@property (nonatomic, retain, readonly) UIView *originalContentView;
+@property (nonatomic, readonly, getter = isDisplayingBannerAd) BOOL displayingBannerAd;
+
++ (void)prepareInterstitialAds;
+
+- (BOOL)requestInterstitialAdPresentation;
+- (BOOL)shouldPresentInterstitialAd;
+
+#pragma mark - MediaPlayer
+
+@property (nonatomic, readonly) MPMoviePlayerController *moviePlayer;
+
+- (void)presentMoviePlayerViewControllerAnimated:(MPMoviePlayerViewController *)moviePlayerViewController;
+- (void)dismissMoviePlayerViewControllerAnimated;
 
 #pragma clang diagnostic pop
 

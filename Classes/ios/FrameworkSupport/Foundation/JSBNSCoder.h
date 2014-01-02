@@ -1,6 +1,8 @@
 #import <Foundation/NSObject.h>
 
 @import Foundation;
+@import UIKit;
+@import AVFoundation;
 @import JavaScriptCore;
 
 @protocol JSBNSObject;
@@ -56,6 +58,30 @@
 - (id)decodeObjectOfClasses:(NSSet *)classes forKey:(NSString *)key;
 - (id)decodePropertyListForKey:(NSString *)key;
 - (NSSet *)allowedClasses;
+
+#pragma mark - UIKit
+
+- (void)encodeCGPoint:(CGPoint)point forKey:(NSString *)key;
+- (void)encodeCGSize:(CGSize)size forKey:(NSString *)key;
+- (void)encodeCGRect:(CGRect)rect forKey:(NSString *)key;
+- (void)encodeCGAffineTransform:(CGAffineTransform)transform forKey:(NSString *)key;
+- (void)encodeUIEdgeInsets:(UIEdgeInsets)insets forKey:(NSString *)key;
+- (void)encodeUIOffset:(UIOffset)offset forKey:(NSString *)key;
+- (CGPoint)decodeCGPointForKey:(NSString *)key;
+- (CGSize)decodeCGSizeForKey:(NSString *)key;
+- (CGRect)decodeCGRectForKey:(NSString *)key;
+- (CGAffineTransform)decodeCGAffineTransformForKey:(NSString *)key;
+- (UIEdgeInsets)decodeUIEdgeInsetsForKey:(NSString *)key;
+- (UIOffset)decodeUIOffsetForKey:(NSString *)key;
+
+#pragma mark - AVFoundation
+
+- (void)encodeCMTime:(CMTime)time forKey:(NSString *)key;
+- (CMTime)decodeCMTimeForKey:(NSString *)key;
+- (void)encodeCMTimeRange:(CMTimeRange)timeRange forKey:(NSString *)key;
+- (CMTimeRange)decodeCMTimeRangeForKey:(NSString *)key;
+- (void)encodeCMTimeMapping:(CMTimeMapping)timeMapping forKey:(NSString *)key;
+- (CMTimeMapping)decodeCMTimeMappingForKey:(NSString *)key;
 
 #pragma clang diagnostic pop
 

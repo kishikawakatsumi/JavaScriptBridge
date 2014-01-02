@@ -267,8 +267,6 @@
 		149D9C52187595BB00129B4B /* JSBAVVideoCompositionInstruction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVVideoCompositionInstruction.h; sourceTree = "<group>"; };
 		149D9C53187595BB00129B4B /* JSBAVVideoCompositionLayerInstruction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVVideoCompositionLayerInstruction.h; sourceTree = "<group>"; };
 		149D9C54187595BB00129B4B /* JSBAVVideoCompositionRenderContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVVideoCompositionRenderContext.h; sourceTree = "<group>"; };
-		149D9C55187595BB00129B4B /* JSBNSCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSCoder.h; sourceTree = "<group>"; };
-		149D9C56187595BB00129B4B /* JSBNSValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSValue.h; sourceTree = "<group>"; };
 		149D9C58187595BB00129B4B /* JSBACAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBACAccount.h; sourceTree = "<group>"; };
 		149D9C59187595BB00129B4B /* JSBACAccountCredential.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBACAccountCredential.h; sourceTree = "<group>"; };
 		149D9C5A187595BB00129B4B /* JSBACAccountStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBACAccountStore.h; sourceTree = "<group>"; };
@@ -613,7 +611,6 @@
 		149D9DD9187595BB00129B4B /* JSBMKUserTrackingBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKUserTrackingBarButtonItem.h; sourceTree = "<group>"; };
 		149D9DDA187595BB00129B4B /* JSBMapKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMapKit.h; sourceTree = "<group>"; };
 		149D9DDB187595BB00129B4B /* JSBMapKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBMapKit.m; sourceTree = "<group>"; };
-		149D9DDC187595BB00129B4B /* JSBNSValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSValue.h; sourceTree = "<group>"; };
 		149D9DDE187595BB00129B4B /* JSBMPMediaEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMPMediaEntity.h; sourceTree = "<group>"; };
 		149D9DDF187595BB00129B4B /* JSBMPMediaItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMPMediaItem.h; sourceTree = "<group>"; };
 		149D9DE0187595BB00129B4B /* JSBMPMediaItemArtwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMPMediaItemArtwork.h; sourceTree = "<group>"; };
@@ -637,7 +634,6 @@
 		149D9DF2187595BB00129B4B /* JSBMPVolumeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMPVolumeView.h; sourceTree = "<group>"; };
 		149D9DF3187595BB00129B4B /* JSBMediaPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMediaPlayer.h; sourceTree = "<group>"; };
 		149D9DF4187595BB00129B4B /* JSBMediaPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBMediaPlayer.m; sourceTree = "<group>"; };
-		149D9DF5187595BB00129B4B /* JSBUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIViewController.h; sourceTree = "<group>"; };
 		149D9DF7187595BB00129B4B /* JSBMFMailComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMFMailComposeViewController.h; sourceTree = "<group>"; };
 		149D9DF8187595BB00129B4B /* JSBMFMessageComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMFMessageComposeViewController.h; sourceTree = "<group>"; };
 		149D9DF9187595BB00129B4B /* JSBMessageUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMessageUI.h; sourceTree = "<group>"; };
@@ -681,10 +677,8 @@
 		149D9E2A187595BC00129B4B /* JSBCATransformLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCATransformLayer.h; sourceTree = "<group>"; };
 		149D9E2B187595BC00129B4B /* JSBCATransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCATransition.h; sourceTree = "<group>"; };
 		149D9E2C187595BC00129B4B /* JSBCAValueFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCAValueFunction.h; sourceTree = "<group>"; };
-		149D9E2D187595BC00129B4B /* JSBNSValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSValue.h; sourceTree = "<group>"; };
 		149D9E2E187595BC00129B4B /* JSBQuartzCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBQuartzCore.h; sourceTree = "<group>"; };
 		149D9E2F187595BC00129B4B /* JSBQuartzCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBQuartzCore.m; sourceTree = "<group>"; };
-		149D9E31187595BC00129B4B /* JSBNSURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSURL.h; sourceTree = "<group>"; };
 		149D9E32187595BC00129B4B /* JSBQLPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBQLPreviewController.h; sourceTree = "<group>"; };
 		149D9E33187595BC00129B4B /* JSBQuickLook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBQuickLook.h; sourceTree = "<group>"; };
 		149D9E34187595BC00129B4B /* JSBQuickLook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBQuickLook.m; sourceTree = "<group>"; };
@@ -712,25 +706,16 @@
 		149D9E6A187595BC00129B4B /* JSBTWTweetComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBTWTweetComposeViewController.h; sourceTree = "<group>"; };
 		149D9E6B187595BC00129B4B /* JSBTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBTwitter.h; sourceTree = "<group>"; };
 		149D9E6C187595BC00129B4B /* JSBTwitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBTwitter.m; sourceTree = "<group>"; };
-		149D9E6E187595BC00129B4B /* JSBCIColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCIColor.h; sourceTree = "<group>"; };
-		149D9E6F187595BC00129B4B /* JSBCIImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCIImage.h; sourceTree = "<group>"; };
-		149D9E70187595BC00129B4B /* JSBNSAttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSAttributedString.h; sourceTree = "<group>"; };
-		149D9E71187595BC00129B4B /* JSBNSBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSBundle.h; sourceTree = "<group>"; };
-		149D9E72187595BC00129B4B /* JSBNSCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSCoder.h; sourceTree = "<group>"; };
-		149D9E73187595BC00129B4B /* JSBNSIndexPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSIndexPath.h; sourceTree = "<group>"; };
 		149D9E74187595BC00129B4B /* JSBNSLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSLayoutConstraint.h; sourceTree = "<group>"; };
 		149D9E75187595BC00129B4B /* JSBNSLayoutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSLayoutManager.h; sourceTree = "<group>"; };
-		149D9E76187595BC00129B4B /* JSBNSMutableAttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSMutableAttributedString.h; sourceTree = "<group>"; };
 		149D9E77187595BC00129B4B /* JSBNSMutableParagraphStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSMutableParagraphStyle.h; sourceTree = "<group>"; };
 		149D9E78187595BC00129B4B /* JSBNSParagraphStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSParagraphStyle.h; sourceTree = "<group>"; };
 		149D9E79187595BC00129B4B /* JSBNSShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSShadow.h; sourceTree = "<group>"; };
-		149D9E7A187595BC00129B4B /* JSBNSString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSString.h; sourceTree = "<group>"; };
 		149D9E7B187595BC00129B4B /* JSBNSStringDrawingContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSStringDrawingContext.h; sourceTree = "<group>"; };
 		149D9E7C187595BC00129B4B /* JSBNSTextAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSTextAttachment.h; sourceTree = "<group>"; };
 		149D9E7D187595BC00129B4B /* JSBNSTextContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSTextContainer.h; sourceTree = "<group>"; };
 		149D9E7E187595BC00129B4B /* JSBNSTextStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSTextStorage.h; sourceTree = "<group>"; };
 		149D9E7F187595BC00129B4B /* JSBNSTextTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSTextTab.h; sourceTree = "<group>"; };
-		149D9E80187595BC00129B4B /* JSBNSValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSValue.h; sourceTree = "<group>"; };
 		149D9E81187595BC00129B4B /* JSBUIAcceleration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIAcceleration.h; sourceTree = "<group>"; };
 		149D9E82187595BC00129B4B /* JSBUIAccelerometer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIAccelerometer.h; sourceTree = "<group>"; };
 		149D9E83187595BC00129B4B /* JSBUIAccessibilityElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIAccessibilityElement.h; sourceTree = "<group>"; };
@@ -859,7 +844,6 @@
 		149D9EFF187595BC00129B4B /* JSBADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBADBannerView.h; sourceTree = "<group>"; };
 		149D9F00187595BC00129B4B /* JSBADInterstitialAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBADInterstitialAd.h; sourceTree = "<group>"; };
 		149D9F01187595BC00129B4B /* JSBMPMoviePlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMPMoviePlayerController.h; sourceTree = "<group>"; };
-		149D9F02187595BC00129B4B /* JSBUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIViewController.h; sourceTree = "<group>"; };
 		149D9F03187595BC00129B4B /* JSBiAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBiAd.h; sourceTree = "<group>"; };
 		149D9F04187595BC00129B4B /* JSBiAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBiAd.m; sourceTree = "<group>"; };
 		149D9F501875996700129B4B /* JSBAccountsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBAccountsTest.m; sourceTree = "<group>"; };
@@ -1363,8 +1347,6 @@
 				149D9C52187595BB00129B4B /* JSBAVVideoCompositionInstruction.h */,
 				149D9C53187595BB00129B4B /* JSBAVVideoCompositionLayerInstruction.h */,
 				149D9C54187595BB00129B4B /* JSBAVVideoCompositionRenderContext.h */,
-				149D9C55187595BB00129B4B /* JSBNSCoder.h */,
-				149D9C56187595BB00129B4B /* JSBNSValue.h */,
 			);
 			path = AVFoundation;
 			sourceTree = "<group>";
@@ -1828,7 +1810,6 @@
 				149D9DD9187595BB00129B4B /* JSBMKUserTrackingBarButtonItem.h */,
 				149D9DDA187595BB00129B4B /* JSBMapKit.h */,
 				149D9DDB187595BB00129B4B /* JSBMapKit.m */,
-				149D9DDC187595BB00129B4B /* JSBNSValue.h */,
 			);
 			path = MapKit;
 			sourceTree = "<group>";
@@ -1859,7 +1840,6 @@
 				149D9DF2187595BB00129B4B /* JSBMPVolumeView.h */,
 				149D9DF3187595BB00129B4B /* JSBMediaPlayer.h */,
 				149D9DF4187595BB00129B4B /* JSBMediaPlayer.m */,
-				149D9DF5187595BB00129B4B /* JSBUIViewController.h */,
 			);
 			path = MediaPlayer;
 			sourceTree = "<group>";
@@ -1938,7 +1918,6 @@
 				149D9E2A187595BC00129B4B /* JSBCATransformLayer.h */,
 				149D9E2B187595BC00129B4B /* JSBCATransition.h */,
 				149D9E2C187595BC00129B4B /* JSBCAValueFunction.h */,
-				149D9E2D187595BC00129B4B /* JSBNSValue.h */,
 				149D9E2E187595BC00129B4B /* JSBQuartzCore.h */,
 				149D9E2F187595BC00129B4B /* JSBQuartzCore.m */,
 			);
@@ -1948,7 +1927,6 @@
 		149D9E30187595BC00129B4B /* QuickLook */ = {
 			isa = PBXGroup;
 			children = (
-				149D9E31187595BC00129B4B /* JSBNSURL.h */,
 				149D9E32187595BC00129B4B /* JSBQLPreviewController.h */,
 				149D9E33187595BC00129B4B /* JSBQuickLook.h */,
 				149D9E34187595BC00129B4B /* JSBQuickLook.m */,
@@ -2011,25 +1989,16 @@
 		149D9E6D187595BC00129B4B /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				149D9E6E187595BC00129B4B /* JSBCIColor.h */,
-				149D9E6F187595BC00129B4B /* JSBCIImage.h */,
-				149D9E70187595BC00129B4B /* JSBNSAttributedString.h */,
-				149D9E71187595BC00129B4B /* JSBNSBundle.h */,
-				149D9E72187595BC00129B4B /* JSBNSCoder.h */,
-				149D9E73187595BC00129B4B /* JSBNSIndexPath.h */,
 				149D9E74187595BC00129B4B /* JSBNSLayoutConstraint.h */,
 				149D9E75187595BC00129B4B /* JSBNSLayoutManager.h */,
-				149D9E76187595BC00129B4B /* JSBNSMutableAttributedString.h */,
 				149D9E77187595BC00129B4B /* JSBNSMutableParagraphStyle.h */,
 				149D9E78187595BC00129B4B /* JSBNSParagraphStyle.h */,
 				149D9E79187595BC00129B4B /* JSBNSShadow.h */,
-				149D9E7A187595BC00129B4B /* JSBNSString.h */,
 				149D9E7B187595BC00129B4B /* JSBNSStringDrawingContext.h */,
 				149D9E7C187595BC00129B4B /* JSBNSTextAttachment.h */,
 				149D9E7D187595BC00129B4B /* JSBNSTextContainer.h */,
 				149D9E7E187595BC00129B4B /* JSBNSTextStorage.h */,
 				149D9E7F187595BC00129B4B /* JSBNSTextTab.h */,
-				149D9E80187595BC00129B4B /* JSBNSValue.h */,
 				149D9E81187595BC00129B4B /* JSBUIAcceleration.h */,
 				149D9E82187595BC00129B4B /* JSBUIAccelerometer.h */,
 				149D9E83187595BC00129B4B /* JSBUIAccessibilityElement.h */,
@@ -2165,7 +2134,6 @@
 				149D9EFF187595BC00129B4B /* JSBADBannerView.h */,
 				149D9F00187595BC00129B4B /* JSBADInterstitialAd.h */,
 				149D9F01187595BC00129B4B /* JSBMPMoviePlayerController.h */,
-				149D9F02187595BC00129B4B /* JSBUIViewController.h */,
 				149D9F03187595BC00129B4B /* JSBiAd.h */,
 				149D9F04187595BC00129B4B /* JSBiAd.m */,
 			);
