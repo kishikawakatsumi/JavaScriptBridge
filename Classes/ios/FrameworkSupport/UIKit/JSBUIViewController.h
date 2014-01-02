@@ -44,6 +44,12 @@
 @property (nonatomic, assign) BOOL automaticallyAdjustsScrollViewInsets;
 @property (nonatomic) CGSize preferredContentSize;
 
+@property (nonatomic, readonly, retain) UINavigationItem *navigationItem;
+@property (nonatomic) BOOL hidesBottomBarWhenPushed;
+@property (nonatomic, readonly, retain) UINavigationController *navigationController;
+
+@property (nonatomic, retain) NSArray *toolbarItems;
+
 + (void)attemptRotationToDeviceOrientation;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil;
