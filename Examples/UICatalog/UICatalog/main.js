@@ -1,12 +1,4 @@
-// var window = UIWindow.alloc().initWithFrame(UIScreen.mainScreen().bounds);
-// window.backgroundColor = UIColor.whiteColor();
-
-// var navigationController = UINavigationController.new();
-// window.rootViewController = navigationController;
-
-// window.makeKeyAndVisible();
-
-JSB.Class.define('JSBTableViewDataSource : NSObject <UITableViewDataSource, UITableViewDelegate>',
+JSB.Class.define('MainViewController : UITableViewController',
 {
  numberOfSectionsInTableView: function (tableView) {
    return 2;
@@ -23,17 +15,14 @@ JSB.Class.define('JSBTableViewDataSource : NSObject <UITableViewDataSource, UITa
 
 });
 
-var dataSource = JSBTableViewDataSource.new();
-
-var window = UIWindow.new();
-window.frame = UIScreen.mainScreen().bounds;
+var window = UIWindow.alloc().initWithFrame(UIScreen.mainScreen().bounds);
 window.backgroundColor = UIColor.whiteColor();
 
-var tableView = UITableView.new();
-tableView.frame = window.bounds;
-tableView.rowHeight = 44;
-tableView.dataSource = dataSource;
+var navigationController = UINavigationController.new();
 
-window.addSubview(tableView);
+var mainViewController = MainViewController.new();
+navigationController.viewControllers = [mainViewController];
+
+window.rootViewController = navigationController;
 
 window.makeKeyAndVisible();

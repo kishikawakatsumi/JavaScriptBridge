@@ -7,15 +7,26 @@
 //
 
 #import "JSBAppDelegate.h"
+#import "JavaScriptBridge.h"
 
 @implementation JSBAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    JSContext *context = [JSBScriptingSupport globalContext];
+    [context evaluateScript:
+     @"var window = UIWindow.alloc().initWithFrame(UIScreen.mainScreen().bounds);"
+     @"window.backgroundColor = UIColor.whiteColor();"
+     @""
+     @"var navigationController = UINavigationController.new();"
+     @""
+     @"var tableViewController = UITableViewController.new();"
+     @"navigationController.viewControllers = [tableViewController];"
+     @""
+     @"window.rootViewController = navigationController;"
+     @""
+     @"window.makeKeyAndVisible();"
+     ];
     
     return YES;
 }

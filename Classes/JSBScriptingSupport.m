@@ -169,9 +169,34 @@ static void setReturnValue(JSValue *value, NSInvocation *invocation)
     }
 }
 
+static void setupForwardingImplementations(Class cls, JSValue *functions)
+{
+    unsigned int count = 0;
+    Method *methods = class_copyMethodList(cls, &count);
+    for (unsigned int i = 0; i < count; i++) {
+        Method m = methods[i];
+        struct objc_method_description *description = method_getDescription(m);
+        
+        NSString *propertyName = propertyNameFromSelector(description->name);
+        JSValue *function = functions[propertyName];
+        if (!function.isUndefined) {
+            method_setImplementation(m, _objc_msgForward);
+        }
+    }
+    if (methods) {
+        free(methods);
+    }
+    
+    Class superClass = class_getSuperclass(cls);
+    if (superClass) {
+        setupForwardingImplementations(superClass, functions);
+    }
+}
+
 static void forwardInvocation(id self, SEL _cmd, NSInvocation *invocation)
 {
-    JSValue *value = globalContext[NSStringFromClass([self class])][propertyNameFromSelector(invocation.selector)];
+    NSString *propertyName = propertyNameFromSelector(invocation.selector);
+    JSValue *value = globalContext[NSStringFromClass([self class])][@"instanceMembers"][propertyName];
     
     NSArray *arguments = extractArguments(invocation);
     JSValue *returnValue = [value callWithArguments:arguments];
@@ -195,7 +220,9 @@ static NSMethodSignature *methodSignatureForSelector(id self, SEL _cmd, SEL sele
 
 static BOOL respondsToSelector(id self, SEL _cmd, SEL selector)
 {
-    JSValue *value = globalContext[NSStringFromClass([self class])][propertyNameFromSelector(selector)];
+    NSString *propertyName = propertyNameFromSelector(selector);
+    JSValue *value = globalContext[NSStringFromClass([self class])][@"instanceMembers"][propertyName];
+    
     return !value.isUndefined;
 }
 
@@ -210,6 +237,11 @@ static BOOL respondsToSelector(id self, SEL _cmd, SEL selector)
             
         };
         
+        [globalContext addScriptingSupport:@"Foundation"];
+        [globalContext addScriptingSupport:@"UIKit"];
+        [globalContext addScriptingSupport:@"QuartzCore"];
+        
+        globalContext[@"JSB"] = [JSBScriptingSupport class];
         [globalContext evaluateScript:
          @"JSB.Class = {};"
          @""
@@ -217,11 +249,6 @@ static BOOL respondsToSelector(id self, SEL _cmd, SEL selector)
          @"  JSB.defineClass(declaration, instanceMembers, staticMembers);"
          @"};"
          ];
-        globalContext[@"JSB"] = [JSBScriptingSupport class];
-        
-        [globalContext addScriptingSupport:@"Foundation"];
-        [globalContext addScriptingSupport:@"UIKit"];
-        [globalContext addScriptingSupport:@"QuartzCore"];
     });
 }
 
@@ -258,6 +285,12 @@ static BOOL respondsToSelector(id self, SEL _cmd, SEL selector)
     }
     
     Class cls = objc_allocateClassPair(NSClassFromString(parentClassName), className.UTF8String, 0);
+    objc_registerClassPair(cls);
+    
+    Class superClass = class_getSuperclass(cls);
+    if (superClass) {
+        setupForwardingImplementations(superClass, instanceMembers);
+    }
     
     NSString *types;
     BOOL result;
@@ -276,15 +309,12 @@ static BOOL respondsToSelector(id self, SEL _cmd, SEL selector)
     }
     
     class_addProtocol(cls, @protocol(JSBNSObject));
+#if DEBUG
     class_addProtocol(cls, @protocol(JSBScriptingSupport));
-    objc_registerClassPair(cls);
+#endif
     
     globalContext[className] = cls;
-    
-    for (NSString *key in instanceMembers.toDictionary.allKeys) {
-        JSValue *instanceMember = instanceMembers[key];
-        globalContext[className][key] = instanceMember;
-    }
+    globalContext[className][@"instanceMembers"] = instanceMembers;
 }
 
 + (void)dump:(id)object
