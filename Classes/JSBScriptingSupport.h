@@ -22,6 +22,10 @@ JSExportAs(defineClass,
     staticMembers:(JSValue *)staticMembers
 );
 
+JSExportAs(require,
++ (id)require:(NSString *)name
+);
+
 @optional
 JSExportAs(dump,
 + (void)dump:(id)object

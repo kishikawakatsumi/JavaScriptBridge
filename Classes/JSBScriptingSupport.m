@@ -257,17 +257,24 @@ static BOOL respondsToSelector(id self, SEL _cmd, SEL selector)
         [globalContext addScriptingSupport:@"UIKit"];
         [globalContext addScriptingSupport:@"QuartzCore"];
         
-        globalContext[@"JSB"] = [JSBScriptingSupport class];
+        globalContext[@"__JSB_JSBScriptingSupport"] = [JSBScriptingSupport class];
         [globalContext evaluateScript:
-         @"JSB.Class = (function() {"
-         @"  var namespace = {"
-         @"    define: function(declaration, instanceMembers, staticMembers) {"
-         @"      return JSB.defineClass(declaration, instanceMembers, staticMembers);"
-         @"    }"
-         @"  };"
-         @""
-         @"  return namespace;"
-         @"})();"
+         @"JSB = (function() {\n"
+         @"  var namespace = {\n"
+         @"    define: function(declaration, instanceMembers, staticMembers) {\n"
+         @"      return __JSB_JSBScriptingSupport.defineClass(declaration, instanceMembers, staticMembers);\n"
+         @"    },\n"
+         @"    require: function(name) {\n"
+         @"      return __JSB_JSBScriptingSupport.require(name);\n"
+         @"    },\n"
+         @"    exports: {},\n"
+         @"    dump: function(obj) {\n"
+         @"      return __JSB_JSBScriptingSupport.dump(obj);\n"
+         @"    }\n"
+         @"  };\n"
+         @"\n"
+         @"  return namespace;\n"
+         @"})();\n"
          ];
     });
 }
@@ -334,6 +341,28 @@ static BOOL respondsToSelector(id self, SEL _cmd, SEL selector)
     globalContext[mangledNameFromClass(cls)][@"instanceMembers"] = instanceMembers;
     
     return cls;
+}
+
++ (id)require:(NSString *)name
+{
+    NSBundle *mainBundle = [NSBundle mainBundle];
+    NSString *path = [mainBundle pathForResource:name ofType:@"js"];
+    
+    NSString *script = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    if (!script) {
+        script = [NSString stringWithContentsOfFile:[name stringByAppendingPathExtension:@"js"] encoding:NSUTF8StringEncoding error:nil];
+    }
+    if (script) {
+        NSString *closure = [NSString stringWithFormat:
+                             @"(function() {\n"
+                             @"  %@\n"
+                             @"})();\n", script];
+        [globalContext evaluateScript:closure];
+        JSValue *module = globalContext[@"JSB"][@"exports"];
+        return module;
+    }
+    
+    return nil;
 }
 
 #pragma mark - for debug
