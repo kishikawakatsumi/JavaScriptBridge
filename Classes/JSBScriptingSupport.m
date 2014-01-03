@@ -176,10 +176,10 @@ static void setReturnValue(JSValue *value, NSInvocation *invocation)
 static CGFloat tableViewHeightForRowAtIndexPath(id self, SEL _cmd, UITableView *tableView, NSIndexPath *indexPath)
 {
     NSString *propertyName = propertyNameFromSelector(_cmd);
-    JSValue *value = globalContext[mangledNameFromClass([self class])][@"instanceMembers"][propertyName];
+    JSValue *function = globalContext[mangledNameFromClass([self class])][@"instanceMembers"][propertyName];
     
-    if (!value.isUndefined) {
-        JSValue *returnValue = [value callWithArguments:@[tableView, indexPath]];
+    if (!function.isUndefined) {
+        JSValue *returnValue = [function callWithArguments:@[tableView, indexPath]];
         return returnValue.toDouble;
     }
     
@@ -222,11 +222,11 @@ static void forwardInvocation(id self, SEL _cmd, NSInvocation *invocation)
     context[@"self"] = self;
     
     NSString *propertyName = propertyNameFromSelector(invocation.selector);
-    JSValue *value = globalContext[mangledNameFromClass([self class])][@"instanceMembers"][propertyName];
+    JSValue *function = globalContext[mangledNameFromClass([self class])][@"instanceMembers"][propertyName];
     
-    if (!value.isUndefined) {
+    if (!function.isUndefined) {
         NSArray *arguments = extractArguments(invocation);
-        JSValue *returnValue = [value callWithArguments:arguments];
+        JSValue *returnValue = [function callWithArguments:arguments];
         
         setReturnValue(returnValue, invocation);
     }
