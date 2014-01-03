@@ -17,9 +17,9 @@
 + (JSContext *)globalContext;
 
 JSExportAs(defineClass,
-+ (void)defineClass:(NSString *)declaration
-    instanceMembers:(JSValue *)instanceMembers
-      staticMembers:(JSValue *)staticMembers
++ (id)defineClass:(NSString *)declaration
+  instanceMembers:(JSValue *)instanceMembers
+    staticMembers:(JSValue *)staticMembers
 );
 
 @optional

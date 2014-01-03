@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		149AE1091876E8BC00018A8C /* buttonsViewController.js in Resources */ = {isa = PBXBuildFile; fileRef = 149AE1081876E8BC00018A8C /* buttonsViewController.js */; };
 		149C53A51875C5870003EE16 /* JSBScriptingSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 149C53A21875C5870003EE16 /* JSBScriptingSupport.m */; };
 		149C53A61875C5870003EE16 /* JSContext+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 149C53A41875C5870003EE16 /* JSContext+Helper.m */; };
 		149C56691875C5BB0003EE16 /* JSBAVFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 149C53DC1875C5B90003EE16 /* JSBAVFoundation.m */; };
@@ -51,6 +52,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		149AE1081876E8BC00018A8C /* buttonsViewController.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = buttonsViewController.js; sourceTree = "<group>"; };
 		149C539F1875C5870003EE16 /* JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JavaScriptBridge.h; path = ../../../Classes/JavaScriptBridge.h; sourceTree = "<group>"; };
 		149C53A01875C5870003EE16 /* JSBNSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSBNSObject.h; path = ../../../Classes/JSBNSObject.h; sourceTree = "<group>"; };
 		149C53A11875C5870003EE16 /* JSBScriptingSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSBScriptingSupport.h; path = ../../../Classes/JSBScriptingSupport.h; sourceTree = "<group>"; };
@@ -1743,6 +1745,7 @@
 				14B5CD2E1875C3740019A135 /* AppDelegate.h */,
 				14B5CD2F1875C3740019A135 /* AppDelegate.m */,
 				14B5CD4E1875C3FF0019A135 /* main.js */,
+				149AE1081876E8BC00018A8C /* buttonsViewController.js */,
 				14B5CD311875C3740019A135 /* Images.xcassets */,
 				14B5CD261875C3740019A135 /* Supporting Files */,
 				149C53A71875C59C0003EE16 /* Vendor */,
@@ -1812,6 +1815,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				149AE1091876E8BC00018A8C /* buttonsViewController.js in Resources */,
 				14B5CD4F1875C3FF0019A135 /* main.js in Resources */,
 				14B5CD2A1875C3740019A135 /* InfoPlist.strings in Resources */,
 				14B5CD321875C3740019A135 /* Images.xcassets in Resources */,
