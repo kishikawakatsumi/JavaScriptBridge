@@ -1,3 +1,5 @@
 language: objective-c
+before_install:
+  - gem install xcpretty
 script:
   - rake clean test
