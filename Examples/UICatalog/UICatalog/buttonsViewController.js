@@ -1,45 +1,78 @@
 var ButtonsViewController = JSB.define('ButtonsViewController : UITableViewController', {
 	viewDidLoad: function() {
+		self.newButton = function(title, target, selector, frame, image, imagePressed, darkTextColor) {
+			var button = UIButton.alloc().initWithFrame(frame);
+
+			button.contentVerticalAlignment = 0;
+			button.contentHorizontalAlignment = 0;
+
+			button.setTitleForState(title, 0);
+			if (darkTextColor) {
+				button.setTitleColorForState(UIColor.blackColor(), 0);
+			} else {
+				button.setTitleColorForState(UIColor.whiteColor(), 0);
+			}
+
+			var newImage = image.stretchableImageWithLeftCapWidthTopCapHeight(12, 0);
+			button.setBackgroundImageForState(newImage, 0);
+
+			var newPressedImage = imagePressed.stretchableImageWithLeftCapWidthTopCapHeight(12, 0);
+			button.setBackgroundImageForState(newPressedImage, 1 << 0);
+
+			button.backgroundColor = UIColor.clearColor();
+
+			button.addTargetActionForControlEvents(target, selector, 1 <<  6);
+
+			return button;
+		};
+
+		self.grayButton = function() {
+			var buttonBackground = UIImage.imageNamed('whiteButton');
+			var buttonBackgroundPressed = UIImage.imageNamed('blueButton');
+
+			var frame = {x: 0, y: 5, width: 106, height: 40};
+			var button = self.newButton('Gray', self, 'action:', frame, buttonBackground, buttonBackgroundPressed, true);
+
+			button.tag = 1;
+
+			return button;
+		};
+
+		self.imageButton = function() {
+			var buttonBackground = UIImage.imageNamed('whiteButton');
+			var buttonBackgroundPressed = UIImage.imageNamed('blueButton');
+
+			var frame = {x: 0, y: 5, width: 106, height: 40};
+			
+			var button = self.newButton('', self, 'action:', frame, buttonBackground, buttonBackgroundPressed, true);
+			button.setImageForState(UIImage.imageNamed('UIButton_custom'), 0);
+
+			return button;
+		}
+
 		self.navigationItem.title = 'Buttons';
 
-		this.dataSourceArray = [];
-
-		var buttonBackground = UIImage.imageNamed('whiteButton');
-		var buttonBackgroundPressed = UIImage.imageNamed('blueButton');
-
-		var frame = {x: 0, y: 5, width: 106, height: 40};
-
-		var button = UIButton.alloc().initWithFrame(frame);
-
-		button.contentVerticalAlignment = 0;
-		button.contentHorizontalAlignment = 0;
-		button.setTitleForState('Gray', 0);
-		button.setTitleColorForState(UIColor.blackColor(), 0);
-
-		var newImage = buttonBackground.stretchableImageWithLeftCapWidthTopCapHeight(12, 0);
-		button.setBackgroundImageForState(newImage, 0);
-
-		var newPressedImage = buttonBackgroundPressed.stretchableImageWithLeftCapWidthTopCapHeight(12, 0);
-		button.setBackgroundImageForState(newPressedImage, 1 << 0);
-
-		button.backgroundColor = UIColor.clearColor();
-		button.tag = 1;
-
-		dataSourceArray.push({
+		self.dataSourceArray = [{
 			sectionTitleKey: 'UIButton',
 			labelKey: 'Background Image',
 			sourceKey: 'ButtonsViewController.m:\r(UIButton *)grayButton',
-			viewKey: button
-		});
+			viewKey: self.grayButton()
+		},
+		{
+			sectionTitleKey: 'UIButton',
+			labelKey: 'Button with Image',
+			sourceKey: 'ButtonsViewController.m:\r(UIButton *)imageButton',
+			viewKey: self.imageButton()
+		}];
 	},
 	numberOfSectionsInTableView: function(tableView) {
-		return dataSourceArray.length;
+		return self.dataSourceArray.length;
 	},
 	tableViewNumberOfRowsInSection: function(tableView, section) {
 		return 2;
 	},
 	tableViewTitleForHeaderInSection: function(tableView, section) {
-		return dataSourceArray[section]['sectionTitleKey'];
+		return self.dataSourceArray[section]['sectionTitleKey'];
 	},
 	tableViewHeightForRowAtIndexPath: function(tableView, indexPath) {
 		return (indexPath.row == 0) ? 50 : 38;
@@ -55,8 +88,8 @@ var ButtonsViewController = JSB.define('ButtonsViewController : UITableViewContr
 				viewToRemove.removeFromSuperview();
 			}
 
-			cell.textLabel.text = dataSourceArray[indexPath.section]['labelKey'];
-			var button = dataSourceArray[indexPath.section]['viewKey'];
+			cell.textLabel.text = self.dataSourceArray[indexPath.section]['labelKey'];
+			var button = self.dataSourceArray[indexPath.section]['viewKey'];
 
 			var newFrame = button.frame;
 			newFrame.x = cell.contentView.frame.width - newFrame.width - 10;
@@ -77,11 +110,18 @@ var ButtonsViewController = JSB.define('ButtonsViewController : UITableViewContr
 			cell.textLabel.numberOfLines = 2;
 			cell.textLabel.highlightedTextColor = UIColor.blackColor();
 			cell.textLabel.font = UIFont.systemFontOfSize(12);
-			cell.textLabel.text = menuList[indexPath.section]['sourceKey'];
+			cell.textLabel.text = self.dataSourceArray[indexPath.section]['sourceKey'];
 
 			return cell;
 		}
-	}
+	},
+	action: function(sender) {
+    // var alertView = UIAlertView.alloc().initWithTitleMessageDelegateCancelButtonTitleOtherButtonTitles('Alert', 'Button pushed.', null, 'Cancel', 'OK', null);
+    var alertView = UIAlertView.new();
+    alertView.message = 'Button pushed.';
+    alertView.addButtonWithTitle('OK');
+    alertView.show();
+  }
 });
 
 JSB.exports = ButtonsViewController;

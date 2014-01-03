@@ -14,6 +14,8 @@
 
 static JSContext *globalContext;
 
+#pragma mark -
+
 static NSString *mangledNameFromClass(Class cls)
 {
     return [NSString stringWithFormat:@"__JSB_%@", NSStringFromClass(cls)];
@@ -212,10 +214,12 @@ static void forwardInvocation(id self, SEL _cmd, NSInvocation *invocation)
     NSString *propertyName = propertyNameFromSelector(invocation.selector);
     JSValue *value = globalContext[mangledNameFromClass([self class])][@"instanceMembers"][propertyName];
     
-    NSArray *arguments = extractArguments(invocation);
-    JSValue *returnValue = [value callWithArguments:arguments];
-    
-    setReturnValue(returnValue, invocation);
+    if (!value.isUndefined) {
+        NSArray *arguments = extractArguments(invocation);
+        JSValue *returnValue = [value callWithArguments:arguments];
+        
+        setReturnValue(returnValue, invocation);
+    }
     
     context[@"self"] = [NSNull null];
 }
@@ -241,6 +245,33 @@ static BOOL respondsToSelector(id self, SEL _cmd, SEL selector)
     
     return !value.isUndefined;
 }
+
+#pragma mark -
+
+@interface UIControl (JavaScriptBridge)
+
+@end
+
+@implementation UIControl (JavaScriptBridge)
+
+- (void)__addTarget:(id)target action:(NSString *)action forControlEvents:(UIControlEvents)controlEvents
+{
+    [self addTarget:target action:NSSelectorFromString(action) forControlEvents:controlEvents];
+}
+
+- (void)__removeTarget:(id)target action:(NSString *)action forControlEvents:(UIControlEvents)controlEvents
+{
+    [self removeTarget:target action:NSSelectorFromString(action) forControlEvents:controlEvents];
+}
+
+- (void)__sendAction:(NSString *)action to:(id)target forEvent:(UIEvent *)event
+{
+    [self sendAction:NSSelectorFromString(action) to:target forEvent:event];
+}
+
+@end
+
+#pragma mark -
 
 @implementation JSBScriptingSupport
 
@@ -268,6 +299,9 @@ static BOOL respondsToSelector(id self, SEL _cmd, SEL selector)
          @"      return __JSB_JSBScriptingSupport.require(name);\n"
          @"    },\n"
          @"    exports: {},\n"
+         @"    selector: function(str) {\n"
+         @"      return __JSB_JSBScriptingSupport.selectorFromString(str);\n"
+         @"    },\n"
          @"    dump: function(obj) {\n"
          @"      return __JSB_JSBScriptingSupport.dump(obj);\n"
          @"    }\n"
@@ -345,6 +379,8 @@ static BOOL respondsToSelector(id self, SEL _cmd, SEL selector)
 
 + (id)require:(NSString *)name
 {
+    JSValue *module = nil;
+    
     NSBundle *mainBundle = [NSBundle mainBundle];
     NSString *path = [mainBundle pathForResource:name ofType:@"js"];
     
@@ -358,14 +394,23 @@ static BOOL respondsToSelector(id self, SEL _cmd, SEL selector)
                              @"  %@\n"
                              @"})();\n", script];
         [globalContext evaluateScript:closure];
-        JSValue *module = globalContext[@"JSB"][@"exports"];
-        return module;
+        module = globalContext[@"JSB"][@"exports"];
     }
     
-    return nil;
+    return module;
 }
 
 #pragma mark - for debug
+
++ (void)log:(NSString *)format, ...
+{
+    va_list args;
+    va_start(args, format);
+    NSString *result = [[NSString alloc] initWithFormat:format arguments:args];
+    va_end(args);
+    
+    NSLog(@"%@", result);
+}
 
 + (void)dump:(id)object
 {
