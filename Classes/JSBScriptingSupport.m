@@ -218,6 +218,15 @@ static void setupForwardingImplementations(Class targetClass, Class cls, JSValue
 
 static void forwardInvocation(id self, SEL _cmd, NSInvocation *invocation)
 {
+    if ([[self superclass] instancesRespondToSelector:invocation.selector]) {
+        SEL invokeSuper = NSSelectorFromString(@"invokeSuper");
+        NSMethodSignature *signature = [invocation methodSignatureForSelector:invokeSuper];
+        NSInvocation *messageSuper = [NSInvocation invocationWithMethodSignature:signature];
+        messageSuper.selector = invokeSuper;
+        messageSuper.target = invocation;
+        [messageSuper invoke];
+    }
+    
     JSContext *context = globalContext;
     context[@"self"] = self;
     
