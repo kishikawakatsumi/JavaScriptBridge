@@ -40,6 +40,8 @@ static NSString *propertyNameFromSelector(SEL selector)
     return propertyName;
 }
 
+#pragma mark -
+
 static NSArray *extractArguments(NSInvocation *invocation)
 {
     NSMethodSignature *methodSignature = invocation.methodSignature;
@@ -112,30 +114,18 @@ static NSArray *extractArguments(NSInvocation *invocation)
             void *argument;
             [invocation getArgument:&argument atIndex:i];
             [arguments addObject:(__bridge id)argument];
-        } else if (strcmp(type, @encode(SEL)) == 0) {
-            const char *argument = nil;
-            [invocation getArgument:&argument atIndex:i];
-            [arguments addObject:@(argument)];
         } else if (strcmp(type, @encode(id)) == 0) {
             id __unsafe_unretained argument = nil;
             [invocation getArgument:&argument atIndex:i];
             [arguments addObject:argument];
+        } else if (strcmp(type, @encode(SEL)) == 0) {
+            const char *argument = nil;
+            [invocation getArgument:&argument atIndex:i];
+            [arguments addObject:@(argument)];
         } else if (strcmp(type, @encode(Class)) == 0) {
             Class __unsafe_unretained argument = nil;
             [invocation getArgument:&argument atIndex:i];
             [arguments addObject:argument];
-        } else if (strcmp(type, @encode(NSInteger)) == 0) {
-            NSInteger argument;
-            [invocation getArgument:&argument atIndex:i];
-            [arguments addObject:@(argument)];
-        } else if (strcmp(type, @encode(NSUInteger)) == 0) {
-            NSUInteger argument;
-            [invocation getArgument:&argument atIndex:i];
-            [arguments addObject:@(argument)];
-        } else if (strcmp(type, @encode(CGFloat)) == 0) {
-            CGFloat argument;
-            [invocation getArgument:&argument atIndex:i];
-            [arguments addObject:@(argument)];
         }
     }
     
@@ -154,23 +144,22 @@ static void setReturnValue(JSValue *value, NSInvocation *invocation)
     if (strcmp(type, @encode(char)) == 0 ||
         strcmp(type, @encode(short)) == 0 ||
         strcmp(type, @encode(int)) == 0 ||
-        strcmp(type, @encode(long)) == 0 ||
-        strcmp(type, @encode(long long)) == 0 ||
         strcmp(type, @encode(unsigned char)) == 0 ||
         strcmp(type, @encode(unsigned short)) == 0 ||
-        strcmp(type, @encode(unsigned int)) == 0 ||
-        strcmp(type, @encode(unsigned long)) == 0 ||
-        strcmp(type, @encode(unsigned long long)) == 0 ||
-        strcmp(type, @encode(NSInteger)) == 0 ||
-        strcmp(type, @encode(NSUInteger)) == 0) {
+        strcmp(type, @encode(unsigned int)) == 0) {
         int32_t returnValue = value.toInt32;
+        [invocation setReturnValue:&returnValue];
+    } else if (strcmp(type, @encode(long)) == 0 ||
+               strcmp(type, @encode(unsigned long)) == 0 ||
+               strcmp(type, @encode(long long)) == 0 ||
+               strcmp(type, @encode(unsigned long long)) == 0) {
+        int64_t returnValue = value.toInt32;
         [invocation setReturnValue:&returnValue];
     } else if (strcmp(type, @encode(bool)) == 0 ||
                strcmp(type, @encode(BOOL)) == 0) {
         BOOL returnValue = value.toBool;
         [invocation setReturnValue:&returnValue];
-    } else if (strcmp(type, @encode(float)) == 0 ||
-               strcmp(type, @encode(CGFloat)) == 0) {
+    } else if (strcmp(type, @encode(float)) == 0) {
         float returnValue = value.toDouble;
         [invocation setReturnValue:&returnValue];
     } else if (strcmp(type, @encode(double)) == 0) {
@@ -180,6 +169,21 @@ static void setReturnValue(JSValue *value, NSInvocation *invocation)
         id __unsafe_unretained returnValue = value.toObject;
         [invocation setReturnValue:&returnValue];
     }
+}
+
+#pragma mark -
+
+static CGFloat tableViewHeightForRowAtIndexPath(id self, SEL _cmd, UITableView *tableView, NSIndexPath *indexPath)
+{
+    NSString *propertyName = propertyNameFromSelector(_cmd);
+    JSValue *value = globalContext[mangledNameFromClass([self class])][@"instanceMembers"][propertyName];
+    
+    if (!value.isUndefined) {
+        JSValue *returnValue = [value callWithArguments:@[tableView, indexPath]];
+        return returnValue.toDouble;
+    }
+    
+    return 0.0f;
 }
 
 static void setupForwardingImplementations(Class targetClass, Class cls, JSValue *functions)
@@ -193,7 +197,11 @@ static void setupForwardingImplementations(Class targetClass, Class cls, JSValue
         NSString *propertyName = propertyNameFromSelector(description->name);
         JSValue *function = functions[propertyName];
         if (!function.isUndefined) {
-            class_addMethod(targetClass, description->name, _objc_msgForward, description->types);
+            if (description->name == @selector(tableView:heightForRowAtIndexPath:)) {
+                class_addMethod(targetClass, description->name, (IMP)tableViewHeightForRowAtIndexPath, description->types);
+            } else {
+                class_addMethod(targetClass, description->name, _objc_msgForward, description->types);
+            }
         }
     }
     if (methods) {
@@ -205,6 +213,8 @@ static void setupForwardingImplementations(Class targetClass, Class cls, JSValue
         setupForwardingImplementations(targetClass, superClass, functions);
     }
 }
+
+#pragma mark -
 
 static void forwardInvocation(id self, SEL _cmd, NSInvocation *invocation)
 {
@@ -221,7 +231,7 @@ static void forwardInvocation(id self, SEL _cmd, NSInvocation *invocation)
         setReturnValue(returnValue, invocation);
     }
     
-    context[@"self"] = [NSNull null];
+    context[@"self"] = nil;
 }
 
 static NSMethodSignature *methodSignatureForSelector(id self, SEL _cmd, SEL selector)

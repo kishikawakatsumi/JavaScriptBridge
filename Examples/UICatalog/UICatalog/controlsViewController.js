@@ -12,7 +12,7 @@ var ControlsViewController = JSB.define('ControlsViewController : UITableViewCon
     };
 
     self.sliderCtl = function() {
-      var frame = {x: 0, y: 12, width: 120, height: 7};
+      var frame = {x: 0, y: 12, width: 120, height: 31};
       var sliderCtl = UISlider.alloc().initWithFrame(frame);
       sliderCtl.addTargetActionForControlEvents(self, 'sliderAction:', 1 << 12);
       sliderCtl.backgroundColor = UIColor.clearColor();
