@@ -25,7 +25,7 @@
 @property (nonatomic) BOOL showsSearchResultsButton;
 @property (nonatomic, assign, getter = isTranslucent) BOOL translucent;
 @property (nonatomic, copy) NSString *placeholder;
-@property (nonatomic, readwrite, retain) UIView *inputAccessoryView;
+//@property (nonatomic, readwrite, retain) UIView *inputAccessoryView;
 @property (nonatomic, copy) NSString *prompt;
 @property (nonatomic, getter = isSearchResultsButtonSelected) BOOL searchResultsButtonSelected;
 @property (nonatomic) UIKeyboardType keyboardType;

@@ -25,13 +25,13 @@
 @property (nonatomic, readonly) CGSize naturalSize;
 @property (nonatomic, copy, readonly) NSArray *segments;
 @property (nonatomic, readonly) NSString *mediaType;
-@property (nonatomic, readonly) NSString *languageCode;
+@property (nonatomic, copy, readonly) NSString *languageCode;
 @property (nonatomic, readonly) AVAsset *asset;
 @property (nonatomic, readonly) CGAffineTransform preferredTransform;
 @property (nonatomic, readonly, getter = isEnabled) BOOL enabled;
 @property (nonatomic, readonly) NSArray *availableMetadataFormats;
 @property (nonatomic, readonly) CMTime minFrameDuration;
-@property (nonatomic, readonly) NSString *extendedLanguageTag;
+@property (nonatomic, copy, readonly) NSString *extendedLanguageTag;
 @property (nonatomic, readonly) float preferredVolume;
 @property (nonatomic, readonly) NSArray *formatDescriptions;
 @property (nonatomic, readonly) NSArray *commonMetadata;
