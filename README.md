@@ -23,6 +23,7 @@ JavaScriptBridge provides the way to write iOS apps with JavaScript.
 
 
 **Example**
+
 *Objective-C*
 ```objc
 UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
