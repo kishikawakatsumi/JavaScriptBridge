@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage              = "https://github.com/kishikawakatsumi/JavaScriptBridge"
   s.license               = 'MIT'
   s.author                = { "kishikawa katsumi" => "kishikawakatsumi@mac.com" }
-  s.source                = { :git => "https://github.com/kishikawakatsumi/JavaScriptBridge.git", :tag => s.version.to_s }
+  s.source                = { :git => "https://github.com/kishikawakatsumi/JavaScriptBridge.git", :tag => "v#{s.version.to_s}" }
 
   s.platform              = :ios, '7.0'
   s.ios.deployment_target = '7.0'

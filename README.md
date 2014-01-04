@@ -8,6 +8,30 @@ JavaScriptBridge provides the way to write iOS apps with JavaScript.
 
 ## Usage
 
+### Naming conventions
+
+**Class name**
+- Same as Objectige-C
+
+**Variable declaration**
+- Get rid of type instead use `var`
+
+**Invoking method
+- Use dot syntax
+- All colons are removed from the selector
+- Any lowercase letter that had followed a colon will be capitalized
+
+
+**Example**
+
+```objc
+UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+```
+
+```javascript
+var window = UIWindow.alloc().initWithFrame(UIScreen.mainScreen().bounds);
+```
+
 ###Hello world on JavaScriptBridge
 
 This is the most simple way.
@@ -69,7 +93,9 @@ You can define custom class in JavaScript.
 It is needs to intaract system provided framework.
 
 ```javascript
-var MainViewController = JSB.define('MainViewController : UITableViewController', {
+var MainViewController = JSB.define('MainViewController : UITableViewController <UITableviewDataSource, UITableviewDelegate>', // Declaration
+// Instance Method Definitions
+{
   viewDidLoad: function() {
     self.navigationItem.title = 'UICatalog';
   },
@@ -112,7 +138,8 @@ JSB.exports = MainViewController;
 ```
 
 ## Requirements
-**iOS 7 or later**
+- **iOS 7 or later**
+- JavaScriptCore.framework
 
 ## Installation
 
