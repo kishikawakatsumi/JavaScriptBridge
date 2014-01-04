@@ -53,10 +53,13 @@ By default, `Foundation`, `UIKit`, `QuartzCore` frameworks are included.
 ### Syntax / Naming conventions
 
 **Class name**
-- Same as Objectige-C
+
+Same as Objectige-C
+
 
 **Variable declaration**
-- Get rid of `Type` instead use `var`
+
+Get rid of `Type name` instead use `var`
 
 ```objc
 UILabel *label;
@@ -67,7 +70,8 @@ var label;
 ```
 
 **Properties**
-- Use dot syntax
+
+Use dot syntax
 
 ```objc
 UISlider *slider = [[UISlider alloc] initWithFrame:frame];
@@ -88,9 +92,10 @@ slider.value = 50.0;
 ```
 
 **Invoking method**
-- Use dot syntax
-- All colons are removed from the selector
-- Any lowercase letter that had followed a colon will be capitalized
+
+Use dot syntax
+All colons are removed from the selector
+Any lowercase letter that had followed a colon will be capitalized
 
 ```objc
 UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -101,7 +106,8 @@ var window = UIWindow.alloc().initWithFrame(UIScreen.mainScreen().bounds);
 ```
 
 **Struct (CGRect, NSRange, etc.)**
-- Use Hashes
+
+Use Hashes
 
 ```objc
 UIView *view = [UIView new];
@@ -122,7 +128,7 @@ var width = view.frame.width; // => 280
 ## Examples
 ###Hello world on JavaScriptBridge
 
-This is the most simple way.
+This is the most simplest way.
 
 ```objc
 @implementation JSBAppDelegate
@@ -164,6 +170,26 @@ This is the most simple way.
      @"window.rootViewController = navigationController;"
      @"window.makeKeyAndVisible();"
      ];
+    
+    return YES;
+}
+
+@end
+```
+
+Of course, the script is able to be loaded from external file.
+```objc
+@implementation JSBAppDelegate
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    NSBundle *mainBundle = [NSBundle mainBundle];
+    NSString *path = [mainBundle pathForResource:@"main" ofType:@"js"];
+
+    NSString *script = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+
+    JSContext *context = [JSBScriptingSupport globalContext];
+    [context evaluateScript:script];
     
     return YES;
 }
