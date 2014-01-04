@@ -1,7 +1,7 @@
 # JavaScriptBridge
 
-[![Version](http://cocoapod-badges.herokuapp.com/v/JavaScriptBridge/badge.png)]
-[![Platform](http://cocoapod-badges.herokuapp.com/p/JavaScriptBridge/badge.png)]
+[![Version](https://cocoapod-badges.herokuapp.com/v/JavaScriptBridge/badge.png)](https://cocoapod-badges.herokuapp.com/v/JavaScriptBridge/badge.png)
+[![Platform](https://cocoapod-badges.herokuapp.com/p/JavaScriptBridge/badge.png)](https://cocoapod-badges.herokuapp.com/p/JavaScriptBridge/badge.png)
 [![Build Status](https://travis-ci.org/kishikawakatsumi/JavaScriptBridge.png?branch=master)](https://travis-ci.org/kishikawakatsumi/JavaScriptBridge)
 
 Write iOS apps in Javascript! JavaScriptBridge provides the way to write iOS apps with JavaScript.
