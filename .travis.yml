@@ -6,6 +6,7 @@ env:
 before_install:
   - gem install xcpretty
 script:
-  - rake clean
-  - rake test
+  - rake "clean[JavaScriptBridge.xcworkspace, 'JavaScriptBridge UICatalog Tests HelloWorld']"
+  - rake "build[JavaScriptBridge.xcworkspace, 'JavaScriptBridge UICatalog Tests HelloWorld']"
+  - rake "test[JavaScriptBridge.xcworkspace, 'Tests']"
    
