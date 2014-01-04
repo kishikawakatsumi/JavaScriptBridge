@@ -8,6 +8,24 @@ JavaScriptBridge provides the way to write iOS apps with JavaScript.
 
 ## Usage
 
+```objc
+// Retrieve the prepared context
+JSContext *context = [JSBScriptingSupport globalContext];
+
+// Add framework support if needed.
+// ('Foundation', 'UIKit', 'QuartzCore' enabled by default.)
+[context addScriptingSupport:@"MapKit"];
+[context addScriptingSupport:@"MessageUI"];
+
+// Evaluate script
+[context evaluateScript:
+ @"var window = UIWindow.new();"
+ @"window.frame = UIScreen.mainScreen().bounds;"
+ @"window.backgroundColor = UIColor.whiteColor();"
+ @"window.makeKeyAndVisible();"
+];
+```
+
 ### Naming conventions
 
 **Class name**
