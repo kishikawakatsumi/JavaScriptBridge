@@ -63,6 +63,53 @@ This is the most simple way.
 
 See the [UICatalog](https://github.com/kishikawakatsumi/JavaScriptBridge/tree/master/Examples/UICatalog/UICatalog) example.
 
+###Define custom classes
+
+You can define custom class in JavaScript.
+It is needs to intaract system provided framework.
+
+```javascript
+var MainViewController = JSB.define('MainViewController : UITableViewController', {
+  viewDidLoad: function() {
+    self.navigationItem.title = 'UICatalog';
+  },
+  tableViewNumberOfRowsInSection: function(tableView, section) {
+    return self.menuList.length;
+  },
+  tableViewCellForRowAtIndexPath: function(tableView, indexPath) {
+    var cell = UITableViewCell.alloc().initWithStyleReuseIdentifier(3, 'Cell');
+    cell.accessoryType = 1;
+    cell.textLabel.text = self.menuList[indexPath.row]['title'];
+    cell.detailTextLabel.text = self.menuList[indexPath.row]['explanation'];
+
+    return cell;
+  },
+  tableViewDidSelectRowAtIndexPath: function(tableView, indexPath) {
+    var targetViewController = self.menuList[indexPath.row]['viewController'];
+    self.navigationController.pushViewControllerAnimated(targetViewController, true);
+  }
+});
+```
+
+###Modules
+
+JavaScriptBridge provides simple module system `require/exports` funcitons, like Node.js.
+
+```javascript
+var ButtonsViewController = JSB.require('buttonsViewController');
+var ControlsViewController = JSB.require('controlsViewController');
+var WebViewController = JSB.require('webViewController');
+var MapViewController = JSB.require('mapViewController');
+
+var MainViewController = JSB.define('MainViewController : UITableViewController', {
+  viewDidLoad: function() {
+    self.navigationItem.title = 'UICatalog';
+    // 〜〜
+});
+
+JSB.exports = MainViewController;
+```
+
 ## Requirements
 **iOS 7 or later**
 
