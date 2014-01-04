@@ -30,10 +30,6 @@
 		141034171875A57B00960F22 /* JSBStoreKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1410340E1875A57B00960F22 /* JSBStoreKitTest.m */; };
 		141034181875A57B00960F22 /* JSBTwitterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 141034101875A57B00960F22 /* JSBTwitterTest.m */; };
 		1410341B1875A6E800960F22 /* JSBUIKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1410341A1875A6E800960F22 /* JSBUIKitTest.m */; };
-		149B87401877D8A40074B480 /* JSContext+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 149B873F1877D8A40074B480 /* JSContext+JavaScriptBridge.m */; };
-		149B87411877D8A40074B480 /* JSContext+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 149B873F1877D8A40074B480 /* JSContext+JavaScriptBridge.m */; };
-		149B87441877D8BD0074B480 /* UIControl+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 149B87431877D8BD0074B480 /* UIControl+JavaScriptBridge.m */; };
-		149B87451877D8BD0074B480 /* UIControl+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 149B87431877D8BD0074B480 /* UIControl+JavaScriptBridge.m */; };
 		149D976E18758B0100129B4B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 149D976D18758B0100129B4B /* Foundation.framework */; };
 		149D977018758B0100129B4B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 149D976F18758B0100129B4B /* CoreGraphics.framework */; };
 		149D977218758B0100129B4B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 149D977118758B0100129B4B /* UIKit.framework */; };
@@ -118,6 +114,10 @@
 		149D9F7018759C2200129B4B /* JSBCoreBluetoothTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 149D9F6F18759C2200129B4B /* JSBCoreBluetoothTest.m */; };
 		149D9F7318759C3B00129B4B /* JSBCoreDataTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 149D9F7218759C3B00129B4B /* JSBCoreDataTest.m */; };
 		149D9F7618759C8100129B4B /* JSBCoreImageTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 149D9F7518759C8100129B4B /* JSBCoreImageTest.m */; };
+		14A04514187817E4004831E8 /* UIControl+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A04513187817E4004831E8 /* UIControl+JavaScriptBridge.m */; };
+		14A04515187817E4004831E8 /* UIControl+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A04513187817E4004831E8 /* UIControl+JavaScriptBridge.m */; };
+		14A04518187817EE004831E8 /* JSContext+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A04517187817EE004831E8 /* JSContext+JavaScriptBridge.m */; };
+		14A04519187817EE004831E8 /* JSContext+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A04517187817EE004831E8 /* JSContext+JavaScriptBridge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,11 +154,6 @@
 		1410340E1875A57B00960F22 /* JSBStoreKitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBStoreKitTest.m; sourceTree = "<group>"; };
 		141034101875A57B00960F22 /* JSBTwitterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBTwitterTest.m; sourceTree = "<group>"; };
 		1410341A1875A6E800960F22 /* JSBUIKitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBUIKitTest.m; sourceTree = "<group>"; };
-		149B873E1877D8A40074B480 /* JSContext+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "JSContext+JavaScriptBridge.h"; path = "../../../Classes/JSContext+JavaScriptBridge.h"; sourceTree = "<group>"; };
-		149B873F1877D8A40074B480 /* JSContext+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "JSContext+JavaScriptBridge.m"; path = "../../../Classes/JSContext+JavaScriptBridge.m"; sourceTree = "<group>"; };
-		149B87421877D8BD0074B480 /* UIControl+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIControl+JavaScriptBridge.h"; path = "../../../Classes/UIControl+JavaScriptBridge.h"; sourceTree = "<group>"; };
-		149B87431877D8BD0074B480 /* UIControl+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIControl+JavaScriptBridge.m"; path = "../../../Classes/UIControl+JavaScriptBridge.m"; sourceTree = "<group>"; };
-		149B874C1877DA050074B480 /* JSBMessageForwarding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSBMessageForwarding.h; path = ../../../Classes/JSBMessageForwarding.h; sourceTree = "<group>"; };
 		149D976A18758B0100129B4B /* JavaScriptBridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JavaScriptBridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		149D976D18758B0100129B4B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		149D976F18758B0100129B4B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -859,6 +854,11 @@
 		149D9F6F18759C2200129B4B /* JSBCoreBluetoothTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBCoreBluetoothTest.m; sourceTree = "<group>"; };
 		149D9F7218759C3B00129B4B /* JSBCoreDataTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBCoreDataTest.m; sourceTree = "<group>"; };
 		149D9F7518759C8100129B4B /* JSBCoreImageTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBCoreImageTest.m; sourceTree = "<group>"; };
+		14A04511187817CE004831E8 /* JSBMessageForwarding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSBMessageForwarding.h; path = ../../../Classes/Private/JSBMessageForwarding.h; sourceTree = "<group>"; };
+		14A04512187817E4004831E8 /* UIControl+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIControl+JavaScriptBridge.h"; path = "../../../Classes/Private/UIControl+JavaScriptBridge.h"; sourceTree = "<group>"; };
+		14A04513187817E4004831E8 /* UIControl+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIControl+JavaScriptBridge.m"; path = "../../../Classes/Private/UIControl+JavaScriptBridge.m"; sourceTree = "<group>"; };
+		14A04516187817EE004831E8 /* JSContext+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "JSContext+JavaScriptBridge.h"; path = "../../../Classes/JSContext+JavaScriptBridge.h"; sourceTree = "<group>"; };
+		14A04517187817EE004831E8 /* JSContext+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "JSContext+JavaScriptBridge.m"; path = "../../../Classes/JSContext+JavaScriptBridge.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1207,14 +1207,12 @@
 			isa = PBXGroup;
 			children = (
 				149D97A918758C2E00129B4B /* JavaScriptBridge.h */,
-				149B874C1877DA050074B480 /* JSBMessageForwarding.h */,
 				149D97A118758BF200129B4B /* JSBScriptingSupport.h */,
 				149D97A218758BF200129B4B /* JSBScriptingSupport.m */,
 				149D97A018758BF200129B4B /* JSBNSObject.h */,
-				149B873E1877D8A40074B480 /* JSContext+JavaScriptBridge.h */,
-				149B873F1877D8A40074B480 /* JSContext+JavaScriptBridge.m */,
-				149B87421877D8BD0074B480 /* UIControl+JavaScriptBridge.h */,
-				149B87431877D8BD0074B480 /* UIControl+JavaScriptBridge.m */,
+				14A04516187817EE004831E8 /* JSContext+JavaScriptBridge.h */,
+				14A04517187817EE004831E8 /* JSContext+JavaScriptBridge.m */,
+				14A0451A187817F6004831E8 /* Private */,
 				149D9BF6187595BB00129B4B /* FrameworkSupport */,
 			);
 			name = Lib;
@@ -1256,7 +1254,7 @@
 				149D9E68187595BC00129B4B /* Twitter */,
 			);
 			name = FrameworkSupport;
-			path = ../../../Classes/ios/FrameworkSupport;
+			path = ../../../Classes/iOS/FrameworkSupport;
 			sourceTree = "<group>";
 		};
 		149D9BF7187595BB00129B4B /* AVFoundation */ = {
@@ -2220,6 +2218,16 @@
 			path = ../../../Tests/CoreImage;
 			sourceTree = "<group>";
 		};
+		14A0451A187817F6004831E8 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				14A04511187817CE004831E8 /* JSBMessageForwarding.h */,
+				14A04512187817E4004831E8 /* UIControl+JavaScriptBridge.h */,
+				14A04513187817E4004831E8 /* UIControl+JavaScriptBridge.m */,
+			);
+			name = Private;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2324,7 +2332,6 @@
 				149D9F11187595BC00129B4B /* JSBCoreData.m in Sources */,
 				149D977A18758B0100129B4B /* main.m in Sources */,
 				149D9F19187595BC00129B4B /* JSBCoreMotion.m in Sources */,
-				149B87441877D8BD0074B480 /* UIControl+JavaScriptBridge.m in Sources */,
 				149D9F35187595BC00129B4B /* JSBOpenGLES.m in Sources */,
 				149D9F31187595BC00129B4B /* JSBMultipeerConnectivity.m in Sources */,
 				149D9F0B187595BC00129B4B /* JSBAddressBookUI.m in Sources */,
@@ -2337,9 +2344,11 @@
 				149D9F2B187595BC00129B4B /* JSBMapKit.m in Sources */,
 				149D9F17187595BC00129B4B /* JSBCoreMIDI.m in Sources */,
 				149D9F2D187595BC00129B4B /* JSBMediaPlayer.m in Sources */,
+				14A04514187817E4004831E8 /* UIControl+JavaScriptBridge.m in Sources */,
 				149D9F05187595BC00129B4B /* JSBAVFoundation.m in Sources */,
 				149D9F0F187595BC00129B4B /* JSBCoreBluetooth.m in Sources */,
 				149D9F1F187595BC00129B4B /* JSBEventKitUI.m in Sources */,
+				14A04518187817EE004831E8 /* JSContext+JavaScriptBridge.m in Sources */,
 				149D9F1B187595BC00129B4B /* JSBCoreTelephony.m in Sources */,
 				149D9F1D187595BC00129B4B /* JSBEventKit.m in Sources */,
 				149D9F29187595BC00129B4B /* JSBJavaScriptCore.m in Sources */,
@@ -2347,7 +2356,6 @@
 				149D9F43187595BC00129B4B /* JSBStoreKit.m in Sources */,
 				149D9F3B187595BC00129B4B /* JSBQuickLook.m in Sources */,
 				149D9F21187595BC00129B4B /* JSBFoundation.m in Sources */,
-				149B87401877D8A40074B480 /* JSContext+JavaScriptBridge.m in Sources */,
 				149D97A518758BF200129B4B /* JSBScriptingSupport.m in Sources */,
 				149D9F2F187595BC00129B4B /* JSBMessageUI.m in Sources */,
 				149D9F27187595BC00129B4B /* JSBGameKit.m in Sources */,
@@ -2377,6 +2385,7 @@
 				141033D418759F4F00960F22 /* JSBCoreMotionTest.m in Sources */,
 				141033DD1875A03E00960F22 /* JSBEventKitUITest.m in Sources */,
 				149D9F30187595BC00129B4B /* JSBMessageUI.m in Sources */,
+				14A04519187817EE004831E8 /* JSContext+JavaScriptBridge.m in Sources */,
 				149D9F3A187595BC00129B4B /* JSBQuartzCore.m in Sources */,
 				149D9F08187595BC00129B4B /* JSBAccounts.m in Sources */,
 				149D9F0A187595BC00129B4B /* JSBAdSupport.m in Sources */,
@@ -2399,7 +2408,6 @@
 				141033CE18759EF600960F22 /* JSBCoreLocationTest.m in Sources */,
 				149D9F12187595BC00129B4B /* JSBCoreData.m in Sources */,
 				149D9F4A187595BC00129B4B /* JSBiAd.m in Sources */,
-				149B87411877D8A40074B480 /* JSContext+JavaScriptBridge.m in Sources */,
 				141033F61875A23500960F22 /* JSBMediaPlayerTest.m in Sources */,
 				149D9F48187595BC00129B4B /* JSBUIKit.m in Sources */,
 				149D9F0E187595BC00129B4B /* JSBAssetsLibrary.m in Sources */,
@@ -2415,8 +2423,8 @@
 				149D9F7618759C8100129B4B /* JSBCoreImageTest.m in Sources */,
 				149D9F32187595BC00129B4B /* JSBMultipeerConnectivity.m in Sources */,
 				149D9F10187595BC00129B4B /* JSBCoreBluetooth.m in Sources */,
+				14A04515187817E4004831E8 /* UIControl+JavaScriptBridge.m in Sources */,
 				141033D718759F6200960F22 /* JSBCoreTelephonyTest.m in Sources */,
-				149B87451877D8BD0074B480 /* UIControl+JavaScriptBridge.m in Sources */,
 				141033EC1875A09B00960F22 /* JSBJavaScriptCoreTest.m in Sources */,
 				149D9F14187595BC00129B4B /* JSBCoreImage.m in Sources */,
 				1410341B1875A6E800960F22 /* JSBUIKitTest.m in Sources */,

@@ -13,6 +13,6 @@ Pod::Spec.new do |s|
 
   s.source_files          = 'Classes/**/*'
 
-  s.private_header_files  = 'Classes/**/FrameworkSupport/**/*.h'
+  s.private_header_files  = ['Classes/Private/*.h', 'Classes/**/FrameworkSupport/**/*.h']
   s.frameworks            = 'JavaScriptCore'
 end
