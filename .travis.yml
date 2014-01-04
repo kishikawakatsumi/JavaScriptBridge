@@ -6,4 +6,6 @@ env:
 before_install:
   - gem install xcpretty
 script:
-  - rake clean test
+  - rake clean
+  - rake test
+   
