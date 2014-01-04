@@ -1,0 +1,2013 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		14A0452D18782920004831E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A0452C18782920004831E8 /* Foundation.framework */; };
+		14A0452F18782920004831E8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A0452E18782920004831E8 /* CoreGraphics.framework */; };
+		14A0453118782920004831E8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A0453018782920004831E8 /* UIKit.framework */; };
+		14A0453718782920004831E8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 14A0453518782920004831E8 /* InfoPlist.strings */; };
+		14A0453918782920004831E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A0453818782920004831E8 /* main.m */; };
+		14A0453D18782920004831E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A0453C18782920004831E8 /* AppDelegate.m */; };
+		14A0453F18782920004831E8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14A0453E18782920004831E8 /* Images.xcassets */; };
+		14A04567187829B4004831E8 /* UIControl+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A04560187829B4004831E8 /* UIControl+JavaScriptBridge.m */; };
+		14A04568187829B4004831E8 /* JSBScriptingSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A04564187829B4004831E8 /* JSBScriptingSupport.m */; };
+		14A04569187829B4004831E8 /* JSContext+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A04566187829B4004831E8 /* JSContext+JavaScriptBridge.m */; };
+		14A0482A187829CB004831E8 /* JSBAVFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A0459D187829CA004831E8 /* JSBAVFoundation.m */; };
+		14A0482B187829CB004831E8 /* JSBAccounts.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A045CF187829CA004831E8 /* JSBAccounts.m */; };
+		14A0482C187829CB004831E8 /* JSBAdSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A045D3187829CA004831E8 /* JSBAdSupport.m */; };
+		14A0482D187829CB004831E8 /* JSBAddressBookUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A045DA187829CA004831E8 /* JSBAddressBookUI.m */; };
+		14A0482E187829CB004831E8 /* JSBAssetsLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A045E2187829CA004831E8 /* JSBAssetsLibrary.m */; };
+		14A0482F187829CB004831E8 /* JSBCoreBluetooth.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A045F1187829CA004831E8 /* JSBCoreBluetooth.m */; };
+		14A04830187829CB004831E8 /* JSBCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A045F4187829CA004831E8 /* JSBCoreData.m */; };
+		14A04831187829CB004831E8 /* JSBCoreImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A0461B187829CA004831E8 /* JSBCoreImage.m */; };
+		14A04832187829CB004831E8 /* JSBCoreLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A04627187829CA004831E8 /* JSBCoreLocation.m */; };
+		14A04833187829CB004831E8 /* JSBCoreMIDI.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A0462A187829CA004831E8 /* JSBCoreMIDI.m */; };
+		14A04834187829CB004831E8 /* JSBCoreMotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A0463A187829CA004831E8 /* JSBCoreMotion.m */; };
+		14A04835187829CB004831E8 /* JSBCoreTelephony.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A04643187829CA004831E8 /* JSBCoreTelephony.m */; };
+		14A04836187829CB004831E8 /* JSBEventKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A04653187829CA004831E8 /* JSBEventKit.m */; };
+		14A04837187829CB004831E8 /* JSBEventKitUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A04659187829CA004831E8 /* JSBEventKitUI.m */; };
+		14A04838187829CB004831E8 /* JSBFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A0465C187829CA004831E8 /* JSBFoundation.m */; };
+		14A04839187829CB004831E8 /* JSBGameKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A046FF187829CB004831E8 /* JSBGameKit.m */; };
+		14A0483A187829CB004831E8 /* JSBJavaScriptCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A04705187829CB004831E8 /* JSBJavaScriptCore.m */; };
+		14A0483B187829CB004831E8 /* JSBMapKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A04731187829CB004831E8 /* JSBMapKit.m */; };
+		14A0483C187829CB004831E8 /* JSBMediaPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A04749187829CB004831E8 /* JSBMediaPlayer.m */; };
+		14A0483D187829CB004831E8 /* JSBMessageUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A0474E187829CB004831E8 /* JSBMessageUI.m */; };
+		14A0483E187829CB004831E8 /* JSBMultipeerConnectivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A04757187829CB004831E8 /* JSBMultipeerConnectivity.m */; };
+		14A0483F187829CB004831E8 /* JSBOpenGLES.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A0475C187829CB004831E8 /* JSBOpenGLES.m */; };
+		14A04840187829CB004831E8 /* JSBPassKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A04762187829CB004831E8 /* JSBPassKit.m */; };
+		14A04841187829CB004831E8 /* JSBQuartzCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A0477B187829CB004831E8 /* JSBQuartzCore.m */; };
+		14A04842187829CB004831E8 /* JSBQuickLook.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A0477F187829CB004831E8 /* JSBQuickLook.m */; };
+		14A04843187829CB004831E8 /* JSBSafariServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A04783187829CB004831E8 /* JSBSafariServices.m */; };
+		14A04844187829CB004831E8 /* JSBSocial.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A04788187829CB004831E8 /* JSBSocial.m */; };
+		14A04845187829CB004831E8 /* JSBStoreKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A04796187829CB004831E8 /* JSBStoreKit.m */; };
+		14A04846187829CB004831E8 /* JSBTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A0479B187829CB004831E8 /* JSBTwitter.m */; };
+		14A04847187829CB004831E8 /* JSBUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A047D8187829CB004831E8 /* JSBUIKit.m */; };
+		14A04848187829CB004831E8 /* JSBiAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A04829187829CB004831E8 /* JSBiAd.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		14A0452918782920004831E8 /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14A0452C18782920004831E8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		14A0452E18782920004831E8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		14A0453018782920004831E8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		14A0453418782920004831E8 /* HelloWorld-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HelloWorld-Info.plist"; sourceTree = "<group>"; };
+		14A0453618782920004831E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		14A0453818782920004831E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		14A0453A18782920004831E8 /* HelloWorld-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HelloWorld-Prefix.pch"; sourceTree = "<group>"; };
+		14A0453B18782920004831E8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		14A0453C18782920004831E8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		14A0453E18782920004831E8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		14A0454518782920004831E8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		14A0455E187829B4004831E8 /* JSBMessageForwarding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMessageForwarding.h; sourceTree = "<group>"; };
+		14A0455F187829B4004831E8 /* UIControl+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+JavaScriptBridge.h"; sourceTree = "<group>"; };
+		14A04560187829B4004831E8 /* UIControl+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+JavaScriptBridge.m"; sourceTree = "<group>"; };
+		14A04561187829B4004831E8 /* JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JavaScriptBridge.h; path = ../../../Classes/JavaScriptBridge.h; sourceTree = "<group>"; };
+		14A04562187829B4004831E8 /* JSBNSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSBNSObject.h; path = ../../../Classes/JSBNSObject.h; sourceTree = "<group>"; };
+		14A04563187829B4004831E8 /* JSBScriptingSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSBScriptingSupport.h; path = ../../../Classes/JSBScriptingSupport.h; sourceTree = "<group>"; };
+		14A04564187829B4004831E8 /* JSBScriptingSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSBScriptingSupport.m; path = ../../../Classes/JSBScriptingSupport.m; sourceTree = "<group>"; };
+		14A04565187829B4004831E8 /* JSContext+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "JSContext+JavaScriptBridge.h"; path = "../../../Classes/JSContext+JavaScriptBridge.h"; sourceTree = "<group>"; };
+		14A04566187829B4004831E8 /* JSContext+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "JSContext+JavaScriptBridge.m"; path = "../../../Classes/JSContext+JavaScriptBridge.m"; sourceTree = "<group>"; };
+		14A0456C187829CA004831E8 /* JSBAVAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVAsset.h; sourceTree = "<group>"; };
+		14A0456D187829CA004831E8 /* JSBAVAssetExportSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVAssetExportSession.h; sourceTree = "<group>"; };
+		14A0456E187829CA004831E8 /* JSBAVAssetImageGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVAssetImageGenerator.h; sourceTree = "<group>"; };
+		14A0456F187829CA004831E8 /* JSBAVAssetReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVAssetReader.h; sourceTree = "<group>"; };
+		14A04570187829CA004831E8 /* JSBAVAssetReaderAudioMixOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVAssetReaderAudioMixOutput.h; sourceTree = "<group>"; };
+		14A04571187829CA004831E8 /* JSBAVAssetReaderOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVAssetReaderOutput.h; sourceTree = "<group>"; };
+		14A04572187829CA004831E8 /* JSBAVAssetReaderTrackOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVAssetReaderTrackOutput.h; sourceTree = "<group>"; };
+		14A04573187829CA004831E8 /* JSBAVAssetReaderVideoCompositionOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVAssetReaderVideoCompositionOutput.h; sourceTree = "<group>"; };
+		14A04574187829CA004831E8 /* JSBAVAssetResourceLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVAssetResourceLoader.h; sourceTree = "<group>"; };
+		14A04575187829CA004831E8 /* JSBAVAssetResourceLoadingContentInformationRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVAssetResourceLoadingContentInformationRequest.h; sourceTree = "<group>"; };
+		14A04576187829CA004831E8 /* JSBAVAssetResourceLoadingDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVAssetResourceLoadingDataRequest.h; sourceTree = "<group>"; };
+		14A04577187829CA004831E8 /* JSBAVAssetResourceLoadingRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVAssetResourceLoadingRequest.h; sourceTree = "<group>"; };
+		14A04578187829CA004831E8 /* JSBAVAssetTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVAssetTrack.h; sourceTree = "<group>"; };
+		14A04579187829CA004831E8 /* JSBAVAssetTrackGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVAssetTrackGroup.h; sourceTree = "<group>"; };
+		14A0457A187829CA004831E8 /* JSBAVAssetTrackSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVAssetTrackSegment.h; sourceTree = "<group>"; };
+		14A0457B187829CA004831E8 /* JSBAVAssetWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVAssetWriter.h; sourceTree = "<group>"; };
+		14A0457C187829CA004831E8 /* JSBAVAssetWriterInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVAssetWriterInput.h; sourceTree = "<group>"; };
+		14A0457D187829CA004831E8 /* JSBAVAssetWriterInputGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVAssetWriterInputGroup.h; sourceTree = "<group>"; };
+		14A0457E187829CA004831E8 /* JSBAVAssetWriterInputPixelBufferAdaptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVAssetWriterInputPixelBufferAdaptor.h; sourceTree = "<group>"; };
+		14A0457F187829CA004831E8 /* JSBAVAsynchronousVideoCompositionRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVAsynchronousVideoCompositionRequest.h; sourceTree = "<group>"; };
+		14A04580187829CA004831E8 /* JSBAVAudioMix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVAudioMix.h; sourceTree = "<group>"; };
+		14A04581187829CA004831E8 /* JSBAVAudioMixInputParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVAudioMixInputParameters.h; sourceTree = "<group>"; };
+		14A04582187829CA004831E8 /* JSBAVAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVAudioPlayer.h; sourceTree = "<group>"; };
+		14A04583187829CA004831E8 /* JSBAVAudioRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVAudioRecorder.h; sourceTree = "<group>"; };
+		14A04584187829CA004831E8 /* JSBAVAudioSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVAudioSession.h; sourceTree = "<group>"; };
+		14A04585187829CA004831E8 /* JSBAVAudioSessionChannelDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVAudioSessionChannelDescription.h; sourceTree = "<group>"; };
+		14A04586187829CA004831E8 /* JSBAVAudioSessionDataSourceDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVAudioSessionDataSourceDescription.h; sourceTree = "<group>"; };
+		14A04587187829CA004831E8 /* JSBAVAudioSessionPortDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVAudioSessionPortDescription.h; sourceTree = "<group>"; };
+		14A04588187829CA004831E8 /* JSBAVAudioSessionRouteDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVAudioSessionRouteDescription.h; sourceTree = "<group>"; };
+		14A04589187829CA004831E8 /* JSBAVCaptureAudioChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVCaptureAudioChannel.h; sourceTree = "<group>"; };
+		14A0458A187829CA004831E8 /* JSBAVCaptureAudioDataOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVCaptureAudioDataOutput.h; sourceTree = "<group>"; };
+		14A0458B187829CA004831E8 /* JSBAVCaptureConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVCaptureConnection.h; sourceTree = "<group>"; };
+		14A0458C187829CA004831E8 /* JSBAVCaptureDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVCaptureDevice.h; sourceTree = "<group>"; };
+		14A0458D187829CA004831E8 /* JSBAVCaptureDeviceFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVCaptureDeviceFormat.h; sourceTree = "<group>"; };
+		14A0458E187829CA004831E8 /* JSBAVCaptureDeviceInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVCaptureDeviceInput.h; sourceTree = "<group>"; };
+		14A0458F187829CA004831E8 /* JSBAVCaptureFileOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVCaptureFileOutput.h; sourceTree = "<group>"; };
+		14A04590187829CA004831E8 /* JSBAVCaptureInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVCaptureInput.h; sourceTree = "<group>"; };
+		14A04591187829CA004831E8 /* JSBAVCaptureInputPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVCaptureInputPort.h; sourceTree = "<group>"; };
+		14A04592187829CA004831E8 /* JSBAVCaptureMetadataOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVCaptureMetadataOutput.h; sourceTree = "<group>"; };
+		14A04593187829CA004831E8 /* JSBAVCaptureMovieFileOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVCaptureMovieFileOutput.h; sourceTree = "<group>"; };
+		14A04594187829CA004831E8 /* JSBAVCaptureOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVCaptureOutput.h; sourceTree = "<group>"; };
+		14A04595187829CA004831E8 /* JSBAVCaptureSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVCaptureSession.h; sourceTree = "<group>"; };
+		14A04596187829CA004831E8 /* JSBAVCaptureStillImageOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVCaptureStillImageOutput.h; sourceTree = "<group>"; };
+		14A04597187829CA004831E8 /* JSBAVCaptureVideoDataOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVCaptureVideoDataOutput.h; sourceTree = "<group>"; };
+		14A04598187829CA004831E8 /* JSBAVCaptureVideoPreviewLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVCaptureVideoPreviewLayer.h; sourceTree = "<group>"; };
+		14A04599187829CA004831E8 /* JSBAVComposition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVComposition.h; sourceTree = "<group>"; };
+		14A0459A187829CA004831E8 /* JSBAVCompositionTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVCompositionTrack.h; sourceTree = "<group>"; };
+		14A0459B187829CA004831E8 /* JSBAVCompositionTrackSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVCompositionTrackSegment.h; sourceTree = "<group>"; };
+		14A0459C187829CA004831E8 /* JSBAVFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVFoundation.h; sourceTree = "<group>"; };
+		14A0459D187829CA004831E8 /* JSBAVFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBAVFoundation.m; sourceTree = "<group>"; };
+		14A0459E187829CA004831E8 /* JSBAVFrameRateRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVFrameRateRange.h; sourceTree = "<group>"; };
+		14A0459F187829CA004831E8 /* JSBAVMediaSelectionGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVMediaSelectionGroup.h; sourceTree = "<group>"; };
+		14A045A0187829CA004831E8 /* JSBAVMediaSelectionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVMediaSelectionOption.h; sourceTree = "<group>"; };
+		14A045A1187829CA004831E8 /* JSBAVMetadataFaceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVMetadataFaceObject.h; sourceTree = "<group>"; };
+		14A045A2187829CA004831E8 /* JSBAVMetadataItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVMetadataItem.h; sourceTree = "<group>"; };
+		14A045A3187829CA004831E8 /* JSBAVMetadataItemFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVMetadataItemFilter.h; sourceTree = "<group>"; };
+		14A045A4187829CA004831E8 /* JSBAVMetadataMachineReadableCodeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVMetadataMachineReadableCodeObject.h; sourceTree = "<group>"; };
+		14A045A5187829CA004831E8 /* JSBAVMetadataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVMetadataObject.h; sourceTree = "<group>"; };
+		14A045A6187829CA004831E8 /* JSBAVMutableAudioMix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVMutableAudioMix.h; sourceTree = "<group>"; };
+		14A045A7187829CA004831E8 /* JSBAVMutableAudioMixInputParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVMutableAudioMixInputParameters.h; sourceTree = "<group>"; };
+		14A045A8187829CA004831E8 /* JSBAVMutableComposition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVMutableComposition.h; sourceTree = "<group>"; };
+		14A045A9187829CA004831E8 /* JSBAVMutableCompositionTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVMutableCompositionTrack.h; sourceTree = "<group>"; };
+		14A045AA187829CA004831E8 /* JSBAVMutableMetadataItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVMutableMetadataItem.h; sourceTree = "<group>"; };
+		14A045AB187829CA004831E8 /* JSBAVMutableTimedMetadataGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVMutableTimedMetadataGroup.h; sourceTree = "<group>"; };
+		14A045AC187829CA004831E8 /* JSBAVMutableVideoComposition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVMutableVideoComposition.h; sourceTree = "<group>"; };
+		14A045AD187829CA004831E8 /* JSBAVMutableVideoCompositionInstruction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVMutableVideoCompositionInstruction.h; sourceTree = "<group>"; };
+		14A045AE187829CA004831E8 /* JSBAVMutableVideoCompositionLayerInstruction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVMutableVideoCompositionLayerInstruction.h; sourceTree = "<group>"; };
+		14A045AF187829CA004831E8 /* JSBAVOutputSettingsAssistant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVOutputSettingsAssistant.h; sourceTree = "<group>"; };
+		14A045B0187829CA004831E8 /* JSBAVPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVPlayer.h; sourceTree = "<group>"; };
+		14A045B1187829CA004831E8 /* JSBAVPlayerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVPlayerItem.h; sourceTree = "<group>"; };
+		14A045B2187829CA004831E8 /* JSBAVPlayerItemAccessLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVPlayerItemAccessLog.h; sourceTree = "<group>"; };
+		14A045B3187829CA004831E8 /* JSBAVPlayerItemAccessLogEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVPlayerItemAccessLogEvent.h; sourceTree = "<group>"; };
+		14A045B4187829CA004831E8 /* JSBAVPlayerItemErrorLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVPlayerItemErrorLog.h; sourceTree = "<group>"; };
+		14A045B5187829CA004831E8 /* JSBAVPlayerItemErrorLogEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVPlayerItemErrorLogEvent.h; sourceTree = "<group>"; };
+		14A045B6187829CA004831E8 /* JSBAVPlayerItemLegibleOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVPlayerItemLegibleOutput.h; sourceTree = "<group>"; };
+		14A045B7187829CA004831E8 /* JSBAVPlayerItemOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVPlayerItemOutput.h; sourceTree = "<group>"; };
+		14A045B8187829CA004831E8 /* JSBAVPlayerItemTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVPlayerItemTrack.h; sourceTree = "<group>"; };
+		14A045B9187829CA004831E8 /* JSBAVPlayerItemVideoOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVPlayerItemVideoOutput.h; sourceTree = "<group>"; };
+		14A045BA187829CA004831E8 /* JSBAVPlayerLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVPlayerLayer.h; sourceTree = "<group>"; };
+		14A045BB187829CA004831E8 /* JSBAVPlayerMediaSelectionCriteria.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVPlayerMediaSelectionCriteria.h; sourceTree = "<group>"; };
+		14A045BC187829CA004831E8 /* JSBAVQueuePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVQueuePlayer.h; sourceTree = "<group>"; };
+		14A045BD187829CA004831E8 /* JSBAVSpeechSynthesisVoice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVSpeechSynthesisVoice.h; sourceTree = "<group>"; };
+		14A045BE187829CA004831E8 /* JSBAVSpeechSynthesizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVSpeechSynthesizer.h; sourceTree = "<group>"; };
+		14A045BF187829CA004831E8 /* JSBAVSpeechUtterance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVSpeechUtterance.h; sourceTree = "<group>"; };
+		14A045C0187829CA004831E8 /* JSBAVSynchronizedLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVSynchronizedLayer.h; sourceTree = "<group>"; };
+		14A045C1187829CA004831E8 /* JSBAVTextStyleRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVTextStyleRule.h; sourceTree = "<group>"; };
+		14A045C2187829CA004831E8 /* JSBAVTimedMetadataGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVTimedMetadataGroup.h; sourceTree = "<group>"; };
+		14A045C3187829CA004831E8 /* JSBAVURLAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVURLAsset.h; sourceTree = "<group>"; };
+		14A045C4187829CA004831E8 /* JSBAVVideoComposition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVVideoComposition.h; sourceTree = "<group>"; };
+		14A045C5187829CA004831E8 /* JSBAVVideoCompositionCoreAnimationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVVideoCompositionCoreAnimationTool.h; sourceTree = "<group>"; };
+		14A045C6187829CA004831E8 /* JSBAVVideoCompositionInstruction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVVideoCompositionInstruction.h; sourceTree = "<group>"; };
+		14A045C7187829CA004831E8 /* JSBAVVideoCompositionLayerInstruction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVVideoCompositionLayerInstruction.h; sourceTree = "<group>"; };
+		14A045C8187829CA004831E8 /* JSBAVVideoCompositionRenderContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAVVideoCompositionRenderContext.h; sourceTree = "<group>"; };
+		14A045CA187829CA004831E8 /* JSBACAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBACAccount.h; sourceTree = "<group>"; };
+		14A045CB187829CA004831E8 /* JSBACAccountCredential.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBACAccountCredential.h; sourceTree = "<group>"; };
+		14A045CC187829CA004831E8 /* JSBACAccountStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBACAccountStore.h; sourceTree = "<group>"; };
+		14A045CD187829CA004831E8 /* JSBACAccountType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBACAccountType.h; sourceTree = "<group>"; };
+		14A045CE187829CA004831E8 /* JSBAccounts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAccounts.h; sourceTree = "<group>"; };
+		14A045CF187829CA004831E8 /* JSBAccounts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBAccounts.m; sourceTree = "<group>"; };
+		14A045D1187829CA004831E8 /* JSBASIdentifierManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBASIdentifierManager.h; sourceTree = "<group>"; };
+		14A045D2187829CA004831E8 /* JSBAdSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAdSupport.h; sourceTree = "<group>"; };
+		14A045D3187829CA004831E8 /* JSBAdSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBAdSupport.m; sourceTree = "<group>"; };
+		14A045D5187829CA004831E8 /* JSBABNewPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBABNewPersonViewController.h; sourceTree = "<group>"; };
+		14A045D6187829CA004831E8 /* JSBABPeoplePickerNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBABPeoplePickerNavigationController.h; sourceTree = "<group>"; };
+		14A045D7187829CA004831E8 /* JSBABPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBABPersonViewController.h; sourceTree = "<group>"; };
+		14A045D8187829CA004831E8 /* JSBABUnknownPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBABUnknownPersonViewController.h; sourceTree = "<group>"; };
+		14A045D9187829CA004831E8 /* JSBAddressBookUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAddressBookUI.h; sourceTree = "<group>"; };
+		14A045DA187829CA004831E8 /* JSBAddressBookUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBAddressBookUI.m; sourceTree = "<group>"; };
+		14A045DC187829CA004831E8 /* JSBALAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBALAsset.h; sourceTree = "<group>"; };
+		14A045DD187829CA004831E8 /* JSBALAssetRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBALAssetRepresentation.h; sourceTree = "<group>"; };
+		14A045DE187829CA004831E8 /* JSBALAssetsFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBALAssetsFilter.h; sourceTree = "<group>"; };
+		14A045DF187829CA004831E8 /* JSBALAssetsGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBALAssetsGroup.h; sourceTree = "<group>"; };
+		14A045E0187829CA004831E8 /* JSBALAssetsLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBALAssetsLibrary.h; sourceTree = "<group>"; };
+		14A045E1187829CA004831E8 /* JSBAssetsLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBAssetsLibrary.h; sourceTree = "<group>"; };
+		14A045E2187829CA004831E8 /* JSBAssetsLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBAssetsLibrary.m; sourceTree = "<group>"; };
+		14A045E4187829CA004831E8 /* JSBCBATTRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCBATTRequest.h; sourceTree = "<group>"; };
+		14A045E5187829CA004831E8 /* JSBCBCentral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCBCentral.h; sourceTree = "<group>"; };
+		14A045E6187829CA004831E8 /* JSBCBCentralManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCBCentralManager.h; sourceTree = "<group>"; };
+		14A045E7187829CA004831E8 /* JSBCBCharacteristic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCBCharacteristic.h; sourceTree = "<group>"; };
+		14A045E8187829CA004831E8 /* JSBCBDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCBDescriptor.h; sourceTree = "<group>"; };
+		14A045E9187829CA004831E8 /* JSBCBMutableCharacteristic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCBMutableCharacteristic.h; sourceTree = "<group>"; };
+		14A045EA187829CA004831E8 /* JSBCBMutableDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCBMutableDescriptor.h; sourceTree = "<group>"; };
+		14A045EB187829CA004831E8 /* JSBCBMutableService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCBMutableService.h; sourceTree = "<group>"; };
+		14A045EC187829CA004831E8 /* JSBCBPeripheral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCBPeripheral.h; sourceTree = "<group>"; };
+		14A045ED187829CA004831E8 /* JSBCBPeripheralManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCBPeripheralManager.h; sourceTree = "<group>"; };
+		14A045EE187829CA004831E8 /* JSBCBService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCBService.h; sourceTree = "<group>"; };
+		14A045EF187829CA004831E8 /* JSBCBUUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCBUUID.h; sourceTree = "<group>"; };
+		14A045F0187829CA004831E8 /* JSBCoreBluetooth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCoreBluetooth.h; sourceTree = "<group>"; };
+		14A045F1187829CA004831E8 /* JSBCoreBluetooth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBCoreBluetooth.m; sourceTree = "<group>"; };
+		14A045F3187829CA004831E8 /* JSBCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCoreData.h; sourceTree = "<group>"; };
+		14A045F4187829CA004831E8 /* JSBCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBCoreData.m; sourceTree = "<group>"; };
+		14A045F5187829CA004831E8 /* JSBNSAtomicStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSAtomicStore.h; sourceTree = "<group>"; };
+		14A045F6187829CA004831E8 /* JSBNSAtomicStoreCacheNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSAtomicStoreCacheNode.h; sourceTree = "<group>"; };
+		14A045F7187829CA004831E8 /* JSBNSAttributeDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSAttributeDescription.h; sourceTree = "<group>"; };
+		14A045F8187829CA004831E8 /* JSBNSEntityDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSEntityDescription.h; sourceTree = "<group>"; };
+		14A045F9187829CA004831E8 /* JSBNSEntityMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSEntityMapping.h; sourceTree = "<group>"; };
+		14A045FA187829CA004831E8 /* JSBNSEntityMigrationPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSEntityMigrationPolicy.h; sourceTree = "<group>"; };
+		14A045FB187829CA004831E8 /* JSBNSExpressionDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSExpressionDescription.h; sourceTree = "<group>"; };
+		14A045FC187829CA004831E8 /* JSBNSFetchRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSFetchRequest.h; sourceTree = "<group>"; };
+		14A045FD187829CA004831E8 /* JSBNSFetchRequestExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSFetchRequestExpression.h; sourceTree = "<group>"; };
+		14A045FE187829CA004831E8 /* JSBNSFetchedPropertyDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSFetchedPropertyDescription.h; sourceTree = "<group>"; };
+		14A045FF187829CA004831E8 /* JSBNSFetchedResultsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSFetchedResultsController.h; sourceTree = "<group>"; };
+		14A04600187829CA004831E8 /* JSBNSIncrementalStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSIncrementalStore.h; sourceTree = "<group>"; };
+		14A04601187829CA004831E8 /* JSBNSIncrementalStoreNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSIncrementalStoreNode.h; sourceTree = "<group>"; };
+		14A04602187829CA004831E8 /* JSBNSManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSManagedObject.h; sourceTree = "<group>"; };
+		14A04603187829CA004831E8 /* JSBNSManagedObjectContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSManagedObjectContext.h; sourceTree = "<group>"; };
+		14A04604187829CA004831E8 /* JSBNSManagedObjectID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSManagedObjectID.h; sourceTree = "<group>"; };
+		14A04605187829CA004831E8 /* JSBNSManagedObjectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSManagedObjectModel.h; sourceTree = "<group>"; };
+		14A04606187829CA004831E8 /* JSBNSMappingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSMappingModel.h; sourceTree = "<group>"; };
+		14A04607187829CA004831E8 /* JSBNSMergeConflict.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSMergeConflict.h; sourceTree = "<group>"; };
+		14A04608187829CA004831E8 /* JSBNSMergePolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSMergePolicy.h; sourceTree = "<group>"; };
+		14A04609187829CA004831E8 /* JSBNSMigrationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSMigrationManager.h; sourceTree = "<group>"; };
+		14A0460A187829CA004831E8 /* JSBNSPersistentStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSPersistentStore.h; sourceTree = "<group>"; };
+		14A0460B187829CA004831E8 /* JSBNSPersistentStoreCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSPersistentStoreCoordinator.h; sourceTree = "<group>"; };
+		14A0460C187829CA004831E8 /* JSBNSPersistentStoreRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSPersistentStoreRequest.h; sourceTree = "<group>"; };
+		14A0460D187829CA004831E8 /* JSBNSPropertyDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSPropertyDescription.h; sourceTree = "<group>"; };
+		14A0460E187829CA004831E8 /* JSBNSPropertyMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSPropertyMapping.h; sourceTree = "<group>"; };
+		14A0460F187829CA004831E8 /* JSBNSRelationshipDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSRelationshipDescription.h; sourceTree = "<group>"; };
+		14A04610187829CA004831E8 /* JSBNSSaveChangesRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSSaveChangesRequest.h; sourceTree = "<group>"; };
+		14A04612187829CA004831E8 /* JSBCIColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCIColor.h; sourceTree = "<group>"; };
+		14A04613187829CA004831E8 /* JSBCIContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCIContext.h; sourceTree = "<group>"; };
+		14A04614187829CA004831E8 /* JSBCIDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCIDetector.h; sourceTree = "<group>"; };
+		14A04615187829CA004831E8 /* JSBCIFaceFeature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCIFaceFeature.h; sourceTree = "<group>"; };
+		14A04616187829CA004831E8 /* JSBCIFeature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCIFeature.h; sourceTree = "<group>"; };
+		14A04617187829CA004831E8 /* JSBCIFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCIFilter.h; sourceTree = "<group>"; };
+		14A04618187829CA004831E8 /* JSBCIImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCIImage.h; sourceTree = "<group>"; };
+		14A04619187829CA004831E8 /* JSBCIVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCIVector.h; sourceTree = "<group>"; };
+		14A0461A187829CA004831E8 /* JSBCoreImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCoreImage.h; sourceTree = "<group>"; };
+		14A0461B187829CA004831E8 /* JSBCoreImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBCoreImage.m; sourceTree = "<group>"; };
+		14A0461D187829CA004831E8 /* JSBCLBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCLBeacon.h; sourceTree = "<group>"; };
+		14A0461E187829CA004831E8 /* JSBCLBeaconRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCLBeaconRegion.h; sourceTree = "<group>"; };
+		14A0461F187829CA004831E8 /* JSBCLCircularRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCLCircularRegion.h; sourceTree = "<group>"; };
+		14A04620187829CA004831E8 /* JSBCLGeocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCLGeocoder.h; sourceTree = "<group>"; };
+		14A04621187829CA004831E8 /* JSBCLHeading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCLHeading.h; sourceTree = "<group>"; };
+		14A04622187829CA004831E8 /* JSBCLLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCLLocation.h; sourceTree = "<group>"; };
+		14A04623187829CA004831E8 /* JSBCLLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCLLocationManager.h; sourceTree = "<group>"; };
+		14A04624187829CA004831E8 /* JSBCLPlacemark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCLPlacemark.h; sourceTree = "<group>"; };
+		14A04625187829CA004831E8 /* JSBCLRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCLRegion.h; sourceTree = "<group>"; };
+		14A04626187829CA004831E8 /* JSBCoreLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCoreLocation.h; sourceTree = "<group>"; };
+		14A04627187829CA004831E8 /* JSBCoreLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBCoreLocation.m; sourceTree = "<group>"; };
+		14A04629187829CA004831E8 /* JSBCoreMIDI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCoreMIDI.h; sourceTree = "<group>"; };
+		14A0462A187829CA004831E8 /* JSBCoreMIDI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBCoreMIDI.m; sourceTree = "<group>"; };
+		14A0462B187829CA004831E8 /* JSBMIDINetworkConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMIDINetworkConnection.h; sourceTree = "<group>"; };
+		14A0462C187829CA004831E8 /* JSBMIDINetworkHost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMIDINetworkHost.h; sourceTree = "<group>"; };
+		14A0462D187829CA004831E8 /* JSBMIDINetworkSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMIDINetworkSession.h; sourceTree = "<group>"; };
+		14A0462F187829CA004831E8 /* JSBCMAccelerometerData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCMAccelerometerData.h; sourceTree = "<group>"; };
+		14A04630187829CA004831E8 /* JSBCMAttitude.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCMAttitude.h; sourceTree = "<group>"; };
+		14A04631187829CA004831E8 /* JSBCMDeviceMotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCMDeviceMotion.h; sourceTree = "<group>"; };
+		14A04632187829CA004831E8 /* JSBCMGyroData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCMGyroData.h; sourceTree = "<group>"; };
+		14A04633187829CA004831E8 /* JSBCMLogItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCMLogItem.h; sourceTree = "<group>"; };
+		14A04634187829CA004831E8 /* JSBCMMagnetometerData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCMMagnetometerData.h; sourceTree = "<group>"; };
+		14A04635187829CA004831E8 /* JSBCMMotionActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCMMotionActivity.h; sourceTree = "<group>"; };
+		14A04636187829CA004831E8 /* JSBCMMotionActivityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCMMotionActivityManager.h; sourceTree = "<group>"; };
+		14A04637187829CA004831E8 /* JSBCMMotionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCMMotionManager.h; sourceTree = "<group>"; };
+		14A04638187829CA004831E8 /* JSBCMStepCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCMStepCounter.h; sourceTree = "<group>"; };
+		14A04639187829CA004831E8 /* JSBCoreMotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCoreMotion.h; sourceTree = "<group>"; };
+		14A0463A187829CA004831E8 /* JSBCoreMotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBCoreMotion.m; sourceTree = "<group>"; };
+		14A0463C187829CA004831E8 /* JSBCTCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCTCall.h; sourceTree = "<group>"; };
+		14A0463D187829CA004831E8 /* JSBCTCallCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCTCallCenter.h; sourceTree = "<group>"; };
+		14A0463E187829CA004831E8 /* JSBCTCarrier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCTCarrier.h; sourceTree = "<group>"; };
+		14A0463F187829CA004831E8 /* JSBCTSubscriber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCTSubscriber.h; sourceTree = "<group>"; };
+		14A04640187829CA004831E8 /* JSBCTSubscriberInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCTSubscriberInfo.h; sourceTree = "<group>"; };
+		14A04641187829CA004831E8 /* JSBCTTelephonyNetworkInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCTTelephonyNetworkInfo.h; sourceTree = "<group>"; };
+		14A04642187829CA004831E8 /* JSBCoreTelephony.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCoreTelephony.h; sourceTree = "<group>"; };
+		14A04643187829CA004831E8 /* JSBCoreTelephony.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBCoreTelephony.m; sourceTree = "<group>"; };
+		14A04645187829CA004831E8 /* JSBEKAlarm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBEKAlarm.h; sourceTree = "<group>"; };
+		14A04646187829CA004831E8 /* JSBEKCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBEKCalendar.h; sourceTree = "<group>"; };
+		14A04647187829CA004831E8 /* JSBEKCalendarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBEKCalendarItem.h; sourceTree = "<group>"; };
+		14A04648187829CA004831E8 /* JSBEKEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBEKEvent.h; sourceTree = "<group>"; };
+		14A04649187829CA004831E8 /* JSBEKEventStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBEKEventStore.h; sourceTree = "<group>"; };
+		14A0464A187829CA004831E8 /* JSBEKObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBEKObject.h; sourceTree = "<group>"; };
+		14A0464B187829CA004831E8 /* JSBEKParticipant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBEKParticipant.h; sourceTree = "<group>"; };
+		14A0464C187829CA004831E8 /* JSBEKRecurrenceDayOfWeek.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBEKRecurrenceDayOfWeek.h; sourceTree = "<group>"; };
+		14A0464D187829CA004831E8 /* JSBEKRecurrenceEnd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBEKRecurrenceEnd.h; sourceTree = "<group>"; };
+		14A0464E187829CA004831E8 /* JSBEKRecurrenceRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBEKRecurrenceRule.h; sourceTree = "<group>"; };
+		14A0464F187829CA004831E8 /* JSBEKReminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBEKReminder.h; sourceTree = "<group>"; };
+		14A04650187829CA004831E8 /* JSBEKSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBEKSource.h; sourceTree = "<group>"; };
+		14A04651187829CA004831E8 /* JSBEKStructuredLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBEKStructuredLocation.h; sourceTree = "<group>"; };
+		14A04652187829CA004831E8 /* JSBEventKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBEventKit.h; sourceTree = "<group>"; };
+		14A04653187829CA004831E8 /* JSBEventKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBEventKit.m; sourceTree = "<group>"; };
+		14A04655187829CA004831E8 /* JSBEKCalendarChooser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBEKCalendarChooser.h; sourceTree = "<group>"; };
+		14A04656187829CA004831E8 /* JSBEKEventEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBEKEventEditViewController.h; sourceTree = "<group>"; };
+		14A04657187829CA004831E8 /* JSBEKEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBEKEventViewController.h; sourceTree = "<group>"; };
+		14A04658187829CA004831E8 /* JSBEventKitUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBEventKitUI.h; sourceTree = "<group>"; };
+		14A04659187829CA004831E8 /* JSBEventKitUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBEventKitUI.m; sourceTree = "<group>"; };
+		14A0465B187829CA004831E8 /* JSBFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBFoundation.h; sourceTree = "<group>"; };
+		14A0465C187829CA004831E8 /* JSBFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBFoundation.m; sourceTree = "<group>"; };
+		14A0465D187829CA004831E8 /* JSBNSArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSArray.h; sourceTree = "<group>"; };
+		14A0465E187829CA004831E8 /* JSBNSAssertionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSAssertionHandler.h; sourceTree = "<group>"; };
+		14A0465F187829CA004831E8 /* JSBNSAttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSAttributedString.h; sourceTree = "<group>"; };
+		14A04660187829CA004831E8 /* JSBNSBlockOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSBlockOperation.h; sourceTree = "<group>"; };
+		14A04661187829CA004831E8 /* JSBNSBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSBundle.h; sourceTree = "<group>"; };
+		14A04662187829CA004831E8 /* JSBNSByteCountFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSByteCountFormatter.h; sourceTree = "<group>"; };
+		14A04663187829CA004831E8 /* JSBNSCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSCache.h; sourceTree = "<group>"; };
+		14A04664187829CA004831E8 /* JSBNSCachedURLResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSCachedURLResponse.h; sourceTree = "<group>"; };
+		14A04665187829CA004831E8 /* JSBNSCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSCalendar.h; sourceTree = "<group>"; };
+		14A04666187829CA004831E8 /* JSBNSCharacterSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSCharacterSet.h; sourceTree = "<group>"; };
+		14A04667187829CA004831E8 /* JSBNSCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSCoder.h; sourceTree = "<group>"; };
+		14A04668187829CA004831E8 /* JSBNSComparisonPredicate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSComparisonPredicate.h; sourceTree = "<group>"; };
+		14A04669187829CA004831E8 /* JSBNSCompoundPredicate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSCompoundPredicate.h; sourceTree = "<group>"; };
+		14A0466A187829CA004831E8 /* JSBNSCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSCondition.h; sourceTree = "<group>"; };
+		14A0466B187829CA004831E8 /* JSBNSConditionLock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSConditionLock.h; sourceTree = "<group>"; };
+		14A0466C187829CA004831E8 /* JSBNSConstantString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSConstantString.h; sourceTree = "<group>"; };
+		14A0466D187829CA004831E8 /* JSBNSCountedSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSCountedSet.h; sourceTree = "<group>"; };
+		14A0466E187829CA004831E8 /* JSBNSData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSData.h; sourceTree = "<group>"; };
+		14A0466F187829CA004831E8 /* JSBNSDataDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSDataDetector.h; sourceTree = "<group>"; };
+		14A04670187829CA004831E8 /* JSBNSDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSDate.h; sourceTree = "<group>"; };
+		14A04671187829CA004831E8 /* JSBNSDateComponents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSDateComponents.h; sourceTree = "<group>"; };
+		14A04672187829CA004831E8 /* JSBNSDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSDateFormatter.h; sourceTree = "<group>"; };
+		14A04673187829CA004831E8 /* JSBNSDecimalNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSDecimalNumber.h; sourceTree = "<group>"; };
+		14A04674187829CA004831E8 /* JSBNSDecimalNumberHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSDecimalNumberHandler.h; sourceTree = "<group>"; };
+		14A04675187829CA004831E8 /* JSBNSDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSDictionary.h; sourceTree = "<group>"; };
+		14A04676187829CA004831E8 /* JSBNSDirectoryEnumerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSDirectoryEnumerator.h; sourceTree = "<group>"; };
+		14A04677187829CA004831E8 /* JSBNSEnumerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSEnumerator.h; sourceTree = "<group>"; };
+		14A04678187829CA004831E8 /* JSBNSError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSError.h; sourceTree = "<group>"; };
+		14A04679187829CA004831E8 /* JSBNSException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSException.h; sourceTree = "<group>"; };
+		14A0467A187829CA004831E8 /* JSBNSExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSExpression.h; sourceTree = "<group>"; };
+		14A0467B187829CA004831E8 /* JSBNSFileCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSFileCoordinator.h; sourceTree = "<group>"; };
+		14A0467C187829CA004831E8 /* JSBNSFileHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSFileHandle.h; sourceTree = "<group>"; };
+		14A0467D187829CA004831E8 /* JSBNSFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSFileManager.h; sourceTree = "<group>"; };
+		14A0467E187829CA004831E8 /* JSBNSFileSecurity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSFileSecurity.h; sourceTree = "<group>"; };
+		14A0467F187829CA004831E8 /* JSBNSFileVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSFileVersion.h; sourceTree = "<group>"; };
+		14A04680187829CA004831E8 /* JSBNSFileWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSFileWrapper.h; sourceTree = "<group>"; };
+		14A04681187829CA004831E8 /* JSBNSFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSFormatter.h; sourceTree = "<group>"; };
+		14A04682187829CA004831E8 /* JSBNSHTTPCookie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSHTTPCookie.h; sourceTree = "<group>"; };
+		14A04683187829CA004831E8 /* JSBNSHTTPCookieStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSHTTPCookieStorage.h; sourceTree = "<group>"; };
+		14A04684187829CA004831E8 /* JSBNSHTTPURLResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSHTTPURLResponse.h; sourceTree = "<group>"; };
+		14A04685187829CA004831E8 /* JSBNSHashTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSHashTable.h; sourceTree = "<group>"; };
+		14A04686187829CA004831E8 /* JSBNSIndexPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSIndexPath.h; sourceTree = "<group>"; };
+		14A04687187829CA004831E8 /* JSBNSIndexSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSIndexSet.h; sourceTree = "<group>"; };
+		14A04688187829CA004831E8 /* JSBNSInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSInputStream.h; sourceTree = "<group>"; };
+		14A04689187829CA004831E8 /* JSBNSInvocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSInvocation.h; sourceTree = "<group>"; };
+		14A0468A187829CA004831E8 /* JSBNSInvocationOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSInvocationOperation.h; sourceTree = "<group>"; };
+		14A0468B187829CA004831E8 /* JSBNSJSONSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSJSONSerialization.h; sourceTree = "<group>"; };
+		14A0468C187829CA004831E8 /* JSBNSKeyedArchiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSKeyedArchiver.h; sourceTree = "<group>"; };
+		14A0468D187829CA004831E8 /* JSBNSKeyedUnarchiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSKeyedUnarchiver.h; sourceTree = "<group>"; };
+		14A0468E187829CA004831E8 /* JSBNSLinguisticTagger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSLinguisticTagger.h; sourceTree = "<group>"; };
+		14A0468F187829CA004831E8 /* JSBNSLocale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSLocale.h; sourceTree = "<group>"; };
+		14A04690187829CA004831E8 /* JSBNSLock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSLock.h; sourceTree = "<group>"; };
+		14A04691187829CA004831E8 /* JSBNSMachPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSMachPort.h; sourceTree = "<group>"; };
+		14A04692187829CA004831E8 /* JSBNSMapTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSMapTable.h; sourceTree = "<group>"; };
+		14A04693187829CA004831E8 /* JSBNSMessagePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSMessagePort.h; sourceTree = "<group>"; };
+		14A04694187829CA004831E8 /* JSBNSMetadataItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSMetadataItem.h; sourceTree = "<group>"; };
+		14A04695187829CA004831E8 /* JSBNSMetadataQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSMetadataQuery.h; sourceTree = "<group>"; };
+		14A04696187829CA004831E8 /* JSBNSMetadataQueryAttributeValueTuple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSMetadataQueryAttributeValueTuple.h; sourceTree = "<group>"; };
+		14A04697187829CA004831E8 /* JSBNSMetadataQueryResultGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSMetadataQueryResultGroup.h; sourceTree = "<group>"; };
+		14A04698187829CA004831E8 /* JSBNSMethodSignature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSMethodSignature.h; sourceTree = "<group>"; };
+		14A04699187829CA004831E8 /* JSBNSMutableArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSMutableArray.h; sourceTree = "<group>"; };
+		14A0469A187829CA004831E8 /* JSBNSMutableAttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSMutableAttributedString.h; sourceTree = "<group>"; };
+		14A0469B187829CA004831E8 /* JSBNSMutableCharacterSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSMutableCharacterSet.h; sourceTree = "<group>"; };
+		14A0469C187829CA004831E8 /* JSBNSMutableData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSMutableData.h; sourceTree = "<group>"; };
+		14A0469D187829CA004831E8 /* JSBNSMutableDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSMutableDictionary.h; sourceTree = "<group>"; };
+		14A0469E187829CA004831E8 /* JSBNSMutableIndexSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSMutableIndexSet.h; sourceTree = "<group>"; };
+		14A0469F187829CA004831E8 /* JSBNSMutableOrderedSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSMutableOrderedSet.h; sourceTree = "<group>"; };
+		14A046A0187829CA004831E8 /* JSBNSMutableSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSMutableSet.h; sourceTree = "<group>"; };
+		14A046A1187829CA004831E8 /* JSBNSMutableString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSMutableString.h; sourceTree = "<group>"; };
+		14A046A2187829CA004831E8 /* JSBNSMutableURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSMutableURLRequest.h; sourceTree = "<group>"; };
+		14A046A3187829CA004831E8 /* JSBNSNetService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSNetService.h; sourceTree = "<group>"; };
+		14A046A4187829CA004831E8 /* JSBNSNetServiceBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSNetServiceBrowser.h; sourceTree = "<group>"; };
+		14A046A5187829CA004831E8 /* JSBNSNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSNotification.h; sourceTree = "<group>"; };
+		14A046A6187829CA004831E8 /* JSBNSNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSNotificationCenter.h; sourceTree = "<group>"; };
+		14A046A7187829CA004831E8 /* JSBNSNotificationQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSNotificationQueue.h; sourceTree = "<group>"; };
+		14A046A8187829CA004831E8 /* JSBNSNull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSNull.h; sourceTree = "<group>"; };
+		14A046A9187829CA004831E8 /* JSBNSNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSNumber.h; sourceTree = "<group>"; };
+		14A046AA187829CA004831E8 /* JSBNSNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSNumberFormatter.h; sourceTree = "<group>"; };
+		14A046AB187829CA004831E8 /* JSBNSOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSOperation.h; sourceTree = "<group>"; };
+		14A046AC187829CA004831E8 /* JSBNSOperationQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSOperationQueue.h; sourceTree = "<group>"; };
+		14A046AD187829CA004831E8 /* JSBNSOrderedSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSOrderedSet.h; sourceTree = "<group>"; };
+		14A046AE187829CA004831E8 /* JSBNSOrthography.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSOrthography.h; sourceTree = "<group>"; };
+		14A046AF187829CA004831E8 /* JSBNSOutputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSOutputStream.h; sourceTree = "<group>"; };
+		14A046B0187829CA004831E8 /* JSBNSPipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSPipe.h; sourceTree = "<group>"; };
+		14A046B1187829CA004831E8 /* JSBNSPointerArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSPointerArray.h; sourceTree = "<group>"; };
+		14A046B2187829CA004831E8 /* JSBNSPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSPort.h; sourceTree = "<group>"; };
+		14A046B3187829CA004831E8 /* JSBNSPredicate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSPredicate.h; sourceTree = "<group>"; };
+		14A046B4187829CA004831E8 /* JSBNSProcessInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSProcessInfo.h; sourceTree = "<group>"; };
+		14A046B5187829CA004831E8 /* JSBNSProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSProgress.h; sourceTree = "<group>"; };
+		14A046B6187829CA004831E8 /* JSBNSPropertyListSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSPropertyListSerialization.h; sourceTree = "<group>"; };
+		14A046B7187829CA004831E8 /* JSBNSProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSProxy.h; sourceTree = "<group>"; };
+		14A046B8187829CA004831E8 /* JSBNSPurgeableData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSPurgeableData.h; sourceTree = "<group>"; };
+		14A046B9187829CA004831E8 /* JSBNSRecursiveLock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSRecursiveLock.h; sourceTree = "<group>"; };
+		14A046BA187829CA004831E8 /* JSBNSRegularExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSRegularExpression.h; sourceTree = "<group>"; };
+		14A046BB187829CA004831E8 /* JSBNSRunLoop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSRunLoop.h; sourceTree = "<group>"; };
+		14A046BC187829CA004831E8 /* JSBNSScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSScanner.h; sourceTree = "<group>"; };
+		14A046BD187829CA004831E8 /* JSBNSSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSSet.h; sourceTree = "<group>"; };
+		14A046BE187829CA004831E8 /* JSBNSSimpleCString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSSimpleCString.h; sourceTree = "<group>"; };
+		14A046BF187829CA004831E8 /* JSBNSSortDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSSortDescriptor.h; sourceTree = "<group>"; };
+		14A046C0187829CA004831E8 /* JSBNSStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSStream.h; sourceTree = "<group>"; };
+		14A046C1187829CA004831E8 /* JSBNSString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSString.h; sourceTree = "<group>"; };
+		14A046C2187829CA004831E8 /* JSBNSTextCheckingResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSTextCheckingResult.h; sourceTree = "<group>"; };
+		14A046C3187829CA004831E8 /* JSBNSThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSThread.h; sourceTree = "<group>"; };
+		14A046C4187829CA004831E8 /* JSBNSTimeZone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSTimeZone.h; sourceTree = "<group>"; };
+		14A046C5187829CA004831E8 /* JSBNSTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSTimer.h; sourceTree = "<group>"; };
+		14A046C6187829CA004831E8 /* JSBNSURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSURL.h; sourceTree = "<group>"; };
+		14A046C7187829CA004831E8 /* JSBNSURLAuthenticationChallenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSURLAuthenticationChallenge.h; sourceTree = "<group>"; };
+		14A046C8187829CA004831E8 /* JSBNSURLCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSURLCache.h; sourceTree = "<group>"; };
+		14A046C9187829CA004831E8 /* JSBNSURLComponents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSURLComponents.h; sourceTree = "<group>"; };
+		14A046CA187829CA004831E8 /* JSBNSURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSURLConnection.h; sourceTree = "<group>"; };
+		14A046CB187829CA004831E8 /* JSBNSURLCredential.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSURLCredential.h; sourceTree = "<group>"; };
+		14A046CC187829CA004831E8 /* JSBNSURLCredentialStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSURLCredentialStorage.h; sourceTree = "<group>"; };
+		14A046CD187829CA004831E8 /* JSBNSURLProtectionSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSURLProtectionSpace.h; sourceTree = "<group>"; };
+		14A046CE187829CA004831E8 /* JSBNSURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSURLProtocol.h; sourceTree = "<group>"; };
+		14A046CF187829CA004831E8 /* JSBNSURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSURLRequest.h; sourceTree = "<group>"; };
+		14A046D0187829CA004831E8 /* JSBNSURLResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSURLResponse.h; sourceTree = "<group>"; };
+		14A046D1187829CA004831E8 /* JSBNSURLSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSURLSession.h; sourceTree = "<group>"; };
+		14A046D2187829CA004831E8 /* JSBNSURLSessionConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSURLSessionConfiguration.h; sourceTree = "<group>"; };
+		14A046D3187829CA004831E8 /* JSBNSURLSessionDataTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSURLSessionDataTask.h; sourceTree = "<group>"; };
+		14A046D4187829CA004831E8 /* JSBNSURLSessionDownloadTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSURLSessionDownloadTask.h; sourceTree = "<group>"; };
+		14A046D5187829CA004831E8 /* JSBNSURLSessionTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSURLSessionTask.h; sourceTree = "<group>"; };
+		14A046D6187829CA004831E8 /* JSBNSURLSessionUploadTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSURLSessionUploadTask.h; sourceTree = "<group>"; };
+		14A046D7187829CA004831E8 /* JSBNSUUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSUUID.h; sourceTree = "<group>"; };
+		14A046D8187829CA004831E8 /* JSBNSUbiquitousKeyValueStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSUbiquitousKeyValueStore.h; sourceTree = "<group>"; };
+		14A046D9187829CA004831E8 /* JSBNSUndoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSUndoManager.h; sourceTree = "<group>"; };
+		14A046DA187829CA004831E8 /* JSBNSUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSUserDefaults.h; sourceTree = "<group>"; };
+		14A046DB187829CA004831E8 /* JSBNSValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSValue.h; sourceTree = "<group>"; };
+		14A046DC187829CA004831E8 /* JSBNSValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSValueTransformer.h; sourceTree = "<group>"; };
+		14A046DD187829CA004831E8 /* JSBNSXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSXMLParser.h; sourceTree = "<group>"; };
+		14A046DF187829CA004831E8 /* JSBGKAchievement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBGKAchievement.h; sourceTree = "<group>"; };
+		14A046E0187829CA004831E8 /* JSBGKAchievementChallenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBGKAchievementChallenge.h; sourceTree = "<group>"; };
+		14A046E1187829CA004831E8 /* JSBGKAchievementDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBGKAchievementDescription.h; sourceTree = "<group>"; };
+		14A046E2187829CA004831E8 /* JSBGKAchievementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBGKAchievementViewController.h; sourceTree = "<group>"; };
+		14A046E3187829CA004831E8 /* JSBGKChallenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBGKChallenge.h; sourceTree = "<group>"; };
+		14A046E4187829CA004831E8 /* JSBGKChallengeEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBGKChallengeEventHandler.h; sourceTree = "<group>"; };
+		14A046E5187829CA004831E8 /* JSBGKFriendRequestComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBGKFriendRequestComposeViewController.h; sourceTree = "<group>"; };
+		14A046E6187829CA004831E8 /* JSBGKGameCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBGKGameCenterViewController.h; sourceTree = "<group>"; };
+		14A046E7187829CA004831E8 /* JSBGKInvite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBGKInvite.h; sourceTree = "<group>"; };
+		14A046E8187829CA004831E8 /* JSBGKLeaderboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBGKLeaderboard.h; sourceTree = "<group>"; };
+		14A046E9187829CA004831E8 /* JSBGKLeaderboardSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBGKLeaderboardSet.h; sourceTree = "<group>"; };
+		14A046EA187829CA004831E8 /* JSBGKLeaderboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBGKLeaderboardViewController.h; sourceTree = "<group>"; };
+		14A046EB187829CA004831E8 /* JSBGKLocalPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBGKLocalPlayer.h; sourceTree = "<group>"; };
+		14A046EC187829CA004831E8 /* JSBGKMatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBGKMatch.h; sourceTree = "<group>"; };
+		14A046ED187829CA004831E8 /* JSBGKMatchRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBGKMatchRequest.h; sourceTree = "<group>"; };
+		14A046EE187829CA004831E8 /* JSBGKMatchmaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBGKMatchmaker.h; sourceTree = "<group>"; };
+		14A046EF187829CA004831E8 /* JSBGKMatchmakerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBGKMatchmakerViewController.h; sourceTree = "<group>"; };
+		14A046F0187829CA004831E8 /* JSBGKNotificationBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBGKNotificationBanner.h; sourceTree = "<group>"; };
+		14A046F1187829CA004831E8 /* JSBGKPeerPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBGKPeerPickerController.h; sourceTree = "<group>"; };
+		14A046F2187829CA004831E8 /* JSBGKPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBGKPlayer.h; sourceTree = "<group>"; };
+		14A046F3187829CA004831E8 /* JSBGKScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBGKScore.h; sourceTree = "<group>"; };
+		14A046F4187829CA004831E8 /* JSBGKScoreChallenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBGKScoreChallenge.h; sourceTree = "<group>"; };
+		14A046F5187829CB004831E8 /* JSBGKSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBGKSession.h; sourceTree = "<group>"; };
+		14A046F6187829CB004831E8 /* JSBGKTurnBasedEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBGKTurnBasedEventHandler.h; sourceTree = "<group>"; };
+		14A046F7187829CB004831E8 /* JSBGKTurnBasedExchange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBGKTurnBasedExchange.h; sourceTree = "<group>"; };
+		14A046F8187829CB004831E8 /* JSBGKTurnBasedExchangeReply.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBGKTurnBasedExchangeReply.h; sourceTree = "<group>"; };
+		14A046F9187829CB004831E8 /* JSBGKTurnBasedMatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBGKTurnBasedMatch.h; sourceTree = "<group>"; };
+		14A046FA187829CB004831E8 /* JSBGKTurnBasedMatchmakerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBGKTurnBasedMatchmakerViewController.h; sourceTree = "<group>"; };
+		14A046FB187829CB004831E8 /* JSBGKTurnBasedParticipant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBGKTurnBasedParticipant.h; sourceTree = "<group>"; };
+		14A046FC187829CB004831E8 /* JSBGKVoiceChat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBGKVoiceChat.h; sourceTree = "<group>"; };
+		14A046FD187829CB004831E8 /* JSBGKVoiceChatService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBGKVoiceChatService.h; sourceTree = "<group>"; };
+		14A046FE187829CB004831E8 /* JSBGameKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBGameKit.h; sourceTree = "<group>"; };
+		14A046FF187829CB004831E8 /* JSBGameKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBGameKit.m; sourceTree = "<group>"; };
+		14A04701187829CB004831E8 /* JSBJSContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBJSContext.h; sourceTree = "<group>"; };
+		14A04702187829CB004831E8 /* JSBJSManagedValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBJSManagedValue.h; sourceTree = "<group>"; };
+		14A04703187829CB004831E8 /* JSBJSVirtualMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBJSVirtualMachine.h; sourceTree = "<group>"; };
+		14A04704187829CB004831E8 /* JSBJavaScriptCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBJavaScriptCore.h; sourceTree = "<group>"; };
+		14A04705187829CB004831E8 /* JSBJavaScriptCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBJavaScriptCore.m; sourceTree = "<group>"; };
+		14A04707187829CB004831E8 /* JSBMKAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKAnnotationView.h; sourceTree = "<group>"; };
+		14A04708187829CB004831E8 /* JSBMKCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKCircle.h; sourceTree = "<group>"; };
+		14A04709187829CB004831E8 /* JSBMKCircleRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKCircleRenderer.h; sourceTree = "<group>"; };
+		14A0470A187829CB004831E8 /* JSBMKCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKCircleView.h; sourceTree = "<group>"; };
+		14A0470B187829CB004831E8 /* JSBMKDirections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKDirections.h; sourceTree = "<group>"; };
+		14A0470C187829CB004831E8 /* JSBMKDirectionsRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKDirectionsRequest.h; sourceTree = "<group>"; };
+		14A0470D187829CB004831E8 /* JSBMKDirectionsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKDirectionsResponse.h; sourceTree = "<group>"; };
+		14A0470E187829CB004831E8 /* JSBMKDistanceFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKDistanceFormatter.h; sourceTree = "<group>"; };
+		14A0470F187829CB004831E8 /* JSBMKETAResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKETAResponse.h; sourceTree = "<group>"; };
+		14A04710187829CB004831E8 /* JSBMKGeodesicPolyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKGeodesicPolyline.h; sourceTree = "<group>"; };
+		14A04711187829CB004831E8 /* JSBMKLocalSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKLocalSearch.h; sourceTree = "<group>"; };
+		14A04712187829CB004831E8 /* JSBMKLocalSearchRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKLocalSearchRequest.h; sourceTree = "<group>"; };
+		14A04713187829CB004831E8 /* JSBMKLocalSearchResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKLocalSearchResponse.h; sourceTree = "<group>"; };
+		14A04714187829CB004831E8 /* JSBMKMapCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKMapCamera.h; sourceTree = "<group>"; };
+		14A04715187829CB004831E8 /* JSBMKMapItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKMapItem.h; sourceTree = "<group>"; };
+		14A04716187829CB004831E8 /* JSBMKMapSnapshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKMapSnapshot.h; sourceTree = "<group>"; };
+		14A04717187829CB004831E8 /* JSBMKMapSnapshotOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKMapSnapshotOptions.h; sourceTree = "<group>"; };
+		14A04718187829CB004831E8 /* JSBMKMapSnapshotter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKMapSnapshotter.h; sourceTree = "<group>"; };
+		14A04719187829CB004831E8 /* JSBMKMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKMapView.h; sourceTree = "<group>"; };
+		14A0471A187829CB004831E8 /* JSBMKMultiPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKMultiPoint.h; sourceTree = "<group>"; };
+		14A0471B187829CB004831E8 /* JSBMKOverlayPathRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKOverlayPathRenderer.h; sourceTree = "<group>"; };
+		14A0471C187829CB004831E8 /* JSBMKOverlayPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKOverlayPathView.h; sourceTree = "<group>"; };
+		14A0471D187829CB004831E8 /* JSBMKOverlayRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKOverlayRenderer.h; sourceTree = "<group>"; };
+		14A0471E187829CB004831E8 /* JSBMKOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKOverlayView.h; sourceTree = "<group>"; };
+		14A0471F187829CB004831E8 /* JSBMKPinAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKPinAnnotationView.h; sourceTree = "<group>"; };
+		14A04720187829CB004831E8 /* JSBMKPlacemark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKPlacemark.h; sourceTree = "<group>"; };
+		14A04721187829CB004831E8 /* JSBMKPointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKPointAnnotation.h; sourceTree = "<group>"; };
+		14A04722187829CB004831E8 /* JSBMKPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKPolygon.h; sourceTree = "<group>"; };
+		14A04723187829CB004831E8 /* JSBMKPolygonRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKPolygonRenderer.h; sourceTree = "<group>"; };
+		14A04724187829CB004831E8 /* JSBMKPolygonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKPolygonView.h; sourceTree = "<group>"; };
+		14A04725187829CB004831E8 /* JSBMKPolyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKPolyline.h; sourceTree = "<group>"; };
+		14A04726187829CB004831E8 /* JSBMKPolylineRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKPolylineRenderer.h; sourceTree = "<group>"; };
+		14A04727187829CB004831E8 /* JSBMKPolylineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKPolylineView.h; sourceTree = "<group>"; };
+		14A04728187829CB004831E8 /* JSBMKReverseGeocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKReverseGeocoder.h; sourceTree = "<group>"; };
+		14A04729187829CB004831E8 /* JSBMKRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKRoute.h; sourceTree = "<group>"; };
+		14A0472A187829CB004831E8 /* JSBMKRouteStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKRouteStep.h; sourceTree = "<group>"; };
+		14A0472B187829CB004831E8 /* JSBMKShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKShape.h; sourceTree = "<group>"; };
+		14A0472C187829CB004831E8 /* JSBMKTileOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKTileOverlay.h; sourceTree = "<group>"; };
+		14A0472D187829CB004831E8 /* JSBMKTileOverlayRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKTileOverlayRenderer.h; sourceTree = "<group>"; };
+		14A0472E187829CB004831E8 /* JSBMKUserLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKUserLocation.h; sourceTree = "<group>"; };
+		14A0472F187829CB004831E8 /* JSBMKUserTrackingBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMKUserTrackingBarButtonItem.h; sourceTree = "<group>"; };
+		14A04730187829CB004831E8 /* JSBMapKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMapKit.h; sourceTree = "<group>"; };
+		14A04731187829CB004831E8 /* JSBMapKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBMapKit.m; sourceTree = "<group>"; };
+		14A04733187829CB004831E8 /* JSBMPMediaEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMPMediaEntity.h; sourceTree = "<group>"; };
+		14A04734187829CB004831E8 /* JSBMPMediaItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMPMediaItem.h; sourceTree = "<group>"; };
+		14A04735187829CB004831E8 /* JSBMPMediaItemArtwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMPMediaItemArtwork.h; sourceTree = "<group>"; };
+		14A04736187829CB004831E8 /* JSBMPMediaItemCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMPMediaItemCollection.h; sourceTree = "<group>"; };
+		14A04737187829CB004831E8 /* JSBMPMediaLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMPMediaLibrary.h; sourceTree = "<group>"; };
+		14A04738187829CB004831E8 /* JSBMPMediaPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMPMediaPickerController.h; sourceTree = "<group>"; };
+		14A04739187829CB004831E8 /* JSBMPMediaPlaylist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMPMediaPlaylist.h; sourceTree = "<group>"; };
+		14A0473A187829CB004831E8 /* JSBMPMediaPredicate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMPMediaPredicate.h; sourceTree = "<group>"; };
+		14A0473B187829CB004831E8 /* JSBMPMediaPropertyPredicate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMPMediaPropertyPredicate.h; sourceTree = "<group>"; };
+		14A0473C187829CB004831E8 /* JSBMPMediaQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMPMediaQuery.h; sourceTree = "<group>"; };
+		14A0473D187829CB004831E8 /* JSBMPMediaQuerySection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMPMediaQuerySection.h; sourceTree = "<group>"; };
+		14A0473E187829CB004831E8 /* JSBMPMovieAccessLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMPMovieAccessLog.h; sourceTree = "<group>"; };
+		14A0473F187829CB004831E8 /* JSBMPMovieAccessLogEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMPMovieAccessLogEvent.h; sourceTree = "<group>"; };
+		14A04740187829CB004831E8 /* JSBMPMovieErrorLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMPMovieErrorLog.h; sourceTree = "<group>"; };
+		14A04741187829CB004831E8 /* JSBMPMovieErrorLogEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMPMovieErrorLogEvent.h; sourceTree = "<group>"; };
+		14A04742187829CB004831E8 /* JSBMPMoviePlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMPMoviePlayerController.h; sourceTree = "<group>"; };
+		14A04743187829CB004831E8 /* JSBMPMoviePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMPMoviePlayerViewController.h; sourceTree = "<group>"; };
+		14A04744187829CB004831E8 /* JSBMPMusicPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMPMusicPlayerController.h; sourceTree = "<group>"; };
+		14A04745187829CB004831E8 /* JSBMPNowPlayingInfoCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMPNowPlayingInfoCenter.h; sourceTree = "<group>"; };
+		14A04746187829CB004831E8 /* JSBMPTimedMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMPTimedMetadata.h; sourceTree = "<group>"; };
+		14A04747187829CB004831E8 /* JSBMPVolumeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMPVolumeView.h; sourceTree = "<group>"; };
+		14A04748187829CB004831E8 /* JSBMediaPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMediaPlayer.h; sourceTree = "<group>"; };
+		14A04749187829CB004831E8 /* JSBMediaPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBMediaPlayer.m; sourceTree = "<group>"; };
+		14A0474B187829CB004831E8 /* JSBMFMailComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMFMailComposeViewController.h; sourceTree = "<group>"; };
+		14A0474C187829CB004831E8 /* JSBMFMessageComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMFMessageComposeViewController.h; sourceTree = "<group>"; };
+		14A0474D187829CB004831E8 /* JSBMessageUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMessageUI.h; sourceTree = "<group>"; };
+		14A0474E187829CB004831E8 /* JSBMessageUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBMessageUI.m; sourceTree = "<group>"; };
+		14A04750187829CB004831E8 /* JSBMCAdvertiserAssistant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMCAdvertiserAssistant.h; sourceTree = "<group>"; };
+		14A04751187829CB004831E8 /* JSBMCBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMCBrowserViewController.h; sourceTree = "<group>"; };
+		14A04752187829CB004831E8 /* JSBMCNearbyServiceAdvertiser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMCNearbyServiceAdvertiser.h; sourceTree = "<group>"; };
+		14A04753187829CB004831E8 /* JSBMCNearbyServiceBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMCNearbyServiceBrowser.h; sourceTree = "<group>"; };
+		14A04754187829CB004831E8 /* JSBMCPeerID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMCPeerID.h; sourceTree = "<group>"; };
+		14A04755187829CB004831E8 /* JSBMCSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMCSession.h; sourceTree = "<group>"; };
+		14A04756187829CB004831E8 /* JSBMultipeerConnectivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMultipeerConnectivity.h; sourceTree = "<group>"; };
+		14A04757187829CB004831E8 /* JSBMultipeerConnectivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBMultipeerConnectivity.m; sourceTree = "<group>"; };
+		14A04759187829CB004831E8 /* JSBEAGLContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBEAGLContext.h; sourceTree = "<group>"; };
+		14A0475A187829CB004831E8 /* JSBEAGLSharegroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBEAGLSharegroup.h; sourceTree = "<group>"; };
+		14A0475B187829CB004831E8 /* JSBOpenGLES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBOpenGLES.h; sourceTree = "<group>"; };
+		14A0475C187829CB004831E8 /* JSBOpenGLES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBOpenGLES.m; sourceTree = "<group>"; };
+		14A0475E187829CB004831E8 /* JSBPKAddPassesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBPKAddPassesViewController.h; sourceTree = "<group>"; };
+		14A0475F187829CB004831E8 /* JSBPKPass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBPKPass.h; sourceTree = "<group>"; };
+		14A04760187829CB004831E8 /* JSBPKPassLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBPKPassLibrary.h; sourceTree = "<group>"; };
+		14A04761187829CB004831E8 /* JSBPassKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBPassKit.h; sourceTree = "<group>"; };
+		14A04762187829CB004831E8 /* JSBPassKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBPassKit.m; sourceTree = "<group>"; };
+		14A04764187829CB004831E8 /* JSBCAAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCAAnimation.h; sourceTree = "<group>"; };
+		14A04765187829CB004831E8 /* JSBCAAnimationGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCAAnimationGroup.h; sourceTree = "<group>"; };
+		14A04766187829CB004831E8 /* JSBCABasicAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCABasicAnimation.h; sourceTree = "<group>"; };
+		14A04767187829CB004831E8 /* JSBCADisplayLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCADisplayLink.h; sourceTree = "<group>"; };
+		14A04768187829CB004831E8 /* JSBCAEAGLLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCAEAGLLayer.h; sourceTree = "<group>"; };
+		14A04769187829CB004831E8 /* JSBCAEmitterBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCAEmitterBehavior.h; sourceTree = "<group>"; };
+		14A0476A187829CB004831E8 /* JSBCAEmitterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCAEmitterCell.h; sourceTree = "<group>"; };
+		14A0476B187829CB004831E8 /* JSBCAEmitterLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCAEmitterLayer.h; sourceTree = "<group>"; };
+		14A0476C187829CB004831E8 /* JSBCAGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCAGradientLayer.h; sourceTree = "<group>"; };
+		14A0476D187829CB004831E8 /* JSBCAKeyframeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCAKeyframeAnimation.h; sourceTree = "<group>"; };
+		14A0476E187829CB004831E8 /* JSBCALayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCALayer.h; sourceTree = "<group>"; };
+		14A0476F187829CB004831E8 /* JSBCAMediaTimingFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCAMediaTimingFunction.h; sourceTree = "<group>"; };
+		14A04770187829CB004831E8 /* JSBCAPropertyAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCAPropertyAnimation.h; sourceTree = "<group>"; };
+		14A04771187829CB004831E8 /* JSBCAReplicatorLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCAReplicatorLayer.h; sourceTree = "<group>"; };
+		14A04772187829CB004831E8 /* JSBCAScrollLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCAScrollLayer.h; sourceTree = "<group>"; };
+		14A04773187829CB004831E8 /* JSBCAShapeLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCAShapeLayer.h; sourceTree = "<group>"; };
+		14A04774187829CB004831E8 /* JSBCATextLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCATextLayer.h; sourceTree = "<group>"; };
+		14A04775187829CB004831E8 /* JSBCATiledLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCATiledLayer.h; sourceTree = "<group>"; };
+		14A04776187829CB004831E8 /* JSBCATransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCATransaction.h; sourceTree = "<group>"; };
+		14A04777187829CB004831E8 /* JSBCATransformLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCATransformLayer.h; sourceTree = "<group>"; };
+		14A04778187829CB004831E8 /* JSBCATransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCATransition.h; sourceTree = "<group>"; };
+		14A04779187829CB004831E8 /* JSBCAValueFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBCAValueFunction.h; sourceTree = "<group>"; };
+		14A0477A187829CB004831E8 /* JSBQuartzCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBQuartzCore.h; sourceTree = "<group>"; };
+		14A0477B187829CB004831E8 /* JSBQuartzCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBQuartzCore.m; sourceTree = "<group>"; };
+		14A0477D187829CB004831E8 /* JSBQLPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBQLPreviewController.h; sourceTree = "<group>"; };
+		14A0477E187829CB004831E8 /* JSBQuickLook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBQuickLook.h; sourceTree = "<group>"; };
+		14A0477F187829CB004831E8 /* JSBQuickLook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBQuickLook.m; sourceTree = "<group>"; };
+		14A04781187829CB004831E8 /* JSBSSReadingList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSSReadingList.h; sourceTree = "<group>"; };
+		14A04782187829CB004831E8 /* JSBSafariServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSafariServices.h; sourceTree = "<group>"; };
+		14A04783187829CB004831E8 /* JSBSafariServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBSafariServices.m; sourceTree = "<group>"; };
+		14A04785187829CB004831E8 /* JSBSLComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSLComposeViewController.h; sourceTree = "<group>"; };
+		14A04786187829CB004831E8 /* JSBSLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSLRequest.h; sourceTree = "<group>"; };
+		14A04787187829CB004831E8 /* JSBSocial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSocial.h; sourceTree = "<group>"; };
+		14A04788187829CB004831E8 /* JSBSocial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBSocial.m; sourceTree = "<group>"; };
+		14A0478A187829CB004831E8 /* JSBSKDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKDownload.h; sourceTree = "<group>"; };
+		14A0478B187829CB004831E8 /* JSBSKMutablePayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKMutablePayment.h; sourceTree = "<group>"; };
+		14A0478C187829CB004831E8 /* JSBSKPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKPayment.h; sourceTree = "<group>"; };
+		14A0478D187829CB004831E8 /* JSBSKPaymentQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKPaymentQueue.h; sourceTree = "<group>"; };
+		14A0478E187829CB004831E8 /* JSBSKPaymentTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKPaymentTransaction.h; sourceTree = "<group>"; };
+		14A0478F187829CB004831E8 /* JSBSKProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKProduct.h; sourceTree = "<group>"; };
+		14A04790187829CB004831E8 /* JSBSKProductsRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKProductsRequest.h; sourceTree = "<group>"; };
+		14A04791187829CB004831E8 /* JSBSKProductsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKProductsResponse.h; sourceTree = "<group>"; };
+		14A04792187829CB004831E8 /* JSBSKReceiptRefreshRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKReceiptRefreshRequest.h; sourceTree = "<group>"; };
+		14A04793187829CB004831E8 /* JSBSKRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKRequest.h; sourceTree = "<group>"; };
+		14A04794187829CB004831E8 /* JSBSKStoreProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKStoreProductViewController.h; sourceTree = "<group>"; };
+		14A04795187829CB004831E8 /* JSBStoreKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBStoreKit.h; sourceTree = "<group>"; };
+		14A04796187829CB004831E8 /* JSBStoreKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBStoreKit.m; sourceTree = "<group>"; };
+		14A04798187829CB004831E8 /* JSBTWRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBTWRequest.h; sourceTree = "<group>"; };
+		14A04799187829CB004831E8 /* JSBTWTweetComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBTWTweetComposeViewController.h; sourceTree = "<group>"; };
+		14A0479A187829CB004831E8 /* JSBTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBTwitter.h; sourceTree = "<group>"; };
+		14A0479B187829CB004831E8 /* JSBTwitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBTwitter.m; sourceTree = "<group>"; };
+		14A0479D187829CB004831E8 /* JSBNSLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSLayoutConstraint.h; sourceTree = "<group>"; };
+		14A0479E187829CB004831E8 /* JSBNSLayoutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSLayoutManager.h; sourceTree = "<group>"; };
+		14A0479F187829CB004831E8 /* JSBNSMutableParagraphStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSMutableParagraphStyle.h; sourceTree = "<group>"; };
+		14A047A0187829CB004831E8 /* JSBNSParagraphStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSParagraphStyle.h; sourceTree = "<group>"; };
+		14A047A1187829CB004831E8 /* JSBNSShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSShadow.h; sourceTree = "<group>"; };
+		14A047A2187829CB004831E8 /* JSBNSStringDrawingContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSStringDrawingContext.h; sourceTree = "<group>"; };
+		14A047A3187829CB004831E8 /* JSBNSTextAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSTextAttachment.h; sourceTree = "<group>"; };
+		14A047A4187829CB004831E8 /* JSBNSTextContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSTextContainer.h; sourceTree = "<group>"; };
+		14A047A5187829CB004831E8 /* JSBNSTextStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSTextStorage.h; sourceTree = "<group>"; };
+		14A047A6187829CB004831E8 /* JSBNSTextTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBNSTextTab.h; sourceTree = "<group>"; };
+		14A047A7187829CB004831E8 /* JSBUIAcceleration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIAcceleration.h; sourceTree = "<group>"; };
+		14A047A8187829CB004831E8 /* JSBUIAccelerometer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIAccelerometer.h; sourceTree = "<group>"; };
+		14A047A9187829CB004831E8 /* JSBUIAccessibilityElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIAccessibilityElement.h; sourceTree = "<group>"; };
+		14A047AA187829CB004831E8 /* JSBUIActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIActionSheet.h; sourceTree = "<group>"; };
+		14A047AB187829CB004831E8 /* JSBUIActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIActivity.h; sourceTree = "<group>"; };
+		14A047AC187829CB004831E8 /* JSBUIActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIActivityIndicatorView.h; sourceTree = "<group>"; };
+		14A047AD187829CB004831E8 /* JSBUIActivityItemProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIActivityItemProvider.h; sourceTree = "<group>"; };
+		14A047AE187829CB004831E8 /* JSBUIActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIActivityViewController.h; sourceTree = "<group>"; };
+		14A047AF187829CB004831E8 /* JSBUIAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIAlertView.h; sourceTree = "<group>"; };
+		14A047B0187829CB004831E8 /* JSBUIApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIApplication.h; sourceTree = "<group>"; };
+		14A047B1187829CB004831E8 /* JSBUIAttachmentBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIAttachmentBehavior.h; sourceTree = "<group>"; };
+		14A047B2187829CB004831E8 /* JSBUIBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIBarButtonItem.h; sourceTree = "<group>"; };
+		14A047B3187829CB004831E8 /* JSBUIBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIBarItem.h; sourceTree = "<group>"; };
+		14A047B4187829CB004831E8 /* JSBUIBezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIBezierPath.h; sourceTree = "<group>"; };
+		14A047B5187829CB004831E8 /* JSBUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIButton.h; sourceTree = "<group>"; };
+		14A047B6187829CB004831E8 /* JSBUICollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUICollectionReusableView.h; sourceTree = "<group>"; };
+		14A047B7187829CB004831E8 /* JSBUICollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUICollectionView.h; sourceTree = "<group>"; };
+		14A047B8187829CB004831E8 /* JSBUICollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUICollectionViewCell.h; sourceTree = "<group>"; };
+		14A047B9187829CB004831E8 /* JSBUICollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUICollectionViewController.h; sourceTree = "<group>"; };
+		14A047BA187829CB004831E8 /* JSBUICollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUICollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		14A047BB187829CB004831E8 /* JSBUICollectionViewFlowLayoutInvalidationContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUICollectionViewFlowLayoutInvalidationContext.h; sourceTree = "<group>"; };
+		14A047BC187829CB004831E8 /* JSBUICollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUICollectionViewLayout.h; sourceTree = "<group>"; };
+		14A047BD187829CB004831E8 /* JSBUICollectionViewLayoutAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUICollectionViewLayoutAttributes.h; sourceTree = "<group>"; };
+		14A047BE187829CB004831E8 /* JSBUICollectionViewLayoutInvalidationContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUICollectionViewLayoutInvalidationContext.h; sourceTree = "<group>"; };
+		14A047BF187829CB004831E8 /* JSBUICollectionViewTransitionLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUICollectionViewTransitionLayout.h; sourceTree = "<group>"; };
+		14A047C0187829CB004831E8 /* JSBUICollectionViewUpdateItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUICollectionViewUpdateItem.h; sourceTree = "<group>"; };
+		14A047C1187829CB004831E8 /* JSBUICollisionBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUICollisionBehavior.h; sourceTree = "<group>"; };
+		14A047C2187829CB004831E8 /* JSBUIColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIColor.h; sourceTree = "<group>"; };
+		14A047C3187829CB004831E8 /* JSBUIControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIControl.h; sourceTree = "<group>"; };
+		14A047C4187829CB004831E8 /* JSBUIDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIDatePicker.h; sourceTree = "<group>"; };
+		14A047C5187829CB004831E8 /* JSBUIDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIDevice.h; sourceTree = "<group>"; };
+		14A047C6187829CB004831E8 /* JSBUIDictationPhrase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIDictationPhrase.h; sourceTree = "<group>"; };
+		14A047C7187829CB004831E8 /* JSBUIDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIDocument.h; sourceTree = "<group>"; };
+		14A047C8187829CB004831E8 /* JSBUIDocumentInteractionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIDocumentInteractionController.h; sourceTree = "<group>"; };
+		14A047C9187829CB004831E8 /* JSBUIDynamicAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIDynamicAnimator.h; sourceTree = "<group>"; };
+		14A047CA187829CB004831E8 /* JSBUIDynamicBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIDynamicBehavior.h; sourceTree = "<group>"; };
+		14A047CB187829CB004831E8 /* JSBUIDynamicItemBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIDynamicItemBehavior.h; sourceTree = "<group>"; };
+		14A047CC187829CB004831E8 /* JSBUIEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIEvent.h; sourceTree = "<group>"; };
+		14A047CD187829CB004831E8 /* JSBUIFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIFont.h; sourceTree = "<group>"; };
+		14A047CE187829CB004831E8 /* JSBUIFontDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIFontDescriptor.h; sourceTree = "<group>"; };
+		14A047CF187829CB004831E8 /* JSBUIGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIGestureRecognizer.h; sourceTree = "<group>"; };
+		14A047D0187829CB004831E8 /* JSBUIGravityBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIGravityBehavior.h; sourceTree = "<group>"; };
+		14A047D1187829CB004831E8 /* JSBUIImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIImage.h; sourceTree = "<group>"; };
+		14A047D2187829CB004831E8 /* JSBUIImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIImagePickerController.h; sourceTree = "<group>"; };
+		14A047D3187829CB004831E8 /* JSBUIImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIImageView.h; sourceTree = "<group>"; };
+		14A047D4187829CB004831E8 /* JSBUIInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIInputView.h; sourceTree = "<group>"; };
+		14A047D5187829CB004831E8 /* JSBUIInterpolatingMotionEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIInterpolatingMotionEffect.h; sourceTree = "<group>"; };
+		14A047D6187829CB004831E8 /* JSBUIKeyCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIKeyCommand.h; sourceTree = "<group>"; };
+		14A047D7187829CB004831E8 /* JSBUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIKit.h; sourceTree = "<group>"; };
+		14A047D8187829CB004831E8 /* JSBUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBUIKit.m; sourceTree = "<group>"; };
+		14A047D9187829CB004831E8 /* JSBUILabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUILabel.h; sourceTree = "<group>"; };
+		14A047DA187829CB004831E8 /* JSBUILocalNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUILocalNotification.h; sourceTree = "<group>"; };
+		14A047DB187829CB004831E8 /* JSBUILocalizedIndexedCollation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUILocalizedIndexedCollation.h; sourceTree = "<group>"; };
+		14A047DC187829CB004831E8 /* JSBUILongPressGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUILongPressGestureRecognizer.h; sourceTree = "<group>"; };
+		14A047DD187829CB004831E8 /* JSBUIManagedDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIManagedDocument.h; sourceTree = "<group>"; };
+		14A047DE187829CB004831E8 /* JSBUIMarkupTextPrintFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIMarkupTextPrintFormatter.h; sourceTree = "<group>"; };
+		14A047DF187829CB004831E8 /* JSBUIMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIMenuController.h; sourceTree = "<group>"; };
+		14A047E0187829CB004831E8 /* JSBUIMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIMenuItem.h; sourceTree = "<group>"; };
+		14A047E1187829CB004831E8 /* JSBUIMotionEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIMotionEffect.h; sourceTree = "<group>"; };
+		14A047E2187829CB004831E8 /* JSBUIMotionEffectGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIMotionEffectGroup.h; sourceTree = "<group>"; };
+		14A047E3187829CB004831E8 /* JSBUINavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUINavigationBar.h; sourceTree = "<group>"; };
+		14A047E4187829CB004831E8 /* JSBUINavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUINavigationController.h; sourceTree = "<group>"; };
+		14A047E5187829CB004831E8 /* JSBUINavigationItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUINavigationItem.h; sourceTree = "<group>"; };
+		14A047E6187829CB004831E8 /* JSBUINib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUINib.h; sourceTree = "<group>"; };
+		14A047E7187829CB004831E8 /* JSBUIPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIPageControl.h; sourceTree = "<group>"; };
+		14A047E8187829CB004831E8 /* JSBUIPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIPageViewController.h; sourceTree = "<group>"; };
+		14A047E9187829CB004831E8 /* JSBUIPanGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIPanGestureRecognizer.h; sourceTree = "<group>"; };
+		14A047EA187829CB004831E8 /* JSBUIPasteboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIPasteboard.h; sourceTree = "<group>"; };
+		14A047EB187829CB004831E8 /* JSBUIPercentDrivenInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIPercentDrivenInteractiveTransition.h; sourceTree = "<group>"; };
+		14A047EC187829CB004831E8 /* JSBUIPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIPickerView.h; sourceTree = "<group>"; };
+		14A047ED187829CB004831E8 /* JSBUIPinchGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIPinchGestureRecognizer.h; sourceTree = "<group>"; };
+		14A047EE187829CB004831E8 /* JSBUIPopoverBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIPopoverBackgroundView.h; sourceTree = "<group>"; };
+		14A047EF187829CB004831E8 /* JSBUIPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIPopoverController.h; sourceTree = "<group>"; };
+		14A047F0187829CB004831E8 /* JSBUIPrintFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIPrintFormatter.h; sourceTree = "<group>"; };
+		14A047F1187829CB004831E8 /* JSBUIPrintInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIPrintInfo.h; sourceTree = "<group>"; };
+		14A047F2187829CB004831E8 /* JSBUIPrintInteractionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIPrintInteractionController.h; sourceTree = "<group>"; };
+		14A047F3187829CB004831E8 /* JSBUIPrintPageRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIPrintPageRenderer.h; sourceTree = "<group>"; };
+		14A047F4187829CB004831E8 /* JSBUIPrintPaper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIPrintPaper.h; sourceTree = "<group>"; };
+		14A047F5187829CB004831E8 /* JSBUIProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIProgressView.h; sourceTree = "<group>"; };
+		14A047F6187829CB004831E8 /* JSBUIPushBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIPushBehavior.h; sourceTree = "<group>"; };
+		14A047F7187829CB004831E8 /* JSBUIReferenceLibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIReferenceLibraryViewController.h; sourceTree = "<group>"; };
+		14A047F8187829CB004831E8 /* JSBUIRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIRefreshControl.h; sourceTree = "<group>"; };
+		14A047F9187829CB004831E8 /* JSBUIResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIResponder.h; sourceTree = "<group>"; };
+		14A047FA187829CB004831E8 /* JSBUIRotationGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIRotationGestureRecognizer.h; sourceTree = "<group>"; };
+		14A047FB187829CB004831E8 /* JSBUIScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIScreen.h; sourceTree = "<group>"; };
+		14A047FC187829CB004831E8 /* JSBUIScreenEdgePanGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIScreenEdgePanGestureRecognizer.h; sourceTree = "<group>"; };
+		14A047FD187829CB004831E8 /* JSBUIScreenMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIScreenMode.h; sourceTree = "<group>"; };
+		14A047FE187829CB004831E8 /* JSBUIScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIScrollView.h; sourceTree = "<group>"; };
+		14A047FF187829CB004831E8 /* JSBUISearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUISearchBar.h; sourceTree = "<group>"; };
+		14A04800187829CB004831E8 /* JSBUISearchDisplayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUISearchDisplayController.h; sourceTree = "<group>"; };
+		14A04801187829CB004831E8 /* JSBUISegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUISegmentedControl.h; sourceTree = "<group>"; };
+		14A04802187829CB004831E8 /* JSBUISimpleTextPrintFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUISimpleTextPrintFormatter.h; sourceTree = "<group>"; };
+		14A04803187829CB004831E8 /* JSBUISlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUISlider.h; sourceTree = "<group>"; };
+		14A04804187829CB004831E8 /* JSBUISnapBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUISnapBehavior.h; sourceTree = "<group>"; };
+		14A04805187829CB004831E8 /* JSBUISplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUISplitViewController.h; sourceTree = "<group>"; };
+		14A04806187829CB004831E8 /* JSBUIStepper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIStepper.h; sourceTree = "<group>"; };
+		14A04807187829CB004831E8 /* JSBUIStoryboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIStoryboard.h; sourceTree = "<group>"; };
+		14A04808187829CB004831E8 /* JSBUIStoryboardPopoverSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIStoryboardPopoverSegue.h; sourceTree = "<group>"; };
+		14A04809187829CB004831E8 /* JSBUIStoryboardSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIStoryboardSegue.h; sourceTree = "<group>"; };
+		14A0480A187829CB004831E8 /* JSBUISwipeGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUISwipeGestureRecognizer.h; sourceTree = "<group>"; };
+		14A0480B187829CB004831E8 /* JSBUISwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUISwitch.h; sourceTree = "<group>"; };
+		14A0480C187829CB004831E8 /* JSBUITabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUITabBar.h; sourceTree = "<group>"; };
+		14A0480D187829CB004831E8 /* JSBUITabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUITabBarController.h; sourceTree = "<group>"; };
+		14A0480E187829CB004831E8 /* JSBUITabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUITabBarItem.h; sourceTree = "<group>"; };
+		14A0480F187829CB004831E8 /* JSBUITableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUITableView.h; sourceTree = "<group>"; };
+		14A04810187829CB004831E8 /* JSBUITableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUITableViewCell.h; sourceTree = "<group>"; };
+		14A04811187829CB004831E8 /* JSBUITableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUITableViewController.h; sourceTree = "<group>"; };
+		14A04812187829CB004831E8 /* JSBUITableViewHeaderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUITableViewHeaderFooterView.h; sourceTree = "<group>"; };
+		14A04813187829CB004831E8 /* JSBUITapGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUITapGestureRecognizer.h; sourceTree = "<group>"; };
+		14A04814187829CB004831E8 /* JSBUITextChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUITextChecker.h; sourceTree = "<group>"; };
+		14A04815187829CB004831E8 /* JSBUITextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUITextField.h; sourceTree = "<group>"; };
+		14A04816187829CB004831E8 /* JSBUITextInputMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUITextInputMode.h; sourceTree = "<group>"; };
+		14A04817187829CB004831E8 /* JSBUITextInputStringTokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUITextInputStringTokenizer.h; sourceTree = "<group>"; };
+		14A04818187829CB004831E8 /* JSBUITextPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUITextPosition.h; sourceTree = "<group>"; };
+		14A04819187829CB004831E8 /* JSBUITextRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUITextRange.h; sourceTree = "<group>"; };
+		14A0481A187829CB004831E8 /* JSBUITextSelectionRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUITextSelectionRect.h; sourceTree = "<group>"; };
+		14A0481B187829CB004831E8 /* JSBUITextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUITextView.h; sourceTree = "<group>"; };
+		14A0481C187829CB004831E8 /* JSBUIToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIToolbar.h; sourceTree = "<group>"; };
+		14A0481D187829CB004831E8 /* JSBUITouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUITouch.h; sourceTree = "<group>"; };
+		14A0481E187829CB004831E8 /* JSBUIVideoEditorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIVideoEditorController.h; sourceTree = "<group>"; };
+		14A0481F187829CB004831E8 /* JSBUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIView.h; sourceTree = "<group>"; };
+		14A04820187829CB004831E8 /* JSBUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIViewController.h; sourceTree = "<group>"; };
+		14A04821187829CB004831E8 /* JSBUIViewPrintFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIViewPrintFormatter.h; sourceTree = "<group>"; };
+		14A04822187829CB004831E8 /* JSBUIWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIWebView.h; sourceTree = "<group>"; };
+		14A04823187829CB004831E8 /* JSBUIWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUIWindow.h; sourceTree = "<group>"; };
+		14A04825187829CB004831E8 /* JSBADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBADBannerView.h; sourceTree = "<group>"; };
+		14A04826187829CB004831E8 /* JSBADInterstitialAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBADInterstitialAd.h; sourceTree = "<group>"; };
+		14A04827187829CB004831E8 /* JSBMPMoviePlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMPMoviePlayerController.h; sourceTree = "<group>"; };
+		14A04828187829CB004831E8 /* JSBiAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBiAd.h; sourceTree = "<group>"; };
+		14A04829187829CB004831E8 /* JSBiAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBiAd.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		14A0452618782920004831E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14A0452F18782920004831E8 /* CoreGraphics.framework in Frameworks */,
+				14A0453118782920004831E8 /* UIKit.framework in Frameworks */,
+				14A0452D18782920004831E8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14A0452018782920004831E8 = {
+			isa = PBXGroup;
+			children = (
+				14A0453218782920004831E8 /* HelloWorld */,
+				14A0452B18782920004831E8 /* Frameworks */,
+				14A0452A18782920004831E8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		14A0452A18782920004831E8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A0452918782920004831E8 /* HelloWorld.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A0452B18782920004831E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				14A0452C18782920004831E8 /* Foundation.framework */,
+				14A0452E18782920004831E8 /* CoreGraphics.framework */,
+				14A0453018782920004831E8 /* UIKit.framework */,
+				14A0454518782920004831E8 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		14A0453218782920004831E8 /* HelloWorld */ = {
+			isa = PBXGroup;
+			children = (
+				14A0453B18782920004831E8 /* AppDelegate.h */,
+				14A0453C18782920004831E8 /* AppDelegate.m */,
+				14A0453E18782920004831E8 /* Images.xcassets */,
+				14A0453318782920004831E8 /* Supporting Files */,
+				14A0455B18782994004831E8 /* Vendor */,
+			);
+			path = HelloWorld;
+			sourceTree = "<group>";
+		};
+		14A0453318782920004831E8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				14A0453418782920004831E8 /* HelloWorld-Info.plist */,
+				14A0453518782920004831E8 /* InfoPlist.strings */,
+				14A0453818782920004831E8 /* main.m */,
+				14A0453A18782920004831E8 /* HelloWorld-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		14A0455B18782994004831E8 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				14A0455C187829A5004831E8 /* JavaScriptBridge */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		14A0455C187829A5004831E8 /* JavaScriptBridge */ = {
+			isa = PBXGroup;
+			children = (
+				14A04561187829B4004831E8 /* JavaScriptBridge.h */,
+				14A04563187829B4004831E8 /* JSBScriptingSupport.h */,
+				14A04564187829B4004831E8 /* JSBScriptingSupport.m */,
+				14A04562187829B4004831E8 /* JSBNSObject.h */,
+				14A04565187829B4004831E8 /* JSContext+JavaScriptBridge.h */,
+				14A04566187829B4004831E8 /* JSContext+JavaScriptBridge.m */,
+				14A0455D187829B4004831E8 /* Private */,
+				14A0456A187829CA004831E8 /* FrameworkSupport */,
+			);
+			name = JavaScriptBridge;
+			sourceTree = "<group>";
+		};
+		14A0455D187829B4004831E8 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				14A0455E187829B4004831E8 /* JSBMessageForwarding.h */,
+				14A0455F187829B4004831E8 /* UIControl+JavaScriptBridge.h */,
+				14A04560187829B4004831E8 /* UIControl+JavaScriptBridge.m */,
+			);
+			name = Private;
+			path = ../../../Classes/Private;
+			sourceTree = "<group>";
+		};
+		14A0456A187829CA004831E8 /* FrameworkSupport */ = {
+			isa = PBXGroup;
+			children = (
+				14A0456B187829CA004831E8 /* AVFoundation */,
+				14A045C9187829CA004831E8 /* Accounts */,
+				14A045D0187829CA004831E8 /* AdSupport */,
+				14A045D4187829CA004831E8 /* AddressBookUI */,
+				14A045DB187829CA004831E8 /* AssetsLibrary */,
+				14A045E3187829CA004831E8 /* CoreBluetooth */,
+				14A045F2187829CA004831E8 /* CoreData */,
+				14A04611187829CA004831E8 /* CoreImage */,
+				14A0461C187829CA004831E8 /* CoreLocation */,
+				14A04628187829CA004831E8 /* CoreMIDI */,
+				14A0462E187829CA004831E8 /* CoreMotion */,
+				14A0463B187829CA004831E8 /* CoreTelephony */,
+				14A04644187829CA004831E8 /* EventKit */,
+				14A04654187829CA004831E8 /* EventKitUI */,
+				14A0465A187829CA004831E8 /* Foundation */,
+				14A046DE187829CA004831E8 /* GameKit */,
+				14A04700187829CB004831E8 /* JavaScriptCore */,
+				14A04706187829CB004831E8 /* MapKit */,
+				14A04732187829CB004831E8 /* MediaPlayer */,
+				14A0474A187829CB004831E8 /* MessageUI */,
+				14A0474F187829CB004831E8 /* MultipeerConnectivity */,
+				14A04758187829CB004831E8 /* OpenGLES */,
+				14A0475D187829CB004831E8 /* PassKit */,
+				14A04763187829CB004831E8 /* QuartzCore */,
+				14A0477C187829CB004831E8 /* QuickLook */,
+				14A04780187829CB004831E8 /* SafariServices */,
+				14A04784187829CB004831E8 /* Social */,
+				14A04789187829CB004831E8 /* StoreKit */,
+				14A04797187829CB004831E8 /* Twitter */,
+				14A0479C187829CB004831E8 /* UIKit */,
+				14A04824187829CB004831E8 /* iAd */,
+			);
+			name = FrameworkSupport;
+			path = ../../../Classes/iOS/FrameworkSupport;
+			sourceTree = "<group>";
+		};
+		14A0456B187829CA004831E8 /* AVFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				14A0456C187829CA004831E8 /* JSBAVAsset.h */,
+				14A0456D187829CA004831E8 /* JSBAVAssetExportSession.h */,
+				14A0456E187829CA004831E8 /* JSBAVAssetImageGenerator.h */,
+				14A0456F187829CA004831E8 /* JSBAVAssetReader.h */,
+				14A04570187829CA004831E8 /* JSBAVAssetReaderAudioMixOutput.h */,
+				14A04571187829CA004831E8 /* JSBAVAssetReaderOutput.h */,
+				14A04572187829CA004831E8 /* JSBAVAssetReaderTrackOutput.h */,
+				14A04573187829CA004831E8 /* JSBAVAssetReaderVideoCompositionOutput.h */,
+				14A04574187829CA004831E8 /* JSBAVAssetResourceLoader.h */,
+				14A04575187829CA004831E8 /* JSBAVAssetResourceLoadingContentInformationRequest.h */,
+				14A04576187829CA004831E8 /* JSBAVAssetResourceLoadingDataRequest.h */,
+				14A04577187829CA004831E8 /* JSBAVAssetResourceLoadingRequest.h */,
+				14A04578187829CA004831E8 /* JSBAVAssetTrack.h */,
+				14A04579187829CA004831E8 /* JSBAVAssetTrackGroup.h */,
+				14A0457A187829CA004831E8 /* JSBAVAssetTrackSegment.h */,
+				14A0457B187829CA004831E8 /* JSBAVAssetWriter.h */,
+				14A0457C187829CA004831E8 /* JSBAVAssetWriterInput.h */,
+				14A0457D187829CA004831E8 /* JSBAVAssetWriterInputGroup.h */,
+				14A0457E187829CA004831E8 /* JSBAVAssetWriterInputPixelBufferAdaptor.h */,
+				14A0457F187829CA004831E8 /* JSBAVAsynchronousVideoCompositionRequest.h */,
+				14A04580187829CA004831E8 /* JSBAVAudioMix.h */,
+				14A04581187829CA004831E8 /* JSBAVAudioMixInputParameters.h */,
+				14A04582187829CA004831E8 /* JSBAVAudioPlayer.h */,
+				14A04583187829CA004831E8 /* JSBAVAudioRecorder.h */,
+				14A04584187829CA004831E8 /* JSBAVAudioSession.h */,
+				14A04585187829CA004831E8 /* JSBAVAudioSessionChannelDescription.h */,
+				14A04586187829CA004831E8 /* JSBAVAudioSessionDataSourceDescription.h */,
+				14A04587187829CA004831E8 /* JSBAVAudioSessionPortDescription.h */,
+				14A04588187829CA004831E8 /* JSBAVAudioSessionRouteDescription.h */,
+				14A04589187829CA004831E8 /* JSBAVCaptureAudioChannel.h */,
+				14A0458A187829CA004831E8 /* JSBAVCaptureAudioDataOutput.h */,
+				14A0458B187829CA004831E8 /* JSBAVCaptureConnection.h */,
+				14A0458C187829CA004831E8 /* JSBAVCaptureDevice.h */,
+				14A0458D187829CA004831E8 /* JSBAVCaptureDeviceFormat.h */,
+				14A0458E187829CA004831E8 /* JSBAVCaptureDeviceInput.h */,
+				14A0458F187829CA004831E8 /* JSBAVCaptureFileOutput.h */,
+				14A04590187829CA004831E8 /* JSBAVCaptureInput.h */,
+				14A04591187829CA004831E8 /* JSBAVCaptureInputPort.h */,
+				14A04592187829CA004831E8 /* JSBAVCaptureMetadataOutput.h */,
+				14A04593187829CA004831E8 /* JSBAVCaptureMovieFileOutput.h */,
+				14A04594187829CA004831E8 /* JSBAVCaptureOutput.h */,
+				14A04595187829CA004831E8 /* JSBAVCaptureSession.h */,
+				14A04596187829CA004831E8 /* JSBAVCaptureStillImageOutput.h */,
+				14A04597187829CA004831E8 /* JSBAVCaptureVideoDataOutput.h */,
+				14A04598187829CA004831E8 /* JSBAVCaptureVideoPreviewLayer.h */,
+				14A04599187829CA004831E8 /* JSBAVComposition.h */,
+				14A0459A187829CA004831E8 /* JSBAVCompositionTrack.h */,
+				14A0459B187829CA004831E8 /* JSBAVCompositionTrackSegment.h */,
+				14A0459C187829CA004831E8 /* JSBAVFoundation.h */,
+				14A0459D187829CA004831E8 /* JSBAVFoundation.m */,
+				14A0459E187829CA004831E8 /* JSBAVFrameRateRange.h */,
+				14A0459F187829CA004831E8 /* JSBAVMediaSelectionGroup.h */,
+				14A045A0187829CA004831E8 /* JSBAVMediaSelectionOption.h */,
+				14A045A1187829CA004831E8 /* JSBAVMetadataFaceObject.h */,
+				14A045A2187829CA004831E8 /* JSBAVMetadataItem.h */,
+				14A045A3187829CA004831E8 /* JSBAVMetadataItemFilter.h */,
+				14A045A4187829CA004831E8 /* JSBAVMetadataMachineReadableCodeObject.h */,
+				14A045A5187829CA004831E8 /* JSBAVMetadataObject.h */,
+				14A045A6187829CA004831E8 /* JSBAVMutableAudioMix.h */,
+				14A045A7187829CA004831E8 /* JSBAVMutableAudioMixInputParameters.h */,
+				14A045A8187829CA004831E8 /* JSBAVMutableComposition.h */,
+				14A045A9187829CA004831E8 /* JSBAVMutableCompositionTrack.h */,
+				14A045AA187829CA004831E8 /* JSBAVMutableMetadataItem.h */,
+				14A045AB187829CA004831E8 /* JSBAVMutableTimedMetadataGroup.h */,
+				14A045AC187829CA004831E8 /* JSBAVMutableVideoComposition.h */,
+				14A045AD187829CA004831E8 /* JSBAVMutableVideoCompositionInstruction.h */,
+				14A045AE187829CA004831E8 /* JSBAVMutableVideoCompositionLayerInstruction.h */,
+				14A045AF187829CA004831E8 /* JSBAVOutputSettingsAssistant.h */,
+				14A045B0187829CA004831E8 /* JSBAVPlayer.h */,
+				14A045B1187829CA004831E8 /* JSBAVPlayerItem.h */,
+				14A045B2187829CA004831E8 /* JSBAVPlayerItemAccessLog.h */,
+				14A045B3187829CA004831E8 /* JSBAVPlayerItemAccessLogEvent.h */,
+				14A045B4187829CA004831E8 /* JSBAVPlayerItemErrorLog.h */,
+				14A045B5187829CA004831E8 /* JSBAVPlayerItemErrorLogEvent.h */,
+				14A045B6187829CA004831E8 /* JSBAVPlayerItemLegibleOutput.h */,
+				14A045B7187829CA004831E8 /* JSBAVPlayerItemOutput.h */,
+				14A045B8187829CA004831E8 /* JSBAVPlayerItemTrack.h */,
+				14A045B9187829CA004831E8 /* JSBAVPlayerItemVideoOutput.h */,
+				14A045BA187829CA004831E8 /* JSBAVPlayerLayer.h */,
+				14A045BB187829CA004831E8 /* JSBAVPlayerMediaSelectionCriteria.h */,
+				14A045BC187829CA004831E8 /* JSBAVQueuePlayer.h */,
+				14A045BD187829CA004831E8 /* JSBAVSpeechSynthesisVoice.h */,
+				14A045BE187829CA004831E8 /* JSBAVSpeechSynthesizer.h */,
+				14A045BF187829CA004831E8 /* JSBAVSpeechUtterance.h */,
+				14A045C0187829CA004831E8 /* JSBAVSynchronizedLayer.h */,
+				14A045C1187829CA004831E8 /* JSBAVTextStyleRule.h */,
+				14A045C2187829CA004831E8 /* JSBAVTimedMetadataGroup.h */,
+				14A045C3187829CA004831E8 /* JSBAVURLAsset.h */,
+				14A045C4187829CA004831E8 /* JSBAVVideoComposition.h */,
+				14A045C5187829CA004831E8 /* JSBAVVideoCompositionCoreAnimationTool.h */,
+				14A045C6187829CA004831E8 /* JSBAVVideoCompositionInstruction.h */,
+				14A045C7187829CA004831E8 /* JSBAVVideoCompositionLayerInstruction.h */,
+				14A045C8187829CA004831E8 /* JSBAVVideoCompositionRenderContext.h */,
+			);
+			path = AVFoundation;
+			sourceTree = "<group>";
+		};
+		14A045C9187829CA004831E8 /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				14A045CA187829CA004831E8 /* JSBACAccount.h */,
+				14A045CB187829CA004831E8 /* JSBACAccountCredential.h */,
+				14A045CC187829CA004831E8 /* JSBACAccountStore.h */,
+				14A045CD187829CA004831E8 /* JSBACAccountType.h */,
+				14A045CE187829CA004831E8 /* JSBAccounts.h */,
+				14A045CF187829CA004831E8 /* JSBAccounts.m */,
+			);
+			path = Accounts;
+			sourceTree = "<group>";
+		};
+		14A045D0187829CA004831E8 /* AdSupport */ = {
+			isa = PBXGroup;
+			children = (
+				14A045D1187829CA004831E8 /* JSBASIdentifierManager.h */,
+				14A045D2187829CA004831E8 /* JSBAdSupport.h */,
+				14A045D3187829CA004831E8 /* JSBAdSupport.m */,
+			);
+			path = AdSupport;
+			sourceTree = "<group>";
+		};
+		14A045D4187829CA004831E8 /* AddressBookUI */ = {
+			isa = PBXGroup;
+			children = (
+				14A045D5187829CA004831E8 /* JSBABNewPersonViewController.h */,
+				14A045D6187829CA004831E8 /* JSBABPeoplePickerNavigationController.h */,
+				14A045D7187829CA004831E8 /* JSBABPersonViewController.h */,
+				14A045D8187829CA004831E8 /* JSBABUnknownPersonViewController.h */,
+				14A045D9187829CA004831E8 /* JSBAddressBookUI.h */,
+				14A045DA187829CA004831E8 /* JSBAddressBookUI.m */,
+			);
+			path = AddressBookUI;
+			sourceTree = "<group>";
+		};
+		14A045DB187829CA004831E8 /* AssetsLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				14A045DC187829CA004831E8 /* JSBALAsset.h */,
+				14A045DD187829CA004831E8 /* JSBALAssetRepresentation.h */,
+				14A045DE187829CA004831E8 /* JSBALAssetsFilter.h */,
+				14A045DF187829CA004831E8 /* JSBALAssetsGroup.h */,
+				14A045E0187829CA004831E8 /* JSBALAssetsLibrary.h */,
+				14A045E1187829CA004831E8 /* JSBAssetsLibrary.h */,
+				14A045E2187829CA004831E8 /* JSBAssetsLibrary.m */,
+			);
+			path = AssetsLibrary;
+			sourceTree = "<group>";
+		};
+		14A045E3187829CA004831E8 /* CoreBluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				14A045E4187829CA004831E8 /* JSBCBATTRequest.h */,
+				14A045E5187829CA004831E8 /* JSBCBCentral.h */,
+				14A045E6187829CA004831E8 /* JSBCBCentralManager.h */,
+				14A045E7187829CA004831E8 /* JSBCBCharacteristic.h */,
+				14A045E8187829CA004831E8 /* JSBCBDescriptor.h */,
+				14A045E9187829CA004831E8 /* JSBCBMutableCharacteristic.h */,
+				14A045EA187829CA004831E8 /* JSBCBMutableDescriptor.h */,
+				14A045EB187829CA004831E8 /* JSBCBMutableService.h */,
+				14A045EC187829CA004831E8 /* JSBCBPeripheral.h */,
+				14A045ED187829CA004831E8 /* JSBCBPeripheralManager.h */,
+				14A045EE187829CA004831E8 /* JSBCBService.h */,
+				14A045EF187829CA004831E8 /* JSBCBUUID.h */,
+				14A045F0187829CA004831E8 /* JSBCoreBluetooth.h */,
+				14A045F1187829CA004831E8 /* JSBCoreBluetooth.m */,
+			);
+			path = CoreBluetooth;
+			sourceTree = "<group>";
+		};
+		14A045F2187829CA004831E8 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				14A045F3187829CA004831E8 /* JSBCoreData.h */,
+				14A045F4187829CA004831E8 /* JSBCoreData.m */,
+				14A045F5187829CA004831E8 /* JSBNSAtomicStore.h */,
+				14A045F6187829CA004831E8 /* JSBNSAtomicStoreCacheNode.h */,
+				14A045F7187829CA004831E8 /* JSBNSAttributeDescription.h */,
+				14A045F8187829CA004831E8 /* JSBNSEntityDescription.h */,
+				14A045F9187829CA004831E8 /* JSBNSEntityMapping.h */,
+				14A045FA187829CA004831E8 /* JSBNSEntityMigrationPolicy.h */,
+				14A045FB187829CA004831E8 /* JSBNSExpressionDescription.h */,
+				14A045FC187829CA004831E8 /* JSBNSFetchRequest.h */,
+				14A045FD187829CA004831E8 /* JSBNSFetchRequestExpression.h */,
+				14A045FE187829CA004831E8 /* JSBNSFetchedPropertyDescription.h */,
+				14A045FF187829CA004831E8 /* JSBNSFetchedResultsController.h */,
+				14A04600187829CA004831E8 /* JSBNSIncrementalStore.h */,
+				14A04601187829CA004831E8 /* JSBNSIncrementalStoreNode.h */,
+				14A04602187829CA004831E8 /* JSBNSManagedObject.h */,
+				14A04603187829CA004831E8 /* JSBNSManagedObjectContext.h */,
+				14A04604187829CA004831E8 /* JSBNSManagedObjectID.h */,
+				14A04605187829CA004831E8 /* JSBNSManagedObjectModel.h */,
+				14A04606187829CA004831E8 /* JSBNSMappingModel.h */,
+				14A04607187829CA004831E8 /* JSBNSMergeConflict.h */,
+				14A04608187829CA004831E8 /* JSBNSMergePolicy.h */,
+				14A04609187829CA004831E8 /* JSBNSMigrationManager.h */,
+				14A0460A187829CA004831E8 /* JSBNSPersistentStore.h */,
+				14A0460B187829CA004831E8 /* JSBNSPersistentStoreCoordinator.h */,
+				14A0460C187829CA004831E8 /* JSBNSPersistentStoreRequest.h */,
+				14A0460D187829CA004831E8 /* JSBNSPropertyDescription.h */,
+				14A0460E187829CA004831E8 /* JSBNSPropertyMapping.h */,
+				14A0460F187829CA004831E8 /* JSBNSRelationshipDescription.h */,
+				14A04610187829CA004831E8 /* JSBNSSaveChangesRequest.h */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		14A04611187829CA004831E8 /* CoreImage */ = {
+			isa = PBXGroup;
+			children = (
+				14A04612187829CA004831E8 /* JSBCIColor.h */,
+				14A04613187829CA004831E8 /* JSBCIContext.h */,
+				14A04614187829CA004831E8 /* JSBCIDetector.h */,
+				14A04615187829CA004831E8 /* JSBCIFaceFeature.h */,
+				14A04616187829CA004831E8 /* JSBCIFeature.h */,
+				14A04617187829CA004831E8 /* JSBCIFilter.h */,
+				14A04618187829CA004831E8 /* JSBCIImage.h */,
+				14A04619187829CA004831E8 /* JSBCIVector.h */,
+				14A0461A187829CA004831E8 /* JSBCoreImage.h */,
+				14A0461B187829CA004831E8 /* JSBCoreImage.m */,
+			);
+			path = CoreImage;
+			sourceTree = "<group>";
+		};
+		14A0461C187829CA004831E8 /* CoreLocation */ = {
+			isa = PBXGroup;
+			children = (
+				14A0461D187829CA004831E8 /* JSBCLBeacon.h */,
+				14A0461E187829CA004831E8 /* JSBCLBeaconRegion.h */,
+				14A0461F187829CA004831E8 /* JSBCLCircularRegion.h */,
+				14A04620187829CA004831E8 /* JSBCLGeocoder.h */,
+				14A04621187829CA004831E8 /* JSBCLHeading.h */,
+				14A04622187829CA004831E8 /* JSBCLLocation.h */,
+				14A04623187829CA004831E8 /* JSBCLLocationManager.h */,
+				14A04624187829CA004831E8 /* JSBCLPlacemark.h */,
+				14A04625187829CA004831E8 /* JSBCLRegion.h */,
+				14A04626187829CA004831E8 /* JSBCoreLocation.h */,
+				14A04627187829CA004831E8 /* JSBCoreLocation.m */,
+			);
+			path = CoreLocation;
+			sourceTree = "<group>";
+		};
+		14A04628187829CA004831E8 /* CoreMIDI */ = {
+			isa = PBXGroup;
+			children = (
+				14A04629187829CA004831E8 /* JSBCoreMIDI.h */,
+				14A0462A187829CA004831E8 /* JSBCoreMIDI.m */,
+				14A0462B187829CA004831E8 /* JSBMIDINetworkConnection.h */,
+				14A0462C187829CA004831E8 /* JSBMIDINetworkHost.h */,
+				14A0462D187829CA004831E8 /* JSBMIDINetworkSession.h */,
+			);
+			path = CoreMIDI;
+			sourceTree = "<group>";
+		};
+		14A0462E187829CA004831E8 /* CoreMotion */ = {
+			isa = PBXGroup;
+			children = (
+				14A0462F187829CA004831E8 /* JSBCMAccelerometerData.h */,
+				14A04630187829CA004831E8 /* JSBCMAttitude.h */,
+				14A04631187829CA004831E8 /* JSBCMDeviceMotion.h */,
+				14A04632187829CA004831E8 /* JSBCMGyroData.h */,
+				14A04633187829CA004831E8 /* JSBCMLogItem.h */,
+				14A04634187829CA004831E8 /* JSBCMMagnetometerData.h */,
+				14A04635187829CA004831E8 /* JSBCMMotionActivity.h */,
+				14A04636187829CA004831E8 /* JSBCMMotionActivityManager.h */,
+				14A04637187829CA004831E8 /* JSBCMMotionManager.h */,
+				14A04638187829CA004831E8 /* JSBCMStepCounter.h */,
+				14A04639187829CA004831E8 /* JSBCoreMotion.h */,
+				14A0463A187829CA004831E8 /* JSBCoreMotion.m */,
+			);
+			path = CoreMotion;
+			sourceTree = "<group>";
+		};
+		14A0463B187829CA004831E8 /* CoreTelephony */ = {
+			isa = PBXGroup;
+			children = (
+				14A0463C187829CA004831E8 /* JSBCTCall.h */,
+				14A0463D187829CA004831E8 /* JSBCTCallCenter.h */,
+				14A0463E187829CA004831E8 /* JSBCTCarrier.h */,
+				14A0463F187829CA004831E8 /* JSBCTSubscriber.h */,
+				14A04640187829CA004831E8 /* JSBCTSubscriberInfo.h */,
+				14A04641187829CA004831E8 /* JSBCTTelephonyNetworkInfo.h */,
+				14A04642187829CA004831E8 /* JSBCoreTelephony.h */,
+				14A04643187829CA004831E8 /* JSBCoreTelephony.m */,
+			);
+			path = CoreTelephony;
+			sourceTree = "<group>";
+		};
+		14A04644187829CA004831E8 /* EventKit */ = {
+			isa = PBXGroup;
+			children = (
+				14A04645187829CA004831E8 /* JSBEKAlarm.h */,
+				14A04646187829CA004831E8 /* JSBEKCalendar.h */,
+				14A04647187829CA004831E8 /* JSBEKCalendarItem.h */,
+				14A04648187829CA004831E8 /* JSBEKEvent.h */,
+				14A04649187829CA004831E8 /* JSBEKEventStore.h */,
+				14A0464A187829CA004831E8 /* JSBEKObject.h */,
+				14A0464B187829CA004831E8 /* JSBEKParticipant.h */,
+				14A0464C187829CA004831E8 /* JSBEKRecurrenceDayOfWeek.h */,
+				14A0464D187829CA004831E8 /* JSBEKRecurrenceEnd.h */,
+				14A0464E187829CA004831E8 /* JSBEKRecurrenceRule.h */,
+				14A0464F187829CA004831E8 /* JSBEKReminder.h */,
+				14A04650187829CA004831E8 /* JSBEKSource.h */,
+				14A04651187829CA004831E8 /* JSBEKStructuredLocation.h */,
+				14A04652187829CA004831E8 /* JSBEventKit.h */,
+				14A04653187829CA004831E8 /* JSBEventKit.m */,
+			);
+			path = EventKit;
+			sourceTree = "<group>";
+		};
+		14A04654187829CA004831E8 /* EventKitUI */ = {
+			isa = PBXGroup;
+			children = (
+				14A04655187829CA004831E8 /* JSBEKCalendarChooser.h */,
+				14A04656187829CA004831E8 /* JSBEKEventEditViewController.h */,
+				14A04657187829CA004831E8 /* JSBEKEventViewController.h */,
+				14A04658187829CA004831E8 /* JSBEventKitUI.h */,
+				14A04659187829CA004831E8 /* JSBEventKitUI.m */,
+			);
+			path = EventKitUI;
+			sourceTree = "<group>";
+		};
+		14A0465A187829CA004831E8 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				14A0465B187829CA004831E8 /* JSBFoundation.h */,
+				14A0465C187829CA004831E8 /* JSBFoundation.m */,
+				14A0465D187829CA004831E8 /* JSBNSArray.h */,
+				14A0465E187829CA004831E8 /* JSBNSAssertionHandler.h */,
+				14A0465F187829CA004831E8 /* JSBNSAttributedString.h */,
+				14A04660187829CA004831E8 /* JSBNSBlockOperation.h */,
+				14A04661187829CA004831E8 /* JSBNSBundle.h */,
+				14A04662187829CA004831E8 /* JSBNSByteCountFormatter.h */,
+				14A04663187829CA004831E8 /* JSBNSCache.h */,
+				14A04664187829CA004831E8 /* JSBNSCachedURLResponse.h */,
+				14A04665187829CA004831E8 /* JSBNSCalendar.h */,
+				14A04666187829CA004831E8 /* JSBNSCharacterSet.h */,
+				14A04667187829CA004831E8 /* JSBNSCoder.h */,
+				14A04668187829CA004831E8 /* JSBNSComparisonPredicate.h */,
+				14A04669187829CA004831E8 /* JSBNSCompoundPredicate.h */,
+				14A0466A187829CA004831E8 /* JSBNSCondition.h */,
+				14A0466B187829CA004831E8 /* JSBNSConditionLock.h */,
+				14A0466C187829CA004831E8 /* JSBNSConstantString.h */,
+				14A0466D187829CA004831E8 /* JSBNSCountedSet.h */,
+				14A0466E187829CA004831E8 /* JSBNSData.h */,
+				14A0466F187829CA004831E8 /* JSBNSDataDetector.h */,
+				14A04670187829CA004831E8 /* JSBNSDate.h */,
+				14A04671187829CA004831E8 /* JSBNSDateComponents.h */,
+				14A04672187829CA004831E8 /* JSBNSDateFormatter.h */,
+				14A04673187829CA004831E8 /* JSBNSDecimalNumber.h */,
+				14A04674187829CA004831E8 /* JSBNSDecimalNumberHandler.h */,
+				14A04675187829CA004831E8 /* JSBNSDictionary.h */,
+				14A04676187829CA004831E8 /* JSBNSDirectoryEnumerator.h */,
+				14A04677187829CA004831E8 /* JSBNSEnumerator.h */,
+				14A04678187829CA004831E8 /* JSBNSError.h */,
+				14A04679187829CA004831E8 /* JSBNSException.h */,
+				14A0467A187829CA004831E8 /* JSBNSExpression.h */,
+				14A0467B187829CA004831E8 /* JSBNSFileCoordinator.h */,
+				14A0467C187829CA004831E8 /* JSBNSFileHandle.h */,
+				14A0467D187829CA004831E8 /* JSBNSFileManager.h */,
+				14A0467E187829CA004831E8 /* JSBNSFileSecurity.h */,
+				14A0467F187829CA004831E8 /* JSBNSFileVersion.h */,
+				14A04680187829CA004831E8 /* JSBNSFileWrapper.h */,
+				14A04681187829CA004831E8 /* JSBNSFormatter.h */,
+				14A04682187829CA004831E8 /* JSBNSHTTPCookie.h */,
+				14A04683187829CA004831E8 /* JSBNSHTTPCookieStorage.h */,
+				14A04684187829CA004831E8 /* JSBNSHTTPURLResponse.h */,
+				14A04685187829CA004831E8 /* JSBNSHashTable.h */,
+				14A04686187829CA004831E8 /* JSBNSIndexPath.h */,
+				14A04687187829CA004831E8 /* JSBNSIndexSet.h */,
+				14A04688187829CA004831E8 /* JSBNSInputStream.h */,
+				14A04689187829CA004831E8 /* JSBNSInvocation.h */,
+				14A0468A187829CA004831E8 /* JSBNSInvocationOperation.h */,
+				14A0468B187829CA004831E8 /* JSBNSJSONSerialization.h */,
+				14A0468C187829CA004831E8 /* JSBNSKeyedArchiver.h */,
+				14A0468D187829CA004831E8 /* JSBNSKeyedUnarchiver.h */,
+				14A0468E187829CA004831E8 /* JSBNSLinguisticTagger.h */,
+				14A0468F187829CA004831E8 /* JSBNSLocale.h */,
+				14A04690187829CA004831E8 /* JSBNSLock.h */,
+				14A04691187829CA004831E8 /* JSBNSMachPort.h */,
+				14A04692187829CA004831E8 /* JSBNSMapTable.h */,
+				14A04693187829CA004831E8 /* JSBNSMessagePort.h */,
+				14A04694187829CA004831E8 /* JSBNSMetadataItem.h */,
+				14A04695187829CA004831E8 /* JSBNSMetadataQuery.h */,
+				14A04696187829CA004831E8 /* JSBNSMetadataQueryAttributeValueTuple.h */,
+				14A04697187829CA004831E8 /* JSBNSMetadataQueryResultGroup.h */,
+				14A04698187829CA004831E8 /* JSBNSMethodSignature.h */,
+				14A04699187829CA004831E8 /* JSBNSMutableArray.h */,
+				14A0469A187829CA004831E8 /* JSBNSMutableAttributedString.h */,
+				14A0469B187829CA004831E8 /* JSBNSMutableCharacterSet.h */,
+				14A0469C187829CA004831E8 /* JSBNSMutableData.h */,
+				14A0469D187829CA004831E8 /* JSBNSMutableDictionary.h */,
+				14A0469E187829CA004831E8 /* JSBNSMutableIndexSet.h */,
+				14A0469F187829CA004831E8 /* JSBNSMutableOrderedSet.h */,
+				14A046A0187829CA004831E8 /* JSBNSMutableSet.h */,
+				14A046A1187829CA004831E8 /* JSBNSMutableString.h */,
+				14A046A2187829CA004831E8 /* JSBNSMutableURLRequest.h */,
+				14A046A3187829CA004831E8 /* JSBNSNetService.h */,
+				14A046A4187829CA004831E8 /* JSBNSNetServiceBrowser.h */,
+				14A046A5187829CA004831E8 /* JSBNSNotification.h */,
+				14A046A6187829CA004831E8 /* JSBNSNotificationCenter.h */,
+				14A046A7187829CA004831E8 /* JSBNSNotificationQueue.h */,
+				14A046A8187829CA004831E8 /* JSBNSNull.h */,
+				14A046A9187829CA004831E8 /* JSBNSNumber.h */,
+				14A046AA187829CA004831E8 /* JSBNSNumberFormatter.h */,
+				14A046AB187829CA004831E8 /* JSBNSOperation.h */,
+				14A046AC187829CA004831E8 /* JSBNSOperationQueue.h */,
+				14A046AD187829CA004831E8 /* JSBNSOrderedSet.h */,
+				14A046AE187829CA004831E8 /* JSBNSOrthography.h */,
+				14A046AF187829CA004831E8 /* JSBNSOutputStream.h */,
+				14A046B0187829CA004831E8 /* JSBNSPipe.h */,
+				14A046B1187829CA004831E8 /* JSBNSPointerArray.h */,
+				14A046B2187829CA004831E8 /* JSBNSPort.h */,
+				14A046B3187829CA004831E8 /* JSBNSPredicate.h */,
+				14A046B4187829CA004831E8 /* JSBNSProcessInfo.h */,
+				14A046B5187829CA004831E8 /* JSBNSProgress.h */,
+				14A046B6187829CA004831E8 /* JSBNSPropertyListSerialization.h */,
+				14A046B7187829CA004831E8 /* JSBNSProxy.h */,
+				14A046B8187829CA004831E8 /* JSBNSPurgeableData.h */,
+				14A046B9187829CA004831E8 /* JSBNSRecursiveLock.h */,
+				14A046BA187829CA004831E8 /* JSBNSRegularExpression.h */,
+				14A046BB187829CA004831E8 /* JSBNSRunLoop.h */,
+				14A046BC187829CA004831E8 /* JSBNSScanner.h */,
+				14A046BD187829CA004831E8 /* JSBNSSet.h */,
+				14A046BE187829CA004831E8 /* JSBNSSimpleCString.h */,
+				14A046BF187829CA004831E8 /* JSBNSSortDescriptor.h */,
+				14A046C0187829CA004831E8 /* JSBNSStream.h */,
+				14A046C1187829CA004831E8 /* JSBNSString.h */,
+				14A046C2187829CA004831E8 /* JSBNSTextCheckingResult.h */,
+				14A046C3187829CA004831E8 /* JSBNSThread.h */,
+				14A046C4187829CA004831E8 /* JSBNSTimeZone.h */,
+				14A046C5187829CA004831E8 /* JSBNSTimer.h */,
+				14A046C6187829CA004831E8 /* JSBNSURL.h */,
+				14A046C7187829CA004831E8 /* JSBNSURLAuthenticationChallenge.h */,
+				14A046C8187829CA004831E8 /* JSBNSURLCache.h */,
+				14A046C9187829CA004831E8 /* JSBNSURLComponents.h */,
+				14A046CA187829CA004831E8 /* JSBNSURLConnection.h */,
+				14A046CB187829CA004831E8 /* JSBNSURLCredential.h */,
+				14A046CC187829CA004831E8 /* JSBNSURLCredentialStorage.h */,
+				14A046CD187829CA004831E8 /* JSBNSURLProtectionSpace.h */,
+				14A046CE187829CA004831E8 /* JSBNSURLProtocol.h */,
+				14A046CF187829CA004831E8 /* JSBNSURLRequest.h */,
+				14A046D0187829CA004831E8 /* JSBNSURLResponse.h */,
+				14A046D1187829CA004831E8 /* JSBNSURLSession.h */,
+				14A046D2187829CA004831E8 /* JSBNSURLSessionConfiguration.h */,
+				14A046D3187829CA004831E8 /* JSBNSURLSessionDataTask.h */,
+				14A046D4187829CA004831E8 /* JSBNSURLSessionDownloadTask.h */,
+				14A046D5187829CA004831E8 /* JSBNSURLSessionTask.h */,
+				14A046D6187829CA004831E8 /* JSBNSURLSessionUploadTask.h */,
+				14A046D7187829CA004831E8 /* JSBNSUUID.h */,
+				14A046D8187829CA004831E8 /* JSBNSUbiquitousKeyValueStore.h */,
+				14A046D9187829CA004831E8 /* JSBNSUndoManager.h */,
+				14A046DA187829CA004831E8 /* JSBNSUserDefaults.h */,
+				14A046DB187829CA004831E8 /* JSBNSValue.h */,
+				14A046DC187829CA004831E8 /* JSBNSValueTransformer.h */,
+				14A046DD187829CA004831E8 /* JSBNSXMLParser.h */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		14A046DE187829CA004831E8 /* GameKit */ = {
+			isa = PBXGroup;
+			children = (
+				14A046DF187829CA004831E8 /* JSBGKAchievement.h */,
+				14A046E0187829CA004831E8 /* JSBGKAchievementChallenge.h */,
+				14A046E1187829CA004831E8 /* JSBGKAchievementDescription.h */,
+				14A046E2187829CA004831E8 /* JSBGKAchievementViewController.h */,
+				14A046E3187829CA004831E8 /* JSBGKChallenge.h */,
+				14A046E4187829CA004831E8 /* JSBGKChallengeEventHandler.h */,
+				14A046E5187829CA004831E8 /* JSBGKFriendRequestComposeViewController.h */,
+				14A046E6187829CA004831E8 /* JSBGKGameCenterViewController.h */,
+				14A046E7187829CA004831E8 /* JSBGKInvite.h */,
+				14A046E8187829CA004831E8 /* JSBGKLeaderboard.h */,
+				14A046E9187829CA004831E8 /* JSBGKLeaderboardSet.h */,
+				14A046EA187829CA004831E8 /* JSBGKLeaderboardViewController.h */,
+				14A046EB187829CA004831E8 /* JSBGKLocalPlayer.h */,
+				14A046EC187829CA004831E8 /* JSBGKMatch.h */,
+				14A046ED187829CA004831E8 /* JSBGKMatchRequest.h */,
+				14A046EE187829CA004831E8 /* JSBGKMatchmaker.h */,
+				14A046EF187829CA004831E8 /* JSBGKMatchmakerViewController.h */,
+				14A046F0187829CA004831E8 /* JSBGKNotificationBanner.h */,
+				14A046F1187829CA004831E8 /* JSBGKPeerPickerController.h */,
+				14A046F2187829CA004831E8 /* JSBGKPlayer.h */,
+				14A046F3187829CA004831E8 /* JSBGKScore.h */,
+				14A046F4187829CA004831E8 /* JSBGKScoreChallenge.h */,
+				14A046F5187829CB004831E8 /* JSBGKSession.h */,
+				14A046F6187829CB004831E8 /* JSBGKTurnBasedEventHandler.h */,
+				14A046F7187829CB004831E8 /* JSBGKTurnBasedExchange.h */,
+				14A046F8187829CB004831E8 /* JSBGKTurnBasedExchangeReply.h */,
+				14A046F9187829CB004831E8 /* JSBGKTurnBasedMatch.h */,
+				14A046FA187829CB004831E8 /* JSBGKTurnBasedMatchmakerViewController.h */,
+				14A046FB187829CB004831E8 /* JSBGKTurnBasedParticipant.h */,
+				14A046FC187829CB004831E8 /* JSBGKVoiceChat.h */,
+				14A046FD187829CB004831E8 /* JSBGKVoiceChatService.h */,
+				14A046FE187829CB004831E8 /* JSBGameKit.h */,
+				14A046FF187829CB004831E8 /* JSBGameKit.m */,
+			);
+			path = GameKit;
+			sourceTree = "<group>";
+		};
+		14A04700187829CB004831E8 /* JavaScriptCore */ = {
+			isa = PBXGroup;
+			children = (
+				14A04701187829CB004831E8 /* JSBJSContext.h */,
+				14A04702187829CB004831E8 /* JSBJSManagedValue.h */,
+				14A04703187829CB004831E8 /* JSBJSVirtualMachine.h */,
+				14A04704187829CB004831E8 /* JSBJavaScriptCore.h */,
+				14A04705187829CB004831E8 /* JSBJavaScriptCore.m */,
+			);
+			path = JavaScriptCore;
+			sourceTree = "<group>";
+		};
+		14A04706187829CB004831E8 /* MapKit */ = {
+			isa = PBXGroup;
+			children = (
+				14A04707187829CB004831E8 /* JSBMKAnnotationView.h */,
+				14A04708187829CB004831E8 /* JSBMKCircle.h */,
+				14A04709187829CB004831E8 /* JSBMKCircleRenderer.h */,
+				14A0470A187829CB004831E8 /* JSBMKCircleView.h */,
+				14A0470B187829CB004831E8 /* JSBMKDirections.h */,
+				14A0470C187829CB004831E8 /* JSBMKDirectionsRequest.h */,
+				14A0470D187829CB004831E8 /* JSBMKDirectionsResponse.h */,
+				14A0470E187829CB004831E8 /* JSBMKDistanceFormatter.h */,
+				14A0470F187829CB004831E8 /* JSBMKETAResponse.h */,
+				14A04710187829CB004831E8 /* JSBMKGeodesicPolyline.h */,
+				14A04711187829CB004831E8 /* JSBMKLocalSearch.h */,
+				14A04712187829CB004831E8 /* JSBMKLocalSearchRequest.h */,
+				14A04713187829CB004831E8 /* JSBMKLocalSearchResponse.h */,
+				14A04714187829CB004831E8 /* JSBMKMapCamera.h */,
+				14A04715187829CB004831E8 /* JSBMKMapItem.h */,
+				14A04716187829CB004831E8 /* JSBMKMapSnapshot.h */,
+				14A04717187829CB004831E8 /* JSBMKMapSnapshotOptions.h */,
+				14A04718187829CB004831E8 /* JSBMKMapSnapshotter.h */,
+				14A04719187829CB004831E8 /* JSBMKMapView.h */,
+				14A0471A187829CB004831E8 /* JSBMKMultiPoint.h */,
+				14A0471B187829CB004831E8 /* JSBMKOverlayPathRenderer.h */,
+				14A0471C187829CB004831E8 /* JSBMKOverlayPathView.h */,
+				14A0471D187829CB004831E8 /* JSBMKOverlayRenderer.h */,
+				14A0471E187829CB004831E8 /* JSBMKOverlayView.h */,
+				14A0471F187829CB004831E8 /* JSBMKPinAnnotationView.h */,
+				14A04720187829CB004831E8 /* JSBMKPlacemark.h */,
+				14A04721187829CB004831E8 /* JSBMKPointAnnotation.h */,
+				14A04722187829CB004831E8 /* JSBMKPolygon.h */,
+				14A04723187829CB004831E8 /* JSBMKPolygonRenderer.h */,
+				14A04724187829CB004831E8 /* JSBMKPolygonView.h */,
+				14A04725187829CB004831E8 /* JSBMKPolyline.h */,
+				14A04726187829CB004831E8 /* JSBMKPolylineRenderer.h */,
+				14A04727187829CB004831E8 /* JSBMKPolylineView.h */,
+				14A04728187829CB004831E8 /* JSBMKReverseGeocoder.h */,
+				14A04729187829CB004831E8 /* JSBMKRoute.h */,
+				14A0472A187829CB004831E8 /* JSBMKRouteStep.h */,
+				14A0472B187829CB004831E8 /* JSBMKShape.h */,
+				14A0472C187829CB004831E8 /* JSBMKTileOverlay.h */,
+				14A0472D187829CB004831E8 /* JSBMKTileOverlayRenderer.h */,
+				14A0472E187829CB004831E8 /* JSBMKUserLocation.h */,
+				14A0472F187829CB004831E8 /* JSBMKUserTrackingBarButtonItem.h */,
+				14A04730187829CB004831E8 /* JSBMapKit.h */,
+				14A04731187829CB004831E8 /* JSBMapKit.m */,
+			);
+			path = MapKit;
+			sourceTree = "<group>";
+		};
+		14A04732187829CB004831E8 /* MediaPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				14A04733187829CB004831E8 /* JSBMPMediaEntity.h */,
+				14A04734187829CB004831E8 /* JSBMPMediaItem.h */,
+				14A04735187829CB004831E8 /* JSBMPMediaItemArtwork.h */,
+				14A04736187829CB004831E8 /* JSBMPMediaItemCollection.h */,
+				14A04737187829CB004831E8 /* JSBMPMediaLibrary.h */,
+				14A04738187829CB004831E8 /* JSBMPMediaPickerController.h */,
+				14A04739187829CB004831E8 /* JSBMPMediaPlaylist.h */,
+				14A0473A187829CB004831E8 /* JSBMPMediaPredicate.h */,
+				14A0473B187829CB004831E8 /* JSBMPMediaPropertyPredicate.h */,
+				14A0473C187829CB004831E8 /* JSBMPMediaQuery.h */,
+				14A0473D187829CB004831E8 /* JSBMPMediaQuerySection.h */,
+				14A0473E187829CB004831E8 /* JSBMPMovieAccessLog.h */,
+				14A0473F187829CB004831E8 /* JSBMPMovieAccessLogEvent.h */,
+				14A04740187829CB004831E8 /* JSBMPMovieErrorLog.h */,
+				14A04741187829CB004831E8 /* JSBMPMovieErrorLogEvent.h */,
+				14A04742187829CB004831E8 /* JSBMPMoviePlayerController.h */,
+				14A04743187829CB004831E8 /* JSBMPMoviePlayerViewController.h */,
+				14A04744187829CB004831E8 /* JSBMPMusicPlayerController.h */,
+				14A04745187829CB004831E8 /* JSBMPNowPlayingInfoCenter.h */,
+				14A04746187829CB004831E8 /* JSBMPTimedMetadata.h */,
+				14A04747187829CB004831E8 /* JSBMPVolumeView.h */,
+				14A04748187829CB004831E8 /* JSBMediaPlayer.h */,
+				14A04749187829CB004831E8 /* JSBMediaPlayer.m */,
+			);
+			path = MediaPlayer;
+			sourceTree = "<group>";
+		};
+		14A0474A187829CB004831E8 /* MessageUI */ = {
+			isa = PBXGroup;
+			children = (
+				14A0474B187829CB004831E8 /* JSBMFMailComposeViewController.h */,
+				14A0474C187829CB004831E8 /* JSBMFMessageComposeViewController.h */,
+				14A0474D187829CB004831E8 /* JSBMessageUI.h */,
+				14A0474E187829CB004831E8 /* JSBMessageUI.m */,
+			);
+			path = MessageUI;
+			sourceTree = "<group>";
+		};
+		14A0474F187829CB004831E8 /* MultipeerConnectivity */ = {
+			isa = PBXGroup;
+			children = (
+				14A04750187829CB004831E8 /* JSBMCAdvertiserAssistant.h */,
+				14A04751187829CB004831E8 /* JSBMCBrowserViewController.h */,
+				14A04752187829CB004831E8 /* JSBMCNearbyServiceAdvertiser.h */,
+				14A04753187829CB004831E8 /* JSBMCNearbyServiceBrowser.h */,
+				14A04754187829CB004831E8 /* JSBMCPeerID.h */,
+				14A04755187829CB004831E8 /* JSBMCSession.h */,
+				14A04756187829CB004831E8 /* JSBMultipeerConnectivity.h */,
+				14A04757187829CB004831E8 /* JSBMultipeerConnectivity.m */,
+			);
+			path = MultipeerConnectivity;
+			sourceTree = "<group>";
+		};
+		14A04758187829CB004831E8 /* OpenGLES */ = {
+			isa = PBXGroup;
+			children = (
+				14A04759187829CB004831E8 /* JSBEAGLContext.h */,
+				14A0475A187829CB004831E8 /* JSBEAGLSharegroup.h */,
+				14A0475B187829CB004831E8 /* JSBOpenGLES.h */,
+				14A0475C187829CB004831E8 /* JSBOpenGLES.m */,
+			);
+			path = OpenGLES;
+			sourceTree = "<group>";
+		};
+		14A0475D187829CB004831E8 /* PassKit */ = {
+			isa = PBXGroup;
+			children = (
+				14A0475E187829CB004831E8 /* JSBPKAddPassesViewController.h */,
+				14A0475F187829CB004831E8 /* JSBPKPass.h */,
+				14A04760187829CB004831E8 /* JSBPKPassLibrary.h */,
+				14A04761187829CB004831E8 /* JSBPassKit.h */,
+				14A04762187829CB004831E8 /* JSBPassKit.m */,
+			);
+			path = PassKit;
+			sourceTree = "<group>";
+		};
+		14A04763187829CB004831E8 /* QuartzCore */ = {
+			isa = PBXGroup;
+			children = (
+				14A04764187829CB004831E8 /* JSBCAAnimation.h */,
+				14A04765187829CB004831E8 /* JSBCAAnimationGroup.h */,
+				14A04766187829CB004831E8 /* JSBCABasicAnimation.h */,
+				14A04767187829CB004831E8 /* JSBCADisplayLink.h */,
+				14A04768187829CB004831E8 /* JSBCAEAGLLayer.h */,
+				14A04769187829CB004831E8 /* JSBCAEmitterBehavior.h */,
+				14A0476A187829CB004831E8 /* JSBCAEmitterCell.h */,
+				14A0476B187829CB004831E8 /* JSBCAEmitterLayer.h */,
+				14A0476C187829CB004831E8 /* JSBCAGradientLayer.h */,
+				14A0476D187829CB004831E8 /* JSBCAKeyframeAnimation.h */,
+				14A0476E187829CB004831E8 /* JSBCALayer.h */,
+				14A0476F187829CB004831E8 /* JSBCAMediaTimingFunction.h */,
+				14A04770187829CB004831E8 /* JSBCAPropertyAnimation.h */,
+				14A04771187829CB004831E8 /* JSBCAReplicatorLayer.h */,
+				14A04772187829CB004831E8 /* JSBCAScrollLayer.h */,
+				14A04773187829CB004831E8 /* JSBCAShapeLayer.h */,
+				14A04774187829CB004831E8 /* JSBCATextLayer.h */,
+				14A04775187829CB004831E8 /* JSBCATiledLayer.h */,
+				14A04776187829CB004831E8 /* JSBCATransaction.h */,
+				14A04777187829CB004831E8 /* JSBCATransformLayer.h */,
+				14A04778187829CB004831E8 /* JSBCATransition.h */,
+				14A04779187829CB004831E8 /* JSBCAValueFunction.h */,
+				14A0477A187829CB004831E8 /* JSBQuartzCore.h */,
+				14A0477B187829CB004831E8 /* JSBQuartzCore.m */,
+			);
+			path = QuartzCore;
+			sourceTree = "<group>";
+		};
+		14A0477C187829CB004831E8 /* QuickLook */ = {
+			isa = PBXGroup;
+			children = (
+				14A0477D187829CB004831E8 /* JSBQLPreviewController.h */,
+				14A0477E187829CB004831E8 /* JSBQuickLook.h */,
+				14A0477F187829CB004831E8 /* JSBQuickLook.m */,
+			);
+			path = QuickLook;
+			sourceTree = "<group>";
+		};
+		14A04780187829CB004831E8 /* SafariServices */ = {
+			isa = PBXGroup;
+			children = (
+				14A04781187829CB004831E8 /* JSBSSReadingList.h */,
+				14A04782187829CB004831E8 /* JSBSafariServices.h */,
+				14A04783187829CB004831E8 /* JSBSafariServices.m */,
+			);
+			path = SafariServices;
+			sourceTree = "<group>";
+		};
+		14A04784187829CB004831E8 /* Social */ = {
+			isa = PBXGroup;
+			children = (
+				14A04785187829CB004831E8 /* JSBSLComposeViewController.h */,
+				14A04786187829CB004831E8 /* JSBSLRequest.h */,
+				14A04787187829CB004831E8 /* JSBSocial.h */,
+				14A04788187829CB004831E8 /* JSBSocial.m */,
+			);
+			path = Social;
+			sourceTree = "<group>";
+		};
+		14A04789187829CB004831E8 /* StoreKit */ = {
+			isa = PBXGroup;
+			children = (
+				14A0478A187829CB004831E8 /* JSBSKDownload.h */,
+				14A0478B187829CB004831E8 /* JSBSKMutablePayment.h */,
+				14A0478C187829CB004831E8 /* JSBSKPayment.h */,
+				14A0478D187829CB004831E8 /* JSBSKPaymentQueue.h */,
+				14A0478E187829CB004831E8 /* JSBSKPaymentTransaction.h */,
+				14A0478F187829CB004831E8 /* JSBSKProduct.h */,
+				14A04790187829CB004831E8 /* JSBSKProductsRequest.h */,
+				14A04791187829CB004831E8 /* JSBSKProductsResponse.h */,
+				14A04792187829CB004831E8 /* JSBSKReceiptRefreshRequest.h */,
+				14A04793187829CB004831E8 /* JSBSKRequest.h */,
+				14A04794187829CB004831E8 /* JSBSKStoreProductViewController.h */,
+				14A04795187829CB004831E8 /* JSBStoreKit.h */,
+				14A04796187829CB004831E8 /* JSBStoreKit.m */,
+			);
+			path = StoreKit;
+			sourceTree = "<group>";
+		};
+		14A04797187829CB004831E8 /* Twitter */ = {
+			isa = PBXGroup;
+			children = (
+				14A04798187829CB004831E8 /* JSBTWRequest.h */,
+				14A04799187829CB004831E8 /* JSBTWTweetComposeViewController.h */,
+				14A0479A187829CB004831E8 /* JSBTwitter.h */,
+				14A0479B187829CB004831E8 /* JSBTwitter.m */,
+			);
+			path = Twitter;
+			sourceTree = "<group>";
+		};
+		14A0479C187829CB004831E8 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				14A0479D187829CB004831E8 /* JSBNSLayoutConstraint.h */,
+				14A0479E187829CB004831E8 /* JSBNSLayoutManager.h */,
+				14A0479F187829CB004831E8 /* JSBNSMutableParagraphStyle.h */,
+				14A047A0187829CB004831E8 /* JSBNSParagraphStyle.h */,
+				14A047A1187829CB004831E8 /* JSBNSShadow.h */,
+				14A047A2187829CB004831E8 /* JSBNSStringDrawingContext.h */,
+				14A047A3187829CB004831E8 /* JSBNSTextAttachment.h */,
+				14A047A4187829CB004831E8 /* JSBNSTextContainer.h */,
+				14A047A5187829CB004831E8 /* JSBNSTextStorage.h */,
+				14A047A6187829CB004831E8 /* JSBNSTextTab.h */,
+				14A047A7187829CB004831E8 /* JSBUIAcceleration.h */,
+				14A047A8187829CB004831E8 /* JSBUIAccelerometer.h */,
+				14A047A9187829CB004831E8 /* JSBUIAccessibilityElement.h */,
+				14A047AA187829CB004831E8 /* JSBUIActionSheet.h */,
+				14A047AB187829CB004831E8 /* JSBUIActivity.h */,
+				14A047AC187829CB004831E8 /* JSBUIActivityIndicatorView.h */,
+				14A047AD187829CB004831E8 /* JSBUIActivityItemProvider.h */,
+				14A047AE187829CB004831E8 /* JSBUIActivityViewController.h */,
+				14A047AF187829CB004831E8 /* JSBUIAlertView.h */,
+				14A047B0187829CB004831E8 /* JSBUIApplication.h */,
+				14A047B1187829CB004831E8 /* JSBUIAttachmentBehavior.h */,
+				14A047B2187829CB004831E8 /* JSBUIBarButtonItem.h */,
+				14A047B3187829CB004831E8 /* JSBUIBarItem.h */,
+				14A047B4187829CB004831E8 /* JSBUIBezierPath.h */,
+				14A047B5187829CB004831E8 /* JSBUIButton.h */,
+				14A047B6187829CB004831E8 /* JSBUICollectionReusableView.h */,
+				14A047B7187829CB004831E8 /* JSBUICollectionView.h */,
+				14A047B8187829CB004831E8 /* JSBUICollectionViewCell.h */,
+				14A047B9187829CB004831E8 /* JSBUICollectionViewController.h */,
+				14A047BA187829CB004831E8 /* JSBUICollectionViewFlowLayout.h */,
+				14A047BB187829CB004831E8 /* JSBUICollectionViewFlowLayoutInvalidationContext.h */,
+				14A047BC187829CB004831E8 /* JSBUICollectionViewLayout.h */,
+				14A047BD187829CB004831E8 /* JSBUICollectionViewLayoutAttributes.h */,
+				14A047BE187829CB004831E8 /* JSBUICollectionViewLayoutInvalidationContext.h */,
+				14A047BF187829CB004831E8 /* JSBUICollectionViewTransitionLayout.h */,
+				14A047C0187829CB004831E8 /* JSBUICollectionViewUpdateItem.h */,
+				14A047C1187829CB004831E8 /* JSBUICollisionBehavior.h */,
+				14A047C2187829CB004831E8 /* JSBUIColor.h */,
+				14A047C3187829CB004831E8 /* JSBUIControl.h */,
+				14A047C4187829CB004831E8 /* JSBUIDatePicker.h */,
+				14A047C5187829CB004831E8 /* JSBUIDevice.h */,
+				14A047C6187829CB004831E8 /* JSBUIDictationPhrase.h */,
+				14A047C7187829CB004831E8 /* JSBUIDocument.h */,
+				14A047C8187829CB004831E8 /* JSBUIDocumentInteractionController.h */,
+				14A047C9187829CB004831E8 /* JSBUIDynamicAnimator.h */,
+				14A047CA187829CB004831E8 /* JSBUIDynamicBehavior.h */,
+				14A047CB187829CB004831E8 /* JSBUIDynamicItemBehavior.h */,
+				14A047CC187829CB004831E8 /* JSBUIEvent.h */,
+				14A047CD187829CB004831E8 /* JSBUIFont.h */,
+				14A047CE187829CB004831E8 /* JSBUIFontDescriptor.h */,
+				14A047CF187829CB004831E8 /* JSBUIGestureRecognizer.h */,
+				14A047D0187829CB004831E8 /* JSBUIGravityBehavior.h */,
+				14A047D1187829CB004831E8 /* JSBUIImage.h */,
+				14A047D2187829CB004831E8 /* JSBUIImagePickerController.h */,
+				14A047D3187829CB004831E8 /* JSBUIImageView.h */,
+				14A047D4187829CB004831E8 /* JSBUIInputView.h */,
+				14A047D5187829CB004831E8 /* JSBUIInterpolatingMotionEffect.h */,
+				14A047D6187829CB004831E8 /* JSBUIKeyCommand.h */,
+				14A047D7187829CB004831E8 /* JSBUIKit.h */,
+				14A047D8187829CB004831E8 /* JSBUIKit.m */,
+				14A047D9187829CB004831E8 /* JSBUILabel.h */,
+				14A047DA187829CB004831E8 /* JSBUILocalNotification.h */,
+				14A047DB187829CB004831E8 /* JSBUILocalizedIndexedCollation.h */,
+				14A047DC187829CB004831E8 /* JSBUILongPressGestureRecognizer.h */,
+				14A047DD187829CB004831E8 /* JSBUIManagedDocument.h */,
+				14A047DE187829CB004831E8 /* JSBUIMarkupTextPrintFormatter.h */,
+				14A047DF187829CB004831E8 /* JSBUIMenuController.h */,
+				14A047E0187829CB004831E8 /* JSBUIMenuItem.h */,
+				14A047E1187829CB004831E8 /* JSBUIMotionEffect.h */,
+				14A047E2187829CB004831E8 /* JSBUIMotionEffectGroup.h */,
+				14A047E3187829CB004831E8 /* JSBUINavigationBar.h */,
+				14A047E4187829CB004831E8 /* JSBUINavigationController.h */,
+				14A047E5187829CB004831E8 /* JSBUINavigationItem.h */,
+				14A047E6187829CB004831E8 /* JSBUINib.h */,
+				14A047E7187829CB004831E8 /* JSBUIPageControl.h */,
+				14A047E8187829CB004831E8 /* JSBUIPageViewController.h */,
+				14A047E9187829CB004831E8 /* JSBUIPanGestureRecognizer.h */,
+				14A047EA187829CB004831E8 /* JSBUIPasteboard.h */,
+				14A047EB187829CB004831E8 /* JSBUIPercentDrivenInteractiveTransition.h */,
+				14A047EC187829CB004831E8 /* JSBUIPickerView.h */,
+				14A047ED187829CB004831E8 /* JSBUIPinchGestureRecognizer.h */,
+				14A047EE187829CB004831E8 /* JSBUIPopoverBackgroundView.h */,
+				14A047EF187829CB004831E8 /* JSBUIPopoverController.h */,
+				14A047F0187829CB004831E8 /* JSBUIPrintFormatter.h */,
+				14A047F1187829CB004831E8 /* JSBUIPrintInfo.h */,
+				14A047F2187829CB004831E8 /* JSBUIPrintInteractionController.h */,
+				14A047F3187829CB004831E8 /* JSBUIPrintPageRenderer.h */,
+				14A047F4187829CB004831E8 /* JSBUIPrintPaper.h */,
+				14A047F5187829CB004831E8 /* JSBUIProgressView.h */,
+				14A047F6187829CB004831E8 /* JSBUIPushBehavior.h */,
+				14A047F7187829CB004831E8 /* JSBUIReferenceLibraryViewController.h */,
+				14A047F8187829CB004831E8 /* JSBUIRefreshControl.h */,
+				14A047F9187829CB004831E8 /* JSBUIResponder.h */,
+				14A047FA187829CB004831E8 /* JSBUIRotationGestureRecognizer.h */,
+				14A047FB187829CB004831E8 /* JSBUIScreen.h */,
+				14A047FC187829CB004831E8 /* JSBUIScreenEdgePanGestureRecognizer.h */,
+				14A047FD187829CB004831E8 /* JSBUIScreenMode.h */,
+				14A047FE187829CB004831E8 /* JSBUIScrollView.h */,
+				14A047FF187829CB004831E8 /* JSBUISearchBar.h */,
+				14A04800187829CB004831E8 /* JSBUISearchDisplayController.h */,
+				14A04801187829CB004831E8 /* JSBUISegmentedControl.h */,
+				14A04802187829CB004831E8 /* JSBUISimpleTextPrintFormatter.h */,
+				14A04803187829CB004831E8 /* JSBUISlider.h */,
+				14A04804187829CB004831E8 /* JSBUISnapBehavior.h */,
+				14A04805187829CB004831E8 /* JSBUISplitViewController.h */,
+				14A04806187829CB004831E8 /* JSBUIStepper.h */,
+				14A04807187829CB004831E8 /* JSBUIStoryboard.h */,
+				14A04808187829CB004831E8 /* JSBUIStoryboardPopoverSegue.h */,
+				14A04809187829CB004831E8 /* JSBUIStoryboardSegue.h */,
+				14A0480A187829CB004831E8 /* JSBUISwipeGestureRecognizer.h */,
+				14A0480B187829CB004831E8 /* JSBUISwitch.h */,
+				14A0480C187829CB004831E8 /* JSBUITabBar.h */,
+				14A0480D187829CB004831E8 /* JSBUITabBarController.h */,
+				14A0480E187829CB004831E8 /* JSBUITabBarItem.h */,
+				14A0480F187829CB004831E8 /* JSBUITableView.h */,
+				14A04810187829CB004831E8 /* JSBUITableViewCell.h */,
+				14A04811187829CB004831E8 /* JSBUITableViewController.h */,
+				14A04812187829CB004831E8 /* JSBUITableViewHeaderFooterView.h */,
+				14A04813187829CB004831E8 /* JSBUITapGestureRecognizer.h */,
+				14A04814187829CB004831E8 /* JSBUITextChecker.h */,
+				14A04815187829CB004831E8 /* JSBUITextField.h */,
+				14A04816187829CB004831E8 /* JSBUITextInputMode.h */,
+				14A04817187829CB004831E8 /* JSBUITextInputStringTokenizer.h */,
+				14A04818187829CB004831E8 /* JSBUITextPosition.h */,
+				14A04819187829CB004831E8 /* JSBUITextRange.h */,
+				14A0481A187829CB004831E8 /* JSBUITextSelectionRect.h */,
+				14A0481B187829CB004831E8 /* JSBUITextView.h */,
+				14A0481C187829CB004831E8 /* JSBUIToolbar.h */,
+				14A0481D187829CB004831E8 /* JSBUITouch.h */,
+				14A0481E187829CB004831E8 /* JSBUIVideoEditorController.h */,
+				14A0481F187829CB004831E8 /* JSBUIView.h */,
+				14A04820187829CB004831E8 /* JSBUIViewController.h */,
+				14A04821187829CB004831E8 /* JSBUIViewPrintFormatter.h */,
+				14A04822187829CB004831E8 /* JSBUIWebView.h */,
+				14A04823187829CB004831E8 /* JSBUIWindow.h */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		14A04824187829CB004831E8 /* iAd */ = {
+			isa = PBXGroup;
+			children = (
+				14A04825187829CB004831E8 /* JSBADBannerView.h */,
+				14A04826187829CB004831E8 /* JSBADInterstitialAd.h */,
+				14A04827187829CB004831E8 /* JSBMPMoviePlayerController.h */,
+				14A04828187829CB004831E8 /* JSBiAd.h */,
+				14A04829187829CB004831E8 /* JSBiAd.m */,
+			);
+			path = iAd;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		14A0452818782920004831E8 /* HelloWorld */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14A0455518782920004831E8 /* Build configuration list for PBXNativeTarget "HelloWorld" */;
+			buildPhases = (
+				14A0452518782920004831E8 /* Sources */,
+				14A0452618782920004831E8 /* Frameworks */,
+				14A0452718782920004831E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HelloWorld;
+			productName = HelloWorld;
+			productReference = 14A0452918782920004831E8 /* HelloWorld.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		14A0452118782920004831E8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "kishikawa katsumi";
+			};
+			buildConfigurationList = 14A0452418782920004831E8 /* Build configuration list for PBXProject "HelloWorld" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 14A0452018782920004831E8;
+			productRefGroup = 14A0452A18782920004831E8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				14A0452818782920004831E8 /* HelloWorld */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		14A0452718782920004831E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14A0453718782920004831E8 /* InfoPlist.strings in Resources */,
+				14A0453F18782920004831E8 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		14A0452518782920004831E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14A04844187829CB004831E8 /* JSBSocial.m in Sources */,
+				14A04835187829CB004831E8 /* JSBCoreTelephony.m in Sources */,
+				14A0482B187829CB004831E8 /* JSBAccounts.m in Sources */,
+				14A0453D18782920004831E8 /* AppDelegate.m in Sources */,
+				14A04833187829CB004831E8 /* JSBCoreMIDI.m in Sources */,
+				14A04830187829CB004831E8 /* JSBCoreData.m in Sources */,
+				14A0483D187829CB004831E8 /* JSBMessageUI.m in Sources */,
+				14A04846187829CB004831E8 /* JSBTwitter.m in Sources */,
+				14A0482E187829CB004831E8 /* JSBAssetsLibrary.m in Sources */,
+				14A0482C187829CB004831E8 /* JSBAdSupport.m in Sources */,
+				14A04839187829CB004831E8 /* JSBGameKit.m in Sources */,
+				14A04831187829CB004831E8 /* JSBCoreImage.m in Sources */,
+				14A04848187829CB004831E8 /* JSBiAd.m in Sources */,
+				14A04567187829B4004831E8 /* UIControl+JavaScriptBridge.m in Sources */,
+				14A04836187829CB004831E8 /* JSBEventKit.m in Sources */,
+				14A04834187829CB004831E8 /* JSBCoreMotion.m in Sources */,
+				14A0453918782920004831E8 /* main.m in Sources */,
+				14A0482F187829CB004831E8 /* JSBCoreBluetooth.m in Sources */,
+				14A0482D187829CB004831E8 /* JSBAddressBookUI.m in Sources */,
+				14A0483C187829CB004831E8 /* JSBMediaPlayer.m in Sources */,
+				14A0483B187829CB004831E8 /* JSBMapKit.m in Sources */,
+				14A04568187829B4004831E8 /* JSBScriptingSupport.m in Sources */,
+				14A04841187829CB004831E8 /* JSBQuartzCore.m in Sources */,
+				14A04569187829B4004831E8 /* JSContext+JavaScriptBridge.m in Sources */,
+				14A0483E187829CB004831E8 /* JSBMultipeerConnectivity.m in Sources */,
+				14A04843187829CB004831E8 /* JSBSafariServices.m in Sources */,
+				14A04840187829CB004831E8 /* JSBPassKit.m in Sources */,
+				14A04838187829CB004831E8 /* JSBFoundation.m in Sources */,
+				14A0482A187829CB004831E8 /* JSBAVFoundation.m in Sources */,
+				14A0483A187829CB004831E8 /* JSBJavaScriptCore.m in Sources */,
+				14A04842187829CB004831E8 /* JSBQuickLook.m in Sources */,
+				14A04832187829CB004831E8 /* JSBCoreLocation.m in Sources */,
+				14A04837187829CB004831E8 /* JSBEventKitUI.m in Sources */,
+				14A04847187829CB004831E8 /* JSBUIKit.m in Sources */,
+				14A04845187829CB004831E8 /* JSBStoreKit.m in Sources */,
+				14A0483F187829CB004831E8 /* JSBOpenGLES.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		14A0453518782920004831E8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14A0453618782920004831E8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		14A0455318782920004831E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		14A0455418782920004831E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		14A0455618782920004831E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HelloWorld/HelloWorld-Prefix.pch";
+				INFOPLIST_FILE = "HelloWorld/HelloWorld-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		14A0455718782920004831E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HelloWorld/HelloWorld-Prefix.pch";
+				INFOPLIST_FILE = "HelloWorld/HelloWorld-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14A0452418782920004831E8 /* Build configuration list for PBXProject "HelloWorld" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14A0455318782920004831E8 /* Debug */,
+				14A0455418782920004831E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14A0455518782920004831E8 /* Build configuration list for PBXNativeTarget "HelloWorld" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14A0455618782920004831E8 /* Debug */,
+				14A0455718782920004831E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 14A0452118782920004831E8 /* Project object */;
+}

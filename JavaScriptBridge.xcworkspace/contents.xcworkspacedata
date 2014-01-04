@@ -14,5 +14,8 @@
       <FileRef
          location = "group:Examples/UICatalog/UICatalog.xcodeproj">
       </FileRef>
+      <FileRef
+         location = "group:Examples/HelloWorld/HelloWorld.xcodeproj">
+      </FileRef>
    </Group>
 </Workspace>
