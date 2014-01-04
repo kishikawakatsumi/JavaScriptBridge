@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		149AE1091876E8BC00018A8C /* buttonsViewController.js in Resources */ = {isa = PBXBuildFile; fileRef = 149AE1081876E8BC00018A8C /* buttonsViewController.js */; };
-		149AE10B1876F32D00018A8C /* mainViewController.js in Resources */ = {isa = PBXBuildFile; fileRef = 149AE10A1876F32D00018A8C /* mainViewController.js */; };
-		149B8722187714BB0074B480 /* controlsViewController.js in Resources */ = {isa = PBXBuildFile; fileRef = 149B8721187714BB0074B480 /* controlsViewController.js */; };
-		149B87241877199C0074B480 /* webViewController.js in Resources */ = {isa = PBXBuildFile; fileRef = 149B87231877199C0074B480 /* webViewController.js */; };
 		149B874A1877D9440074B480 /* JSContext+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 149B87471877D9440074B480 /* JSContext+JavaScriptBridge.m */; };
 		149B874B1877D9440074B480 /* UIControl+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 149B87491877D9440074B480 /* UIControl+JavaScriptBridge.m */; };
 		149C53A51875C5870003EE16 /* JSBScriptingSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 149C53A21875C5870003EE16 /* JSBScriptingSupport.m */; };
@@ -45,6 +41,12 @@
 		149C56851875C5BB0003EE16 /* JSBTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 149C55DA1875C5BB0003EE16 /* JSBTwitter.m */; };
 		149C56861875C5BB0003EE16 /* JSBUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 149C56171875C5BB0003EE16 /* JSBUIKit.m */; };
 		149C56871875C5BB0003EE16 /* JSBiAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 149C56681875C5BB0003EE16 /* JSBiAd.m */; };
+		14A045081877E7E3004831E8 /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 14A044FF1877E7B1004831E8 /* main.js */; };
+		14A045091877E7E3004831E8 /* mainViewController.js in Resources */ = {isa = PBXBuildFile; fileRef = 14A045001877E7B1004831E8 /* mainViewController.js */; };
+		14A0450A1877E7E3004831E8 /* buttonsViewController.js in Resources */ = {isa = PBXBuildFile; fileRef = 14A044FD1877E7B1004831E8 /* buttonsViewController.js */; };
+		14A0450B1877E7E3004831E8 /* controlsViewController.js in Resources */ = {isa = PBXBuildFile; fileRef = 14A044FE1877E7B1004831E8 /* controlsViewController.js */; };
+		14A0450C1877E7E3004831E8 /* webViewController.js in Resources */ = {isa = PBXBuildFile; fileRef = 14A045011877E7B1004831E8 /* webViewController.js */; };
+		14A0450E1877E870004831E8 /* mapViewController.js in Resources */ = {isa = PBXBuildFile; fileRef = 14A0450D1877E870004831E8 /* mapViewController.js */; };
 		14B5CD201875C3740019A135 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B5CD1F1875C3740019A135 /* Foundation.framework */; };
 		14B5CD221875C3740019A135 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B5CD211875C3740019A135 /* CoreGraphics.framework */; };
 		14B5CD241875C3740019A135 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B5CD231875C3740019A135 /* UIKit.framework */; };
@@ -52,14 +54,9 @@
 		14B5CD2C1875C3740019A135 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B5CD2B1875C3740019A135 /* main.m */; };
 		14B5CD301875C3740019A135 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B5CD2F1875C3740019A135 /* AppDelegate.m */; };
 		14B5CD321875C3740019A135 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14B5CD311875C3740019A135 /* Images.xcassets */; };
-		14B5CD4F1875C3FF0019A135 /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 14B5CD4E1875C3FF0019A135 /* main.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		149AE1081876E8BC00018A8C /* buttonsViewController.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = buttonsViewController.js; sourceTree = "<group>"; };
-		149AE10A1876F32D00018A8C /* mainViewController.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = mainViewController.js; sourceTree = "<group>"; };
-		149B8721187714BB0074B480 /* controlsViewController.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = controlsViewController.js; sourceTree = "<group>"; };
-		149B87231877199C0074B480 /* webViewController.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = webViewController.js; sourceTree = "<group>"; };
 		149B87461877D9440074B480 /* JSContext+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "JSContext+JavaScriptBridge.h"; path = "../../../Classes/JSContext+JavaScriptBridge.h"; sourceTree = "<group>"; };
 		149B87471877D9440074B480 /* JSContext+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "JSContext+JavaScriptBridge.m"; path = "../../../Classes/JSContext+JavaScriptBridge.m"; sourceTree = "<group>"; };
 		149B87481877D9440074B480 /* UIControl+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIControl+JavaScriptBridge.h"; path = "../../../Classes/UIControl+JavaScriptBridge.h"; sourceTree = "<group>"; };
@@ -741,6 +738,12 @@
 		149C56671875C5BB0003EE16 /* JSBiAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBiAd.h; sourceTree = "<group>"; };
 		149C56681875C5BB0003EE16 /* JSBiAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBiAd.m; sourceTree = "<group>"; };
 		14A044FC1877DD5E004831E8 /* JSBMessageForwarding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSBMessageForwarding.h; path = ../../../Classes/JSBMessageForwarding.h; sourceTree = "<group>"; };
+		14A044FD1877E7B1004831E8 /* buttonsViewController.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = buttonsViewController.js; path = js/buttonsViewController.js; sourceTree = "<group>"; };
+		14A044FE1877E7B1004831E8 /* controlsViewController.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = controlsViewController.js; path = js/controlsViewController.js; sourceTree = "<group>"; };
+		14A044FF1877E7B1004831E8 /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = main.js; path = js/main.js; sourceTree = "<group>"; };
+		14A045001877E7B1004831E8 /* mainViewController.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = mainViewController.js; path = js/mainViewController.js; sourceTree = "<group>"; };
+		14A045011877E7B1004831E8 /* webViewController.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = webViewController.js; path = js/webViewController.js; sourceTree = "<group>"; };
+		14A0450D1877E870004831E8 /* mapViewController.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = mapViewController.js; path = js/mapViewController.js; sourceTree = "<group>"; };
 		14B5CD1C1875C3740019A135 /* UICatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14B5CD1F1875C3740019A135 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		14B5CD211875C3740019A135 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -753,7 +756,6 @@
 		14B5CD2F1875C3740019A135 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		14B5CD311875C3740019A135 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		14B5CD381875C3750019A135 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		14B5CD4E1875C3FF0019A135 /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1723,6 +1725,19 @@
 			path = iAd;
 			sourceTree = "<group>";
 		};
+		14A045071877E7B5004831E8 /* js */ = {
+			isa = PBXGroup;
+			children = (
+				14A044FF1877E7B1004831E8 /* main.js */,
+				14A045001877E7B1004831E8 /* mainViewController.js */,
+				14A044FD1877E7B1004831E8 /* buttonsViewController.js */,
+				14A044FE1877E7B1004831E8 /* controlsViewController.js */,
+				14A045011877E7B1004831E8 /* webViewController.js */,
+				14A0450D1877E870004831E8 /* mapViewController.js */,
+			);
+			name = js;
+			sourceTree = "<group>";
+		};
 		14B5CD131875C3740019A135 = {
 			isa = PBXGroup;
 			children = (
@@ -1757,12 +1772,8 @@
 			children = (
 				14B5CD2E1875C3740019A135 /* AppDelegate.h */,
 				14B5CD2F1875C3740019A135 /* AppDelegate.m */,
-				14B5CD4E1875C3FF0019A135 /* main.js */,
-				149AE10A1876F32D00018A8C /* mainViewController.js */,
-				149AE1081876E8BC00018A8C /* buttonsViewController.js */,
-				149B8721187714BB0074B480 /* controlsViewController.js */,
-				149B87231877199C0074B480 /* webViewController.js */,
 				14B5CD311875C3740019A135 /* Images.xcassets */,
+				14A045071877E7B5004831E8 /* js */,
 				14B5CD261875C3740019A135 /* Supporting Files */,
 				149C53A71875C59C0003EE16 /* Vendor */,
 			);
@@ -1831,11 +1842,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14B5CD4F1875C3FF0019A135 /* main.js in Resources */,
-				149AE10B1876F32D00018A8C /* mainViewController.js in Resources */,
-				149AE1091876E8BC00018A8C /* buttonsViewController.js in Resources */,
-				149B8722187714BB0074B480 /* controlsViewController.js in Resources */,
-				149B87241877199C0074B480 /* webViewController.js in Resources */,
+				14A045081877E7E3004831E8 /* main.js in Resources */,
+				14A045091877E7E3004831E8 /* mainViewController.js in Resources */,
+				14A0450A1877E7E3004831E8 /* buttonsViewController.js in Resources */,
+				14A0450B1877E7E3004831E8 /* controlsViewController.js in Resources */,
+				14A0450C1877E7E3004831E8 /* webViewController.js in Resources */,
+				14A0450E1877E870004831E8 /* mapViewController.js in Resources */,
 				14B5CD2A1875C3740019A135 /* InfoPlist.strings in Resources */,
 				14B5CD321875C3740019A135 /* Images.xcassets in Resources */,
 			);

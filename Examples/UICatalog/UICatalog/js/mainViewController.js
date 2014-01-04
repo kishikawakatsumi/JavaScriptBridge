@@ -1,6 +1,7 @@
 var ButtonsViewController = JSB.require('buttonsViewController');
 var ControlsViewController = JSB.require('controlsViewController');
 var WebViewController = JSB.require('webViewController');
+var MapViewController = JSB.require('mapViewController');
 
 var MainViewController = JSB.define('MainViewController : UITableViewController', {
   viewDidLoad: function() {
@@ -20,6 +21,11 @@ var MainViewController = JSB.define('MainViewController : UITableViewController'
       title: 'Web',
       explanation: 'Use of UIWebView',
       viewController: WebViewController.alloc().init()
+    },
+    {
+      title: 'Map',
+      explanation: 'Use of MKMapView',
+      viewController: MapViewController.alloc().init()
     }]
   },
   tableViewNumberOfRowsInSection: function(tableView, section) {

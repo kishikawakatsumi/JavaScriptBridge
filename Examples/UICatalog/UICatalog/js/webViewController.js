@@ -25,28 +25,28 @@ var WebViewController = JSB.define('WebViewController : UIViewController <UIText
     webFrame.y += (6 * 2) + 30;
     webFrame.height -= 40;
 
-    self.myWebView = UIWebView.alloc().initWithFrame(webFrame);
+    self.webView = UIWebView.alloc().initWithFrame(webFrame);
     
-    self.myWebView.backgroundColor = UIColor.whiteColor();
-    self.myWebView.scalesPageToFit = true;
-    self.myWebView.autoresizingMask = (1 << 1 | 1 << 4 | 1 << 5);
-    self.myWebView.delegate = self;
-    self.view.addSubview(self.myWebView);
+    self.webView.backgroundColor = UIColor.whiteColor();
+    self.webView.scalesPageToFit = true;
+    self.webView.autoresizingMask = (1 << 1 | 1 << 4 | 1 << 5);
+    self.webView.delegate = self;
+    self.view.addSubview(self.webView);
     
-    self.myWebView.loadRequest(NSURLRequest.requestWithURL(NSURL.URLWithString('http://www.apple.com/')));
+    self.webView.loadRequest(NSURLRequest.requestWithURL(NSURL.URLWithString('http://www.apple.com/')));
   },
   viewWillAppear: function(animated) {
-    self.myWebView.delegate = self;
+    self.webView.delegate = self;
   },
   viewWillDisappear: function(animated) {
-    self.myWebView.stopLoading();
-    self.myWebView.delegate = null;
+    self.webView.stopLoading();
+    self.webView.delegate = null;
 
     UIApplication.sharedApplication().networkActivityIndicatorVisible = false;
   },
   textFieldShouldReturn: function(textField) {
     textField.resignFirstResponder();
-    self.myWebView.loadRequest(NSURLRequest.requestWithURL(NSURL.URLWithString(textField.text)));
+    self.webView.loadRequest(NSURLRequest.requestWithURL(NSURL.URLWithString(textField.text)));
 
     return true;
   },
@@ -62,7 +62,7 @@ var WebViewController = JSB.define('WebViewController : UIViewController <UIText
     var errorString = "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\"><html><head><meta http-equiv='Content-Type' content='text/html;charset=utf-8'><title></title></head><body><div style='width: 100%%; text-align: center; font-size: 36pt; color: red;'>An error occurred:<br>%@</div></body></html>";
     errorString = errorString.replace("%@", error.localizedDescription);
     
-    self.myWebView.loadHTMLStringBaseURL(errorString, null);
+    self.webView.loadHTMLStringBaseURL(errorString, null);
   }
 });
 

@@ -19,6 +19,7 @@
     NSString *script = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
     
     JSContext *context = [JSBScriptingSupport globalContext];
+    [context addScriptingSupport:@"MapKit"];
     [context evaluateScript:script];
     
     return YES;
