@@ -27,7 +27,7 @@ JSContext *context = [JSBScriptingSupport globalContext];
 ];
 ```
 
-### Syntax/Naming conventions
+### Syntax / Naming conventions
 
 **Class name**
 - Same as Objectige-C
