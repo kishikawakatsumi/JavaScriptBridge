@@ -35,12 +35,10 @@ JSContext *context = [JSBScriptingSupport globalContext];
 **Variable declaration**
 - Get rid of `Type` instead use `var`
 
-*Objective-C*
 ```objc
 UILabel *label;
 ```
 
-*JavaScript*
 ```javascript
 var label;
 ```
@@ -57,7 +55,6 @@ slider.continuous = YES;
 slider.value = 50.0;
 ```
 
-*JavaScript*
 ```javascript
 var slider = UISlider.alloc().initWithFrame(frame);
 slider.backgroundColor = UIColor.clearColor();
@@ -72,12 +69,10 @@ slider.value = 50.0;
 - All colons are removed from the selector
 - Any lowercase letter that had followed a colon will be capitalized
 
-*Objective-C*
 ```objc
 UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 ```
 
-*JavaScript*
 ```javascript
 var window = UIWindow.alloc().initWithFrame(UIScreen.mainScreen().bounds);
 ```
@@ -85,7 +80,6 @@ var window = UIWindow.alloc().initWithFrame(UIScreen.mainScreen().bounds);
 **Struct (CGRect, NSRange, etc.)**
 - Use Hashes
 
-*Objective-C*
 ```objc
 UIView *view = [UIView new];
 view.frame = CGRectMake(20, 80, 280, 80);
@@ -94,7 +88,6 @@ CGFloat x = view.frame.origin.x;
 CGFloat width = view.frame.size.width;
 ```
 
-*JavaScript*
 ```javascript
 var view = UIView.new();
 view.frame = {x: 20, y: 80, width: 280, height: 80};
