@@ -8,7 +8,7 @@ desc "build"
 task :build, :workspace, :schemes do |t, args|
   schemes = args[:schemes].gsub(/'/, '').split(' ')
   schemes.each do |scheme|
-    system("xcodebuild -workspace #{args[:workspace]} -scheme #{scheme} | xcpretty -c")
+    system("xcodebuild -workspace #{args[:workspace]} -scheme #{scheme}")
   end
 end
 
