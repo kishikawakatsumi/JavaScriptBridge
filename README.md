@@ -4,7 +4,8 @@
 [![Platform](http://cocoapod-badges.herokuapp.com/p/JavaScriptBridge/badge.png)](http://cocoadocs.org/docsets/JavaScriptBridge)
 [![Build Status](https://travis-ci.org/kishikawakatsumi/JavaScriptBridge.png?branch=master)](https://travis-ci.org/kishikawakatsumi/JavaScriptBridge)
 
-JavaScriptBridge provides the way to write iOS apps with JavaScript.
+Write iOS apps in Javascript! JavaScriptBridge provides the way to write iOS apps with JavaScript.
+JavaScriptBridge bridges Cocoa touch to JavaScriptCore (JavaScriptCore.framework is introduced in iOS 7).
 
 ## Usage
 
@@ -26,21 +27,50 @@ JSContext *context = [JSBScriptingSupport globalContext];
 ];
 ```
 
-### Naming conventions
+### Syntax/Naming conventions
 
 **Class name**
 - Same as Objectige-C
 
 **Variable declaration**
-- Get rid of type instead use `var`
+- Get rid of `Type` instead use `var`
+
+*Objective-C*
+```objc
+UILabel *label;
+```
+
+*JavaScript*
+```javascript
+var label;
+```
+
+**Properties**
+- Use dot syntax
+
+```objc
+UISlider *slider = [[UISlider alloc] initWithFrame:frame];
+slider.backgroundColor = [UIColor clearColor];
+slider.minimumValue = 0.0;
+slider.maximumValue = 100.0;
+slider.continuous = YES;
+slider.value = 50.0;
+```
+
+*JavaScript*
+```javascript
+var slider = UISlider.alloc().initWithFrame(frame);
+slider.backgroundColor = UIColor.clearColor();
+slider.minimumValue = 0.0;
+slider.maximumValue = 100.0;
+slider.continuous = true;
+slider.value = 50.0;
+```
 
 **Invoking method**
 - Use dot syntax
 - All colons are removed from the selector
 - Any lowercase letter that had followed a colon will be capitalized
-
-
-**Example**
 
 *Objective-C*
 ```objc
@@ -50,6 +80,27 @@ UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds
 *JavaScript*
 ```javascript
 var window = UIWindow.alloc().initWithFrame(UIScreen.mainScreen().bounds);
+```
+
+**Struct (CGRect, NSRange, etc.)**
+- Use Hashes
+
+*Objective-C*
+```objc
+UIView *view = [UIView new];
+view.frame = CGRectMake(20, 80, 280, 80);
+
+CGFloat x = view.frame.origin.x;
+CGFloat width = view.frame.size.width;
+```
+
+*JavaScript*
+```javascript
+var view = UIView.new();
+view.frame = {x: 20, y: 80, width: 280, height: 80};
+
+var x = view.frame.x; // => 20
+var width = view.frame.width; // => 280
 ```
 
 ###Hello world on JavaScriptBridge
