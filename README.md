@@ -94,6 +94,7 @@ var MainViewController = JSB.define('MainViewController : UITableViewController'
 ###Modules
 
 JavaScriptBridge provides simple module system `require/exports` funcitons, like Node.js.
+See [example](https://github.com/kishikawakatsumi/JavaScriptBridge/tree/master/Examples/UICatalog/UICatalog/js).
 
 ```javascript
 var ButtonsViewController = JSB.require('buttonsViewController');
