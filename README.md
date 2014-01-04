@@ -27,6 +27,29 @@ JSContext *context = [JSBScriptingSupport globalContext];
 ];
 ```
 
+Retrieve the `JSContext` instance from `JSBScriptingSupport`.
+The context includes a lot of system classes that has been `JSExports` adopted.
+```objc
+JSContext *context = [JSBScriptingSupport globalContext];
+```
+
+Add `JSExports` adopted classes each framework if needed.
+By default, `Foundation`, `UIKit`, `QuartzCore` frameworks are included.
+```objc
+[context addScriptingSupport:@"MapKit"];
+[context addScriptingSupport:@"MessageUI"];
+```
+
+It is ready to use, writing appliction code and evaluate in JavaScript.
+```
+[context evaluateScript:
+ @"var window = UIWindow.new();"
+ @"window.frame = UIScreen.mainScreen().bounds;"
+ @"window.backgroundColor = UIColor.whiteColor();"
+ @"window.makeKeyAndVisible();"
+];
+```
+
 ### Syntax / Naming conventions
 
 **Class name**
