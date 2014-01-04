@@ -103,6 +103,7 @@ var x = view.frame.x; // => 20
 var width = view.frame.width; // => 280
 ```
 
+## Examples
 ###Hello world on JavaScriptBridge
 
 This is the most simple way.
@@ -158,6 +159,7 @@ This is the most simple way.
 
 See the [UICatalog](https://github.com/kishikawakatsumi/JavaScriptBridge/tree/master/Examples/UICatalog/UICatalog) example.
 
+## Enhancements
 ###Define custom classes
 
 You can define custom class in JavaScript.
