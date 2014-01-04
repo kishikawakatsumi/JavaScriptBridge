@@ -421,6 +421,10 @@
     [context evaluateScript:@"var uicollectionviewcontroller = UICollectionViewController.new();"];
     value = context[@"uicollectionviewcontroller"];
     XCTAssertTrue(value && !value.isUndefined);
+    
+    [context evaluateScript:@"var uicollectionviewcontroller = UICollectionViewController.alloc().initWithCollectionViewLayout(UICollectionViewFlowLayout.new());"];
+    value = context[@"uicollectionviewcontroller"];
+    XCTAssertTrue(value && !value.isUndefined);
 
     [context evaluateScript:@"var uicollectionviewflowlayout = UICollectionViewFlowLayout.new();"];
     value = context[@"uicollectionviewflowlayout"];
