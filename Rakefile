@@ -14,6 +14,6 @@ end
 desc "run unit tests"
 task :test do
   DESTINATIONS.each do |destination|
-    system("xcodebuild test -sdk iphonesimulator -workspace #{WORKSPASE} -scheme #{SCHEME} -configuration Debug -destination \"#{destination}\" | xcpretty -c")
+    system("xcodebuild test -workspace #{WORKSPASE} -scheme #{SCHEME} -configuration Debug -sdk iphonesimulator -destination \"#{destination}\" | xcpretty -c")
   end
 end

@@ -1,14 +1,14 @@
 //
-//  JSContext+Helper.m
+//  JSContext+JavaScriptBridge.m
 //  JavaScriptBridge
 //
-//  Created by kishikawa katsumi on 2013/12/31.
-//  Copyright (c) 2013 kishikawa katsumi. All rights reserved.
+//  Created by kishikawa katsumi on 2014/01/04.
+//  Copyright (c) 2014 kishikawa katsumi. All rights reserved.
 //
 
-#import "JSContext+Helper.h"
+#import "JSContext+JavaScriptBridge.h"
 
-@implementation JSContext (Helper)
+@implementation JSContext (JavaScriptBridge)
 
 - (void)addScriptingSupport:(NSString *)framework
 {

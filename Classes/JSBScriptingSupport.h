@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "JSContext+Helper.h"
+#import "JSContext+JavaScriptBridge.h"
 
 @import JavaScriptCore;
 
