@@ -16,18 +16,19 @@ JavaScriptBridge provides the way to write iOS apps with JavaScript.
 **Variable declaration**
 - Get rid of type instead use `var`
 
-**Invoking method
+**Invoking method**
 - Use dot syntax
 - All colons are removed from the selector
 - Any lowercase letter that had followed a colon will be capitalized
 
 
 **Example**
-
+*Objective-C*
 ```objc
 UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 ```
 
+*JavaScript*
 ```javascript
 var window = UIWindow.alloc().initWithFrame(UIScreen.mainScreen().bounds);
 ```
@@ -90,7 +91,7 @@ See the [UICatalog](https://github.com/kishikawakatsumi/JavaScriptBridge/tree/ma
 ###Define custom classes
 
 You can define custom class in JavaScript.
-It is needs to intaract system provided framework.
+It is needs to interact system provided framework.
 
 ```javascript
 var MainViewController = JSB.define('MainViewController : UITableViewController <UITableviewDataSource, UITableviewDelegate>', // Declaration
