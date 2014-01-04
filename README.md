@@ -27,20 +27,20 @@ JSContext *context = [JSBScriptingSupport globalContext];
 ];
 ```
 
-Retrieve the `JSContext` instance from `JSBScriptingSupport`.
+1. Retrieve the `JSContext` instance from `JSBScriptingSupport`.
 The context includes a lot of system classes that has been `JSExports` adopted.
 ```objc
 JSContext *context = [JSBScriptingSupport globalContext];
 ```
 
-Add `JSExports` adopted classes each framework if needed.
+2. Add `JSExports` adopted classes each framework if needed.
 By default, `Foundation`, `UIKit`, `QuartzCore` frameworks are included.
 ```objc
 [context addScriptingSupport:@"MapKit"];
 [context addScriptingSupport:@"MessageUI"];
 ```
 
-It is ready to use, writing appliction code and evaluate in JavaScript.
+3. It is ready to use, writing appliction code and evaluate in JavaScript.
 ```
 [context evaluateScript:
  @"var window = UIWindow.new();"
@@ -181,6 +181,27 @@ See the [UICatalog](https://github.com/kishikawakatsumi/JavaScriptBridge/tree/ma
 You can define custom class in JavaScript.
 It is needs to interact system provided framework.
 
+`JSB.define(declaration, instanceMembers)` function defines Objective-C class in JavaScript.
+Pass the class declaration string to first argument.
+
+Second argument is instance method definitions as hash.
+The hash object inclueds function object, each keys are to be used as method name.
+
+**Example**
+
+```javascript
+var MainViewController = JSB.define('MainViewController : UITableViewController', {
+  viewDidLoad: function() { // Instance Method Definitions
+    self.navigationItem.title = 'UICatalog';
+  },
+  viewWillAppear: function(animated) {
+    self.tableView.reloadData();
+  }
+});
+```
+
+**Example**
+
 ```javascript
 var MainViewController = JSB.define('MainViewController : UITableViewController <UITableviewDataSource, UITableviewDelegate>', // Declaration
 // Instance Method Definitions
@@ -209,6 +230,9 @@ var MainViewController = JSB.define('MainViewController : UITableViewController 
 ###Modules
 
 JavaScriptBridge provides simple module system `require/exports` funcitons, like Node.js.
+
+`JSB.require(name)` function enables external module, `JSB.exports` publishes a module.
+
 See [example](https://github.com/kishikawakatsumi/JavaScriptBridge/tree/master/Examples/UICatalog/UICatalog/js).
 
 ```javascript
