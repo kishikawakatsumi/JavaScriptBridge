@@ -20,6 +20,7 @@
     
     JSContext *context = [JSBScriptingSupport globalContext];
     [context addScriptingSupport:@"AssetsLibrary"];
+    [context addScriptingSupport:@"Accounts"];
     [context addScriptingSupport:@"MapKit"];
     [context evaluateScript:script];
     

@@ -1,5 +1,6 @@
 var ButtonsViewController = JSB.require('buttonsViewController');
 var ControlsViewController = JSB.require('controlsViewController');
+var TwitterViewController = JSB.require('twitterViewController');
 var CollectionViewController = JSB.require('collectionViewController');
 var WebViewController = JSB.require('webViewController');
 var MapViewController = JSB.require('mapViewController');
@@ -17,6 +18,11 @@ var MainViewController = JSB.define('MainViewController : UITableViewController'
       title: 'Controls',
       explanation: 'Various uses of UIControl',
       viewController: ControlsViewController.alloc().initWithStyle(1)
+    },
+    {
+      title: 'Table View',
+      explanation: 'Use of UITableView',
+      viewController: TwitterViewController.alloc().init()
     },
     {
       title: 'Collection View',

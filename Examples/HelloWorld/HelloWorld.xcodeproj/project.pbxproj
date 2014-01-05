@@ -11,6 +11,9 @@
 		149A45F718796C66007C2CA7 /* ALAsset+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 149A45F218796C66007C2CA7 /* ALAsset+JavaScriptBridge.m */; };
 		149A45F818796C66007C2CA7 /* ALAssetsGroup+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 149A45F418796C66007C2CA7 /* ALAssetsGroup+JavaScriptBridge.m */; };
 		149A45F918796C66007C2CA7 /* ALAssetsLibrary+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 149A45F618796C66007C2CA7 /* ALAssetsLibrary+JavaScriptBridge.m */; };
+		149A460C1879730A007C2CA7 /* SLComposeViewController+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 149A46091879730A007C2CA7 /* SLComposeViewController+JavaScriptBridge.m */; };
+		149A460D1879730A007C2CA7 /* SLRequest+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 149A460B1879730A007C2CA7 /* SLRequest+JavaScriptBridge.m */; };
+		149A4619187984E8007C2CA7 /* ACAccountStore+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 149A4618187984E8007C2CA7 /* ACAccountStore+JavaScriptBridge.m */; };
 		14A0452D18782920004831E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A0452C18782920004831E8 /* Foundation.framework */; };
 		14A0452F18782920004831E8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A0452E18782920004831E8 /* CoreGraphics.framework */; };
 		14A0453118782920004831E8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A0453018782920004831E8 /* UIKit.framework */; };
@@ -62,6 +65,12 @@
 		149A45F418796C66007C2CA7 /* ALAssetsGroup+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAssetsGroup+JavaScriptBridge.m"; sourceTree = "<group>"; };
 		149A45F518796C66007C2CA7 /* ALAssetsLibrary+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAssetsLibrary+JavaScriptBridge.h"; sourceTree = "<group>"; };
 		149A45F618796C66007C2CA7 /* ALAssetsLibrary+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAssetsLibrary+JavaScriptBridge.m"; sourceTree = "<group>"; };
+		149A46081879730A007C2CA7 /* SLComposeViewController+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLComposeViewController+JavaScriptBridge.h"; sourceTree = "<group>"; };
+		149A46091879730A007C2CA7 /* SLComposeViewController+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SLComposeViewController+JavaScriptBridge.m"; sourceTree = "<group>"; };
+		149A460A1879730A007C2CA7 /* SLRequest+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLRequest+JavaScriptBridge.h"; sourceTree = "<group>"; };
+		149A460B1879730A007C2CA7 /* SLRequest+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SLRequest+JavaScriptBridge.m"; sourceTree = "<group>"; };
+		149A4617187984E8007C2CA7 /* ACAccountStore+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ACAccountStore+JavaScriptBridge.h"; sourceTree = "<group>"; };
+		149A4618187984E8007C2CA7 /* ACAccountStore+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ACAccountStore+JavaScriptBridge.m"; sourceTree = "<group>"; };
 		14A0452918782920004831E8 /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14A0452C18782920004831E8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		14A0452E18782920004831E8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -852,12 +861,18 @@
 				149A45EF18796C5D007C2CA7 /* JSBMessageForwarding.m */,
 				14A0455F187829B4004831E8 /* UIControl+JavaScriptBridge.h */,
 				14A04560187829B4004831E8 /* UIControl+JavaScriptBridge.m */,
+				149A4617187984E8007C2CA7 /* ACAccountStore+JavaScriptBridge.h */,
+				149A4618187984E8007C2CA7 /* ACAccountStore+JavaScriptBridge.m */,
 				149A45F518796C66007C2CA7 /* ALAssetsLibrary+JavaScriptBridge.h */,
 				149A45F618796C66007C2CA7 /* ALAssetsLibrary+JavaScriptBridge.m */,
 				149A45F118796C66007C2CA7 /* ALAsset+JavaScriptBridge.h */,
 				149A45F218796C66007C2CA7 /* ALAsset+JavaScriptBridge.m */,
 				149A45F318796C66007C2CA7 /* ALAssetsGroup+JavaScriptBridge.h */,
 				149A45F418796C66007C2CA7 /* ALAssetsGroup+JavaScriptBridge.m */,
+				149A460A1879730A007C2CA7 /* SLRequest+JavaScriptBridge.h */,
+				149A460B1879730A007C2CA7 /* SLRequest+JavaScriptBridge.m */,
+				149A46081879730A007C2CA7 /* SLComposeViewController+JavaScriptBridge.h */,
+				149A46091879730A007C2CA7 /* SLComposeViewController+JavaScriptBridge.m */,
 			);
 			name = Private;
 			path = ../../../Classes/Private;
@@ -1873,6 +1888,7 @@
 				14A04567187829B4004831E8 /* UIControl+JavaScriptBridge.m in Sources */,
 				14A04836187829CB004831E8 /* JSBEventKit.m in Sources */,
 				14A04834187829CB004831E8 /* JSBCoreMotion.m in Sources */,
+				149A460C1879730A007C2CA7 /* SLComposeViewController+JavaScriptBridge.m in Sources */,
 				14A0453918782920004831E8 /* main.m in Sources */,
 				149A45F818796C66007C2CA7 /* ALAssetsGroup+JavaScriptBridge.m in Sources */,
 				14A0482F187829CB004831E8 /* JSBCoreBluetooth.m in Sources */,
@@ -1883,6 +1899,8 @@
 				14A04841187829CB004831E8 /* JSBQuartzCore.m in Sources */,
 				14A04569187829B4004831E8 /* JSContext+JavaScriptBridge.m in Sources */,
 				14A0483E187829CB004831E8 /* JSBMultipeerConnectivity.m in Sources */,
+				149A4619187984E8007C2CA7 /* ACAccountStore+JavaScriptBridge.m in Sources */,
+				149A460D1879730A007C2CA7 /* SLRequest+JavaScriptBridge.m in Sources */,
 				14A04843187829CB004831E8 /* JSBSafariServices.m in Sources */,
 				14A04840187829CB004831E8 /* JSBPassKit.m in Sources */,
 				14A04838187829CB004831E8 /* JSBFoundation.m in Sources */,
