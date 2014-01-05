@@ -17,19 +17,21 @@
 + (JSContext *)globalContext;
 
 JSExportAs(defineClass,
-+ (id)defineClass:(NSString *)declaration
-  instanceMembers:(JSValue *)instanceMembers
-    staticMembers:(JSValue *)staticMembers
-);
++ (id)defineClass:(NSString *)declaration instanceMembers:(JSValue *)instanceMembers staticMembers:(JSValue *)staticMembers);
 
 JSExportAs(require,
-+ (id)require:(NSString *)name
-);
++ (id)require:(NSString *)name);
+
+JSExportAs(dispatch_async,
++ (void)dispatch_async:(id)queue block:(JSValue *)block);
+
+JSExportAs(dispatch_get_global_queue,
++ (id)dispatch_get_global_queue:(dispatch_queue_priority_t)priority flags:(unsigned long)flags);
++ (id)dispatch_get_main_queue;
 
 @optional
 JSExportAs(dump,
-+ (void)dump:(id)object
-);
++ (void)dump:(id)object);
 
 @end
 

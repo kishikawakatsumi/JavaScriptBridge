@@ -14,12 +14,19 @@
 @property (nonatomic, readonly, getter = isEditable) BOOL editable;
 
 - (id)valueForProperty:(NSString *)property;
-- (CGImageRef)posterImage;
+- (id)posterImage;
 - (void)setAssetsFilter:(ALAssetsFilter *)filter;
 - (NSInteger)numberOfAssets;
-- (void)enumerateAssetsUsingBlock:(ALAssetsGroupEnumerationResultsBlock)enumerationBlock;
-- (void)enumerateAssetsWithOptions:(NSEnumerationOptions)options usingBlock:(ALAssetsGroupEnumerationResultsBlock)enumerationBlock;
-- (void)enumerateAssetsAtIndexes:(NSIndexSet *)indexSet options:(NSEnumerationOptions)options usingBlock:(ALAssetsGroupEnumerationResultsBlock)enumerationBlock;
+JSExportAs(enumerateAssetsUsingBlock,
+- (void)__enumerateAssetsUsingBlock:(JSValue *)enumerationBlock);
+JSExportAs(enumerateAssetsWithOptionsUsingBlock,
+- (void)__enumerateAssetsWithOptions:(NSEnumerationOptions)options
+                          usingBlock:(JSValue *)enumerationBlock);
+
+JSExportAs(enumerateAssetsAtIndexes,
+- (void)__enumerateAssetsAtIndexes:(NSIndexSet *)indexSet
+                           options:(NSEnumerationOptions)options
+                        usingBlock:(JSValue *)enumerationBlock);
 - (BOOL)addAsset:(ALAsset *)asset;
 
 #pragma clang diagnostic pop

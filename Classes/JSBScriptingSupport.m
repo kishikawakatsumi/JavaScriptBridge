@@ -45,6 +45,15 @@ static JSContext *globalContext;
          @"    selector: function(str) {\n"
          @"      return __JSB_JSBScriptingSupport.selectorFromString(str);\n"
          @"    },\n"
+         @"    dispatch_async: function(queue, block) {\n"
+         @"      return __JSB_JSBScriptingSupport.dispatch_async(queue, block);\n"
+         @"    },\n"
+         @"    dispatch_get_global_queue: function(priority, flags) {\n"
+         @"      return __JSB_JSBScriptingSupport.dispatch_get_global_queue(priority, flags);\n"
+         @"    },\n"
+         @"    dispatch_get_main_queue: function() {\n"
+         @"      return __JSB_JSBScriptingSupport.dispatch_get_main_queue();\n"
+         @"    },\n"
          @"    dump: function(obj) {\n"
          @"      return __JSB_JSBScriptingSupport.dump(obj);\n"
          @"    }\n"
@@ -63,9 +72,9 @@ static JSContext *globalContext;
     return globalContext;
 }
 
-+ (id)defineClass:(NSString *)declaration
-  instanceMembers:(JSValue *)instanceMembers
-    staticMembers:(JSValue *)staticMembers
+#pragma mark -
+
++ (id)defineClass:(NSString *)declaration instanceMembers:(JSValue *)instanceMembers staticMembers:(JSValue *)staticMembers
 {
     NSScanner *scanner = [NSScanner scannerWithString:declaration];
     
@@ -141,6 +150,31 @@ static JSContext *globalContext;
     }
     
     return module;
+}
+
+#pragma mark -
+
++ (void)dispatch_async:(id)queue block:(JSValue *)function
+{
+    dispatch_block_t block = NULL;
+    if (!function.isUndefined) {
+        block = ^() {
+            [function callWithArguments:nil];
+        };
+    }
+    
+    dispatch_async(queue, block);
+}
+
++ (id)dispatch_get_global_queue:(dispatch_queue_priority_t)priority
+                          flags:(unsigned long)flags
+{
+    return dispatch_get_global_queue(priority, flags);
+}
+
++ (id)dispatch_get_main_queue
+{
+    return dispatch_get_main_queue();
 }
 
 #pragma mark - for debug

@@ -1,5 +1,6 @@
 var ButtonsViewController = JSB.require('buttonsViewController');
 var ControlsViewController = JSB.require('controlsViewController');
+var CollectionViewController = JSB.require('collectionViewController');
 var WebViewController = JSB.require('webViewController');
 var MapViewController = JSB.require('mapViewController');
 
@@ -16,6 +17,11 @@ var MainViewController = JSB.define('MainViewController : UITableViewController'
       title: 'Controls',
       explanation: 'Various uses of UIControl',
       viewController: ControlsViewController.alloc().initWithStyle(1)
+    },
+    {
+      title: 'Collection View',
+      explanation: 'Use of UICollectionView',
+      viewController: CollectionViewController.alloc().initWithCollectionViewLayout(UICollectionViewFlowLayout.new())
     },
     {
       title: 'Web',

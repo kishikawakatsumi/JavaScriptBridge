@@ -14,14 +14,37 @@
 + (ALAuthorizationStatus)authorizationStatus;
 + (void)disableSharedPhotoStreamsSupport;
 
-- (void)enumerateGroupsWithTypes:(ALAssetsGroupType)types usingBlock:(ALAssetsLibraryGroupsEnumerationResultsBlock)enumerationBlock failureBlock:(ALAssetsLibraryAccessFailureBlock)failureBlock;
-- (void)assetForURL:(NSURL *)assetURL resultBlock:(ALAssetsLibraryAssetForURLResultBlock)resultBlock failureBlock:(ALAssetsLibraryAccessFailureBlock)failureBlock;
-- (void)groupForURL:(NSURL *)groupURL resultBlock:(ALAssetsLibraryGroupResultBlock)resultBlock failureBlock:(ALAssetsLibraryAccessFailureBlock)failureBlock;
-- (void)addAssetsGroupAlbumWithName:(NSString *)name resultBlock:(ALAssetsLibraryGroupResultBlock)resultBlock failureBlock:(ALAssetsLibraryAccessFailureBlock)failureBlock;
-- (void)writeImageToSavedPhotosAlbum:(CGImageRef)imageRef orientation:(ALAssetOrientation)orientation completionBlock:(ALAssetsLibraryWriteImageCompletionBlock)completionBlock;
-- (void)writeImageToSavedPhotosAlbum:(CGImageRef)imageRef metadata:(NSDictionary *)metadata completionBlock:(ALAssetsLibraryWriteImageCompletionBlock)completionBlock;
-- (void)writeImageDataToSavedPhotosAlbum:(NSData *)imageData metadata:(NSDictionary *)metadata completionBlock:(ALAssetsLibraryWriteImageCompletionBlock)completionBlock;
-- (void)writeVideoAtPathToSavedPhotosAlbum:(NSURL *)videoPathURL completionBlock:(ALAssetsLibraryWriteVideoCompletionBlock)completionBlock;
+JSExportAs(enumerateGroupsWithTypesUsingBlockFailureBlock,
+- (void)__enumerateGroupsWithTypes:(ALAssetsGroupType)types
+                        usingBlock:(JSValue *)enumerationBlock
+                      failureBlock:(JSValue *)failureBlock);
+JSExportAs(assetForURLResultBlockFailureBlock,
+- (void)__assetForURL:(NSURL *)assetURL
+          resultBlock:(JSValue *)resultBlock
+         failureBlock:(JSValue *)failureBlock);
+JSExportAs(groupForURLResultBlockFailureBlock,
+- (void)__groupForURL:(NSURL *)groupURL
+          resultBlock:(JSValue *)resultBlock
+         failureBlock:(JSValue *)failureBlock);
+JSExportAs(addAssetsGroupAlbumWithNameResultBlockFailureBlock,
+- (void)__addAssetsGroupAlbumWithName:(NSString *)name
+                          resultBlock:(JSValue *)resultBlock
+                         failureBlock:(JSValue *)failureBlock);
+JSExportAs(writeImageToSavedPhotosAlbumOrientationCompletionBlock,
+- (void)__writeImageToSavedPhotosAlbum:(id)imageRef
+                           orientation:(ALAssetOrientation)orientation
+                       completionBlock:(JSValue *)completionBlock);
+JSExportAs(writeImageToSavedPhotosAlbumMetadataCompletionBlock,
+- (void)__writeImageToSavedPhotosAlbum:(id)imageRef
+                              metadata:(NSDictionary *)metadata
+                       completionBlock:(JSValue *)completionBlock);
+JSExportAs(writeImageDataToSavedPhotosAlbumMetadataCompletionBlock,
+- (void)__writeImageDataToSavedPhotosAlbum:(NSData *)imageData
+                                  metadata:(NSDictionary *)metadata
+                           completionBlock:(JSValue *)completionBlock);
+JSExportAs(writeVideoAtPathToSavedPhotosAlbumCompletionBlock,
+- (void)__writeVideoAtPathToSavedPhotosAlbum:(NSURL *)videoPathURL
+                             completionBlock:(JSValue *)completionBlock);
 - (BOOL)videoAtPathIsCompatibleWithSavedPhotosAlbum:(NSURL *)videoPathURL;
 
 #pragma clang diagnostic pop
