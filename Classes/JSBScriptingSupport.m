@@ -156,10 +156,13 @@ static JSContext *globalContext;
 
 + (void)dispatch_async:(id)queue block:(JSValue *)function
 {
+    JSContext *context = [JSContext currentContext];
+    id currentSelf = context[@"self"];
+    
     dispatch_block_t block = NULL;
     if (!function.isUndefined) {
         block = ^() {
-            [function callWithArguments:nil];
+            dispatchFunction(currentSelf, function, nil);
         };
     }
     

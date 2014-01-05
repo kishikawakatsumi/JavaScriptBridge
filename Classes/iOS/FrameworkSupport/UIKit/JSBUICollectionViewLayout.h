@@ -38,7 +38,7 @@
 
 - (void)invalidateLayout;
 - (void)invalidateLayoutWithContext:(UICollectionViewLayoutInvalidationContext *)context;
-- (void)registerClass:(Class)viewClass forDecorationViewOfKind:(NSString *)decorationViewKind;
+- (void)registerClass:(id)viewClass forDecorationViewOfKind:(NSString *)decorationViewKind;
 - (void)registerNib:(UINib *)nib forDecorationViewOfKind:(NSString *)decorationViewKind;
 - (void)prepareLayout;
 - (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect;

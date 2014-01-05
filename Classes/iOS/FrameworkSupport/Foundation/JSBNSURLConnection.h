@@ -13,7 +13,8 @@
 + (NSURLConnection *)connectionWithRequest:(NSURLRequest *)request delegate:(id)delegate;
 + (BOOL)canHandleRequest:(NSURLRequest *)request;
 + (NSData *)sendSynchronousRequest:(NSURLRequest *)request returningResponse:(NSURLResponse **)response error:(NSError **)error;
-+ (void)sendAsynchronousRequest:(NSURLRequest *)request queue:(NSOperationQueue *)queue completionHandler:(void (^)(NSURLResponse *response , NSData *data , NSError *connectionError))handler;
+JSExportAs(sendAsynchronousRequestQueueCompletionHandler,
++ (void)__sendAsynchronousRequest:(NSURLRequest *)request queue:(NSOperationQueue *)queue completionHandler:(JSValue *)handler);
 
 - (id)initWithRequest:(NSURLRequest *)request delegate:(id)delegate startImmediately:(BOOL)startImmediately;
 - (id)initWithRequest:(NSURLRequest *)request delegate:(id)delegate;

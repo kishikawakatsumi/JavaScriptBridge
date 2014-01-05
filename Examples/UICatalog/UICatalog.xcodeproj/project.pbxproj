@@ -15,6 +15,7 @@
 		149A4607187972FF007C2CA7 /* SLRequest+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 149A4605187972FF007C2CA7 /* SLRequest+JavaScriptBridge.m */; };
 		149A460F18797DDD007C2CA7 /* twitterViewController.js in Resources */ = {isa = PBXBuildFile; fileRef = 149A460E18797DDD007C2CA7 /* twitterViewController.js */; };
 		149A4616187984D6007C2CA7 /* ACAccountStore+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 149A4615187984D6007C2CA7 /* ACAccountStore+JavaScriptBridge.m */; };
+		149A46201879B497007C2CA7 /* NSURLConnection+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 149A461F1879B497007C2CA7 /* NSURLConnection+JavaScriptBridge.m */; };
 		149B874A1877D9440074B480 /* JSContext+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 149B87471877D9440074B480 /* JSContext+JavaScriptBridge.m */; };
 		149C53A51875C5870003EE16 /* JSBScriptingSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 149C53A21875C5870003EE16 /* JSBScriptingSupport.m */; };
 		149C56691875C5BB0003EE16 /* JSBAVFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 149C53DC1875C5B90003EE16 /* JSBAVFoundation.m */; };
@@ -80,6 +81,8 @@
 		149A460E18797DDD007C2CA7 /* twitterViewController.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = twitterViewController.js; path = js/twitterViewController.js; sourceTree = "<group>"; };
 		149A4614187984D6007C2CA7 /* ACAccountStore+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ACAccountStore+JavaScriptBridge.h"; path = "../../../Classes/Private/ACAccountStore+JavaScriptBridge.h"; sourceTree = "<group>"; };
 		149A4615187984D6007C2CA7 /* ACAccountStore+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ACAccountStore+JavaScriptBridge.m"; path = "../../../Classes/Private/ACAccountStore+JavaScriptBridge.m"; sourceTree = "<group>"; };
+		149A461E1879B497007C2CA7 /* NSURLConnection+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURLConnection+JavaScriptBridge.h"; path = "../../../Classes/Private/NSURLConnection+JavaScriptBridge.h"; sourceTree = "<group>"; };
+		149A461F1879B497007C2CA7 /* NSURLConnection+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURLConnection+JavaScriptBridge.m"; path = "../../../Classes/Private/NSURLConnection+JavaScriptBridge.m"; sourceTree = "<group>"; };
 		149B87461877D9440074B480 /* JSContext+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "JSContext+JavaScriptBridge.h"; path = "../../../Classes/JSContext+JavaScriptBridge.h"; sourceTree = "<group>"; };
 		149B87471877D9440074B480 /* JSContext+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "JSContext+JavaScriptBridge.m"; path = "../../../Classes/JSContext+JavaScriptBridge.m"; sourceTree = "<group>"; };
 		149C539F1875C5870003EE16 /* JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JavaScriptBridge.h; path = ../../../Classes/JavaScriptBridge.h; sourceTree = "<group>"; };
@@ -1767,6 +1770,8 @@
 			children = (
 				14A0451B18781832004831E8 /* JSBMessageForwarding.h */,
 				149A45E0187961AB007C2CA7 /* JSBMessageForwarding.m */,
+				149A461E1879B497007C2CA7 /* NSURLConnection+JavaScriptBridge.h */,
+				149A461F1879B497007C2CA7 /* NSURLConnection+JavaScriptBridge.m */,
 				14A0451C18781832004831E8 /* UIControl+JavaScriptBridge.h */,
 				14A0451D18781832004831E8 /* UIControl+JavaScriptBridge.m */,
 				149A4614187984D6007C2CA7 /* ACAccountStore+JavaScriptBridge.h */,
@@ -1917,6 +1922,7 @@
 				149C567A1875C5BB0003EE16 /* JSBMapKit.m in Sources */,
 				149C56851875C5BB0003EE16 /* JSBTwitter.m in Sources */,
 				149C567E1875C5BB0003EE16 /* JSBOpenGLES.m in Sources */,
+				149A46201879B497007C2CA7 /* NSURLConnection+JavaScriptBridge.m in Sources */,
 				149C56811875C5BB0003EE16 /* JSBQuickLook.m in Sources */,
 				149C56711875C5BB0003EE16 /* JSBCoreLocation.m in Sources */,
 				149A45E7187961BD007C2CA7 /* ALAssetsLibrary+JavaScriptBridge.m in Sources */,

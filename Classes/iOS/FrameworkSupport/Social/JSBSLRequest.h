@@ -21,7 +21,7 @@
 
 - (void)addMultipartData:(NSData *)data withName:(NSString *)name type:(NSString *)type filename:(NSString *)filename;
 - (NSURLRequest *)preparedURLRequest;
-JSExportAs(enumerateAssetsUsingBlock,
+JSExportAs(performRequestWithHandler,
 - (void)__performRequestWithHandler:(JSValue *)handler);
 
 #pragma clang diagnostic pop
