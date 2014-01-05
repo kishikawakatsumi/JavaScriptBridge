@@ -1,13 +1,13 @@
 //
-//  ALAssetsGroup+JavaScriptBridge.h
+//  ACAccountStore+JavaScriptBridge.h
 //  JavaScriptBridge
 //
 //  Created by kishikawa katsumi on 2014/01/05.
 //  Copyright (c) 2014 kishikawa katsumi. All rights reserved.
 //
 
-#import <AssetsLibrary/AssetsLibrary.h>
+#import <Accounts/Accounts.h>
 
-@interface ALAssetsGroup (JavaScriptBridge)
+@interface ACAccountStore (JavaScriptBridge)
 
 @end

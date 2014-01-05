@@ -3,7 +3,7 @@
 //  JavaScriptBridge
 //
 //  Created by kishikawa katsumi on 2014/01/05.
-//  Copyright (c) 2014年 kishikawa katsumi. All rights reserved.
+//  Copyright (c) 2014 kishikawa katsumi. All rights reserved.
 //
 
 #import "JSBMessageForwarding.h"
@@ -294,6 +294,7 @@ void forwardInvocation(id self, SEL _cmd, NSInvocation *invocation)
         invokeSuper(invocation);
     }
     
+    id currentSelf = context[@"self"];
     context[@"self"] = self;
     
     NSString *propertyName = propertyNameFromSelector(invocation.selector);
@@ -306,7 +307,7 @@ void forwardInvocation(id self, SEL _cmd, NSInvocation *invocation)
         setReturnValue(returnValue, invocation);
     }
     
-    context[@"self"] = nil;
+    context[@"self"] = currentSelf;
 }
 
 NSMethodSignature *methodSignatureForSelector(id self, SEL _cmd, SEL selector)

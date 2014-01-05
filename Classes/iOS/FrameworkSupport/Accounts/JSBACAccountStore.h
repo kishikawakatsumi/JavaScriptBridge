@@ -16,11 +16,18 @@
 - (ACAccount *)accountWithIdentifier:(NSString *)identifier;
 - (ACAccountType *)accountTypeWithAccountTypeIdentifier:(NSString *)typeIdentifier;
 - (NSArray *)accountsWithAccountType:(ACAccountType *)accountType;
-- (void)saveAccount:(ACAccount *)account withCompletionHandler:(ACAccountStoreSaveCompletionHandler)completionHandler;
-- (void)requestAccessToAccountsWithType:(ACAccountType *)accountType withCompletionHandler:(ACAccountStoreRequestAccessCompletionHandler)handler;
-- (void)requestAccessToAccountsWithType:(ACAccountType *)accountType options:(NSDictionary *)options completion:(ACAccountStoreRequestAccessCompletionHandler)completion;
-- (void)renewCredentialsForAccount:(ACAccount *)account completion:(ACAccountStoreCredentialRenewalHandler)completionHandler;
-- (void)removeAccount:(ACAccount *)account withCompletionHandler:(ACAccountStoreRemoveCompletionHandler)completionHandler;
+JSExportAs(saveAccountWithCompletionHandler,
+- (void)__saveAccount:(ACAccount *)account withCompletionHandler:(JSValue *)completionHandler);
+JSExportAs(requestAccessToAccountsWithTypeWithCompletionHandler,
+- (void)__requestAccessToAccountsWithType:(ACAccountType *)accountType withCompletionHandler:(JSValue *)handler);
+JSExportAs(requestAccessToAccountsWithTypeOptionsCompletion,
+- (void)__requestAccessToAccountsWithType:(ACAccountType *)accountType
+                                  options:(NSDictionary *)options
+                               completion:(JSValue *)completion);
+JSExportAs(renewCredentialsForAccountCompletion,
+- (void)renewCredentialsForAccount:(ACAccount *)account completion:(JSValue *)completionHandler);
+JSExportAs(removeAccountWithCompletionHandler,
+- (void)removeAccount:(ACAccount *)account withCompletionHandler:(JSValue *)completionHandler);
 
 #pragma clang diagnostic pop
 

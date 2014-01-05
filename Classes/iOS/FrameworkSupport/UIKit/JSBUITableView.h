@@ -80,9 +80,9 @@
 - (id)dequeueReusableCellWithIdentifier:(NSString *)identifier forIndexPath:(NSIndexPath *)indexPath;
 - (id)dequeueReusableHeaderFooterViewWithIdentifier:(NSString *)identifier;
 - (void)registerNib:(UINib *)nib forCellReuseIdentifier:(NSString *)identifier;
-- (void)registerClass:(Class)cellClass forCellReuseIdentifier:(NSString *)identifier;
+- (void)registerClass:(id)cellClass forCellReuseIdentifier:(NSString *)identifier;
 - (void)registerNib:(UINib *)nib forHeaderFooterViewReuseIdentifier:(NSString *)identifier;
-- (void)registerClass:(Class)aClass forHeaderFooterViewReuseIdentifier:(NSString *)identifier;
+- (void)registerClass:(id)aClass forHeaderFooterViewReuseIdentifier:(NSString *)identifier;
 
 #pragma clang diagnostic pop
 

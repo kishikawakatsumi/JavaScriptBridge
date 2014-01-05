@@ -24,10 +24,10 @@
     JSContext *context = [[JSContext alloc] init];
     [context addScriptingSupport:@"Foundation"];
     [context addScriptingSupport:@"Social"];
-
+    
     JSValue *value = nil;
     
-    [context evaluateScript:@"var slrequest = SLRequest.requestForServiceTypeRequestMethodURLParameters('com.apple.social.twitter', 0, NSURL.URLWithString('http://www.apple.com/'), null);"];
+    [context evaluateScript:@"var slrequest = SLRequest.requestForServiceTypeRequestMethodURLParameters('com.apple.social.twitter', 0, NSURL.URLWithString('https://api.twitter.com/1/statuses/home_timeline.json'), null);"];
     value = context[@"slrequest"];
     XCTAssertTrue(value && !value.isUndefined);
 
