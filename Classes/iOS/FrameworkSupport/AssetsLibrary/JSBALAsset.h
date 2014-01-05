@@ -18,12 +18,22 @@
 - (id)valueForProperty:(NSString *)property;
 - (ALAssetRepresentation *)defaultRepresentation;
 - (ALAssetRepresentation *)representationForUTI:(NSString *)representationUTI;
-- (CGImageRef)thumbnail;
-- (CGImageRef)aspectRatioThumbnail;
-- (void)writeModifiedImageDataToSavedPhotosAlbum:(NSData *)imageData metadata:(NSDictionary *)metadata completionBlock:(ALAssetsLibraryWriteImageCompletionBlock)completionBlock;
-- (void)writeModifiedVideoAtPathToSavedPhotosAlbum:(NSURL *)videoPathURL completionBlock:(ALAssetsLibraryWriteVideoCompletionBlock)completionBlock;
-- (void)setImageData:(NSData *)imageData metadata:(NSDictionary *)metadata completionBlock:(ALAssetsLibraryWriteImageCompletionBlock)completionBlock;
-- (void)setVideoAtPath:(NSURL *)videoPathURL completionBlock:(ALAssetsLibraryWriteVideoCompletionBlock)completionBlock;
+- (id)thumbnail;
+- (id)aspectRatioThumbnail;
+JSExportAs(writeModifiedImageDataToSavedPhotosAlbumMetadataCompletionBlock,
+- (void)__writeModifiedImageDataToSavedPhotosAlbum:(NSData *)imageData
+                                          metadata:(NSDictionary *)metadata
+                                   completionBlock:(JSValue *)completionBlock);
+JSExportAs(writeModifiedVideoAtPathToSavedPhotosAlbumCompletionBlock,
+- (void)__writeModifiedVideoAtPathToSavedPhotosAlbum:(NSURL *)videoPathURL
+                                     completionBlock:(JSValue *)completionBlock);
+JSExportAs(setImageDataMetadataCompletionBlock,
+- (void)__setImageData:(NSData *)imageData
+              metadata:(NSDictionary *)metadata
+       completionBlock:(JSValue *)completionBlock);
+JSExportAs(setVideoAtPathCompletionBlock,
+- (void)__setVideoAtPath:(NSURL *)videoPathURL
+         completionBlock:(JSValue *)completionBlock);
 
 #pragma clang diagnostic pop
 

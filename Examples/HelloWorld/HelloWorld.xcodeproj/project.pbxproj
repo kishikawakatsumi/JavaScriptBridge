@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		149A45F018796C5D007C2CA7 /* JSBMessageForwarding.m in Sources */ = {isa = PBXBuildFile; fileRef = 149A45EF18796C5D007C2CA7 /* JSBMessageForwarding.m */; };
+		149A45F718796C66007C2CA7 /* ALAsset+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 149A45F218796C66007C2CA7 /* ALAsset+JavaScriptBridge.m */; };
+		149A45F818796C66007C2CA7 /* ALAssetsGroup+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 149A45F418796C66007C2CA7 /* ALAssetsGroup+JavaScriptBridge.m */; };
+		149A45F918796C66007C2CA7 /* ALAssetsLibrary+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 149A45F618796C66007C2CA7 /* ALAssetsLibrary+JavaScriptBridge.m */; };
 		14A0452D18782920004831E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A0452C18782920004831E8 /* Foundation.framework */; };
 		14A0452F18782920004831E8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A0452E18782920004831E8 /* CoreGraphics.framework */; };
 		14A0453118782920004831E8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A0453018782920004831E8 /* UIKit.framework */; };
@@ -51,6 +55,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		149A45EF18796C5D007C2CA7 /* JSBMessageForwarding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBMessageForwarding.m; sourceTree = "<group>"; };
+		149A45F118796C66007C2CA7 /* ALAsset+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAsset+JavaScriptBridge.h"; sourceTree = "<group>"; };
+		149A45F218796C66007C2CA7 /* ALAsset+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAsset+JavaScriptBridge.m"; sourceTree = "<group>"; };
+		149A45F318796C66007C2CA7 /* ALAssetsGroup+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAssetsGroup+JavaScriptBridge.h"; sourceTree = "<group>"; };
+		149A45F418796C66007C2CA7 /* ALAssetsGroup+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAssetsGroup+JavaScriptBridge.m"; sourceTree = "<group>"; };
+		149A45F518796C66007C2CA7 /* ALAssetsLibrary+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAssetsLibrary+JavaScriptBridge.h"; sourceTree = "<group>"; };
+		149A45F618796C66007C2CA7 /* ALAssetsLibrary+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAssetsLibrary+JavaScriptBridge.m"; sourceTree = "<group>"; };
 		14A0452918782920004831E8 /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14A0452C18782920004831E8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		14A0452E18782920004831E8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -838,8 +849,15 @@
 			isa = PBXGroup;
 			children = (
 				14A0455E187829B4004831E8 /* JSBMessageForwarding.h */,
+				149A45EF18796C5D007C2CA7 /* JSBMessageForwarding.m */,
 				14A0455F187829B4004831E8 /* UIControl+JavaScriptBridge.h */,
 				14A04560187829B4004831E8 /* UIControl+JavaScriptBridge.m */,
+				149A45F518796C66007C2CA7 /* ALAssetsLibrary+JavaScriptBridge.h */,
+				149A45F618796C66007C2CA7 /* ALAssetsLibrary+JavaScriptBridge.m */,
+				149A45F118796C66007C2CA7 /* ALAsset+JavaScriptBridge.h */,
+				149A45F218796C66007C2CA7 /* ALAsset+JavaScriptBridge.m */,
+				149A45F318796C66007C2CA7 /* ALAssetsGroup+JavaScriptBridge.h */,
+				149A45F418796C66007C2CA7 /* ALAssetsGroup+JavaScriptBridge.m */,
 			);
 			name = Private;
 			path = ../../../Classes/Private;
@@ -1846,13 +1864,17 @@
 				14A04846187829CB004831E8 /* JSBTwitter.m in Sources */,
 				14A0482E187829CB004831E8 /* JSBAssetsLibrary.m in Sources */,
 				14A0482C187829CB004831E8 /* JSBAdSupport.m in Sources */,
+				149A45F018796C5D007C2CA7 /* JSBMessageForwarding.m in Sources */,
+				149A45F718796C66007C2CA7 /* ALAsset+JavaScriptBridge.m in Sources */,
 				14A04839187829CB004831E8 /* JSBGameKit.m in Sources */,
+				149A45F918796C66007C2CA7 /* ALAssetsLibrary+JavaScriptBridge.m in Sources */,
 				14A04831187829CB004831E8 /* JSBCoreImage.m in Sources */,
 				14A04848187829CB004831E8 /* JSBiAd.m in Sources */,
 				14A04567187829B4004831E8 /* UIControl+JavaScriptBridge.m in Sources */,
 				14A04836187829CB004831E8 /* JSBEventKit.m in Sources */,
 				14A04834187829CB004831E8 /* JSBCoreMotion.m in Sources */,
 				14A0453918782920004831E8 /* main.m in Sources */,
+				149A45F818796C66007C2CA7 /* ALAssetsGroup+JavaScriptBridge.m in Sources */,
 				14A0482F187829CB004831E8 /* JSBCoreBluetooth.m in Sources */,
 				14A0482D187829CB004831E8 /* JSBAddressBookUI.m in Sources */,
 				14A0483C187829CB004831E8 /* JSBMediaPlayer.m in Sources */,
@@ -2006,6 +2028,7 @@
 				14A0455718782920004831E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

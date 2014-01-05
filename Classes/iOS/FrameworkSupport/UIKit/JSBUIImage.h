@@ -20,7 +20,7 @@
 @property (nonatomic, readonly) CGFloat scale;
 @property (nonatomic, readonly) UIImageRenderingMode renderingMode;
 @property (nonatomic, readonly) NSInteger leftCapWidth;
-@property (nonatomic, readonly) CGImageRef CGImage;
+@property (nonatomic, readonly) id CGImage;
 @property (nonatomic, readonly) CGSize size;
 @property (nonatomic, readonly) NSInteger topCapHeight;
 @property (nonatomic, readonly) UIEdgeInsets alignmentRectInsets;
@@ -33,8 +33,8 @@
 + (UIImage *)imageWithContentsOfFile:(NSString *)path;
 + (UIImage *)imageWithData:(NSData *)data;
 + (UIImage *)imageWithData:(NSData *)data scale:(CGFloat)scale;
-+ (UIImage *)imageWithCGImage:(CGImageRef)cgImage;
-+ (UIImage *)imageWithCGImage:(CGImageRef)cgImage scale:(CGFloat)scale orientation:(UIImageOrientation)orientation;
++ (UIImage *)imageWithCGImage:(id)cgImage;
++ (UIImage *)imageWithCGImage:(id)cgImage scale:(CGFloat)scale orientation:(UIImageOrientation)orientation;
 + (UIImage *)imageWithCIImage:(CIImage *)ciImage;
 + (UIImage *)imageWithCIImage:(CIImage *)ciImage scale:(CGFloat)scale orientation:(UIImageOrientation)orientation;
 + (UIImage *)animatedImageNamed:(NSString *)name duration:(NSTimeInterval)duration;
@@ -45,11 +45,11 @@
 - (id)initWithContentsOfFile:(NSString *)path;
 - (id)initWithData:(NSData *)data;
 - (id)initWithData:(NSData *)data scale:(CGFloat)scale;
-- (id)initWithCGImage:(CGImageRef)cgImage;
-- (id)initWithCGImage:(CGImageRef)cgImage scale:(CGFloat)scale orientation:(UIImageOrientation)orientation;
+- (id)initWithCGImage:(id)cgImage;
+- (id)initWithCGImage:(id)cgImage scale:(CGFloat)scale orientation:(UIImageOrientation)orientation;
 - (id)initWithCIImage:(CIImage *)ciImage;
 - (id)initWithCIImage:(CIImage *)ciImage scale:(CGFloat)scale orientation:(UIImageOrientation)orientation;
-- (CGImageRef)CGImage;
+- (id)CGImage;
 - (void)drawAtPoint:(CGPoint)point;
 - (void)drawAtPoint:(CGPoint)point blendMode:(CGBlendMode)blendMode alpha:(CGFloat)alpha;
 - (void)drawInRect:(CGRect)rect;
