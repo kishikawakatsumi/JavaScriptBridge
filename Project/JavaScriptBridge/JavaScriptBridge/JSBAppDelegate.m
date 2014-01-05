@@ -21,11 +21,17 @@
      @"var navigationController = UINavigationController.new();"
      @""
      @"var tableViewController = UITableViewController.new();"
+     @"tableViewController.navigationItem.title = 'JavaScriptBridge';"
      @"navigationController.viewControllers = [tableViewController];"
      @""
      @"window.rootViewController = navigationController;"
      @""
      @"window.makeKeyAndVisible();"
+     @""
+     @"var alertView = UIAlertView.new();"
+     @"alertView.message = 'Hello JavaScriptBridge!';"
+     @"alertView.addButtonWithTitle('OK');"
+     @"alertView.show();"
      ];
     
     return YES;
