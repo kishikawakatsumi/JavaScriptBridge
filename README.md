@@ -10,6 +10,9 @@ JavaScriptBridge bridges Cocoa touch to JavaScriptCore (JavaScriptCore.framework
 ## Usage
 
 ```objc
+#import <JavaScriptBridge/JavaScriptBridge.h>
+...
+
 // Retrieve the prepared context
 JSContext *context = [JSBScriptingSupport globalContext];
 
