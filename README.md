@@ -72,6 +72,7 @@ UILabel *label;
 var label;
 ```
 
+
 **Properties**
 
 Use dot syntax
@@ -94,6 +95,7 @@ slider.continuous = true;
 slider.value = 50.0;
 ```
 
+
 **Invoking method**
 
 Use dot syntax
@@ -107,6 +109,7 @@ UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds
 ```javascript
 var window = UIWindow.alloc().initWithFrame(UIScreen.mainScreen().bounds);
 ```
+
 
 **Struct (CGRect, NSRange, etc.)**
 
