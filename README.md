@@ -273,7 +273,8 @@ var MapViewController = JSB.require('mapViewController');
 var MainViewController = JSB.define('MainViewController : UITableViewController', {
   viewDidLoad: function() {
     self.navigationItem.title = 'UICatalog';
-    // 〜〜
+    ...
+    
 });
 
 JSB.exports = MainViewController;
