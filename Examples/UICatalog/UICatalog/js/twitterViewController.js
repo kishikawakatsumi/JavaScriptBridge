@@ -67,10 +67,20 @@ var TwitterViewController = JSB.define('TwitterViewController : UITableViewContr
           var account = accounts[0];
           self.getHomeTimlineWithAccount(account);
         } else {
-
+          JSB.dispatch_async(JSB.dispatch_get_main_queue(), function() {
+            var alertView = UIAlertView.new();
+            alertView.message = 'No Twitter account.';
+            alertView.addButtonWithTitle('OK');
+            alertView.show();
+          });
         }
       } else {
-
+        JSB.dispatch_async(JSB.dispatch_get_main_queue(), function() {
+          var alertView = UIAlertView.new();
+          alertView.message = 'Twitter account access denied.';
+          alertView.addButtonWithTitle('OK');
+          alertView.show();
+        });
       }
     });
   },
