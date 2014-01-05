@@ -7,6 +7,9 @@
 Write iOS apps in Javascript! JavaScriptBridge provides the way to write iOS apps with JavaScript.
 JavaScriptBridge bridges Cocoa touch to JavaScriptCore (JavaScriptCore.framework is introduced in iOS 7).
 
+
+You get the power of dynamics of scripting language for your apps.
+
 ## Usage
 
 ```objc
