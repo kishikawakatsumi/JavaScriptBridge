@@ -3,6 +3,7 @@
 [![Version](https://cocoapod-badges.herokuapp.com/v/JavaScriptBridge/badge.png)](https://cocoapod-badges.herokuapp.com/v/JavaScriptBridge/badge.png)
 [![Platform](https://cocoapod-badges.herokuapp.com/p/JavaScriptBridge/badge.png)](https://cocoapod-badges.herokuapp.com/p/JavaScriptBridge/badge.png)
 [![Build Status](https://travis-ci.org/kishikawakatsumi/JavaScriptBridge.png?branch=master)](https://travis-ci.org/kishikawakatsumi/JavaScriptBridge)
+[![Analytics](https://ga-beacon.appspot.com/UA-4291014-9/JavaScriptBridge/README.md)](https://github.com/igrigorik/ga-beacon)
 
 Write iOS apps in Javascript! JavaScriptBridge provides the way to write iOS apps with JavaScript.
 JavaScriptBridge bridges Cocoa touch to JavaScriptCore (JavaScriptCore.framework is introduced in iOS 7).
