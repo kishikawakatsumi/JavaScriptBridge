@@ -1,4 +1,4 @@
-# JavaScriptBridge
+# JavaScriptBridge ![License MIT](https://go-shields.herokuapp.com/license-MIT-yellow.png) 
 
 [![Version](https://cocoapod-badges.herokuapp.com/v/JavaScriptBridge/badge.png)](https://cocoapod-badges.herokuapp.com/v/JavaScriptBridge/badge.png)
 [![Platform](https://cocoapod-badges.herokuapp.com/p/JavaScriptBridge/badge.png)](https://cocoapod-badges.herokuapp.com/p/JavaScriptBridge/badge.png)
