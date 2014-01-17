@@ -11,6 +11,8 @@ JavaScriptBridge bridges Cocoa touch to JavaScriptCore (JavaScriptCore.framework
 
 You get the power of dynamics of scripting language for your apps.
 
+*It is still in development, obviously. You're welcomed to contribute if you find the project interesting!*
+
 ## Usage
 
 ```objc
