@@ -1,4 +1,4 @@
-var TwitterCell = JSB.define('TwitterCell : UITableViewCell', {
+var TwitterCell = JSB.defineClass('TwitterCell : UITableViewCell', {
   initWithStyleReuseIdentifier: function(style, reuseIdentifier) {
     self.iconImageView = UIImageView.alloc().initWithFrame({x: 8, y: 8, width: 40, height: 40});
     self.iconImageView.tag = 1;
@@ -23,7 +23,7 @@ var TwitterCell = JSB.define('TwitterCell : UITableViewCell', {
   }
 });
 
-var TwitterViewController = JSB.define('TwitterViewController : UITableViewController', {
+var TwitterViewController = JSB.defineClass('TwitterViewController : UITableViewController', {
   viewDidLoad: function() {
     self.timeline = [];
 

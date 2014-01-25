@@ -1,4 +1,4 @@
-var WebViewController = JSB.define('WebViewController : UIViewController <UITextFieldDelegate, UIWebViewDelegate>', {
+var WebViewController = JSB.defineClass('WebViewController : UIViewController <UITextFieldDelegate, UIWebViewDelegate>', {
   viewDidLoad: function() {
     self.navigationItem.title = 'Web';
 

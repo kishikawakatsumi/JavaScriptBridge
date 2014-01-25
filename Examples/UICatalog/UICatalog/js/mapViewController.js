@@ -1,4 +1,4 @@
-var MapViewController = JSB.define('MapViewController : UIViewController <MKMapViewDelegate>', {
+var MapViewController = JSB.defineClass('MapViewController : UIViewController <MKMapViewDelegate>', {
   viewDidLoad: function() {
     self.navigationItem.title = 'Map';
 
