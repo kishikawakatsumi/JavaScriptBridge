@@ -219,7 +219,7 @@ See the [UICatalog](https://github.com/kishikawakatsumi/JavaScriptBridge/tree/ma
 You can define custom class in JavaScript.
 It is needs to interact system provided framework.
 
-`JSB.define(declaration, instanceMembers)` function defines Objective-C class in JavaScript.
+`JSB.defineClass(declaration, instanceMembers)` function defines Objective-C class in JavaScript.
 Pass the class declaration string to first argument.
 
 Second argument is instance method definitions as hash.
@@ -228,7 +228,7 @@ The hash object inclueds function object, each keys are to be used as method nam
 **Example**
 
 ```javascript
-var MainViewController = JSB.define('MainViewController : UITableViewController', {
+var MainViewController = JSB.defineClass('MainViewController : UITableViewController', {
   viewDidLoad: function() { // Instance Method Definitions
     self.navigationItem.title = 'UICatalog';
   },

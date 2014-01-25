@@ -35,7 +35,11 @@ static JSContext *globalContext;
         [globalContext evaluateScript:
          @"JSB = (function() {\n"
          @"  var namespace = {\n"
+         @"    defineClass: function(declaration, instanceMembers, staticMembers) {\n"
+         @"      return __JSB_JSBScriptingSupport.defineClass(declaration, instanceMembers, staticMembers);\n"
+         @"    },\n"
          @"    define: function(declaration, instanceMembers, staticMembers) {\n"
+         @"      JSB.dump('`define` is deprecated, use `defineClass` instead.');\n"
          @"      return __JSB_JSBScriptingSupport.defineClass(declaration, instanceMembers, staticMembers);\n"
          @"    },\n"
          @"    require: function(name) {\n"

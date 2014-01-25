@@ -1,4 +1,4 @@
-var CollectionViewController = JSB.define('CollectionViewController : UICollectionViewController', {
+var CollectionViewController = JSB.defineClass('CollectionViewController : UICollectionViewController', {
   viewDidLoad: function() {
     self.navigationItem.title = 'Photo Album';
 

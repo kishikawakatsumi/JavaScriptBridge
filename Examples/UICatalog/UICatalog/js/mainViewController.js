@@ -5,7 +5,7 @@ var CollectionViewController = JSB.require('collectionViewController');
 var WebViewController = JSB.require('webViewController');
 var MapViewController = JSB.require('mapViewController');
 
-var MainViewController = JSB.define('MainViewController : UITableViewController', {
+var MainViewController = JSB.defineClass('MainViewController : UITableViewController', {
   viewDidLoad: function() {
     self.navigationItem.title = 'UICatalog';
 

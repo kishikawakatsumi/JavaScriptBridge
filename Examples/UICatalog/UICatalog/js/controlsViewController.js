@@ -1,4 +1,4 @@
-var ControlsViewController = JSB.define('ControlsViewController : UITableViewController', {
+var ControlsViewController = JSB.defineClass('ControlsViewController : UITableViewController', {
   viewDidLoad: function() {
     self.switchCtl = function() {
       var frame = {x: 0, y: 12, width: 94, height: 27};

@@ -1,4 +1,4 @@
-var ButtonsViewController = JSB.define('ButtonsViewController : UITableViewController', {
+var ButtonsViewController = JSB.defineClass('ButtonsViewController : UITableViewController', {
 	viewDidLoad: function() {
 		self.newButton = function(title, target, selector, frame, image, imagePressed, darkTextColor) {
 			var button = UIButton.alloc().initWithFrame(frame);
