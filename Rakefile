@@ -16,7 +16,7 @@ desc "clean"
 task :clean, :workspace, :schemes do |t, args|
   schemes = args[:schemes].gsub(/'/, '').split(' ')
   schemes.each do |scheme|
-    sh "xcodebuild clean -workspace #{args[:workspace]} -scheme #{scheme} | xcpretty -c"
+    sh "xcodebuild clean -workspace #{args[:workspace]} -scheme #{scheme}"
   end
 end
 
