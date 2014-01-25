@@ -61,16 +61,26 @@
 + (void)setAnimationTransition:(UIViewAnimationTransition)transition forView:(UIView *)view cache:(BOOL)cache;
 + (void)setAnimationsEnabled:(BOOL)enabled;
 + (BOOL)areAnimationsEnabled;
-+ (void)performWithoutAnimation:(void (^)(void))actionsWithoutAnimation;
-+ (void)animateWithDuration:(NSTimeInterval)duration delay:(NSTimeInterval)delay options:(UIViewAnimationOptions)options animations:(void (^)(void))animations completion:(void (^)(BOOL finished))completion;
-+ (void)animateWithDuration:(NSTimeInterval)duration animations:(void (^)(void))animations completion:(void (^)(BOOL finished))completion;
-+ (void)animateWithDuration:(NSTimeInterval)duration animations:(void (^)(void))animations;
-+ (void)animateWithDuration:(NSTimeInterval)duration delay:(NSTimeInterval)delay usingSpringWithDamping:(CGFloat)dampingRatio initialSpringVelocity:(CGFloat)velocity options:(UIViewAnimationOptions)options animations:(void (^)(void))animations completion:(void (^)(BOOL finished))completion;
-+ (void)transitionWithView:(UIView *)view duration:(NSTimeInterval)duration options:(UIViewAnimationOptions)options animations:(void (^)(void))animations completion:(void (^)(BOOL finished))completion;
-+ (void)transitionFromView:(UIView *)fromView toView:(UIView *)toView duration:(NSTimeInterval)duration options:(UIViewAnimationOptions)options completion:(void (^)(BOOL finished))completion;
-+ (void)performSystemAnimation:(UISystemAnimation)animation onViews:(NSArray *)views options:(UIViewAnimationOptions)options animations:(void (^)(void))parallelAnimations completion:(void (^)(BOOL finished))completion;
-+ (void)animateKeyframesWithDuration:(NSTimeInterval)duration delay:(NSTimeInterval)delay options:(UIViewKeyframeAnimationOptions)options animations:(void (^)(void))animations completion:(void (^)(BOOL finished))completion;
-+ (void)addKeyframeWithRelativeStartTime:(double)frameStartTime relativeDuration:(double)frameDuration animations:(void (^)(void))animations;
+JSExportAs(performWithoutAnimation,
++ (void)__performWithoutAnimation:(JSValue *)actionsWithoutAnimation);
+JSExportAs(animateWithDurationDelayOptionsAnimationsCompletion,
++ (void)__animateWithDuration:(NSTimeInterval)duration delay:(NSTimeInterval)delay options:(UIViewAnimationOptions)options animations:(JSValue *)animations completion:(JSValue *)completion);
+JSExportAs(animateWithDurationAnimationsCompletion,
++ (void)__animateWithDuration:(NSTimeInterval)duration animations:(JSValue *)animations completion:(JSValue *)completion);
+JSExportAs(animateWithDurationAnimations,
++ (void)__animateWithDuration:(NSTimeInterval)duration animations:(JSValue *)animations);
+JSExportAs(animateWithDurationDelayUsingSpringWithDampingInitialSpringVelocityOptionsAnimationsCompletion,
++ (void)__animateWithDuration:(NSTimeInterval)duration delay:(NSTimeInterval)delay usingSpringWithDamping:(CGFloat)dampingRatio initialSpringVelocity:(CGFloat)velocity options:(UIViewAnimationOptions)options animations:(JSValue *)animations completion:(JSValue *)completion);
+JSExportAs(transitionWithViewDurationOptionsAnimationsCompletion,
++ (void)__transitionWithView:(UIView *)view duration:(NSTimeInterval)duration options:(UIViewAnimationOptions)options animations:(JSValue *)animations completion:(JSValue *)completion);
+JSExportAs(transitionFromViewToViewDurationOptionsCompletion,
++ (void)__transitionFromView:(UIView *)fromView toView:(UIView *)toView duration:(NSTimeInterval)duration options:(UIViewAnimationOptions)options completion:(JSValue *)completion);
+JSExportAs(performSystemAnimationOnViewsOptionsAnimationsCompletion,
++ (void)__performSystemAnimation:(UISystemAnimation)animation onViews:(NSArray *)views options:(UIViewAnimationOptions)options animations:(JSValue *)parallelAnimations completion:(JSValue *)completion);
+JSExportAs(animateKeyframesWithDurationDelayOptionsAnimationsCompletion,
++ (void)__animateKeyframesWithDuration:(NSTimeInterval)duration delay:(NSTimeInterval)delay options:(UIViewKeyframeAnimationOptions)options animations:(JSValue *)animations completion:(JSValue *)completion);
+JSExportAs(addKeyframeWithRelativeStartTimeRelativeDurationAnimations,
++ (void)__addKeyframeWithRelativeStartTime:(double)frameStartTime relativeDuration:(double)frameDuration animations:(JSValue *)animations);
 + (BOOL)requiresConstraintBasedLayout;
 
 - (id)initWithFrame:(CGRect)frame;
