@@ -62,16 +62,8 @@
     value = context[@"nsstringdrawingcontext"];
     XCTAssertTrue(value && !value.isUndefined);
 
-    [context evaluateScript:@"var nsattributedstring = NSAttributedString.new();"];
-    value = context[@"nsattributedstring"];
-    XCTAssertTrue(value && !value.isUndefined);
-
     [context evaluateScript:@"var nstextattachment = NSTextAttachment.new();"];
     value = context[@"nstextattachment"];
-    XCTAssertTrue(value && !value.isUndefined);
-
-    [context evaluateScript:@"var nsattributedstring = NSAttributedString.new();"];
-    value = context[@"nsattributedstring"];
     XCTAssertTrue(value && !value.isUndefined);
 
     [context evaluateScript:@"var nstextcontainer = NSTextContainer.new();"];
@@ -254,16 +246,8 @@
     value = context[@"uipopovercontroller"];
     XCTAssertTrue(value && !value.isUndefined);
 
-    [context evaluateScript:@"var uiviewcontroller = UIViewController.new();"];
-    value = context[@"uiviewcontroller"];
-    XCTAssertTrue(value && !value.isUndefined);
-
     [context evaluateScript:@"var uiprintformatter = UIPrintFormatter.new();"];
     value = context[@"uiprintformatter"];
-    XCTAssertTrue(value && !value.isUndefined);
-
-    [context evaluateScript:@"var uiview = UIView.new();"];
-    value = context[@"uiview"];
     XCTAssertTrue(value && !value.isUndefined);
 
     [context evaluateScript:@"var uiprintinfo = UIPrintInfo.printInfo();"];
@@ -306,10 +290,6 @@
     value = context[@"uisplitviewcontroller"];
     XCTAssertTrue(value && !value.isUndefined);
 
-    [context evaluateScript:@"var uiviewcontroller = UIViewController.new();"];
-    value = context[@"uiviewcontroller"];
-    XCTAssertTrue(value && !value.isUndefined);
-
     [context evaluateScript:@"var uistoryboard = UIStoryboard.new();"];
     value = context[@"uistoryboard"];
     XCTAssertTrue(value && !value.isUndefined);
@@ -318,24 +298,8 @@
     value = context[@"uistoryboardsegue"];
     XCTAssertTrue(value && !value.isUndefined);
 
-    [context evaluateScript:@"var nsstring = NSString.new();"];
-    value = context[@"nsstring"];
-    XCTAssertTrue(value && !value.isUndefined);
-
-    [context evaluateScript:@"var uiviewcontroller = UIViewController.new();"];
-    value = context[@"uiviewcontroller"];
-    XCTAssertTrue(value && !value.isUndefined);
-
-    [context evaluateScript:@"var nsindexpath = NSIndexPath.new();"];
-    value = context[@"nsindexpath"];
-    XCTAssertTrue(value && !value.isUndefined);
-
     [context evaluateScript:@"var uitextchecker = UITextChecker.new();"];
     value = context[@"uitextchecker"];
-    XCTAssertTrue(value && !value.isUndefined);
-
-    [context evaluateScript:@"var uiview = UIView.new();"];
-    value = context[@"uiview"];
     XCTAssertTrue(value && !value.isUndefined);
 
     [context evaluateScript:@"var uitextinputstringtokenizer = UITextInputStringTokenizer.new();"];
@@ -364,10 +328,6 @@
 
     [context evaluateScript:@"var uitouch = UITouch.new();"];
     value = context[@"uitouch"];
-    XCTAssertTrue(value && !value.isUndefined);
-
-    [context evaluateScript:@"var uiviewcontroller = UIViewController.new();"];
-    value = context[@"uiviewcontroller"];
     XCTAssertTrue(value && !value.isUndefined);
 
     [context evaluateScript:@"var uipercentdriveninteractivetransition = UIPercentDrivenInteractiveTransition.new();"];
@@ -580,14 +540,6 @@
 
     [context evaluateScript:@"var uitoolbar = UIToolbar.new();"];
     value = context[@"uitoolbar"];
-    XCTAssertTrue(value && !value.isUndefined);
-
-    [context evaluateScript:@"var uiview = UIView.new();"];
-    value = context[@"uiview"];
-    XCTAssertTrue(value && !value.isUndefined);
-
-    [context evaluateScript:@"var uiviewcontroller = UIViewController.new();"];
-    value = context[@"uiviewcontroller"];
     XCTAssertTrue(value && !value.isUndefined);
 
     [context evaluateScript:@"var uiwebview = UIWebView.new();"];
