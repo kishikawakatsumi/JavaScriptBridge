@@ -219,7 +219,7 @@ See the [UICatalog](https://github.com/kishikawakatsumi/JavaScriptBridge/tree/ma
 You can define custom class in JavaScript.
 It is needs to interact system provided framework.
 
-`JSB.defineClass(declaration, instanceMembers)` function defines Objective-C class in JavaScript.
+`JSB.defineClass(declaration, instanceMembers, staticMembers)` function defines Objective-C class in JavaScript.
 Pass the class declaration string to first argument.
 
 Second argument is instance method definitions as hash.
@@ -229,11 +229,17 @@ The hash object inclueds function object, each keys are to be used as method nam
 
 ```javascript
 var MainViewController = JSB.defineClass('MainViewController : UITableViewController', {
-  viewDidLoad: function() { // Instance Method Definitions
+  // Instance Method Definitions
+  viewDidLoad: function() {
     self.navigationItem.title = 'UICatalog';
   },
   viewWillAppear: function(animated) {
     self.tableView.reloadData();
+  }
+}, {
+  // Instance Method Definitions
+  attemptRotationToDeviceOrientation: function() {
+    ...
   }
 });
 ```
@@ -241,7 +247,7 @@ var MainViewController = JSB.defineClass('MainViewController : UITableViewContro
 **Example**
 
 ```javascript
-var MainViewController = JSB.define('MainViewController : UITableViewController <UITableviewDataSource, UITableviewDelegate>', // Declaration
+var MainViewController = JSB.defineClass('MainViewController : UITableViewController <UITableviewDataSource, UITableviewDelegate>', // Declaration
 // Instance Method Definitions
 {
   viewDidLoad: function() {
@@ -262,6 +268,10 @@ var MainViewController = JSB.define('MainViewController : UITableViewController 
     var targetViewController = self.menuList[indexPath.row]['viewController'];
     self.navigationController.pushViewControllerAnimated(targetViewController, true);
   }
+},
+{
+// Class Method Definitions
+  ...
 });
 ```
 
@@ -279,7 +289,7 @@ var ControlsViewController = JSB.require('controlsViewController');
 var WebViewController = JSB.require('webViewController');
 var MapViewController = JSB.require('mapViewController');
 
-var MainViewController = JSB.define('MainViewController : UITableViewController', {
+var MainViewController = JSB.defineClass('MainViewController : UITableViewController', {
   viewDidLoad: function() {
     self.navigationItem.title = 'UICatalog';
     ...
