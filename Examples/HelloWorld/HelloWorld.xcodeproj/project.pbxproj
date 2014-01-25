@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		144BD83618938E2C00C7E217 /* UIView+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 144BD83518938E2C00C7E217 /* UIView+JavaScriptBridge.m */; };
 		149A45F018796C5D007C2CA7 /* JSBMessageForwarding.m in Sources */ = {isa = PBXBuildFile; fileRef = 149A45EF18796C5D007C2CA7 /* JSBMessageForwarding.m */; };
 		149A45F718796C66007C2CA7 /* ALAsset+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 149A45F218796C66007C2CA7 /* ALAsset+JavaScriptBridge.m */; };
 		149A45F818796C66007C2CA7 /* ALAssetsGroup+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 149A45F418796C66007C2CA7 /* ALAssetsGroup+JavaScriptBridge.m */; };
@@ -59,6 +60,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		144BD83418938E2C00C7E217 /* UIView+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JavaScriptBridge.h"; sourceTree = "<group>"; };
+		144BD83518938E2C00C7E217 /* UIView+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JavaScriptBridge.m"; sourceTree = "<group>"; };
 		149A45EF18796C5D007C2CA7 /* JSBMessageForwarding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBMessageForwarding.m; sourceTree = "<group>"; };
 		149A45F118796C66007C2CA7 /* ALAsset+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAsset+JavaScriptBridge.h"; sourceTree = "<group>"; };
 		149A45F218796C66007C2CA7 /* ALAsset+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAsset+JavaScriptBridge.m"; sourceTree = "<group>"; };
@@ -864,6 +867,8 @@
 				149A45EF18796C5D007C2CA7 /* JSBMessageForwarding.m */,
 				149A46211879B4A6007C2CA7 /* NSURLConnection+JavaScriptBridge.h */,
 				149A46221879B4A6007C2CA7 /* NSURLConnection+JavaScriptBridge.m */,
+				144BD83418938E2C00C7E217 /* UIView+JavaScriptBridge.h */,
+				144BD83518938E2C00C7E217 /* UIView+JavaScriptBridge.m */,
 				14A0455F187829B4004831E8 /* UIControl+JavaScriptBridge.h */,
 				14A04560187829B4004831E8 /* UIControl+JavaScriptBridge.m */,
 				149A4617187984E8007C2CA7 /* ACAccountStore+JavaScriptBridge.h */,
@@ -1878,6 +1883,7 @@
 				14A04835187829CB004831E8 /* JSBCoreTelephony.m in Sources */,
 				14A0482B187829CB004831E8 /* JSBAccounts.m in Sources */,
 				14A0453D18782920004831E8 /* AppDelegate.m in Sources */,
+				144BD83618938E2C00C7E217 /* UIView+JavaScriptBridge.m in Sources */,
 				14A04833187829CB004831E8 /* JSBCoreMIDI.m in Sources */,
 				14A04830187829CB004831E8 /* JSBCoreData.m in Sources */,
 				14A0483D187829CB004831E8 /* JSBMessageUI.m in Sources */,
