@@ -32,6 +32,7 @@
 		1410341B1875A6E800960F22 /* JSBUIKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1410341A1875A6E800960F22 /* JSBUIKitTest.m */; };
 		144BD82F1893892B00C7E217 /* UIView+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 144BD82E1893892B00C7E217 /* UIView+JavaScriptBridge.m */; };
 		144BD8301893892B00C7E217 /* UIView+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 144BD82E1893892B00C7E217 /* UIView+JavaScriptBridge.m */; };
+		14876D551893AFA7008622D6 /* JSBUIViewTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 14876D541893AFA7008622D6 /* JSBUIViewTest.m */; };
 		149A45D718795D3D007C2CA7 /* ALAssetsLibrary+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 149A45D618795D3D007C2CA7 /* ALAssetsLibrary+JavaScriptBridge.m */; };
 		149A45D818795D3D007C2CA7 /* ALAssetsLibrary+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 149A45D618795D3D007C2CA7 /* ALAssetsLibrary+JavaScriptBridge.m */; };
 		149A45DB18795D64007C2CA7 /* ALAssetsGroup+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 149A45DA18795D64007C2CA7 /* ALAssetsGroup+JavaScriptBridge.m */; };
@@ -174,6 +175,7 @@
 		1410341A1875A6E800960F22 /* JSBUIKitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBUIKitTest.m; sourceTree = "<group>"; };
 		144BD82D1893892B00C7E217 /* UIView+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+JavaScriptBridge.h"; path = "../../../Classes/Private/UIView+JavaScriptBridge.h"; sourceTree = "<group>"; };
 		144BD82E1893892B00C7E217 /* UIView+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+JavaScriptBridge.m"; path = "../../../Classes/Private/UIView+JavaScriptBridge.m"; sourceTree = "<group>"; };
+		14876D541893AFA7008622D6 /* JSBUIViewTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBUIViewTest.m; sourceTree = "<group>"; };
 		149A45D518795D3D007C2CA7 /* ALAssetsLibrary+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ALAssetsLibrary+JavaScriptBridge.h"; path = "../../../Classes/Private/ALAssetsLibrary+JavaScriptBridge.h"; sourceTree = "<group>"; };
 		149A45D618795D3D007C2CA7 /* ALAssetsLibrary+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ALAssetsLibrary+JavaScriptBridge.m"; path = "../../../Classes/Private/ALAssetsLibrary+JavaScriptBridge.m"; sourceTree = "<group>"; };
 		149A45D918795D64007C2CA7 /* ALAssetsGroup+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ALAssetsGroup+JavaScriptBridge.h"; path = "../../../Classes/Private/ALAssetsGroup+JavaScriptBridge.h"; sourceTree = "<group>"; };
@@ -1161,6 +1163,7 @@
 			isa = PBXGroup;
 			children = (
 				1410341A1875A6E800960F22 /* JSBUIKitTest.m */,
+				14876D541893AFA7008622D6 /* JSBUIViewTest.m */,
 			);
 			name = UIKit;
 			path = ../../../Tests/UIKit;
@@ -2490,6 +2493,7 @@
 				149D9F0C187595BC00129B4B /* JSBAddressBookUI.m in Sources */,
 				149D979318758B0100129B4B /* JavaScriptBridgeTests.m in Sources */,
 				149D9F7618759C8100129B4B /* JSBCoreImageTest.m in Sources */,
+				14876D551893AFA7008622D6 /* JSBUIViewTest.m in Sources */,
 				149D9F32187595BC00129B4B /* JSBMultipeerConnectivity.m in Sources */,
 				149D9F10187595BC00129B4B /* JSBCoreBluetooth.m in Sources */,
 				14A04515187817E4004831E8 /* UIControl+JavaScriptBridge.m in Sources */,
