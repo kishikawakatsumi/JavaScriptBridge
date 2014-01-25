@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		144BD83318938E1D00C7E217 /* UIView+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 144BD83218938E1D00C7E217 /* UIView+JavaScriptBridge.m */; };
+		14876D5C1893B697008622D6 /* UIViewController+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 14876D5B1893B697008622D6 /* UIViewController+JavaScriptBridge.m */; };
 		149A45E1187961AB007C2CA7 /* JSBMessageForwarding.m in Sources */ = {isa = PBXBuildFile; fileRef = 149A45E0187961AB007C2CA7 /* JSBMessageForwarding.m */; };
 		149A45E6187961BD007C2CA7 /* ALAssetsGroup+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 149A45E3187961BD007C2CA7 /* ALAssetsGroup+JavaScriptBridge.m */; };
 		149A45E7187961BD007C2CA7 /* ALAssetsLibrary+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 149A45E5187961BD007C2CA7 /* ALAssetsLibrary+JavaScriptBridge.m */; };
@@ -70,6 +71,8 @@
 /* Begin PBXFileReference section */
 		144BD83118938E1D00C7E217 /* UIView+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+JavaScriptBridge.h"; path = "../../../Classes/Private/UIView+JavaScriptBridge.h"; sourceTree = "<group>"; };
 		144BD83218938E1D00C7E217 /* UIView+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+JavaScriptBridge.m"; path = "../../../Classes/Private/UIView+JavaScriptBridge.m"; sourceTree = "<group>"; };
+		14876D5A1893B697008622D6 /* UIViewController+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+JavaScriptBridge.h"; path = "../../../Classes/Private/UIViewController+JavaScriptBridge.h"; sourceTree = "<group>"; };
+		14876D5B1893B697008622D6 /* UIViewController+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+JavaScriptBridge.m"; path = "../../../Classes/Private/UIViewController+JavaScriptBridge.m"; sourceTree = "<group>"; };
 		149A45E0187961AB007C2CA7 /* JSBMessageForwarding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSBMessageForwarding.m; path = ../../../Classes/Private/JSBMessageForwarding.m; sourceTree = "<group>"; };
 		149A45E2187961BD007C2CA7 /* ALAssetsGroup+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ALAssetsGroup+JavaScriptBridge.h"; path = "../../../Classes/Private/ALAssetsGroup+JavaScriptBridge.h"; sourceTree = "<group>"; };
 		149A45E3187961BD007C2CA7 /* ALAssetsGroup+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ALAssetsGroup+JavaScriptBridge.m"; path = "../../../Classes/Private/ALAssetsGroup+JavaScriptBridge.m"; sourceTree = "<group>"; };
@@ -1775,6 +1778,8 @@
 				149A45E0187961AB007C2CA7 /* JSBMessageForwarding.m */,
 				149A461E1879B497007C2CA7 /* NSURLConnection+JavaScriptBridge.h */,
 				149A461F1879B497007C2CA7 /* NSURLConnection+JavaScriptBridge.m */,
+				14876D5A1893B697008622D6 /* UIViewController+JavaScriptBridge.h */,
+				14876D5B1893B697008622D6 /* UIViewController+JavaScriptBridge.m */,
 				144BD83118938E1D00C7E217 /* UIView+JavaScriptBridge.h */,
 				144BD83218938E1D00C7E217 /* UIView+JavaScriptBridge.m */,
 				14A0451C18781832004831E8 /* UIControl+JavaScriptBridge.h */,
@@ -1939,6 +1944,7 @@
 				149C56831875C5BB0003EE16 /* JSBSocial.m in Sources */,
 				14B5CD2C1875C3740019A135 /* main.m in Sources */,
 				149C56801875C5BB0003EE16 /* JSBQuartzCore.m in Sources */,
+				14876D5C1893B697008622D6 /* UIViewController+JavaScriptBridge.m in Sources */,
 				149C56731875C5BB0003EE16 /* JSBCoreMotion.m in Sources */,
 				149A4606187972FF007C2CA7 /* SLComposeViewController+JavaScriptBridge.m in Sources */,
 				149C566C1875C5BB0003EE16 /* JSBAddressBookUI.m in Sources */,

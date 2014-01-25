@@ -25,7 +25,7 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testBlockAnimations
 {
     JSContext *context = [[JSContext alloc] init];
     [context addScriptingSupport:@"UIKit"];
@@ -38,11 +38,11 @@
     value = context[@"a"];
     XCTAssertTrue(value && !value.isUndefined);
     
-    [context evaluateScript:@"UIView.animateWithDurationDelayOptionsAnimationsCompletion(0.5, 1.0, 0, function() {}, function(sucess) {}); var b = UIView.new();"];
+    [context evaluateScript:@"UIView.animateWithDurationDelayOptionsAnimationsCompletion(0.5, 1.0, 0, function() {}, function(finished) {}); var b = UIView.new();"];
     value = context[@"b"];
     XCTAssertTrue(value && !value.isUndefined);
     
-    [context evaluateScript:@"UIView.animateWithDurationAnimationsCompletion(0.5, function() {}, function(sucess) {}); var c = UIView.new();"];
+    [context evaluateScript:@"UIView.animateWithDurationAnimationsCompletion(0.5, function() {}, function(finished) {}); var c = UIView.new();"];
     value = context[@"c"];
     XCTAssertTrue(value && !value.isUndefined);
     
@@ -50,23 +50,23 @@
     value = context[@"d"];
     XCTAssertTrue(value && !value.isUndefined);
     
-    [context evaluateScript:@"UIView.animateWithDurationDelayUsingSpringWithDampingInitialSpringVelocityOptionsAnimationsCompletion(0.5, 1.0, 0.5, 0.5, 0, function() {}, function(sucess) {}); var e = UIView.new();"];
+    [context evaluateScript:@"UIView.animateWithDurationDelayUsingSpringWithDampingInitialSpringVelocityOptionsAnimationsCompletion(0.5, 1.0, 0.5, 0.5, 0, function() {}, function(finished) {}); var e = UIView.new();"];
     value = context[@"e"];
     XCTAssertTrue(value && !value.isUndefined);
     
-    [context evaluateScript:@"UIView.transitionWithViewDurationOptionsAnimationsCompletion(view, 0.5, 0, function() {}, function(sucess) {}); var f = UIView.new();"];
+    [context evaluateScript:@"UIView.transitionWithViewDurationOptionsAnimationsCompletion(view, 0.5, 0, function() {}, function(finished) {}); var f = UIView.new();"];
     value = context[@"f"];
     XCTAssertTrue(value && !value.isUndefined);
     
-    [context evaluateScript:@"UIView.transitionFromViewToViewDurationOptionsCompletion(view, UIView.new(), 0.5, 0, function(sucess) {}); var g = UIView.new();"];
+    [context evaluateScript:@"UIView.transitionFromViewToViewDurationOptionsCompletion(view, UIView.new(), 0.5, 0, function(finished) {}); var g = UIView.new();"];
     value = context[@"g"];
     XCTAssertTrue(value && !value.isUndefined);
     
-    [context evaluateScript:@"UIView.performSystemAnimationOnViewsOptionsAnimationsCompletion(0, [view], 0.5, 0, function(sucess) {}); var h = UIView.new();"];
+    [context evaluateScript:@"UIView.performSystemAnimationOnViewsOptionsAnimationsCompletion(0, [view], 0.5, 0, function(finished) {}); var h = UIView.new();"];
     value = context[@"h"];
     XCTAssertTrue(value && !value.isUndefined);
     
-    [context evaluateScript:@"UIView.animateKeyframesWithDurationDelayOptionsAnimationsCompletion(0.5, 1.0, 0, function() {}, function(sucess) {}); var i = UIView.new();"];
+    [context evaluateScript:@"UIView.animateKeyframesWithDurationDelayOptionsAnimationsCompletion(0.5, 1.0, 0, function() {}, function(finished) {}); var i = UIView.new();"];
     value = context[@"i"];
     XCTAssertTrue(value && !value.isUndefined);
 #if 0

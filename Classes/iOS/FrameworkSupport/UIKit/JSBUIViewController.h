@@ -75,8 +75,10 @@
 - (BOOL)isBeingDismissed;
 - (BOOL)isMovingToParentViewController;
 - (BOOL)isMovingFromParentViewController;
-- (void)presentViewController:(UIViewController *)viewControllerToPresent animated:(BOOL)flag completion:(void (^)(void))completion;
-- (void)dismissViewControllerAnimated:(BOOL)flag completion:(void (^)(void))completion;
+JSExportAs(presentViewControllerAnimatedCompletion,
+- (void)__presentViewController:(UIViewController *)viewControllerToPresent animated:(BOOL)flag completion:(JSValue *)completion);
+JSExportAs(dismissViewControllerAnimatedCompletion,
+- (void)__dismissViewControllerAnimated:(BOOL)flag completion:(JSValue *)completion);
 - (void)presentModalViewController:(UIViewController *)modalViewController animated:(BOOL)animated;
 - (void)dismissModalViewControllerAnimated:(BOOL)animated;
 - (BOOL)disablesAutomaticKeyboardDismissal;
@@ -100,7 +102,8 @@
 - (UIBarButtonItem *)editButtonItem;
 - (void)addChildViewController:(UIViewController *)childController;
 - (void)removeFromParentViewController;
-- (void)transitionFromViewController:(UIViewController *)fromViewController toViewController:(UIViewController *)toViewController duration:(NSTimeInterval)duration options:(UIViewAnimationOptions)options animations:(void (^)(void))animations completion:(void (^)(BOOL finished))completion;
+JSExportAs(transitionFromViewControllerToViewControllerDurationOptionsAnimationsCompletion,
+- (void)__transitionFromViewController:(UIViewController *)fromViewController toViewController:(UIViewController *)toViewController duration:(NSTimeInterval)duration options:(UIViewAnimationOptions)options animations:(JSValue *)animations completion:(JSValue *)completion);
 - (void)beginAppearanceTransition:(BOOL)isAppearing animated:(BOOL)animated;
 - (void)endAppearanceTransition;
 - (UIViewController *)childViewControllerForStatusBarStyle;
