@@ -9,6 +9,9 @@
 #import "JSBMessageForwarding.h"
 #import "JSBScriptingSupport.h"
 
+NSString * const JSBInstanceMembersKey = @"instanceMembers";
+NSString * const JSBStaticMembersKey = @"staticMembers";
+
 @import JavaScriptCore;
 @import ObjectiveC;
 
@@ -34,6 +37,22 @@ NSString *propertyNameFromSelector(SEL selector)
     }
     
     return propertyName;
+}
+
+JSValue *propertyForObject(id obj, NSString *propertyName)
+{
+    JSContext *context = [JSBScriptingSupport globalContext];
+    
+    JSValue *properties = nil;
+    
+    Class cls = object_getClass(obj);
+    if (class_isMetaClass(cls)) {
+        properties = context[mangledNameFromClass(obj)][JSBStaticMembersKey];
+    } else {
+        properties = context[mangledNameFromClass(cls)][JSBInstanceMembersKey];
+    }
+    
+    return properties[propertyName];
 }
 
 #pragma mark -
@@ -196,7 +215,7 @@ CGFloat tableViewHeightForRowAtIndexPath(id self, SEL _cmd, UITableView *tableVi
     JSContext *context = [JSBScriptingSupport globalContext];
     
     NSString *propertyName = propertyNameFromSelector(_cmd);
-    JSValue *function = context[mangledNameFromClass([self class])][@"instanceMembers"][propertyName];
+    JSValue *function = context[mangledNameFromClass(object_getClass(self))][JSBInstanceMembersKey][propertyName];
     
     if (!function.isUndefined) {
         JSValue *returnValue = [function callWithArguments:@[tableView, indexPath]];
@@ -211,7 +230,7 @@ CGFloat tableViewHeightForHeaderInSection(id self, SEL _cmd, UITableView *tableV
     JSContext *context = [JSBScriptingSupport globalContext];
     
     NSString *propertyName = propertyNameFromSelector(_cmd);
-    JSValue *function = context[mangledNameFromClass([self class])][@"instanceMembers"][propertyName];
+    JSValue *function = context[mangledNameFromClass(object_getClass(self))][JSBInstanceMembersKey][propertyName];
     
     if (!function.isUndefined) {
         JSValue *returnValue = [function callWithArguments:@[tableView, @(section)]];
@@ -226,7 +245,7 @@ CGFloat tableViewHeightForFooterInSection(id self, SEL _cmd, UITableView *tableV
     JSContext *context = [JSBScriptingSupport globalContext];
     
     NSString *propertyName = propertyNameFromSelector(_cmd);
-    JSValue *function = context[mangledNameFromClass([self class])][@"instanceMembers"][propertyName];
+    JSValue *function = context[mangledNameFromClass(object_getClass(self))][JSBInstanceMembersKey][propertyName];
     
     if (!function.isUndefined) {
         JSValue *returnValue = [function callWithArguments:@[tableView, @(section)]];
@@ -238,16 +257,16 @@ CGFloat tableViewHeightForFooterInSection(id self, SEL _cmd, UITableView *tableV
 
 #pragma mark -
 
-void setupForwardingImplementations(Class targetClass, Class cls, JSValue *functions)
+void setupForwardingImplementations(Class targetClass, Class cls, JSValue *instanceFunctions, JSValue *staticFunctions)
 {
-    unsigned int count = 0;
-    Method *methods = class_copyMethodList(cls, &count);
-    for (unsigned int i = 0; i < count; i++) {
-        Method m = methods[i];
-        struct objc_method_description *description = method_getDescription(m);
+    unsigned int numberOfInstanceMethods = 0;
+    Method *instanceMethods = class_copyMethodList(cls, &numberOfInstanceMethods);
+    for (unsigned int i = 0; i < numberOfInstanceMethods; i++) {
+        Method method = instanceMethods[i];
+        struct objc_method_description *description = method_getDescription(method);
         
         NSString *propertyName = propertyNameFromSelector(description->name);
-        JSValue *function = functions[propertyName];
+        JSValue *function = instanceFunctions[propertyName];
         if (!function.isUndefined) {
             if (strcmp(@encode(NSInteger), "q") == 0) { // for 64bit devices
                 if (description->name == @selector(tableView:heightForRowAtIndexPath:)) {
@@ -274,13 +293,31 @@ void setupForwardingImplementations(Class targetClass, Class cls, JSValue *funct
             class_addMethod(targetClass, description->name, _objc_msgForward, description->types);
         }
     }
-    if (methods) {
-        free(methods);
+    if (instanceMethods) {
+        free(instanceMethods);
+    }
+    
+    unsigned int numberOfClassMethods = 0;
+    Class metaClass = objc_getMetaClass(class_getName(cls));
+    Class targetMetaClass = objc_getMetaClass(class_getName(targetClass));
+    Method *classMethods = class_copyMethodList(metaClass, &numberOfClassMethods);
+    for (unsigned int i = 0; i < numberOfClassMethods; i++) {
+        Method method = classMethods[i];
+        struct objc_method_description *description = method_getDescription(method);
+        
+        NSString *propertyName = propertyNameFromSelector(description->name);
+        JSValue *function = staticFunctions[propertyName];
+        if (!function.isUndefined) {
+            class_addMethod(targetMetaClass, description->name, _objc_msgForward, description->types);
+        }
+    }
+    if (classMethods) {
+        free(classMethods);
     }
     
     Class superClass = class_getSuperclass(cls);
     if (superClass) {
-        setupForwardingImplementations(targetClass, superClass, functions);
+        setupForwardingImplementations(targetClass, superClass, instanceFunctions, staticFunctions);
     }
 }
 
@@ -298,7 +335,7 @@ void forwardInvocation(id self, SEL _cmd, NSInvocation *invocation)
     context[@"self"] = self;
     
     NSString *propertyName = propertyNameFromSelector(invocation.selector);
-    JSValue *function = context[mangledNameFromClass([self class])][@"instanceMembers"][propertyName];
+    JSValue *function = propertyForObject(self, propertyName);
     
     if (!function.isUndefined) {
         NSArray *arguments = extractArguments(invocation);
@@ -313,11 +350,18 @@ void forwardInvocation(id self, SEL _cmd, NSInvocation *invocation)
 NSMethodSignature *methodSignatureForSelector(id self, SEL _cmd, SEL selector)
 {
     NSMethodSignature *methodSignature = nil;
+    Class cls = object_getClass(self);
     
-    Class cls = [self class];
-    methodSignature = [cls instanceMethodSignatureForSelector:selector];
-    if (methodSignature) {
-        return methodSignature;
+    if (class_isMetaClass(cls)) {
+        methodSignature = [cls instanceMethodSignatureForSelector:selector];
+        if (methodSignature) {
+            return methodSignature;
+        }
+    } else {
+        methodSignature = [cls instanceMethodSignatureForSelector:selector];
+        if (methodSignature) {
+            return methodSignature;
+        }
     }
     
     NSUInteger numberOfArguments = [[NSStringFromSelector(selector) componentsSeparatedByString:@":"] count] - 1;
@@ -326,10 +370,8 @@ NSMethodSignature *methodSignatureForSelector(id self, SEL _cmd, SEL selector)
 
 BOOL respondsToSelector(id self, SEL _cmd, SEL selector)
 {
-    JSContext *context = [JSBScriptingSupport globalContext];
-    
     NSString *propertyName = propertyNameFromSelector(selector);
-    JSValue *value = context[mangledNameFromClass([self class])][@"instanceMembers"][propertyName];
+    JSValue *function = propertyForObject(self, propertyName);
     
-    return !value.isUndefined;
+    return !function.isUndefined;
 }

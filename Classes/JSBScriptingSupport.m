@@ -9,7 +9,6 @@
 #import "JSBScriptingSupport.h"
 #import "JSBNSObject.h"
 #import "JSBMessageForwarding.h"
-#import "UIControl+JavaScriptBridge.h"
 #import "JSContext+JavaScriptBridge.h"
 
 @import ObjectiveC;
@@ -106,20 +105,25 @@ static JSContext *globalContext;
     
     Class superClass = class_getSuperclass(cls);
     if (superClass) {
-        setupForwardingImplementations(cls, superClass, instanceMembers);
+        setupForwardingImplementations(cls, superClass, instanceMembers, staticMembers);
     }
     
     NSString *types;
     BOOL result;
     
+    Class metaClass = objc_getMetaClass(className.UTF8String);
+    
     types = [NSString stringWithFormat: @"%s%s%s%s", @encode(NSMethodSignature), @encode(id), @encode(SEL), @encode(SEL)];
     result = class_addMethod(cls, @selector(methodSignatureForSelector:), (IMP)methodSignatureForSelector, types.UTF8String);
+    result = class_addMethod(metaClass, @selector(methodSignatureForSelector:), (IMP)methodSignatureForSelector, types.UTF8String);
     
     types = [NSString stringWithFormat: @"%s%s%s%s", @encode(void), @encode(id), @encode(SEL), @encode(NSInvocation)];
     result = class_addMethod(cls, @selector(forwardInvocation:), (IMP)forwardInvocation, types.UTF8String);
+    result = class_addMethod(metaClass, @selector(forwardInvocation:), (IMP)forwardInvocation, types.UTF8String);
     
     types = [NSString stringWithFormat: @"%s%s%s%s", @encode(BOOL), @encode(id), @encode(SEL), @encode(SEL)];
     result = class_addMethod(cls, @selector(respondsToSelector:), (IMP)respondsToSelector, types.UTF8String);
+    result = class_addMethod(metaClass, @selector(respondsToSelector:), (IMP)respondsToSelector, types.UTF8String);
     
     for (NSString *protocol in [protocols componentsSeparatedByString:@","]) {
         class_addProtocol(cls, NSProtocolFromString([protocol stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]));
@@ -127,8 +131,10 @@ static JSContext *globalContext;
     
     class_addProtocol(cls, @protocol(JSBNSObject));
     
-    globalContext[mangledNameFromClass(cls)] = cls;
-    globalContext[mangledNameFromClass(cls)][@"instanceMembers"] = instanceMembers;
+    NSString *key = mangledNameFromClass(cls);
+    globalContext[key] = cls;
+    globalContext[key][JSBInstanceMembersKey] = instanceMembers;
+    globalContext[key][JSBStaticMembersKey] = staticMembers;
     
     return cls;
 }

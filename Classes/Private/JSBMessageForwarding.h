@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString * const JSBInstanceMembersKey;
+extern NSString * const JSBStaticMembersKey;
+
 @import JavaScriptCore;
 
 NSString *mangledNameFromClass(Class cls);
@@ -24,7 +27,7 @@ CGFloat tableViewHeightForRowAtIndexPath(id self, SEL _cmd, UITableView *tableVi
 CGFloat tableViewHeightForHeaderInSection(id self, SEL _cmd, UITableView *tableView, NSInteger section);
 CGFloat tableViewHeightForFooterInSection(id self, SEL _cmd, UITableView *tableView, NSInteger section);
 
-void setupForwardingImplementations(Class targetClass, Class cls, JSValue *functions);
+void setupForwardingImplementations(Class targetClass, Class cls, JSValue *instanceFunctions, JSValue *staticFunctions);
 
 void forwardInvocation(id self, SEL _cmd, NSInvocation *invocation);
 NSMethodSignature *methodSignatureForSelector(id self, SEL _cmd, SEL selector);
