@@ -9,11 +9,11 @@
 #import <XCTest/XCTest.h>
 #import "JavaScriptBridge.h"
 
-@interface JSBUIViewTest : XCTestCase
+@interface JSBUIViewTests : XCTestCase
 
 @end
 
-@implementation JSBUIViewTest
+@implementation JSBUIViewTests
 
 - (void)setUp
 {
