@@ -19,7 +19,8 @@
 @property (nonatomic) SEL action;
 @property (nonatomic, getter = isMenuVisible) BOOL menuVisible;
 
-- (id)initWithTitle:(NSString *)title action:(SEL)action;
+JSExportAs(initWithTitleEvent,
+- (id)__initWithTitle:(NSString *)title action:(NSString *)action);
 
 #pragma clang diagnostic pop
 

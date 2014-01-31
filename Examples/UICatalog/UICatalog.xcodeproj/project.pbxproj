@@ -58,6 +58,8 @@
 		14A0450C1877E7E3004831E8 /* webViewController.js in Resources */ = {isa = PBXBuildFile; fileRef = 14A045011877E7B1004831E8 /* webViewController.js */; };
 		14A0450E1877E870004831E8 /* mapViewController.js in Resources */ = {isa = PBXBuildFile; fileRef = 14A0450D1877E870004831E8 /* mapViewController.js */; };
 		14A0451E18781832004831E8 /* UIControl+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A0451D18781832004831E8 /* UIControl+JavaScriptBridge.m */; };
+		14A98441189BF0120033D110 /* UIGestureRecognizer+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A9843E189BF0120033D110 /* UIGestureRecognizer+JavaScriptBridge.m */; };
+		14A98442189BF0120033D110 /* UIMenuItem+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A98440189BF0120033D110 /* UIMenuItem+JavaScriptBridge.m */; };
 		14B5CD201875C3740019A135 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B5CD1F1875C3740019A135 /* Foundation.framework */; };
 		14B5CD221875C3740019A135 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B5CD211875C3740019A135 /* CoreGraphics.framework */; };
 		14B5CD241875C3740019A135 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B5CD231875C3740019A135 /* UIKit.framework */; };
@@ -776,6 +778,10 @@
 		14A0451B18781832004831E8 /* JSBMessageForwarding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSBMessageForwarding.h; path = ../../../Classes/Private/JSBMessageForwarding.h; sourceTree = "<group>"; };
 		14A0451C18781832004831E8 /* UIControl+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIControl+JavaScriptBridge.h"; path = "../../../Classes/Private/UIControl+JavaScriptBridge.h"; sourceTree = "<group>"; };
 		14A0451D18781832004831E8 /* UIControl+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIControl+JavaScriptBridge.m"; path = "../../../Classes/Private/UIControl+JavaScriptBridge.m"; sourceTree = "<group>"; };
+		14A9843D189BF0120033D110 /* UIGestureRecognizer+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIGestureRecognizer+JavaScriptBridge.h"; path = "../../../Classes/Private/UIGestureRecognizer+JavaScriptBridge.h"; sourceTree = "<group>"; };
+		14A9843E189BF0120033D110 /* UIGestureRecognizer+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIGestureRecognizer+JavaScriptBridge.m"; path = "../../../Classes/Private/UIGestureRecognizer+JavaScriptBridge.m"; sourceTree = "<group>"; };
+		14A9843F189BF0120033D110 /* UIMenuItem+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIMenuItem+JavaScriptBridge.h"; path = "../../../Classes/Private/UIMenuItem+JavaScriptBridge.h"; sourceTree = "<group>"; };
+		14A98440189BF0120033D110 /* UIMenuItem+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIMenuItem+JavaScriptBridge.m"; path = "../../../Classes/Private/UIMenuItem+JavaScriptBridge.m"; sourceTree = "<group>"; };
 		14B5CD1C1875C3740019A135 /* UICatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14B5CD1F1875C3740019A135 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		14B5CD211875C3740019A135 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -1784,6 +1790,10 @@
 				144BD83218938E1D00C7E217 /* UIView+JavaScriptBridge.m */,
 				14A0451C18781832004831E8 /* UIControl+JavaScriptBridge.h */,
 				14A0451D18781832004831E8 /* UIControl+JavaScriptBridge.m */,
+				14A9843D189BF0120033D110 /* UIGestureRecognizer+JavaScriptBridge.h */,
+				14A9843E189BF0120033D110 /* UIGestureRecognizer+JavaScriptBridge.m */,
+				14A9843F189BF0120033D110 /* UIMenuItem+JavaScriptBridge.h */,
+				14A98440189BF0120033D110 /* UIMenuItem+JavaScriptBridge.m */,
 				149A4614187984D6007C2CA7 /* ACAccountStore+JavaScriptBridge.h */,
 				149A4615187984D6007C2CA7 /* ACAccountStore+JavaScriptBridge.m */,
 				149A45E4187961BD007C2CA7 /* ALAssetsLibrary+JavaScriptBridge.h */,
@@ -1933,12 +1943,14 @@
 				149C567A1875C5BB0003EE16 /* JSBMapKit.m in Sources */,
 				149C56851875C5BB0003EE16 /* JSBTwitter.m in Sources */,
 				149C567E1875C5BB0003EE16 /* JSBOpenGLES.m in Sources */,
+				14A98442189BF0120033D110 /* UIMenuItem+JavaScriptBridge.m in Sources */,
 				149A46201879B497007C2CA7 /* NSURLConnection+JavaScriptBridge.m in Sources */,
 				149C56811875C5BB0003EE16 /* JSBQuickLook.m in Sources */,
 				149C56711875C5BB0003EE16 /* JSBCoreLocation.m in Sources */,
 				149A45E7187961BD007C2CA7 /* ALAssetsLibrary+JavaScriptBridge.m in Sources */,
 				149C56861875C5BB0003EE16 /* JSBUIKit.m in Sources */,
 				149A45E1187961AB007C2CA7 /* JSBMessageForwarding.m in Sources */,
+				14A98441189BF0120033D110 /* UIGestureRecognizer+JavaScriptBridge.m in Sources */,
 				14B5CD301875C3740019A135 /* AppDelegate.m in Sources */,
 				149C566F1875C5BB0003EE16 /* JSBCoreData.m in Sources */,
 				149C56831875C5BB0003EE16 /* JSBSocial.m in Sources */,

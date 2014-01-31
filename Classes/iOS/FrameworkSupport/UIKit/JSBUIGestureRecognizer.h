@@ -22,9 +22,12 @@
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event;
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event;
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event;
-- (id)initWithTarget:(id)target action:(SEL)action;
-- (void)addTarget:(id)target action:(SEL)action;
-- (void)removeTarget:(id)target action:(SEL)action;
+JSExportAs(initWithTargetAction,
+- (id)__initWithTarget:(id)target action:(NSString *)action);
+JSExportAs(addTargetAction,
+- (void)__addTarget:(id)target action:(NSString *)action);
+JSExportAs(removeTargetAction,
+- (void)__removeTarget:(id)target action:(NSString *)action);
 - (void)requireGestureRecognizerToFail:(UIGestureRecognizer *)otherGestureRecognizer;
 - (CGPoint)locationInView:(UIView *)view;
 - (NSUInteger)numberOfTouches;

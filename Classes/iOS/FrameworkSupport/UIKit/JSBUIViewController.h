@@ -61,8 +61,10 @@
 - (void)performSegueWithIdentifier:(NSString *)identifier sender:(id)sender;
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender;
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender;
-- (BOOL)canPerformUnwindSegueAction:(SEL)action fromViewController:(UIViewController *)fromViewController withSender:(id)sender;
-- (UIViewController *)viewControllerForUnwindSegueAction:(SEL)action fromViewController:(UIViewController *)fromViewController withSender:(id)sender;
+JSExportAs(canPerformUnwindSegueActionFromViewControllerWithSender,
+- (BOOL)__canPerformUnwindSegueAction:(NSString *)action fromViewController:(UIViewController *)fromViewController withSender:(id)sender);
+JSExportAs(viewControllerForUnwindSegueActionFromViewControllerWithSender,
+- (UIViewController *)__viewControllerForUnwindSegueAction:(NSString *)action fromViewController:(UIViewController *)fromViewController withSender:(id)sender);
 - (UIStoryboardSegue *)segueForUnwindingToViewController:(UIViewController *)toViewController fromViewController:(UIViewController *)fromViewController identifier:(NSString *)identifier;
 - (void)viewWillAppear:(BOOL)animated;
 - (void)viewDidAppear:(BOOL)animated;

@@ -49,8 +49,10 @@
 + (void)beginAnimations:(NSString *)animationID context:(void *)context;
 + (void)commitAnimations;
 + (void)setAnimationDelegate:(id)delegate;
-+ (void)setAnimationWillStartSelector:(SEL)selector;
-+ (void)setAnimationDidStopSelector:(SEL)selector;
+JSExportAs(setAnimationWillStartSelector,
++ (void)__setAnimationWillStartSelector:(NSString *)selector);
+JSExportAs(setAnimationDidStopSelector,
++ (void)__setAnimationDidStopSelector:(NSString *)selector);
 + (void)setAnimationDuration:(NSTimeInterval)duration;
 + (void)setAnimationDelay:(NSTimeInterval)delay;
 + (void)setAnimationStartDate:(NSDate *)startDate;
