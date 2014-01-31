@@ -218,7 +218,13 @@ CGFloat tableViewHeightForRowAtIndexPath(id self, SEL _cmd, UITableView *tableVi
     JSValue *function = context[mangledNameFromClass(object_getClass(self))][JSBInstanceMembersKey][propertyName];
     
     if (!function.isUndefined) {
+        id currentSelf = context[@"self"];
+        context[@"self"] = self;
+        
         JSValue *returnValue = [function callWithArguments:@[tableView, indexPath]];
+        
+        context[@"self"] = currentSelf;
+        
         return returnValue.toDouble;
     }
     
@@ -233,7 +239,13 @@ CGFloat tableViewHeightForHeaderInSection(id self, SEL _cmd, UITableView *tableV
     JSValue *function = context[mangledNameFromClass(object_getClass(self))][JSBInstanceMembersKey][propertyName];
     
     if (!function.isUndefined) {
+        id currentSelf = context[@"self"];
+        context[@"self"] = self;
+        
         JSValue *returnValue = [function callWithArguments:@[tableView, @(section)]];
+        
+        context[@"self"] = currentSelf;
+        
         return returnValue.toDouble;
     }
     
@@ -248,7 +260,13 @@ CGFloat tableViewHeightForFooterInSection(id self, SEL _cmd, UITableView *tableV
     JSValue *function = context[mangledNameFromClass(object_getClass(self))][JSBInstanceMembersKey][propertyName];
     
     if (!function.isUndefined) {
+        id currentSelf = context[@"self"];
+        context[@"self"] = self;
+        
         JSValue *returnValue = [function callWithArguments:@[tableView, @(section)]];
+        
+        context[@"self"] = currentSelf;
+        
         return returnValue.toDouble;
     }
     
