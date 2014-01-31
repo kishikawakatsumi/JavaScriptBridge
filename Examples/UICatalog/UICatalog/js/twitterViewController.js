@@ -34,7 +34,7 @@ var TwitterViewController = JSB.defineClass('TwitterViewController : UITableView
     self.getHomeTimlineWithAccount = function(account) {
       UIApplication.sharedApplication().networkActivityIndicatorVisible = true;
 
-      var requestURL = NSURL.URLWithString('https://api.twitter.com/1/statuses/home_timeline.json');
+      var requestURL = NSURL.URLWithString('https://api.twitter.com/1.1/statuses/home_timeline.json');
       var params = {'count': '200', 'include_entities': 'true'};
 
       var request = SLRequest.requestForServiceTypeRequestMethodURLParameters('com.apple.social.twitter', 0, requestURL, params);
