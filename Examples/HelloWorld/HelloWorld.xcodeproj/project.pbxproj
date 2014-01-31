@@ -58,6 +58,8 @@
 		14A04846187829CB004831E8 /* JSBTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A0479B187829CB004831E8 /* JSBTwitter.m */; };
 		14A04847187829CB004831E8 /* JSBUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A047D8187829CB004831E8 /* JSBUIKit.m */; };
 		14A04848187829CB004831E8 /* JSBiAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A04829187829CB004831E8 /* JSBiAd.m */; };
+		14A98447189BF01F0033D110 /* UIGestureRecognizer+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A98444189BF01F0033D110 /* UIGestureRecognizer+JavaScriptBridge.m */; };
+		14A98448189BF01F0033D110 /* UIMenuItem+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A98446189BF01F0033D110 /* UIMenuItem+JavaScriptBridge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -773,6 +775,10 @@
 		14A04827187829CB004831E8 /* JSBMPMoviePlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMPMoviePlayerController.h; sourceTree = "<group>"; };
 		14A04828187829CB004831E8 /* JSBiAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBiAd.h; sourceTree = "<group>"; };
 		14A04829187829CB004831E8 /* JSBiAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBiAd.m; sourceTree = "<group>"; };
+		14A98443189BF01F0033D110 /* UIGestureRecognizer+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+JavaScriptBridge.h"; sourceTree = "<group>"; };
+		14A98444189BF01F0033D110 /* UIGestureRecognizer+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+JavaScriptBridge.m"; sourceTree = "<group>"; };
+		14A98445189BF01F0033D110 /* UIMenuItem+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIMenuItem+JavaScriptBridge.h"; sourceTree = "<group>"; };
+		14A98446189BF01F0033D110 /* UIMenuItem+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIMenuItem+JavaScriptBridge.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -877,6 +883,10 @@
 				144BD83518938E2C00C7E217 /* UIView+JavaScriptBridge.m */,
 				14A0455F187829B4004831E8 /* UIControl+JavaScriptBridge.h */,
 				14A04560187829B4004831E8 /* UIControl+JavaScriptBridge.m */,
+				14A98443189BF01F0033D110 /* UIGestureRecognizer+JavaScriptBridge.h */,
+				14A98444189BF01F0033D110 /* UIGestureRecognizer+JavaScriptBridge.m */,
+				14A98445189BF01F0033D110 /* UIMenuItem+JavaScriptBridge.h */,
+				14A98446189BF01F0033D110 /* UIMenuItem+JavaScriptBridge.m */,
 				149A4617187984E8007C2CA7 /* ACAccountStore+JavaScriptBridge.h */,
 				149A4618187984E8007C2CA7 /* ACAccountStore+JavaScriptBridge.m */,
 				149A45F518796C66007C2CA7 /* ALAssetsLibrary+JavaScriptBridge.h */,
@@ -1894,12 +1904,14 @@
 				14A04830187829CB004831E8 /* JSBCoreData.m in Sources */,
 				14A0483D187829CB004831E8 /* JSBMessageUI.m in Sources */,
 				14A04846187829CB004831E8 /* JSBTwitter.m in Sources */,
+				14A98448189BF01F0033D110 /* UIMenuItem+JavaScriptBridge.m in Sources */,
 				149A46231879B4A6007C2CA7 /* NSURLConnection+JavaScriptBridge.m in Sources */,
 				14A0482E187829CB004831E8 /* JSBAssetsLibrary.m in Sources */,
 				14A0482C187829CB004831E8 /* JSBAdSupport.m in Sources */,
 				149A45F018796C5D007C2CA7 /* JSBMessageForwarding.m in Sources */,
 				149A45F718796C66007C2CA7 /* ALAsset+JavaScriptBridge.m in Sources */,
 				14A04839187829CB004831E8 /* JSBGameKit.m in Sources */,
+				14A98447189BF01F0033D110 /* UIGestureRecognizer+JavaScriptBridge.m in Sources */,
 				149A45F918796C66007C2CA7 /* ALAssetsLibrary+JavaScriptBridge.m in Sources */,
 				14A04831187829CB004831E8 /* JSBCoreImage.m in Sources */,
 				14A04848187829CB004831E8 /* JSBiAd.m in Sources */,

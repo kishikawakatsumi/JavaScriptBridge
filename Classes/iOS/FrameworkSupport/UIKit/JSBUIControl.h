@@ -26,18 +26,15 @@
 - (void)endTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event;
 - (void)cancelTrackingWithEvent:(UIEvent *)event;
 JSExportAs(addTargetActionForControlEvents,
-- (void)__addTarget:(id)target action:(NSString *)action forControlEvents:(UIControlEvents)controlEvents
-);
+- (void)__addTarget:(id)target action:(NSString *)action forControlEvents:(UIControlEvents)controlEvents);
 JSExportAs(removeTargetActionForControlEvents,
-- (void)__removeTarget:(id)target action:(NSString *)action forControlEvents:(UIControlEvents)controlEvents
-);
+- (void)__removeTarget:(id)target action:(NSString *)action forControlEvents:(UIControlEvents)controlEvents);
 - (void)removeTarget:(id)target action:(NSString *)action forControlEvents:(UIControlEvents)controlEvents;
 - (NSSet *)allTargets;
 - (UIControlEvents)allControlEvents;
 - (NSArray *)actionsForTarget:(id)target forControlEvent:(UIControlEvents)controlEvent;
 JSExportAs(sendActionToForEvent,
-- (void)__sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event
-);
+- (void)__sendAction:(NSString *)action to:(id)target forEvent:(UIEvent *)event);
 - (void)sendActionsForControlEvents:(UIControlEvents)controlEvents;
 
 #pragma clang diagnostic pop

@@ -11,6 +11,18 @@
 
 @implementation UIViewController (JavaScriptBridge)
 
+- (BOOL)__canPerformUnwindSegueAction:(NSString *)action fromViewController:(UIViewController *)fromViewController withSender:(id)sender
+{
+    return [self canPerformUnwindSegueAction:NSSelectorFromString(action) fromViewController:fromViewController withSender:sender];
+}
+
+- (UIViewController *)__viewControllerForUnwindSegueAction:(NSString *)action fromViewController:(UIViewController *)fromViewController withSender:(id)sender
+{
+    return [self viewControllerForUnwindSegueAction:NSSelectorFromString(action) fromViewController:fromViewController withSender:sender];
+}
+
+#pragma mark -
+
 - (void)__presentViewController:(UIViewController *)viewControllerToPresent
                        animated:(BOOL)flag
                      completion:(JSValue *)completionFunction

@@ -11,6 +11,18 @@
 
 @implementation UIView (JavaScriptBridge)
 
++ (void)__setAnimationWillStartSelector:(NSString *)selector
+{
+    [self setAnimationWillStartSelector:NSSelectorFromString(selector)];
+}
+
++ (void)__setAnimationDidStopSelector:(NSString *)selector
+{
+    [self setAnimationDidStopSelector:NSSelectorFromString(selector)];
+}
+
+#pragma mark -
+
 + (void)__performWithoutAnimation:(JSValue *)function
 {
     JSContext *context = [JSContext currentContext];
