@@ -1,5 +1,8 @@
 # JavaScriptBridge CHANGELOG
 
+## 0.1.2
+- Fix not to assign `self` object on calling some UITableView delegate methods on 64 bit devices.
+
 ## 0.1.1
 - Add support to call some action-target methods from JavaScript
 
