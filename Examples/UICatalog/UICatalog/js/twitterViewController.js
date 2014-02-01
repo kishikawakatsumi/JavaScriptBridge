@@ -57,7 +57,7 @@ var TwitterViewController = JSB.defineClass('TwitterViewController : UITableView
     }
 
     self.navigationItem.title = 'Twitter';
-    self.view.backGroundColor = UIColor.whiteColor();
+    self.view.backgroundColor = UIColor.whiteColor();
 
     self.tableView.registerClassForCellReuseIdentifier(TwitterCell, 'Cell');
 

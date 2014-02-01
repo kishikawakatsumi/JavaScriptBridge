@@ -21,7 +21,7 @@ var ButtonsViewController = JSB.defineClass('ButtonsViewController : UITableView
 
       button.backgroundColor = UIColor.clearColor();
 
-      button.addTargetActionForControlEvents(target, selector, 1 <<  6);
+      button.addTargetActionForControlEvents(target, selector, 1 << 6);
 
       return button;
     };

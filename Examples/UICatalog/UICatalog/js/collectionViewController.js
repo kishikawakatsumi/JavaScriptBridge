@@ -2,7 +2,7 @@ var CollectionViewController = JSB.defineClass('CollectionViewController : UICol
   viewDidLoad: function() {
     self.navigationItem.title = 'Photo Album';
 
-    self.view.backGroundColor = UIColor.whiteColor();
+    self.view.backgroundColor = UIColor.whiteColor();
 
     self.collectionViewLayout.itemSize = {width: 77, height: 77};
     self.collectionViewLayout.minimumInteritemSpacing = 0;
