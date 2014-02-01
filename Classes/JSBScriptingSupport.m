@@ -113,15 +113,15 @@ static JSContext *globalContext;
     
     Class metaClass = objc_getMetaClass(className.UTF8String);
     
-    types = [NSString stringWithFormat: @"%s%s%s%s", @encode(NSMethodSignature), @encode(id), @encode(SEL), @encode(SEL)];
+    types = [NSString stringWithFormat:@"%s%s%s%s", @encode(NSMethodSignature), @encode(id), @encode(SEL), @encode(SEL)];
     result = class_addMethod(cls, @selector(methodSignatureForSelector:), (IMP)methodSignatureForSelector, types.UTF8String);
     result = class_addMethod(metaClass, @selector(methodSignatureForSelector:), (IMP)methodSignatureForSelector, types.UTF8String);
     
-    types = [NSString stringWithFormat: @"%s%s%s%s", @encode(void), @encode(id), @encode(SEL), @encode(NSInvocation)];
+    types = [NSString stringWithFormat:@"%s%s%s%s", @encode(void), @encode(id), @encode(SEL), @encode(NSInvocation)];
     result = class_addMethod(cls, @selector(forwardInvocation:), (IMP)forwardInvocation, types.UTF8String);
     result = class_addMethod(metaClass, @selector(forwardInvocation:), (IMP)forwardInvocation, types.UTF8String);
     
-    types = [NSString stringWithFormat: @"%s%s%s%s", @encode(BOOL), @encode(id), @encode(SEL), @encode(SEL)];
+    types = [NSString stringWithFormat:@"%s%s%s%s", @encode(BOOL), @encode(id), @encode(SEL), @encode(SEL)];
     result = class_addMethod(cls, @selector(respondsToSelector:), (IMP)respondsToSelector, types.UTF8String);
     result = class_addMethod(metaClass, @selector(respondsToSelector:), (IMP)respondsToSelector, types.UTF8String);
     
