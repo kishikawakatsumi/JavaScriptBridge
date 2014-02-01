@@ -237,7 +237,7 @@ var MainViewController = JSB.defineClass('MainViewController : UITableViewContro
     self.tableView.reloadData();
   }
 }, {
-  // Instance Method Definitions
+  // Class Method Definitions
   attemptRotationToDeviceOrientation: function() {
     ...
   }
