@@ -370,16 +370,9 @@ NSMethodSignature *methodSignatureForSelector(id self, SEL _cmd, SEL selector)
     NSMethodSignature *methodSignature = nil;
     Class cls = object_getClass(self);
     
-    if (class_isMetaClass(cls)) {
-        methodSignature = [cls instanceMethodSignatureForSelector:selector];
-        if (methodSignature) {
-            return methodSignature;
-        }
-    } else {
-        methodSignature = [cls instanceMethodSignatureForSelector:selector];
-        if (methodSignature) {
-            return methodSignature;
-        }
+    methodSignature = [cls instanceMethodSignatureForSelector:selector];
+    if (methodSignature) {
+        return methodSignature;
     }
     
     NSUInteger numberOfArguments = [[NSStringFromSelector(selector) componentsSeparatedByString:@":"] count] - 1;
