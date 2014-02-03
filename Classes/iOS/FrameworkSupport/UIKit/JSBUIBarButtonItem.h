@@ -24,10 +24,14 @@
 @property (nonatomic) CGFloat width;
 @property (nonatomic, retain) UIView *customView;
 
-- (id)initWithImage:(UIImage *)image style:(UIBarButtonItemStyle)style target:(id)target action:(SEL)action;
-- (id)initWithImage:(UIImage *)image landscapeImagePhone:(UIImage *)landscapeImagePhone style:(UIBarButtonItemStyle)style target:(id)target action:(SEL)action;
-- (id)initWithTitle:(NSString *)title style:(UIBarButtonItemStyle)style target:(id)target action:(SEL)action;
-- (id)initWithBarButtonSystemItem:(UIBarButtonSystemItem)systemItem target:(id)target action:(SEL)action;
+JSExportAs(initWithImageStyleTargetAction,
+- (id)__initWithImage:(UIImage *)image style:(UIBarButtonItemStyle)style target:(id)target action:(NSString *)action);
+JSExportAs(initWithImageLandscapeImagePhoneStyleTargetAction,
+- (id)__initWithImage:(UIImage *)image landscapeImagePhone:(UIImage *)landscapeImagePhone style:(UIBarButtonItemStyle)style target:(id)target action:(NSString *)action);
+JSExportAs(initWithTitleStyleTargetAction,
+- (id)__initWithTitle:(NSString *)title style:(UIBarButtonItemStyle)style target:(id)target action:(NSString *)action);
+JSExportAs(initWithBarButtonSystemItemTargetAction,
+- (id)__initWithBarButtonSystemItem:(UIBarButtonSystemItem)systemItem target:(id)target action:(NSString *)action);
 - (id)initWithCustomView:(UIView *)customView;
 - (void)setBackgroundImage:(UIImage *)backgroundImage forState:(UIControlState)state barMetrics:(UIBarMetrics)barMetrics;
 - (UIImage *)backgroundImageForState:(UIControlState)state barMetrics:(UIBarMetrics)barMetrics;

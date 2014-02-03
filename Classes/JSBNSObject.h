@@ -23,9 +23,12 @@
 - (id)self;
 - (struct _NSZone *)zone;
 
-- (id)performSelector:(SEL)aSelector;
-- (id)performSelector:(SEL)aSelector withObject:(id)object;
-- (id)performSelector:(SEL)aSelector withObject:(id)object1 withObject:(id)object2;
+JSExportAs(performSelector,
+- (id)__performSelector:(NSString *)aSelector);
+JSExportAs(performSelectorWithObject,
+- (id)__performSelector:(NSString *)aSelector withObject:(id)object);
+JSExportAs(performSelectorWithObjectWithObject,
+- (id)__performSelector:(NSString *)aSelector withObject:(id)object1 withObject:(id)object2);
 
 - (BOOL)isProxy;
 
@@ -63,17 +66,22 @@
 
 + (Class)superclass;
 + (Class)class;
-+ (BOOL)instancesRespondToSelector:(SEL)aSelector;
+JSExportAs(instancesRespondToSelector,
++ (BOOL)__instancesRespondToSelector:(NSString *)aSelector);
 + (BOOL)conformsToProtocol:(Protocol *)protocol;
 - (IMP)methodForSelector:(SEL)aSelector;
 + (IMP)instanceMethodForSelector:(SEL)aSelector;
-- (void)doesNotRecognizeSelector:(SEL)aSelector;
+JSExportAs(doesNotRecognizeSelector,
+- (void)__doesNotRecognizeSelector:(NSString *)aSelector);
 
-- (id)forwardingTargetForSelector:(SEL)aSelector;
+JSExportAs(forwardingTargetForSelector,
+- (id)__forwardingTargetForSelector:(NSString *)aSelector);
 - (void)forwardInvocation:(NSInvocation *)anInvocation;
-- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector;
+JSExportAs(methodSignatureForSelector,
+- (NSMethodSignature *)__methodSignatureForSelector:(NSString *)aSelector);
 
-+ (NSMethodSignature *)instanceMethodSignatureForSelector:(SEL)aSelector;
+JSExportAs(instanceMethodSignatureForSelector,
++ (NSMethodSignature *)__instanceMethodSignatureForSelector:(NSString *)aSelector);
 
 - (BOOL)allowsWeakReference;
 - (BOOL)retainWeakReference;
@@ -82,7 +90,9 @@
 
 + (BOOL)isSubclassOfClass:(Class)aClass;
 
-+ (BOOL)resolveClassMethod:(SEL)sel;
-+ (BOOL)resolveInstanceMethod:(SEL)sel;
+JSExportAs(resolveClassMethod,
++ (BOOL)__resolveClassMethod:(NSString *)sel);
+JSExportAs(resolveInstanceMethod,
++ (BOOL)__resolveInstanceMethod:(NSString *)sel);
 
 @end
