@@ -1,5 +1,8 @@
 # JavaScriptBridge CHANGELOG
 
+## 0.1.3
+- Add support UIBarButtonItem's `init` mathod.
+
 ## 0.1.2
 - Fix not to assign `self` object on calling some UITableView delegate methods on 64 bit devices.
 
