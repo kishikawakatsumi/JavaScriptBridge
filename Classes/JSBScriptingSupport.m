@@ -151,11 +151,9 @@ static JSContext *globalContext;
         script = [NSString stringWithContentsOfFile:[name stringByAppendingPathExtension:@"js"] encoding:NSUTF8StringEncoding error:nil];
     }
     if (script) {
-        NSString *closure = [NSString stringWithFormat:
-                             @"(function() {\n"
-                             @"  %@\n"
-                             @"})();\n", script];
-        [globalContext evaluateScript:closure];
+        JSValue *function = globalContext[@"Function"];
+        JSValue *value = [function constructWithArguments:@[script]];
+        [value callWithArguments:nil];
         module = globalContext[@"JSB"][@"exports"];
     }
     
