@@ -1,6 +1,9 @@
 # JavaScriptBridge CHANGELOG
 
 ## 0.1.4
+- Change all `CFType` to `id` in JSExport protocol methods.
+
+## 0.1.4
 - Fix UIGestureRecognizer header.
 
 ## 0.1.3
