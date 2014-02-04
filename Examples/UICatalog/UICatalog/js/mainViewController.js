@@ -4,6 +4,7 @@ var TwitterViewController = JSB.require('twitterViewController');
 var CollectionViewController = JSB.require('collectionViewController');
 var WebViewController = JSB.require('webViewController');
 var MapViewController = JSB.require('mapViewController');
+var GestureViewController = JSB.require('gestureViewController');
 
 var MainViewController = JSB.defineClass('MainViewController : UITableViewController', {
   viewDidLoad: function() {
@@ -38,6 +39,11 @@ var MainViewController = JSB.defineClass('MainViewController : UITableViewContro
       title: 'Map',
       explanation: 'Use of MKMapView',
       viewController: MapViewController.alloc().init()
+    },
+    {
+      title: 'Gesture',
+      explanation: 'Use of UIGestureRecognizer',
+      viewController: GestureViewController.alloc().init()
     }]
   },
   tableViewNumberOfRowsInSection: function(tableView, section) {

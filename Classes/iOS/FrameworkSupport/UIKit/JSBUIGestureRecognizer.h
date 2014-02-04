@@ -11,6 +11,12 @@
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
 @property (nonatomic, readwrite) UIGestureRecognizerState state;
+@property(nonatomic, assign) id <UIGestureRecognizerDelegate> delegate;
+@property(nonatomic, getter = isEnabled) BOOL enabled;
+@property(nonatomic, readonly) UIView *view;
+@property(nonatomic) BOOL cancelsTouchesInView;
+@property(nonatomic) BOOL delaysTouchesBegan;
+@property(nonatomic) BOOL delaysTouchesEnded;
 
 - (void)ignoreTouch:(UITouch *)touch forEvent:(UIEvent *)event;
 - (void)reset;

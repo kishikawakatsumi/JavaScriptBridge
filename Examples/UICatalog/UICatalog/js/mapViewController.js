@@ -19,12 +19,6 @@ var MapViewController = JSB.defineClass('MapViewController : UIViewController <M
   },
   viewWillDisappear: function(animated) {
     self.mapView.delegate = null;
-  },
-  webViewDidStartLoad: function(webView) {
-    UIApplication.sharedApplication().networkActivityIndicatorVisible = true;
-  },
-  webViewDidFinishLoad: function(webView) {
-    UIApplication.sharedApplication().networkActivityIndicatorVisible = false;
   }
 });
 
