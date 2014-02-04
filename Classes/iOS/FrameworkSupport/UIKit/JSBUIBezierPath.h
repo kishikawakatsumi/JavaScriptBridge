@@ -13,7 +13,7 @@
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
 @property (nonatomic) CGLineCap lineCapStyle;
-@property (nonatomic) CGPathRef CGPath;
+@property (nonatomic) id CGPath;
 @property (nonatomic, readonly) CGRect bounds;
 @property (nonatomic) CGFloat miterLimit;
 @property (nonatomic) CGFloat flatness;
@@ -29,9 +29,9 @@
 + (UIBezierPath *)bezierPathWithRoundedRect:(CGRect)rect cornerRadius:(CGFloat)cornerRadius;
 + (UIBezierPath *)bezierPathWithRoundedRect:(CGRect)rect byRoundingCorners:(UIRectCorner)corners cornerRadii:(CGSize)cornerRadii;
 + (UIBezierPath *)bezierPathWithArcCenter:(CGPoint)center radius:(CGFloat)radius startAngle:(CGFloat)startAngle endAngle:(CGFloat)endAngle clockwise:(BOOL)clockwise;
-+ (UIBezierPath *)bezierPathWithCGPath:(CGPathRef)CGPath;
++ (UIBezierPath *)bezierPathWithCGPath:(id)CGPath;
 
-- (CGPathRef)CGPath;
+- (id)CGPath;
 - (void)moveToPoint:(CGPoint)point;
 - (void)addLineToPoint:(CGPoint)point;
 - (void)addCurveToPoint:(CGPoint)endPoint controlPoint1:(CGPoint)controlPoint1 controlPoint2:(CGPoint)controlPoint2;

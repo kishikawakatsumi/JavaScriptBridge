@@ -32,7 +32,7 @@
 @property (nonatomic, readonly) BOOL enablePostProcessing;
 @property (nonatomic, readonly) AVEdgeWidths edgeWidths;
 
-- (CVPixelBufferRef)newPixelBuffer;
+- (id)newPixelBuffer;
 
 #pragma clang diagnostic pop
 

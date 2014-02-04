@@ -12,10 +12,10 @@
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
 @property (nonatomic, copy) NSArray *displayedProperties;
-@property (nonatomic, readwrite) ABAddressBookRef addressBook;
+@property (nonatomic, readwrite) id addressBook;
 @property (nonatomic) BOOL allowsEditing;
 @property (nonatomic) BOOL allowsActions;
-@property (nonatomic, readwrite) ABRecordRef displayedPerson;
+@property (nonatomic, readwrite) id displayedPerson;
 @property (nonatomic, assign) id personViewDelegate;
 @property (nonatomic) BOOL shouldShowLinkedPeople;
 

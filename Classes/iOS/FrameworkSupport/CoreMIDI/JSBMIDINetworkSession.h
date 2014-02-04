@@ -31,8 +31,8 @@
 - (NSSet *)connections;
 - (BOOL)addConnection:(MIDINetworkConnection *)connection;
 - (BOOL)removeConnection:(MIDINetworkConnection *)connection;
-- (MIDIEndpointRef)sourceEndpoint;
-- (MIDIEndpointRef)destinationEndpoint;
+- (id)sourceEndpoint;
+- (id)destinationEndpoint;
 
 #pragma clang diagnostic pop
 

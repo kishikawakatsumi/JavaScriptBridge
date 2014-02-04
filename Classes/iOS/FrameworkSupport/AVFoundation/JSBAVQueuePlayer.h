@@ -28,7 +28,7 @@
 @property (nonatomic) AVPlayerActionAtItemEnd actionAtItemEnd;
 @property (nonatomic, getter = isMuted) BOOL muted;
 @property (nonatomic, copy) NSString *audioOutputDeviceUniqueID;
-@property (nonatomic, retain) __attribute__ ((NSObject)) CMClockRef masterClock;
+@property (nonatomic, retain) id masterClock;
 @property (nonatomic, getter = isClosedCaptionDisplayEnabled) BOOL closedCaptionDisplayEnabled;
 @property (nonatomic) float rate;
 @property (nonatomic, readonly) BOOL outputObscuredDueToInsufficientExternalProtection;

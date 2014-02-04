@@ -25,7 +25,7 @@
 + (AVAssetImageGenerator *)assetImageGeneratorWithAsset:(AVAsset *)asset;
 
 - (id)initWithAsset:(AVAsset *)asset;
-- (CGImageRef)copyCGImageAtTime:(CMTime)requestedTime actualTime:(CMTime *)actualTime error:(NSError **)outError;
+- (id)copyCGImageAtTime:(CMTime)requestedTime actualTime:(CMTime *)actualTime error:(NSError **)outError;
 - (void)generateCGImagesAsynchronouslyForTimes:(NSArray *)requestedTimes completionHandler:(AVAssetImageGeneratorCompletionHandler)handler;
 - (void)cancelAllCGImageGeneration;
 

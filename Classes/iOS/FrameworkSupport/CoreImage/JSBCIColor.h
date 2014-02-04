@@ -12,16 +12,16 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
-+ (CIColor *)colorWithCGColor:(CGColorRef)c;
++ (CIColor *)colorWithCGColor:(id)c;
 + (CIColor *)colorWithRed:(CGFloat)r green:(CGFloat)g blue:(CGFloat)b alpha:(CGFloat)a;
 + (CIColor *)colorWithRed:(CGFloat)r green:(CGFloat)g blue:(CGFloat)b;
 + (CIColor *)colorWithString:(NSString *)representation;
 
-- (id)initWithCGColor:(CGColorRef)c;
+- (id)initWithCGColor:(id)c;
 - (size_t)numberOfComponents;
 - (const CGFloat *)components;
 - (CGFloat)alpha;
-- (CGColorSpaceRef)colorSpace;
+- (id)colorSpace;
 - (CGFloat)red;
 - (CGFloat)green;
 - (CGFloat)blue;
@@ -29,7 +29,7 @@
 
 #pragma mark - UIKit
 
-@property (nonatomic, readonly) CGColorRef CGColor;
+@property (nonatomic, readonly) id CGColor;
 @property (nonatomic, readonly) CIColor *CIColor;
 
 - (id)initWithColor:(UIColor *)color;

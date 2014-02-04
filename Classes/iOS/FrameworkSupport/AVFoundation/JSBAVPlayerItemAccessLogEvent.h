@@ -29,7 +29,7 @@
 @property (nonatomic) CMTime forwardPlaybackEndTime;
 @property (nonatomic, readonly) NSString *errorDomain;
 @property (nonatomic, readonly) double observedBitrateStandardDeviation;
-@property (nonatomic, readonly) __attribute__ ((NSObject)) CMTimebaseRef timebase;
+@property (nonatomic, readonly) id timebase;
 @property (nonatomic, readonly) NSDate *date;
 @property (nonatomic, readonly, getter = isPlaybackBufferEmpty) BOOL playbackBufferEmpty;
 @property (nonatomic, readonly) NSDate *playbackStartDate;

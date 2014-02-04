@@ -21,7 +21,7 @@
 
 - (id)initWithPixelBufferAttributes:(NSDictionary *)pixelBufferAttributes;
 - (BOOL)hasNewPixelBufferForItemTime:(CMTime)itemTime;
-- (CVPixelBufferRef)copyPixelBufferForItemTime:(CMTime)itemTime itemTimeForDisplay:(CMTime *)outItemTimeForDisplay;
+- (id)copyPixelBufferForItemTime:(CMTime)itemTime itemTimeForDisplay:(CMTime *)outItemTimeForDisplay;
 - (void)setDelegate:(id <AVPlayerItemOutputPullDelegate>)delegate queue:(dispatch_queue_t)delegateQueue;
 - (void)requestNotificationOfMediaDataChangeWithAdvanceInterval:(NSTimeInterval)interval;
 

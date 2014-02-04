@@ -32,8 +32,8 @@
 @property (nonatomic, readonly) BOOL enablePostProcessing;
 @property (nonatomic, readonly) AVEdgeWidths edgeWidths;
 
-- (CVPixelBufferRef)sourceFrameByTrackID:(CMPersistentTrackID)trackID;
-- (void)finishWithComposedVideoFrame:(CVPixelBufferRef)composedVideoFrame;
+- (id)sourceFrameByTrackID:(CMPersistentTrackID)trackID;
+- (void)finishWithComposedVideoFrame:(id)composedVideoFrame;
 - (void)finishWithError:(NSError *)error;
 - (void)finishCancelledRequest;
 

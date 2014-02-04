@@ -12,11 +12,11 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
-@property (nonatomic, retain) __attribute__ ((NSObject)) CMAudioFormatDescriptionRef sourceAudioFormat;
+@property (nonatomic, retain) id sourceAudioFormat;
 @property (nonatomic) CMTime sourceVideoAverageFrameDuration;
 @property (nonatomic, readonly) NSString *outputFileType;
 @property (nonatomic) CMTime sourceVideoMinFrameDuration;
-@property (nonatomic, retain) __attribute__ ((NSObject)) CMVideoFormatDescriptionRef sourceVideoFormat;
+@property (nonatomic, retain) id sourceVideoFormat;
 @property (nonatomic, readonly) NSDictionary *videoSettings;
 @property (nonatomic, readonly) NSDictionary *audioSettings;
 

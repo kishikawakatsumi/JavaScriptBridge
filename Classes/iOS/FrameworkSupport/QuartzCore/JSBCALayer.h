@@ -47,8 +47,8 @@
 - (void)setNeedsDisplayInRect:(CGRect)r;
 - (BOOL)needsDisplay;
 - (void)displayIfNeeded;
-- (void)drawInContext:(CGContextRef)ctx;
-- (void)renderInContext:(CGContextRef)ctx;
+- (void)drawInContext:(id)ctx;
+- (void)renderInContext:(id)ctx;
 - (CGSize)preferredFrameSize;
 - (void)setNeedsLayout;
 - (BOOL)needsLayout;

@@ -13,7 +13,7 @@
 
 @property (readonly, nonatomic) NSUUID *identifier;
 @property (readonly, nonatomic) NSUInteger maximumUpdateValueLength;
-@property (readonly, nonatomic) CFUUIDRef UUID;
+@property (readonly, nonatomic) id UUID;
 
 #pragma clang diagnostic pop
 

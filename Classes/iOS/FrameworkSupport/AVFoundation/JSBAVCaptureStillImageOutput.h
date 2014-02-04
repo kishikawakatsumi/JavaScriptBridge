@@ -45,7 +45,7 @@
 @property (nonatomic, readonly) NSArray *availableVideoCVPixelFormatTypes;
 @property (nonatomic, readonly, readonly) id sampleBufferDelegate;
 
-+ (NSData *)jpegStillImageNSDataRepresentation:(CMSampleBufferRef)jpegSampleBuffer;
++ (NSData *)jpegStillImageNSDataRepresentation:(id)jpegSampleBuffer;
 
 - (void)captureStillImageAsynchronouslyFromConnection:(AVCaptureConnection *)connection completionHandler:(void (^)(CMSampleBufferRef imageDataSampleBuffer , NSError *error))handler;
 
