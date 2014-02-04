@@ -71,6 +71,7 @@
 		14B5CD301875C3740019A135 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B5CD2F1875C3740019A135 /* AppDelegate.m */; };
 		14B5CD321875C3740019A135 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14B5CD311875C3740019A135 /* Images.xcassets */; };
 		14D6C30C18793F12005C7018 /* collectionViewController.js in Resources */ = {isa = PBXBuildFile; fileRef = 14D6C30B18793F12005C7018 /* collectionViewController.js */; };
+		14F55CFB18A1882E008B798E /* gradientViewController.js in Resources */ = {isa = PBXBuildFile; fileRef = 14F55CFA18A1882E008B798E /* gradientViewController.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -803,6 +804,7 @@
 		14B5CD311875C3740019A135 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		14B5CD381875C3750019A135 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		14D6C30B18793F12005C7018 /* collectionViewController.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = collectionViewController.js; path = js/collectionViewController.js; sourceTree = "<group>"; };
+		14F55CFA18A1882E008B798E /* gradientViewController.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = gradientViewController.js; path = js/gradientViewController.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1782,6 +1784,7 @@
 				14A045011877E7B1004831E8 /* webViewController.js */,
 				14A0450D1877E870004831E8 /* mapViewController.js */,
 				149ED65018A148230078236E /* gestureViewController.js */,
+				14F55CFA18A1882E008B798E /* gradientViewController.js */,
 			);
 			name = js;
 			sourceTree = "<group>";
@@ -1937,6 +1940,7 @@
 				14A0450E1877E870004831E8 /* mapViewController.js in Resources */,
 				149ED65218A1483D0078236E /* gestureViewController.js in Resources */,
 				14B5CD2A1875C3740019A135 /* InfoPlist.strings in Resources */,
+				14F55CFB18A1882E008B798E /* gradientViewController.js in Resources */,
 				14B5CD321875C3740019A135 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
