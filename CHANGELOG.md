@@ -1,5 +1,8 @@
 # JavaScriptBridge CHANGELOG
 
+## 0.1.4
+- Fix UIGestureRecognizer header.
+
 ## 0.1.3
 - Add support UIBarButtonItem's `init` mathod.
 

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                  = "JavaScriptBridge"
-  s.version               = "0.1.3"
+  s.version               = "0.1.4"
   s.summary               = "Write iOS apps in Javascript! JavaScriptBridge provides the way to write iOS apps with JavaScript."
   s.homepage              = "https://github.com/kishikawakatsumi/JavaScriptBridge"
   s.social_media_url      = "https://twitter.com/k_katsumi"
