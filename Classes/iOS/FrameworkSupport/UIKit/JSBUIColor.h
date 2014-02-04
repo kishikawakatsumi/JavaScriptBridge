@@ -22,7 +22,7 @@
 + (UIColor *)colorWithWhite:(CGFloat)white alpha:(CGFloat)alpha;
 + (UIColor *)colorWithHue:(CGFloat)hue saturation:(CGFloat)saturation brightness:(CGFloat)brightness alpha:(CGFloat)alpha;
 + (UIColor *)colorWithRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha;
-+ (UIColor *)colorWithCGColor:(CGColorRef)cgColor;
++ (UIColor *)colorWithCGColor:(id)cgColor;
 + (UIColor *)colorWithPatternImage:(UIImage *)image;
 + (UIColor *)colorWithCIColor:(CIColor *)ciColor;
 + (UIColor *)blackColor;
@@ -44,7 +44,7 @@
 - (UIColor *)initWithWhite:(CGFloat)white alpha:(CGFloat)alpha;
 - (UIColor *)initWithHue:(CGFloat)hue saturation:(CGFloat)saturation brightness:(CGFloat)brightness alpha:(CGFloat)alpha;
 - (UIColor *)initWithRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha;
-- (UIColor *)initWithCGColor:(CGColorRef)cgColor;
+- (UIColor *)initWithCGColor:(id)cgColor;
 - (UIColor *)initWithPatternImage:(UIImage *)image;
 - (UIColor *)initWithCIColor:(CIColor *)ciColor;
 - (void)set;
@@ -54,7 +54,7 @@
 - (BOOL)getHue:(CGFloat *)hue saturation:(CGFloat *)saturation brightness:(CGFloat *)brightness alpha:(CGFloat *)alpha;
 - (BOOL)getRed:(CGFloat *)red green:(CGFloat *)green blue:(CGFloat *)blue alpha:(CGFloat *)alpha;
 - (UIColor *)colorWithAlphaComponent:(CGFloat)alpha;
-- (CGColorRef)CGColor;
+- (id)CGColor;
 
 #pragma clang diagnostic pop
 
