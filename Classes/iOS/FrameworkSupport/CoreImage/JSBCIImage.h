@@ -13,37 +13,37 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
-+ (CIImage *)imageWithCGImage:(CGImageRef)image;
-+ (CIImage *)imageWithCGImage:(CGImageRef)image options:(NSDictionary *)d;
-+ (CIImage *)imageWithCGLayer:(CGLayerRef)layer;
-+ (CIImage *)imageWithCGLayer:(CGLayerRef)layer options:(NSDictionary *)d;
-+ (CIImage *)imageWithBitmapData:(NSData *)d bytesPerRow:(size_t)bpr size:(CGSize)size format:(CIFormat)f colorSpace:(CGColorSpaceRef)cs;
-+ (CIImage *)imageWithTexture:(unsigned int)name size:(CGSize)size flipped:(BOOL)flag colorSpace:(CGColorSpaceRef)cs;
++ (CIImage *)imageWithCGImage:(id)image;
++ (CIImage *)imageWithCGImage:(id)image options:(NSDictionary *)d;
++ (CIImage *)imageWithCGLayer:(id)layer;
++ (CIImage *)imageWithCGLayer:(id)layer options:(NSDictionary *)d;
++ (CIImage *)imageWithBitmapData:(NSData *)d bytesPerRow:(size_t)bpr size:(CGSize)size format:(CIFormat)f colorSpace:(id)cs;
++ (CIImage *)imageWithTexture:(unsigned int)name size:(CGSize)size flipped:(BOOL)flag colorSpace:(id)cs;
 + (CIImage *)imageWithContentsOfURL:(NSURL *)url;
 + (CIImage *)imageWithContentsOfURL:(NSURL *)url options:(NSDictionary *)d;
 + (CIImage *)imageWithData:(NSData *)data;
 + (CIImage *)imageWithData:(NSData *)data options:(NSDictionary *)d;
-+ (CIImage *)imageWithCVImageBuffer:(CVImageBufferRef)imageBuffer;
-+ (CIImage *)imageWithCVImageBuffer:(CVImageBufferRef)imageBuffer options:(NSDictionary *)dict;
-+ (CIImage *)imageWithCVPixelBuffer:(CVPixelBufferRef)buffer;
-+ (CIImage *)imageWithCVPixelBuffer:(CVPixelBufferRef)buffer options:(NSDictionary *)dict;
++ (CIImage *)imageWithCVImageBuffer:(id)imageBuffer;
++ (CIImage *)imageWithCVImageBuffer:(id)imageBuffer options:(NSDictionary *)dict;
++ (CIImage *)imageWithCVPixelBuffer:(id)buffer;
++ (CIImage *)imageWithCVPixelBuffer:(id)buffer options:(NSDictionary *)dict;
 + (CIImage *)imageWithColor:(CIColor *)color;
 + (CIImage *)emptyImage;
 
-- (id)initWithCGImage:(CGImageRef)image;
-- (id)initWithCGImage:(CGImageRef)image options:(NSDictionary *)d;
-- (id)initWithCGLayer:(CGLayerRef)layer;
-- (id)initWithCGLayer:(CGLayerRef)layer options:(NSDictionary *)d;
+- (id)initWithCGImage:(id)image;
+- (id)initWithCGImage:(id)image options:(NSDictionary *)d;
+- (id)initWithCGLayer:(id)layer;
+- (id)initWithCGLayer:(id)layer options:(NSDictionary *)d;
 - (id)initWithData:(NSData *)data;
 - (id)initWithData:(NSData *)data options:(NSDictionary *)d;
-- (id)initWithBitmapData:(NSData *)d bytesPerRow:(size_t)bpr size:(CGSize)size format:(CIFormat)f colorSpace:(CGColorSpaceRef)c;
-- (id)initWithTexture:(unsigned int)name size:(CGSize)size flipped:(BOOL)flag colorSpace:(CGColorSpaceRef)cs;
+- (id)initWithBitmapData:(NSData *)d bytesPerRow:(size_t)bpr size:(CGSize)size format:(CIFormat)f colorSpace:(id)c;
+- (id)initWithTexture:(unsigned int)name size:(CGSize)size flipped:(BOOL)flag colorSpace:(id)cs;
 - (id)initWithContentsOfURL:(NSURL *)url;
 - (id)initWithContentsOfURL:(NSURL *)url options:(NSDictionary *)d;
-- (id)initWithCVImageBuffer:(CVImageBufferRef)imageBuffer;
-- (id)initWithCVImageBuffer:(CVImageBufferRef)imageBuffer options:(NSDictionary *)dict;
-- (id)initWithCVPixelBuffer:(CVPixelBufferRef)buffer;
-- (id)initWithCVPixelBuffer:(CVPixelBufferRef)buffer options:(NSDictionary *)dict;
+- (id)initWithCVImageBuffer:(id)imageBuffer;
+- (id)initWithCVImageBuffer:(id)imageBuffer options:(NSDictionary *)dict;
+- (id)initWithCVPixelBuffer:(id)buffer;
+- (id)initWithCVPixelBuffer:(id)buffer options:(NSDictionary *)dict;
 - (id)initWithColor:(CIColor *)color;
 - (CIImage *)imageByApplyingTransform:(CGAffineTransform)matrix;
 - (CIImage *)imageByCroppingToRect:(CGRect)r;
@@ -51,7 +51,7 @@
 - (NSDictionary *)properties;
 - (CIFilterShape *)definition;
 - (NSURL *)url;
-- (CGColorSpaceRef)colorSpace;
+- (id)colorSpace;
 - (CGRect)regionOfInterestForImage:(CIImage *)im inRect:(CGRect)r;
 - (NSArray *)autoAdjustmentFilters;
 - (NSArray *)autoAdjustmentFiltersWithOptions:(NSDictionary *)dict;
@@ -63,7 +63,7 @@
 @property (nonatomic, readonly) CGFloat scale;
 @property (nonatomic, readonly) UIImageRenderingMode renderingMode;
 @property (nonatomic, readonly) NSInteger leftCapWidth;
-@property (nonatomic, readonly) CGImageRef CGImage;
+@property (nonatomic, readonly) id CGImage;
 @property (nonatomic, readonly) CGSize size;
 @property (nonatomic, readonly) NSInteger topCapHeight;
 @property (nonatomic, readonly) UIEdgeInsets alignmentRectInsets;

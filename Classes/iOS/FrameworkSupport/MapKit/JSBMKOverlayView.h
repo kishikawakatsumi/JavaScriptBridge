@@ -21,7 +21,7 @@
 - (CGRect)rectForMapRect:(MKMapRect)mapRect;
 - (MKMapRect)mapRectForRect:(CGRect)rect;
 - (BOOL)canDrawMapRect:(MKMapRect)mapRect zoomScale:(MKZoomScale)zoomScale;
-- (void)drawMapRect:(MKMapRect)mapRect zoomScale:(MKZoomScale)zoomScale inContext:(CGContextRef)context;
+- (void)drawMapRect:(MKMapRect)mapRect zoomScale:(MKZoomScale)zoomScale inContext:(id)context;
 - (void)setNeedsDisplayInMapRect:(MKMapRect)mapRect;
 - (void)setNeedsDisplayInMapRect:(MKMapRect)mapRect zoomScale:(MKZoomScale)zoomScale;
 

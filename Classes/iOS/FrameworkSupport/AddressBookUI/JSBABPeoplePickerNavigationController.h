@@ -14,7 +14,7 @@
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
 @property (nonatomic, copy) NSArray *displayedProperties;
-@property (nonatomic, readwrite) ABAddressBookRef addressBook;
+@property (nonatomic, readwrite) id addressBook;
 @property (nonatomic, assign) id peoplePickerDelegate;
 
 #pragma clang diagnostic pop

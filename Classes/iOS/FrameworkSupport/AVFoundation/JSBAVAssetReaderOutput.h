@@ -26,7 +26,7 @@
 @property (nonatomic, readonly) NSDictionary *audioSettings;
 @property (nonatomic, copy) NSString *audioTimePitchAlgorithm;
 
-- (CMSampleBufferRef)copyNextSampleBuffer;
+- (id)copyNextSampleBuffer;
 
 #pragma clang diagnostic pop
 

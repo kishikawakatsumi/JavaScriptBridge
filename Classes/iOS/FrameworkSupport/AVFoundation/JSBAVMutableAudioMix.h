@@ -18,7 +18,7 @@
 @property (nonatomic, readonly) CMPersistentTrackID trackID;
 @property (nonatomic, copy, readonly) NSArray *inputParameters;
 @property (nonatomic, copy, readonly) NSString *audioTimePitchAlgorithm;
-@property (nonatomic, retain, readonly) __attribute__ ((NSObject)) MTAudioProcessingTapRef audioTapProcessor;
+@property (nonatomic, retain, readonly) id audioTapProcessor;
 
 + (AVMutableAudioMix *)audioMix;
 

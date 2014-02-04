@@ -17,7 +17,7 @@
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
 @property (nonatomic, readonly) CMPersistentTrackID passthroughTrackID;
-@property (nonatomic, retain) __attribute__ ((NSObject)) CGColorRef backgroundColor;
+@property (nonatomic, retain) id backgroundColor;
 @property (nonatomic, readonly) float renderScale;
 @property (nonatomic, retain, readonly) AVVideoCompositionCoreAnimationTool *animationTool;
 @property (nonatomic, readonly) CGSize renderSize;

@@ -15,7 +15,7 @@
 
 + (CBUUID *)UUIDWithString:(NSString *)theString;
 + (CBUUID *)UUIDWithData:(NSData *)theData;
-+ (CBUUID *)UUIDWithCFUUID:(CFUUIDRef)theUUID;
++ (CBUUID *)UUIDWithCFUUID:(id)theUUID;
 + (CBUUID *)UUIDWithNSUUID:(NSUUID *)theUUID;
 
 #pragma clang diagnostic pop

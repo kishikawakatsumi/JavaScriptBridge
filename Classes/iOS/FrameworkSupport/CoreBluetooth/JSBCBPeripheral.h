@@ -13,7 +13,7 @@
 
 @property (retain, readonly) NSNumber *RSSI;
 @property (retain, readonly) NSArray *services;
-@property (readonly, nonatomic) CFUUIDRef UUID;
+@property (readonly, nonatomic) id UUID;
 @property (readonly, nonatomic) NSUUID *identifier;
 @property (readonly) BOOL isConnected;
 @property (weak, nonatomic) id delegate;

@@ -18,8 +18,8 @@
 @property (nonatomic, readonly) AVCaptureInput *input;
 @property (nonatomic, getter = isEnabled) BOOL enabled;
 @property (nonatomic, readonly) NSArray *ports;
-@property (nonatomic, readonly) CMFormatDescriptionRef formatDescription;
-@property (nonatomic, readonly) __attribute__ ((NSObject)) CMClockRef clock;
+@property (nonatomic, readonly) id formatDescription;
+@property (nonatomic, readonly) id clock;
 
 + (id)deviceInputWithDevice:(AVCaptureDevice *)device error:(NSError **)outError;
 

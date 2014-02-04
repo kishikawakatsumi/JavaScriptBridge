@@ -20,7 +20,7 @@
 @property (nonatomic, readonly) BOOL isCurrentUser;
 @property (nonatomic, readonly) EKParticipantStatus participantStatus;
 
-- (ABRecordRef)ABRecordWithAddressBook:(ABAddressBookRef)addressBook;
+- (id)ABRecordWithAddressBook:(id)addressBook;
 
 #pragma clang diagnostic pop
 

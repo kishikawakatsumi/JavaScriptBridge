@@ -19,7 +19,7 @@
 @property (copy) NSArray *emitterCells;
 @property float redSpeed, greenSpeed, blueSpeed, alphaSpeed;
 @property CGRect contentsRect;
-@property CGColorRef color;
+@property id color;
 @property CGFloat spin, spinRange;
 @property float redRange, greenRange, blueRange, alphaRange;
 @property CGFloat emissionLatitude, emissionLongitude;

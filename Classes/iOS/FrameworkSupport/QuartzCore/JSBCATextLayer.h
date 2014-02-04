@@ -13,9 +13,9 @@
 @property (copy) id string;
 @property (copy) NSString *truncationMode;
 @property CGFloat fontSize;
-@property CGColorRef foregroundColor;
+@property id foregroundColor;
 @property (copy) NSString *alignmentMode;
-@property CFTypeRef font;
+@property id font;
 @property (getter = isWrapped) BOOL wrapped;
 
 #pragma clang diagnostic pop

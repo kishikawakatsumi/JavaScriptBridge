@@ -23,7 +23,7 @@
 @property (nonatomic, readonly) EKCalendarType type;
 @property (nonatomic, readonly) EKEntityMask allowedEntityTypes;
 @property (nonatomic, readonly) NSString *calendarIdentifier;
-@property (nonatomic) CGColorRef CGColor;
+@property (nonatomic) id CGColor;
 
 + (EKCalendar *)calendarWithEventStore:(EKEventStore *)eventStore;
 + (EKCalendar *)calendarForEntityType:(EKEntityType)entityType eventStore:(EKEventStore *)eventStore;

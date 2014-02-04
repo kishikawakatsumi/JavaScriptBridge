@@ -16,7 +16,7 @@
 
 @property (nonatomic, readonly) NSString *mediaType;
 @property (nonatomic, readonly) float torchLevel;
-@property (nonatomic, readonly) CMFormatDescriptionRef formatDescription;
+@property (nonatomic, readonly) id formatDescription;
 @property (nonatomic) CGPoint focusPointOfInterest;
 @property (nonatomic, readonly) NSArray *videoSupportedFrameRateRanges;
 @property (nonatomic) AVCaptureFlashMode flashMode;

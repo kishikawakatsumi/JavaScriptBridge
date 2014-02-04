@@ -17,7 +17,7 @@
 + (JSContext *)currentContext;
 + (JSValue *)currentThis;
 + (NSArray *)currentArguments;
-+ (JSContext *)contextWithJSGlobalContextRef:(JSGlobalContextRef)jsGlobalContextRef;
++ (JSContext *)contextWithJSGlobalContextRef:(id)jsGlobalContextRef;
 
 - (id)init;
 - (id)initWithVirtualMachine:(JSVirtualMachine *)virtualMachine;
@@ -25,7 +25,7 @@
 - (JSValue *)globalObject;
 - (JSValue *)objectForKeyedSubscript:(id)key;
 - (void)setObject:(id)object forKeyedSubscript:(NSObject <NSCopying> *)key;
-- (JSGlobalContextRef)JSGlobalContextRef;
+- (id)JSGlobalContextRef;
 
 #pragma clang diagnostic pop
 

@@ -20,7 +20,7 @@
 @property (retain) CAValueFunction *valueFunction;
 @property (getter = isCumulative) BOOL cumulative;
 @property (copy) NSArray *timingFunctions;
-@property CGPathRef path;
+@property id path;
 @property (copy) NSString *calculationMode;
 @property (copy) NSString *rotationMode;
 @property (copy) NSString *type;

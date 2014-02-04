@@ -14,10 +14,10 @@
 @property (copy) NSString *lineCap;
 @property (copy) NSArray *lineDashPattern;
 @property CGFloat lineDashPhase;
-@property CGColorRef fillColor;
+@property id fillColor;
 @property CGFloat strokeStart, strokeEnd;
-@property CGColorRef strokeColor;
-@property CGPathRef path;
+@property id strokeColor;
+@property id path;
 @property (copy) NSString *fillRule;
 @property (copy) NSString *lineJoin;
 @property CGFloat lineWidth;

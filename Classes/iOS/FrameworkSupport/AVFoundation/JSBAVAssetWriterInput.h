@@ -25,20 +25,20 @@
 @property (nonatomic, copy) NSString *languageCode;
 @property (nonatomic) CGAffineTransform transform;
 @property (nonatomic, readonly) NSDictionary *outputSettings;
-@property (nonatomic, readonly) CVPixelBufferPoolRef pixelBufferPool;
+@property (nonatomic, readonly) id pixelBufferPool;
 @property (nonatomic, readonly) NSDictionary *sourcePixelBufferAttributes;
 @property (nonatomic, copy) NSString *extendedLanguageTag;
 @property (nonatomic) CGSize naturalSize;
-@property (nonatomic, readonly) __attribute__ ((NSObject)) CMFormatDescriptionRef sourceFormatHint;
+@property (nonatomic, readonly) id sourceFormatHint;
 @property (nonatomic, readonly) AVAssetWriterInput *assetWriterInput;
 
 + (AVAssetWriterInput *)assetWriterInputWithMediaType:(NSString *)mediaType outputSettings:(NSDictionary *)outputSettings;
-+ (AVAssetWriterInput *)assetWriterInputWithMediaType:(NSString *)mediaType outputSettings:(NSDictionary *)outputSettings sourceFormatHint:(CMFormatDescriptionRef)sourceFormatHint;
++ (AVAssetWriterInput *)assetWriterInputWithMediaType:(NSString *)mediaType outputSettings:(NSDictionary *)outputSettings sourceFormatHint:(id)sourceFormatHint;
 
 - (id)initWithMediaType:(NSString *)mediaType outputSettings:(NSDictionary *)outputSettings;
-- (id)initWithMediaType:(NSString *)mediaType outputSettings:(NSDictionary *)outputSettings sourceFormatHint:(CMFormatDescriptionRef)sourceFormatHint;
+- (id)initWithMediaType:(NSString *)mediaType outputSettings:(NSDictionary *)outputSettings sourceFormatHint:(id)sourceFormatHint;
 - (void)requestMediaDataWhenReadyOnQueue:(dispatch_queue_t)queue usingBlock:(void (^)(void))block;
-- (BOOL)appendSampleBuffer:(CMSampleBufferRef)sampleBuffer;
+- (BOOL)appendSampleBuffer:(id)sampleBuffer;
 - (void)markAsFinished;
 - (BOOL)canAddTrackAssociationWithTrackOfInput:(AVAssetWriterInput *)input type:(NSString *)trackAssociationType;
 - (void)addTrackAssociationWithTrackOfInput:(AVAssetWriterInput *)input type:(NSString *)trackAssociationType;

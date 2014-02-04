@@ -18,7 +18,7 @@
 + (void)cancelPreviousPerformRequestsWithTarget:(id)aTarget;
 
 - (NSString *)currentMode;
-- (CFRunLoopRef)getCFRunLoop;
+- (id)getCFRunLoop;
 - (void)addTimer:(NSTimer *)timer forMode:(NSString *)mode;
 - (void)addPort:(NSPort *)aPort forMode:(NSString *)mode;
 - (void)removePort:(NSPort *)aPort forMode:(NSString *)mode;

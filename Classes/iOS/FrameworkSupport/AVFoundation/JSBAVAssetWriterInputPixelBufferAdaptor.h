@@ -25,17 +25,17 @@
 @property (nonatomic, copy) NSString *languageCode;
 @property (nonatomic) CGAffineTransform transform;
 @property (nonatomic, readonly) NSDictionary *outputSettings;
-@property (nonatomic, readonly) CVPixelBufferPoolRef pixelBufferPool;
+@property (nonatomic, readonly) id pixelBufferPool;
 @property (nonatomic, readonly) NSDictionary *sourcePixelBufferAttributes;
 @property (nonatomic, copy) NSString *extendedLanguageTag;
 @property (nonatomic) CGSize naturalSize;
-@property (nonatomic, readonly) __attribute__ ((NSObject)) CMFormatDescriptionRef sourceFormatHint;
+@property (nonatomic, readonly) id sourceFormatHint;
 @property (nonatomic, readonly) AVAssetWriterInput *assetWriterInput;
 
 + (AVAssetWriterInputPixelBufferAdaptor *)assetWriterInputPixelBufferAdaptorWithAssetWriterInput:(AVAssetWriterInput *)input sourcePixelBufferAttributes:(NSDictionary *)sourcePixelBufferAttributes;
 
 - (id)initWithAssetWriterInput:(AVAssetWriterInput *)input sourcePixelBufferAttributes:(NSDictionary *)sourcePixelBufferAttributes;
-- (BOOL)appendPixelBuffer:(CVPixelBufferRef)pixelBuffer withPresentationTime:(CMTime)presentationTime;
+- (BOOL)appendPixelBuffer:(id)pixelBuffer withPresentationTime:(CMTime)presentationTime;
 
 #pragma clang diagnostic pop
 

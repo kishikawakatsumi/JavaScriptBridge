@@ -22,7 +22,7 @@
 - (NSString *)protocol;
 - (NSString *)authenticationMethod;
 - (NSArray *)distinguishedNames;
-- (SecTrustRef)serverTrust;
+- (id)serverTrust;
 
 #pragma clang diagnostic pop
 

@@ -12,7 +12,7 @@
 
 @property BOOL preservesDepth;
 @property NSInteger instanceCount;
-@property CGColorRef instanceColor;
+@property id instanceColor;
 @property CATransform3D instanceTransform;
 @property float instanceRedOffset, instanceGreenOffset;
 @property CFTimeInterval instanceDelay;

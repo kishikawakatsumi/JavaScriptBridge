@@ -18,16 +18,16 @@
 @property CGFloat lineDashPhase;
 @property (retain) UIColor *fillColor;
 @property (retain) UIColor *strokeColor;
-@property CGPathRef path;
+@property id path;
 @property CGLineJoin lineJoin;
 @property CGLineCap lineCap;
 
 - (void)createPath;
 - (void)invalidatePath;
-- (void)applyStrokePropertiesToContext:(CGContextRef)context atZoomScale:(MKZoomScale)zoomScale;
-- (void)applyFillPropertiesToContext:(CGContextRef)context atZoomScale:(MKZoomScale)zoomScale;
-- (void)strokePath:(CGPathRef)path inContext:(CGContextRef)context;
-- (void)fillPath:(CGPathRef)path inContext:(CGContextRef)context;
+- (void)applyStrokePropertiesToContext:(id)context atZoomScale:(MKZoomScale)zoomScale;
+- (void)applyFillPropertiesToContext:(id)context atZoomScale:(MKZoomScale)zoomScale;
+- (void)strokePath:(id)path inContext:(id)context;
+- (void)fillPath:(id)path inContext:(id)context;
 
 #pragma clang diagnostic pop
 

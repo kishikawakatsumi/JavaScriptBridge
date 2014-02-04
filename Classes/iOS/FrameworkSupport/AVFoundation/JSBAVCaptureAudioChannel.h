@@ -39,7 +39,7 @@
 @property (nonatomic) CMTime videoMaxFrameDuration;
 @property (nonatomic, readonly) CGFloat videoMaxScaleAndCropFactor;
 @property (nonatomic) BOOL enablesVideoStabilizationWhenAvailable;
-@property (nonatomic, readonly) __attribute__ ((NSObject)) CMClockRef masterClock;
+@property (nonatomic, readonly) id masterClock;
 @property (nonatomic) CGFloat videoScaleAndCropFactor;
 @property (nonatomic, readonly, getter = isVideoStabilizationSupported) BOOL supportsVideoStabilization;
 @property (nonatomic, readonly) AVCaptureOutput *output;
