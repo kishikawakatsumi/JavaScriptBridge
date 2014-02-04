@@ -53,6 +53,7 @@
 		149C56851875C5BB0003EE16 /* JSBTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 149C55DA1875C5BB0003EE16 /* JSBTwitter.m */; };
 		149C56861875C5BB0003EE16 /* JSBUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 149C56171875C5BB0003EE16 /* JSBUIKit.m */; };
 		149C56871875C5BB0003EE16 /* JSBiAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 149C56681875C5BB0003EE16 /* JSBiAd.m */; };
+		149ED65218A1483D0078236E /* gestureViewController.js in Resources */ = {isa = PBXBuildFile; fileRef = 149ED65018A148230078236E /* gestureViewController.js */; };
 		14A045081877E7E3004831E8 /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 14A044FF1877E7B1004831E8 /* main.js */; };
 		14A045091877E7E3004831E8 /* mainViewController.js in Resources */ = {isa = PBXBuildFile; fileRef = 14A045001877E7B1004831E8 /* mainViewController.js */; };
 		14A0450A1877E7E3004831E8 /* buttonsViewController.js in Resources */ = {isa = PBXBuildFile; fileRef = 14A044FD1877E7B1004831E8 /* buttonsViewController.js */; };
@@ -775,6 +776,7 @@
 		149C56661875C5BB0003EE16 /* JSBMPMoviePlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBMPMoviePlayerController.h; sourceTree = "<group>"; };
 		149C56671875C5BB0003EE16 /* JSBiAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBiAd.h; sourceTree = "<group>"; };
 		149C56681875C5BB0003EE16 /* JSBiAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBiAd.m; sourceTree = "<group>"; };
+		149ED65018A148230078236E /* gestureViewController.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = gestureViewController.js; path = js/gestureViewController.js; sourceTree = "<group>"; };
 		14A044FD1877E7B1004831E8 /* buttonsViewController.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = buttonsViewController.js; path = js/buttonsViewController.js; sourceTree = "<group>"; };
 		14A044FE1877E7B1004831E8 /* controlsViewController.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = controlsViewController.js; path = js/controlsViewController.js; sourceTree = "<group>"; };
 		14A044FF1877E7B1004831E8 /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = main.js; path = js/main.js; sourceTree = "<group>"; };
@@ -1779,6 +1781,7 @@
 				14D6C30B18793F12005C7018 /* collectionViewController.js */,
 				14A045011877E7B1004831E8 /* webViewController.js */,
 				14A0450D1877E870004831E8 /* mapViewController.js */,
+				149ED65018A148230078236E /* gestureViewController.js */,
 			);
 			name = js;
 			sourceTree = "<group>";
@@ -1932,6 +1935,7 @@
 				14D6C30C18793F12005C7018 /* collectionViewController.js in Resources */,
 				14A0450C1877E7E3004831E8 /* webViewController.js in Resources */,
 				14A0450E1877E870004831E8 /* mapViewController.js in Resources */,
+				149ED65218A1483D0078236E /* gestureViewController.js in Resources */,
 				14B5CD2A1875C3740019A135 /* InfoPlist.strings in Resources */,
 				14B5CD321875C3740019A135 /* Images.xcassets in Resources */,
 			);
