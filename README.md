@@ -299,6 +299,13 @@ var MainViewController = JSB.defineClass('MainViewController : UITableViewContro
 JSB.exports = MainViewController;
 ```
 
+###For Debug
+`JSB.log` function is the same as `NSLog`.
+
+```javascript
+JSB.log('view: %@', self.view);
+```
+
 ## Requirements
 - **iOS 7 or later**
 - JavaScriptCore.framework
