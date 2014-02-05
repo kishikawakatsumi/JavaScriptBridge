@@ -1,5 +1,8 @@
 # JavaScriptBridge CHANGELOG
 
+## 0.1.7
+- Fix duplicate named methods/properties from all framework support files.
+
 ## 0.1.6
 - Fix duplicate named methods/properties export.
 
