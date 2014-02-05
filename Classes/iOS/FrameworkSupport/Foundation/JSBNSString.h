@@ -36,8 +36,10 @@
 + (instancetype)stringWithString:(NSString *)string;
 + (instancetype)stringWithCharacters:(const unichar *)characters length:(NSUInteger)length;
 + (instancetype)stringWithUTF8String:(const char *)nullTerminatedCString;
-+ (instancetype)stringWithFormat:(NSString *)format , ...;
-+ (instancetype)localizedStringWithFormat:(NSString *)format , ...;
+JSExportAs(stringWithFormat,
++ (instancetype)__stringWithFormat:(NSString *)format arguments:(NSArray *)arguments);
+JSExportAs(localizedStringWithFormat,
++ (instancetype)__localizedStringWithFormat:(NSString *)format arguments:(NSArray *)arguments);
 + (instancetype)stringWithCString:(const char *)cString encoding:(NSStringEncoding)enc;
 + (instancetype)stringWithContentsOfURL:(NSURL *)url encoding:(NSStringEncoding)enc error:(NSError **)error;
 + (instancetype)stringWithContentsOfFile:(NSString *)path encoding:(NSStringEncoding)enc error:(NSError **)error;
@@ -98,7 +100,8 @@
 - (NSRange)rangeOfComposedCharacterSequenceAtIndex:(NSUInteger)index;
 - (NSRange)rangeOfComposedCharacterSequencesForRange:(NSRange)range;
 - (NSString *)stringByAppendingString:(NSString *)aString;
-- (NSString *)stringByAppendingFormat:(NSString *)format , ...;
+JSExportAs(stringByAppendingFormat,
+- (NSString *)__stringByAppendingFormat:(NSString *)format arguments:(NSArray *)arguments);
 - (double)doubleValue;
 - (float)floatValue;
 - (int)intValue;
@@ -148,9 +151,10 @@
 - (instancetype)initWithCharacters:(const unichar *)characters length:(NSUInteger)length;
 - (instancetype)initWithUTF8String:(const char *)nullTerminatedCString;
 - (instancetype)initWithString:(NSString *)aString;
-- (instancetype)initWithFormat:(NSString *)format , ...;
-- (instancetype)initWithFormat:(NSString *)format arguments:(va_list)argList;
-- (instancetype)initWithFormat:(NSString *)format locale:(id)locale , ...;
+JSExportAs(initWithFormat,
+- (instancetype)__initWithFormat:(NSString *)format arguments:(NSArray *)arguments);
+JSExportAs(initWithFormatLocale,
+- (instancetype)__initWithFormat:(NSString *)format locale:(id)locale arguments:(NSArray *)arguments);
 - (instancetype)initWithFormat:(NSString *)format locale:(id)locale arguments:(va_list)argList;
 - (instancetype)initWithData:(NSData *)data encoding:(NSStringEncoding)encoding;
 - (instancetype)initWithBytes:(const void *)bytes length:(NSUInteger)len encoding:(NSStringEncoding)encoding;
@@ -162,14 +166,6 @@
 - (instancetype)initWithContentsOfFile:(NSString *)path usedEncoding:(NSStringEncoding *)enc error:(NSError **)error;
 - (BOOL)writeToURL:(NSURL *)url atomically:(BOOL)useAuxiliaryFile encoding:(NSStringEncoding)enc error:(NSError **)error;
 - (BOOL)writeToFile:(NSString *)path atomically:(BOOL)useAuxiliaryFile encoding:(NSStringEncoding)enc error:(NSError **)error;
-- (void)replaceCharactersInRange:(NSRange)range withString:(NSString *)aString;
-- (void)insertString:(NSString *)aString atIndex:(NSUInteger)loc;
-- (void)deleteCharactersInRange:(NSRange)range;
-- (void)appendString:(NSString *)aString;
-- (void)appendFormat:(NSString *)format , ...;
-- (void)setString:(NSString *)aString;
-- (id)initWithCapacity:(NSUInteger)capacity;
-- (NSUInteger)replaceOccurrencesOfString:(NSString *)target withString:(NSString *)replacement options:(NSStringCompareOptions)options range:(NSRange)searchRange;
 - (id)propertyList;
 - (NSDictionary *)propertyListFromStringsFileFormat;
 - (const char *)cString;

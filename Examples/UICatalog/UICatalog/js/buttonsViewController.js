@@ -116,10 +116,7 @@ var ButtonsViewController = JSB.defineClass('ButtonsViewController : UITableView
     }
   },
   action: function(sender) {
-// var alertView = UIAlertView.alloc().initWithTitleMessageDelegateCancelButtonTitleOtherButtonTitles('Alert', 'Button pushed.', null, 'Cancel', 'OK', null);
-    var alertView = UIAlertView.new();
-    alertView.message = 'Button pushed.';
-    alertView.addButtonWithTitle('OK');
+    var alertView = UIAlertView.alloc().initWithTitleMessageDelegateCancelButtonTitleOtherButtonTitles('Alert', 'Button pushed.', null, 'Cancel', ['OK']);
     alertView.show();
   }
 });

@@ -19,7 +19,8 @@
 - (void)insertString:(NSString *)aString atIndex:(NSUInteger)loc;
 - (void)deleteCharactersInRange:(NSRange)range;
 - (void)appendString:(NSString *)aString;
-- (void)appendFormat:(NSString *)format , ...;
+JSExportAs(appendFormat,
+- (void)__appendFormat:(NSString *)format arguments:(NSArray *)arguments);
 - (void)setString:(NSString *)aString;
 - (id)initWithCapacity:(NSUInteger)capacity;
 - (NSUInteger)replaceOccurrencesOfString:(NSString *)target withString:(NSString *)replacement options:(NSStringCompareOptions)options range:(NSRange)searchRange;

@@ -22,7 +22,8 @@
 @property (nonatomic, assign) UIAlertViewStyle alertViewStyle;
 @property (nonatomic, readonly) NSInteger firstOtherButtonIndex;
 
-- (id)initWithTitle:(NSString *)title message:(NSString *)message delegate:(id)delegate cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSString *)otherButtonTitles , ...;
+JSExportAs(initWithTitleMessageDelegateCancelButtonTitleOtherButtonTitles,
+- (id)__initWithTitle:(NSString *)title message:(NSString *)message delegate:(id)delegate cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles);
 - (NSInteger)addButtonWithTitle:(NSString *)title;
 - (NSString *)buttonTitleAtIndex:(NSInteger)buttonIndex;
 - (void)show;

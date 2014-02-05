@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		140E223A18A2B19300A9F9EF /* NSMutableString+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 140E223318A2B19300A9F9EF /* NSMutableString+JavaScriptBridge.m */; };
+		140E223B18A2B19300A9F9EF /* NSString+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 140E223518A2B19300A9F9EF /* NSString+JavaScriptBridge.m */; };
+		140E223C18A2B19300A9F9EF /* UIActionSheet+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 140E223718A2B19300A9F9EF /* UIActionSheet+JavaScriptBridge.m */; };
+		140E223D18A2B19300A9F9EF /* UIAlertView+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 140E223918A2B19300A9F9EF /* UIAlertView+JavaScriptBridge.m */; };
 		1448F2D1189EAAC7005BC527 /* NSObject+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 1448F2CE189EAAC7005BC527 /* NSObject+JavaScriptBridge.m */; };
 		1448F2D2189EAAC7005BC527 /* UIBarButtonItem+JavaScriptCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1448F2D0189EAAC7005BC527 /* UIBarButtonItem+JavaScriptCore.m */; };
 		144BD83318938E1D00C7E217 /* UIView+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 144BD83218938E1D00C7E217 /* UIView+JavaScriptBridge.m */; };
@@ -75,6 +79,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		140E223218A2B19300A9F9EF /* NSMutableString+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableString+JavaScriptBridge.h"; path = "../../../Classes/Private/NSMutableString+JavaScriptBridge.h"; sourceTree = "<group>"; };
+		140E223318A2B19300A9F9EF /* NSMutableString+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableString+JavaScriptBridge.m"; path = "../../../Classes/Private/NSMutableString+JavaScriptBridge.m"; sourceTree = "<group>"; };
+		140E223418A2B19300A9F9EF /* NSString+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JavaScriptBridge.h"; path = "../../../Classes/Private/NSString+JavaScriptBridge.h"; sourceTree = "<group>"; };
+		140E223518A2B19300A9F9EF /* NSString+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+JavaScriptBridge.m"; path = "../../../Classes/Private/NSString+JavaScriptBridge.m"; sourceTree = "<group>"; };
+		140E223618A2B19300A9F9EF /* UIActionSheet+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIActionSheet+JavaScriptBridge.h"; path = "../../../Classes/Private/UIActionSheet+JavaScriptBridge.h"; sourceTree = "<group>"; };
+		140E223718A2B19300A9F9EF /* UIActionSheet+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIActionSheet+JavaScriptBridge.m"; path = "../../../Classes/Private/UIActionSheet+JavaScriptBridge.m"; sourceTree = "<group>"; };
+		140E223818A2B19300A9F9EF /* UIAlertView+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+JavaScriptBridge.h"; path = "../../../Classes/Private/UIAlertView+JavaScriptBridge.h"; sourceTree = "<group>"; };
+		140E223918A2B19300A9F9EF /* UIAlertView+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+JavaScriptBridge.m"; path = "../../../Classes/Private/UIAlertView+JavaScriptBridge.m"; sourceTree = "<group>"; };
 		1448F2CD189EAAC7005BC527 /* NSObject+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+JavaScriptBridge.h"; path = "../../../Classes/Private/NSObject+JavaScriptBridge.h"; sourceTree = "<group>"; };
 		1448F2CE189EAAC7005BC527 /* NSObject+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+JavaScriptBridge.m"; path = "../../../Classes/Private/NSObject+JavaScriptBridge.m"; sourceTree = "<group>"; };
 		1448F2CF189EAAC7005BC527 /* UIBarButtonItem+JavaScriptCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+JavaScriptCore.h"; path = "../../../Classes/Private/UIBarButtonItem+JavaScriptCore.h"; sourceTree = "<group>"; };
@@ -1796,6 +1808,10 @@
 				149A45E0187961AB007C2CA7 /* JSBMessageForwarding.m */,
 				1448F2CD189EAAC7005BC527 /* NSObject+JavaScriptBridge.h */,
 				1448F2CE189EAAC7005BC527 /* NSObject+JavaScriptBridge.m */,
+				140E223418A2B19300A9F9EF /* NSString+JavaScriptBridge.h */,
+				140E223518A2B19300A9F9EF /* NSString+JavaScriptBridge.m */,
+				140E223218A2B19300A9F9EF /* NSMutableString+JavaScriptBridge.h */,
+				140E223318A2B19300A9F9EF /* NSMutableString+JavaScriptBridge.m */,
 				149A461E1879B497007C2CA7 /* NSURLConnection+JavaScriptBridge.h */,
 				149A461F1879B497007C2CA7 /* NSURLConnection+JavaScriptBridge.m */,
 				14876D5A1893B697008622D6 /* UIViewController+JavaScriptBridge.h */,
@@ -1806,6 +1822,10 @@
 				1448F2D0189EAAC7005BC527 /* UIBarButtonItem+JavaScriptCore.m */,
 				14A0451C18781832004831E8 /* UIControl+JavaScriptBridge.h */,
 				14A0451D18781832004831E8 /* UIControl+JavaScriptBridge.m */,
+				140E223618A2B19300A9F9EF /* UIActionSheet+JavaScriptBridge.h */,
+				140E223718A2B19300A9F9EF /* UIActionSheet+JavaScriptBridge.m */,
+				140E223818A2B19300A9F9EF /* UIAlertView+JavaScriptBridge.h */,
+				140E223918A2B19300A9F9EF /* UIAlertView+JavaScriptBridge.m */,
 				14A9843D189BF0120033D110 /* UIGestureRecognizer+JavaScriptBridge.h */,
 				14A9843E189BF0120033D110 /* UIGestureRecognizer+JavaScriptBridge.m */,
 				14A9843F189BF0120033D110 /* UIMenuItem+JavaScriptBridge.h */,
@@ -1976,10 +1996,12 @@
 				14B5CD2C1875C3740019A135 /* main.m in Sources */,
 				149C56801875C5BB0003EE16 /* JSBQuartzCore.m in Sources */,
 				14876D5C1893B697008622D6 /* UIViewController+JavaScriptBridge.m in Sources */,
+				140E223A18A2B19300A9F9EF /* NSMutableString+JavaScriptBridge.m in Sources */,
 				1448F2D2189EAAC7005BC527 /* UIBarButtonItem+JavaScriptCore.m in Sources */,
 				149C56731875C5BB0003EE16 /* JSBCoreMotion.m in Sources */,
 				149A4606187972FF007C2CA7 /* SLComposeViewController+JavaScriptBridge.m in Sources */,
 				149C566C1875C5BB0003EE16 /* JSBAddressBookUI.m in Sources */,
+				140E223D18A2B19300A9F9EF /* UIAlertView+JavaScriptBridge.m in Sources */,
 				149C567C1875C5BB0003EE16 /* JSBMessageUI.m in Sources */,
 				149C566A1875C5BB0003EE16 /* JSBAccounts.m in Sources */,
 				149C56721875C5BB0003EE16 /* JSBCoreMIDI.m in Sources */,
@@ -1996,11 +2018,13 @@
 				149C56741875C5BB0003EE16 /* JSBCoreTelephony.m in Sources */,
 				149C56751875C5BB0003EE16 /* JSBEventKit.m in Sources */,
 				149B874A1877D9440074B480 /* JSContext+JavaScriptBridge.m in Sources */,
+				140E223B18A2B19300A9F9EF /* NSString+JavaScriptBridge.m in Sources */,
 				149C567B1875C5BB0003EE16 /* JSBMediaPlayer.m in Sources */,
 				149C56841875C5BB0003EE16 /* JSBStoreKit.m in Sources */,
 				149C56771875C5BB0003EE16 /* JSBFoundation.m in Sources */,
 				149C53A51875C5870003EE16 /* JSBScriptingSupport.m in Sources */,
 				149A45E6187961BD007C2CA7 /* ALAssetsGroup+JavaScriptBridge.m in Sources */,
+				140E223C18A2B19300A9F9EF /* UIActionSheet+JavaScriptBridge.m in Sources */,
 				149C566B1875C5BB0003EE16 /* JSBAdSupport.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

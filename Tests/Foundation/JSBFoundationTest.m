@@ -19,7 +19,7 @@
     [super tearDown];
 }
 
-- (void)testInstantiation1
+- (void)testInstantiation
 {
     JSContext *context = [[JSContext alloc] init];
     [context addScriptingSupport:@"Foundation"];
@@ -213,14 +213,6 @@
     [context evaluateScript:@"var nsmetadataqueryattributevaluetuple = NSMetadataQueryAttributeValueTuple.new();"];
     value = context[@"nsmetadataqueryattributevaluetuple"];
     XCTAssertTrue(value && !value.isUndefined);
-}
-
-- (void)testInstantiation2
-{
-    JSContext *context = [[JSContext alloc] init];
-    [context addScriptingSupport:@"Foundation"];
-    
-    JSValue *value = nil;
     
     [context evaluateScript:@"var nsmetadataquery = NSMetadataQuery.new();"];
     value = context[@"nsmetadataquery"];
@@ -325,14 +317,6 @@
     [context evaluateScript:@"var nsscanner = NSScanner.new();"];
     value = context[@"nsscanner"];
     XCTAssertTrue(value && !value.isUndefined);
-}
-
-- (void)testInstantiation3
-{
-    JSContext *context = [[JSContext alloc] init];
-    [context addScriptingSupport:@"Foundation"];
-    
-    JSValue *value = nil;
     
     [context evaluateScript:@"var nssortdescriptor = NSSortDescriptor.new();"];
     value = context[@"nssortdescriptor"];
@@ -433,14 +417,6 @@
     [context evaluateScript:@"var nsuuid = NSUUID.new();"];
     value = context[@"nsuuid"];
     XCTAssertTrue(value && !value.isUndefined);
-}
-
-- (void)testInstantiation4
-{
-    JSContext *context = [[JSContext alloc] init];
-    [context addScriptingSupport:@"Foundation"];
-    
-    JSValue *value = nil;
     
     [context evaluateScript:@"var nsubiquitouskeyvaluestore = NSUbiquitousKeyValueStore.new();"];
     value = context[@"nsubiquitouskeyvaluestore"];

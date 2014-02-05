@@ -22,7 +22,8 @@
 @property (nonatomic, assign) id delegate;
 @property (nonatomic, readonly) NSInteger firstOtherButtonIndex;
 
-- (id)initWithTitle:(NSString *)title delegate:(id <UIActionSheetDelegate>)delegate cancelButtonTitle:(NSString *)cancelButtonTitle destructiveButtonTitle:(NSString *)destructiveButtonTitle otherButtonTitles:(NSString *)otherButtonTitles , ...;
+JSExportAs(initWithTitleDelegateCancelButtonTitleDestructiveButtonTitleOtherButtonTitles,
+- (id)__initWithTitle:(NSString *)title delegate:(id <UIActionSheetDelegate>)delegate cancelButtonTitle:(NSString *)cancelButtonTitle destructiveButtonTitle:(NSString *)destructiveButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles);
 - (NSInteger)addButtonWithTitle:(NSString *)title;
 - (NSString *)buttonTitleAtIndex:(NSInteger)buttonIndex;
 - (void)showFromToolbar:(UIToolbar *)view;
