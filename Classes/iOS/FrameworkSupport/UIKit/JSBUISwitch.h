@@ -14,7 +14,6 @@
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
 @property (nonatomic, retain) UIColor *thumbTintColor;
-@property (nonatomic, retain) UIColor *tintColor;
 @property (nonatomic, retain) UIColor *onTintColor;
 @property (nonatomic, retain) UIImage *onImage;
 @property (nonatomic, retain) UIImage *offImage;

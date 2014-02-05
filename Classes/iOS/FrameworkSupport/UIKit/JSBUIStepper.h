@@ -13,7 +13,6 @@
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
 @property (nonatomic, getter = isContinuous) BOOL continuous;
-@property (nonatomic, retain) UIColor *tintColor;
 @property (nonatomic) double minimumValue;
 @property (nonatomic) double stepValue;
 @property (nonatomic) BOOL wraps;

@@ -12,11 +12,6 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
-@property (readonly) NSString *pattern;
-@property (readonly) NSUInteger numberOfCaptureGroups;
-@property (readonly) NSRegularExpressionOptions options;
-@property (readonly) NSTextCheckingTypes checkingTypes;
-
 + (NSDataDetector *)dataDetectorWithTypes:(NSTextCheckingTypes)checkingTypes error:(NSError **)error;
 
 - (id)initWithTypes:(NSTextCheckingTypes)checkingTypes error:(NSError **)error;

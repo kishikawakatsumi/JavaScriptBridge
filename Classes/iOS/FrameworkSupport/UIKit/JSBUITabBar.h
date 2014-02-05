@@ -15,7 +15,6 @@
 @property (nonatomic, retain) UIImage *selectionIndicatorImage;
 @property (nonatomic) UIBarStyle barStyle;
 @property (nonatomic, assign) UITabBarItem *selectedItem;
-@property (nonatomic, retain) UIColor *tintColor;
 @property (nonatomic, getter = isTranslucent) BOOL translucent;
 @property (nonatomic) CGFloat itemWidth;
 @property (nonatomic, retain) UIImage *backgroundImage;

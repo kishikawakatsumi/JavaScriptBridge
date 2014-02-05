@@ -16,7 +16,6 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
-@property (nonatomic, retain) UIColor *tintColor;
 @property (nonatomic, assign) id delegate;
 @property (nonatomic, copy) NSArray *items;
 @property (nonatomic, assign, getter = isTranslucent) BOOL translucent;

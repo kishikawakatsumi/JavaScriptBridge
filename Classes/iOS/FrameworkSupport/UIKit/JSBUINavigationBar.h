@@ -33,7 +33,6 @@
 @property (nonatomic, retain) UIView *titleView;
 @property (nonatomic, retain) UIColor *barTintColor;
 @property (nonatomic, assign) UIBarStyle barStyle;
-@property (nonatomic, retain) UIColor *tintColor;
 @property (nonatomic, readonly, retain) UINavigationItem *topItem;
 @property (nonatomic, copy) NSArray *leftBarButtonItems;
 @property (nonatomic, copy) NSDictionary *titleTextAttributes;

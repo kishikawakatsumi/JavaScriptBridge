@@ -14,7 +14,6 @@
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
 @property (nonatomic) NSTimeInterval videoMaximumDuration;
-@property (nonatomic, assign) id delegate;
 @property (nonatomic) UIImagePickerControllerQualityType videoQuality;
 @property (nonatomic, copy) NSString *videoPath;
 

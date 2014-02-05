@@ -30,7 +30,6 @@
 @property (nonatomic, copy) NSString *text;
 @property (nonatomic, getter = isHighlighted) BOOL highlighted;
 @property (nonatomic) NSInteger numberOfLines;
-@property (nonatomic, getter = isUserInteractionEnabled) BOOL userInteractionEnabled;
 @property (nonatomic) BOOL adjustsFontSizeToFitWidth;
 @property (nonatomic) BOOL adjustsLetterSpacingToFitWidth;
 

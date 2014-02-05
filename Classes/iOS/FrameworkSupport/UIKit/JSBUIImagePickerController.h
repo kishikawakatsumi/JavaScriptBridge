@@ -20,7 +20,6 @@
 @property (nonatomic, retain) UIView *cameraOverlayView;
 @property (nonatomic) BOOL allowsImageEditing;
 @property (nonatomic) CGAffineTransform cameraViewTransform;
-@property (nonatomic, assign) id delegate;
 @property (nonatomic) UIImagePickerControllerCameraCaptureMode cameraCaptureMode;
 @property (nonatomic) UIImagePickerControllerCameraDevice cameraDevice;
 @property (nonatomic) BOOL showsCameraControls;
