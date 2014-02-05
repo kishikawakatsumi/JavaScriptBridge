@@ -13,7 +13,6 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
-@property (nonatomic, readonly, getter = isEmpty) BOOL empty;
 @property (nonatomic, readonly) NSURL *sourceURL;
 @property (nonatomic, readonly) CMPersistentTrackID sourceTrackID;
 

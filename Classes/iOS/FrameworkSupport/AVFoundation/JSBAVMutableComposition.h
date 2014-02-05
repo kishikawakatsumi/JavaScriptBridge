@@ -14,9 +14,6 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
-@property (nonatomic, readonly, readonly) NSArray *tracks;
-@property (nonatomic, readonly) CGSize naturalSize;
-
 + (AVMutableComposition *)composition;
 
 - (BOOL)insertTimeRange:(CMTimeRange)timeRange ofAsset:(AVAsset *)asset atTime:(CMTime)startTime error:(NSError **)outError;

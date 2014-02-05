@@ -12,9 +12,6 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
-@property (readwrite, copy) NSArray *items;
-@property (readwrite) CMTimeRange timeRange;
-
 #pragma clang diagnostic pop
 
 @end
