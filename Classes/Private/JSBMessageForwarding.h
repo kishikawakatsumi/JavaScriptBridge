@@ -32,3 +32,5 @@ void setupForwardingImplementations(Class targetClass, Class cls, JSValue *insta
 void forwardInvocation(id self, SEL _cmd, NSInvocation *invocation);
 NSMethodSignature *methodSignatureForSelector(id self, SEL _cmd, SEL selector);
 BOOL respondsToSelector(id self, SEL _cmd, SEL selector);
+
+__unsafe_unretained id *createVariableArgumentListsFromArray(NSArray *arguments);

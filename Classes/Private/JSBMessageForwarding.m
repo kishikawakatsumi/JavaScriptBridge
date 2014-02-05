@@ -386,3 +386,15 @@ BOOL respondsToSelector(id self, SEL _cmd, SEL selector)
     
     return !function.isUndefined;
 }
+
+#pragma mark -
+
+__unsafe_unretained id *createVariableArgumentListsFromArray(NSArray *arguments)
+{
+    __unsafe_unretained id *argList = (__unsafe_unretained id *) calloc(1UL, sizeof(id) * arguments.count);
+    for (NSInteger i = 0; i < arguments.count; i++) {
+        argList[i] = arguments[i];
+    }
+    
+    return argList;
+}

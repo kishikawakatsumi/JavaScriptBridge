@@ -30,6 +30,8 @@ JSExportAs(dispatch_get_global_queue,
 + (id)dispatch_get_main_queue;
 
 @optional
+JSExportAs(log,
++ (void)log:(NSString *)format arguments:(NSArray *)arguments);
 JSExportAs(dump,
 + (void)dump:(id)object);
 

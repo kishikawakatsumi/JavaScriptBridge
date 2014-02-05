@@ -59,6 +59,13 @@ static JSContext *globalContext;
          @"    dispatch_get_main_queue: function() {\n"
          @"      return __JSB_JSBScriptingSupport.dispatch_get_main_queue();\n"
          @"    },\n"
+         @"    log: function(format) {\n"
+         @"      var args = [];\n"
+         @"      for (var i = 1; i < arguments.length; i++) {\n"
+         @"        args.push(arguments[i]);\n"
+         @"      }\n"
+         @"      return __JSB_JSBScriptingSupport.log(format, args);\n"
+         @"    },\n"
          @"    dump: function(obj) {\n"
          @"      return __JSB_JSBScriptingSupport.dump(obj);\n"
          @"    }\n"
@@ -192,12 +199,11 @@ static JSContext *globalContext;
 
 #pragma mark - for debug
 
-+ (void)log:(NSString *)format, ...
++ (void)log:(NSString *)format arguments:(NSArray *)arguments
 {
-    va_list args;
-    va_start(args, format);
-    NSString *result = [[NSString alloc] initWithFormat:format arguments:args];
-    va_end(args);
+    __unsafe_unretained id *argList = createVariableArgumentListsFromArray(arguments);
+    NSString *result = [[NSString alloc] initWithFormat:format, *argList];
+    free(argList);
     
     NSLog(@"%@", result);
 }
