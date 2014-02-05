@@ -12,7 +12,6 @@
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
 @property (nonatomic, readonly, retain) UIView *contentView;
-@property (nonatomic, retain) UIColor *tintColor;
 @property (nonatomic, retain) UIView *backgroundView;
 @property (nonatomic, readonly, copy) NSString *reuseIdentifier;
 @property (nonatomic, readonly, retain) UILabel *textLabel;

@@ -15,13 +15,9 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
-@property (nonatomic, readonly, retain) UINavigationItem *navigationItem;
 @property (nonatomic, readonly, retain) UIViewController *visibleViewController;
-@property (nonatomic, retain) NSArray *toolbarItems;
 @property (nonatomic, getter = isNavigationBarHidden) BOOL navigationBarHidden;
 @property (nonatomic, getter = isToolbarHidden) BOOL toolbarHidden;
-@property (nonatomic) BOOL hidesBottomBarWhenPushed;
-@property (nonatomic, readonly, retain) UINavigationController *navigationController;
 @property (nonatomic, readonly) UIGestureRecognizer *interactivePopGestureRecognizer;
 @property (nonatomic, assign) id delegate;
 @property (nonatomic, readonly) UIToolbar *toolbar;

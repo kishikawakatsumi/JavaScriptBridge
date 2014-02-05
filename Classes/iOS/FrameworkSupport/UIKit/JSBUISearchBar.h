@@ -31,7 +31,6 @@
 @property (nonatomic) UIKeyboardType keyboardType;
 @property (nonatomic, retain) UIColor *barTintColor;
 @property (nonatomic) UIBarStyle barStyle;
-@property (nonatomic, retain) UIColor *tintColor;
 @property (nonatomic) UITextSpellCheckingType spellCheckingType;
 @property (nonatomic, retain) UIImage *backgroundImage;
 @property (nonatomic) BOOL showsCancelButton;

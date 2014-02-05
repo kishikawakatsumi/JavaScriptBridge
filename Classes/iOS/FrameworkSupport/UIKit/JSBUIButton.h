@@ -27,7 +27,6 @@
 @property (nonatomic) CGSize titleShadowOffset;
 @property (nonatomic) UIEdgeInsets titleEdgeInsets;
 @property (nonatomic) NSLineBreakMode lineBreakMode;
-@property (nonatomic, retain) UIColor *tintColor;
 @property (nonatomic, retain) UIFont *font;
 @property (nonatomic, readonly, retain) UIColor *currentTitleShadowColor;
 @property (nonatomic, readonly, retain) UILabel *titleLabel;

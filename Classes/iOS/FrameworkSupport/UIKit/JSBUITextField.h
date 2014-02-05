@@ -26,7 +26,6 @@
 @property (nonatomic) CGFloat minimumFontSize;
 @property (nonatomic, copy) NSString *placeholder;
 @property (nonatomic) NSTextAlignment textAlignment;
-@property (readwrite, retain) UIView *inputAccessoryView;
 @property (nonatomic) UITextFieldViewMode rightViewMode;
 @property (nonatomic) BOOL adjustsFontSizeToFitWidth;
 @property (nonatomic) UITextFieldViewMode clearButtonMode;
@@ -38,7 +37,6 @@
 @property (nonatomic) UITextBorderStyle borderStyle;
 @property (nonatomic, readonly, getter = isEditing) BOOL editing;
 @property (nonatomic, copy) NSString *text;
-@property (readwrite, retain) UIView *inputView;
 @property (nonatomic, copy) NSAttributedString *attributedPlaceholder;
 @property (nonatomic, copy) NSAttributedString *attributedText;
 @property (nonatomic, retain) UIView *rightView;

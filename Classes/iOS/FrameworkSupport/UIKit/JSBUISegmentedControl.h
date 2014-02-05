@@ -20,7 +20,6 @@
 @property (nonatomic) UISegmentedControlStyle segmentedControlStyle;
 @property (nonatomic, readonly) NSUInteger numberOfSegments;
 @property (nonatomic) NSInteger selectedSegmentIndex;
-@property (nonatomic, retain) UIColor *tintColor;
 @property (nonatomic, getter = isMomentary) BOOL momentary;
 
 - (id)initWithItems:(NSArray *)items;

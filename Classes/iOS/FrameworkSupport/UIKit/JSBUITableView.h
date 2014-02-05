@@ -20,7 +20,6 @@
 @property (nonatomic, readonly) UITableViewStyle style;
 @property (nonatomic) CGFloat estimatedSectionFooterHeight;
 @property (nonatomic) NSInteger sectionIndexMinimumDisplayRowCount;
-@property (nonatomic, assign) id delegate;
 @property (nonatomic) BOOL allowsMultipleSelectionDuringEditing;
 @property (nonatomic) CGFloat rowHeight;
 @property (nonatomic, readwrite, retain) UIView *backgroundView;

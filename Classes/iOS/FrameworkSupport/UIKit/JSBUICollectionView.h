@@ -16,7 +16,6 @@
 @property (nonatomic, retain) UIView *backgroundView;
 @property (nonatomic) BOOL allowsMultipleSelection;
 @property (nonatomic) BOOL allowsSelection;
-@property (nonatomic, assign) id delegate;
 @property (nonatomic, assign) id dataSource;
 @property (nonatomic, retain) UICollectionViewLayout *collectionViewLayout;
 

@@ -14,12 +14,10 @@
 
 @property (nonatomic) NSInteger animationRepeatCount;
 @property (nonatomic, copy) NSArray *highlightedAnimationImages;
-@property (nonatomic, retain) UIColor *tintColor;
 @property (nonatomic, getter = isHighlighted) BOOL highlighted;
 @property (nonatomic) NSTimeInterval animationDuration;
 @property (nonatomic, retain) UIImage *image;
 @property (nonatomic, copy) NSArray *animationImages;
-@property (nonatomic, getter = isUserInteractionEnabled) BOOL userInteractionEnabled;
 @property (nonatomic, retain) UIImage *highlightedImage;
 
 - (id)initWithImage:(UIImage *)image;
