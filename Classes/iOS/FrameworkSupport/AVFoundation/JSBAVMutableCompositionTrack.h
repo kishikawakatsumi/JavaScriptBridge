@@ -13,13 +13,6 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
-@property (nonatomic) float preferredVolume;
-@property (nonatomic) CGAffineTransform preferredTransform;
-@property (nonatomic, copy) NSString *extendedLanguageTag;
-@property (nonatomic, copy) NSString *languageCode;
-@property (nonatomic, copy, readonly) NSArray *segments;
-@property (nonatomic) CMTimeScale naturalTimeScale;
-
 - (BOOL)insertTimeRange:(CMTimeRange)timeRange ofTrack:(AVAssetTrack *)track atTime:(CMTime)startTime error:(NSError **)error;
 - (BOOL)insertTimeRanges:(NSArray *)timeRanges ofTracks:(NSArray *)tracks atTime:(CMTime)startTime error:(NSError **)error;
 - (void)insertEmptyTimeRange:(CMTimeRange)timeRange;

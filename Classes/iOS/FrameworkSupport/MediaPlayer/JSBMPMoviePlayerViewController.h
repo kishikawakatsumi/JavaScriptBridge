@@ -12,8 +12,6 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
-@property (nonatomic, readonly) MPMoviePlayerController *moviePlayer;
-
 - (id)initWithContentURL:(NSURL *)contentURL;
 - (BOOL)shouldAutorotate;
 - (NSUInteger)supportedInterfaceOrientations;

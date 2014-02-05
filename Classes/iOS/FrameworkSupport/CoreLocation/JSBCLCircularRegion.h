@@ -13,9 +13,6 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
-@property (readonly, nonatomic) CLLocationCoordinate2D center;
-@property (readonly, nonatomic) CLLocationDistance radius;
-
 - (id)initWithCenter:(CLLocationCoordinate2D)center radius:(CLLocationDistance)radius identifier:(NSString *)identifier;
 - (BOOL)containsCoordinate:(CLLocationCoordinate2D)coordinate;
 

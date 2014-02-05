@@ -13,12 +13,6 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
-@property (nonatomic, readwrite) NSTimeInterval advanceIntervalForDelegateInvocation;
-@property (nonatomic, readonly, readonly) dispatch_queue_t delegateQueue;
-@property (nonatomic, readonly, readonly) id delegate;
-@property (nonatomic, readwrite) BOOL suppressesPlayerRendering;
-@property (nonatomic, copy) NSString *textStylingResolution;
-
 - (id)initWithPixelBufferAttributes:(NSDictionary *)pixelBufferAttributes;
 - (BOOL)hasNewPixelBufferForItemTime:(CMTime)itemTime;
 - (id)copyPixelBufferForItemTime:(CMTime)itemTime itemTimeForDisplay:(CMTime *)outItemTimeForDisplay;

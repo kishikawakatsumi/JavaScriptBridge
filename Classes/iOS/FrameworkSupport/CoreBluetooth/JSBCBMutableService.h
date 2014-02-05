@@ -11,12 +11,6 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
-@property (retain, readwrite) NSArray *characteristics;
-@property (retain, readwrite) NSArray *includedServices;
-@property (weak, readonly, nonatomic) CBPeripheral *peripheral;
-@property (readwrite, nonatomic) BOOL isPrimary;
-@property (retain, readwrite, nonatomic) CBUUID *UUID;
-
 - (id)initWithType:(CBUUID *)UUID primary:(BOOL)isPrimary;
 
 #pragma clang diagnostic pop
