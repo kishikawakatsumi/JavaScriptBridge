@@ -23,7 +23,7 @@ static JSContext *globalContext;
     dispatch_once(&onceToken, ^{
         globalContext = [[JSContext alloc] init];
         globalContext.exceptionHandler = ^(JSContext *context, JSValue *value) {
-            
+            NSLog(@"%@", value);
         };
         
         [globalContext addScriptingSupport:@"Foundation"];
@@ -35,7 +35,9 @@ static JSContext *globalContext;
          @"JSB = (function() {\n"
          @"  var namespace = {\n"
          @"    defineClass: function(declaration, instanceMembers, staticMembers) {\n"
-         @"      return __JSB_JSBScriptingSupport.defineClass(declaration, instanceMembers, staticMembers);\n"
+         @"      return __JSB_JSBScriptingSupport.defineClass(declaration,"
+         @"                                                   typeof instanceMembers === 'undefined' ? {} : instanceMembers,"
+         @"                                                   typeof staticMembers === 'undefined' ? {} : staticMembers);\n"
          @"    },\n"
          @"    define: function(declaration, instanceMembers, staticMembers) {\n"
          @"      JSB.dump('`define` is deprecated, use `defineClass` instead.');\n"
