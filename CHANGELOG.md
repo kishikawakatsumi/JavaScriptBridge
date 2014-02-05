@@ -1,6 +1,9 @@
 # JavaScriptBridge CHANGELOG
 
-## 0.1.4
+## 0.1.6
+- Fix duplicate named methods/properties export.
+
+## 0.1.5
 - Change all `CFType` to `id` in JSExport protocol methods.
 
 ## 0.1.4
