@@ -74,7 +74,7 @@ var GestureViewController = JSB.defineClass('GestureViewController : UIViewContr
       UIView.animateWithDurationDelayOptionsAnimationsCompletion(0.3, 0.5, 0 << 16, function() {
         label.alpha = 0.0;
       }, function(finished) {
-        label.removeFromSuperView();
+        label.removeFromSuperview();
       });
     });
   }
