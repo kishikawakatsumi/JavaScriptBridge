@@ -7,6 +7,7 @@
 //
 
 #import "JSBScriptingSupport.h"
+#import "JSBScriptingSupport+Private.h"
 #import "JSBNSObject.h"
 #import "JSBMessageForwarding.h"
 #import "JSContext+JavaScriptBridge.h"
@@ -30,50 +31,7 @@ static JSContext *globalContext;
         [globalContext addScriptingSupport:@"UIKit"];
         [globalContext addScriptingSupport:@"QuartzCore"];
         
-        globalContext[@"__JSB_JSBScriptingSupport"] = [JSBScriptingSupport class];
-        [globalContext evaluateScript:
-         @"JSB = (function() {\n"
-         @"  var namespace = {\n"
-         @"    defineClass: function(declaration, instanceMembers, staticMembers) {\n"
-         @"      return __JSB_JSBScriptingSupport.defineClass(declaration,"
-         @"                                                   instanceMembers == null ? {} : instanceMembers,"
-         @"                                                   staticMembers == null ? {} : staticMembers);\n"
-         @"    },\n"
-         @"    define: function(declaration, instanceMembers, staticMembers) {\n"
-         @"      JSB.dump('`define` is deprecated, use `defineClass` instead.');\n"
-         @"      return __JSB_JSBScriptingSupport.defineClass(declaration, instanceMembers, staticMembers);\n"
-         @"    },\n"
-         @"    require: function(name) {\n"
-         @"      return __JSB_JSBScriptingSupport.require(name);\n"
-         @"    },\n"
-         @"    exports: {},\n"
-         @"    selector: function(str) {\n"
-         @"      return __JSB_JSBScriptingSupport.selectorFromString(str);\n"
-         @"    },\n"
-         @"    dispatch_async: function(queue, block) {\n"
-         @"      return __JSB_JSBScriptingSupport.dispatch_async(queue, block);\n"
-         @"    },\n"
-         @"    dispatch_get_global_queue: function(priority, flags) {\n"
-         @"      return __JSB_JSBScriptingSupport.dispatch_get_global_queue(priority, flags);\n"
-         @"    },\n"
-         @"    dispatch_get_main_queue: function() {\n"
-         @"      return __JSB_JSBScriptingSupport.dispatch_get_main_queue();\n"
-         @"    },\n"
-         @"    log: function(format) {\n"
-         @"      var args = [];\n"
-         @"      for (var i = 1; i < arguments.length; i++) {\n"
-         @"        args.push(arguments[i]);\n"
-         @"      }\n"
-         @"      return __JSB_JSBScriptingSupport.log(format, args);\n"
-         @"    },\n"
-         @"    dump: function(obj) {\n"
-         @"      return __JSB_JSBScriptingSupport.dump(obj);\n"
-         @"    }\n"
-         @"  };\n"
-         @"\n"
-         @"  return namespace;\n"
-         @"})();\n"
-         ];
+        [self setupSupportFunctionsToContext:globalContext];
     });
 }
 
@@ -109,7 +67,11 @@ static JSContext *globalContext;
         parentClassName = @"NSObject";
     }
     
-    Class cls = objc_allocateClassPair(NSClassFromString(parentClassName), className.UTF8String, 0);
+    Class cls = objc_getClass(className.UTF8String);
+    if (cls) {
+        objc_disposeClassPair(cls);
+    }
+    cls = objc_allocateClassPair(NSClassFromString(parentClassName), className.UTF8String, 0);
     objc_registerClassPair(cls);
     
     Class superClass = class_getSuperclass(cls);
@@ -120,7 +82,7 @@ static JSContext *globalContext;
     NSString *types;
     BOOL result;
     
-    Class metaClass = objc_getMetaClass(className.UTF8String);
+    Class metaClass = objc_getClass(className.UTF8String);
     
     types = [NSString stringWithFormat:@"%s%s%s%s", @encode(NSMethodSignature), @encode(id), @encode(SEL), @encode(SEL)];
     result = class_addMethod(cls, @selector(methodSignatureForSelector:), (IMP)methodSignatureForSelector, types.UTF8String);
@@ -140,10 +102,12 @@ static JSContext *globalContext;
     
     class_addProtocol(cls, @protocol(JSBNSObject));
     
+    JSContext *context = [self currentContext];
+    
     NSString *key = mangledNameFromClass(cls);
-    globalContext[key] = cls;
-    globalContext[key][JSBInstanceMembersKey] = instanceMembers;
-    globalContext[key][JSBStaticMembersKey] = staticMembers;
+    context[key] = cls;
+    context[key][JSBInstanceMembersKey] = instanceMembers;
+    context[key][JSBStaticMembersKey] = staticMembers;
     
     return cls;
 }
@@ -160,10 +124,12 @@ static JSContext *globalContext;
         script = [NSString stringWithContentsOfFile:[name stringByAppendingPathExtension:@"js"] encoding:NSUTF8StringEncoding error:nil];
     }
     if (script) {
-        JSValue *function = globalContext[@"Function"];
+        JSContext *context = [self currentContext];
+        
+        JSValue *function = context[@"Function"];
         JSValue *value = [function constructWithArguments:@[script]];
         [value callWithArguments:nil];
-        module = globalContext[@"JSB"][@"exports"];
+        module = context[@"JSB"][@"exports"];
     }
     
     return module;

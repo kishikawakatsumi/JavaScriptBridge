@@ -66,6 +66,7 @@
 		14A04848187829CB004831E8 /* JSBiAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A04829187829CB004831E8 /* JSBiAd.m */; };
 		14A98447189BF01F0033D110 /* UIGestureRecognizer+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A98444189BF01F0033D110 /* UIGestureRecognizer+JavaScriptBridge.m */; };
 		14A98448189BF01F0033D110 /* UIMenuItem+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A98446189BF01F0033D110 /* UIMenuItem+JavaScriptBridge.m */; };
+		14E28D8E18AD1E2F0084F84A /* JSBScriptingSupport+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E28D8D18AD1E2F0084F84A /* JSBScriptingSupport+Private.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -797,6 +798,8 @@
 		14A98444189BF01F0033D110 /* UIGestureRecognizer+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+JavaScriptBridge.m"; sourceTree = "<group>"; };
 		14A98445189BF01F0033D110 /* UIMenuItem+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIMenuItem+JavaScriptBridge.h"; sourceTree = "<group>"; };
 		14A98446189BF01F0033D110 /* UIMenuItem+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIMenuItem+JavaScriptBridge.m"; sourceTree = "<group>"; };
+		14E28D8C18AD1E2F0084F84A /* JSBScriptingSupport+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSBScriptingSupport+Private.h"; sourceTree = "<group>"; };
+		14E28D8D18AD1E2F0084F84A /* JSBScriptingSupport+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSBScriptingSupport+Private.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -891,6 +894,8 @@
 		14A0455D187829B4004831E8 /* Private */ = {
 			isa = PBXGroup;
 			children = (
+				14E28D8C18AD1E2F0084F84A /* JSBScriptingSupport+Private.h */,
+				14E28D8D18AD1E2F0084F84A /* JSBScriptingSupport+Private.m */,
 				14A0455E187829B4004831E8 /* JSBMessageForwarding.h */,
 				149A45EF18796C5D007C2CA7 /* JSBMessageForwarding.m */,
 				1448F2D3189EAAFA005BC527 /* NSObject+JavaScriptBridge.h */,
@@ -1952,6 +1957,7 @@
 				140E224618A2B1AE00A9F9EF /* NSMutableString+JavaScriptBridge.m in Sources */,
 				1448F2D8189EAAFA005BC527 /* UIBarButtonItem+JavaScriptCore.m in Sources */,
 				14A04834187829CB004831E8 /* JSBCoreMotion.m in Sources */,
+				14E28D8E18AD1E2F0084F84A /* JSBScriptingSupport+Private.m in Sources */,
 				149A460C1879730A007C2CA7 /* SLComposeViewController+JavaScriptBridge.m in Sources */,
 				14A0453918782920004831E8 /* main.m in Sources */,
 				140E224918A2B1AE00A9F9EF /* UIAlertView+JavaScriptBridge.m in Sources */,

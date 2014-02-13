@@ -12,9 +12,20 @@
 
 - (void)addScriptingSupport:(NSString *)framework
 {
+    static NSMapTable *hashTables;
+    if (!hashTables) {
+        hashTables = [NSMapTable mapTableWithKeyOptions:NSPointerFunctionsWeakMemory valueOptions:NSPointerFunctionsWeakMemory];
+    }
+    
+    NSHashTable *frameworks = [hashTables objectForKey:self];
+    if (!frameworks) {
+        frameworks = [NSHashTable hashTableWithOptions:NSPointerFunctionsWeakMemory];
+        [hashTables setObject:frameworks forKey:self];
+    }
+    
     NSString *prefix = @"JSB";
     id classObject = NSClassFromString([NSString stringWithFormat:@"%@%@", prefix, framework]);
-    if (classObject) {
+    if (classObject && ![frameworks containsObject:framework]) {
         SEL selector = NSSelectorFromString(@"addScriptingSupportToContext:");
         
         NSMethodSignature *methodSignature = [classObject methodSignatureForSelector:selector];
@@ -26,6 +37,8 @@
         [invocation setArgument:&context atIndex:2];
         
         [invocation invoke];
+        
+        [frameworks addObject:framework];
     }
 }
 

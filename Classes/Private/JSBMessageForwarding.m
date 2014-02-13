@@ -7,7 +7,7 @@
 //
 
 #import "JSBMessageForwarding.h"
-#import "JSBScriptingSupport.h"
+#import "JSBScriptingSupport+Private.h"
 
 NSString * const JSBInstanceMembersKey = @"instanceMembers";
 NSString * const JSBStaticMembersKey = @"staticMembers";
@@ -41,7 +41,7 @@ NSString *propertyNameFromSelector(SEL selector)
 
 JSValue *propertyForObject(id obj, NSString *propertyName)
 {
-    JSContext *context = [JSBScriptingSupport globalContext];
+    JSContext *context = [JSBScriptingSupport currentContext];
     
     JSValue *properties = nil;
     
@@ -71,7 +71,7 @@ void invokeSuper(NSInvocation *inv)
 
 void dispatchFunction(id self, JSValue *function, NSArray *parameters)
 {
-    JSContext *context = [JSBScriptingSupport globalContext];
+    JSContext *context = [JSBScriptingSupport currentContext];
     context[@"self"] = self;
     
     [function callWithArguments:parameters];
@@ -212,7 +212,7 @@ void setReturnValue(JSValue *value, NSInvocation *invocation)
 
 CGFloat tableViewHeightForRowAtIndexPath(id self, SEL _cmd, UITableView *tableView, NSIndexPath *indexPath)
 {
-    JSContext *context = [JSBScriptingSupport globalContext];
+    JSContext *context = [JSBScriptingSupport currentContext];
     
     NSString *propertyName = propertyNameFromSelector(_cmd);
     JSValue *function = context[mangledNameFromClass(object_getClass(self))][JSBInstanceMembersKey][propertyName];
@@ -233,7 +233,7 @@ CGFloat tableViewHeightForRowAtIndexPath(id self, SEL _cmd, UITableView *tableVi
 
 CGFloat tableViewHeightForHeaderInSection(id self, SEL _cmd, UITableView *tableView, NSInteger section)
 {
-    JSContext *context = [JSBScriptingSupport globalContext];
+    JSContext *context = [JSBScriptingSupport currentContext];
     
     NSString *propertyName = propertyNameFromSelector(_cmd);
     JSValue *function = context[mangledNameFromClass(object_getClass(self))][JSBInstanceMembersKey][propertyName];
@@ -254,7 +254,7 @@ CGFloat tableViewHeightForHeaderInSection(id self, SEL _cmd, UITableView *tableV
 
 CGFloat tableViewHeightForFooterInSection(id self, SEL _cmd, UITableView *tableView, NSInteger section)
 {
-    JSContext *context = [JSBScriptingSupport globalContext];
+    JSContext *context = [JSBScriptingSupport currentContext];
     
     NSString *propertyName = propertyNameFromSelector(_cmd);
     JSValue *function = context[mangledNameFromClass(object_getClass(self))][JSBInstanceMembersKey][propertyName];
@@ -343,7 +343,7 @@ void setupForwardingImplementations(Class targetClass, Class cls, JSValue *insta
 
 void forwardInvocation(id self, SEL _cmd, NSInvocation *invocation)
 {
-    JSContext *context = [JSBScriptingSupport globalContext];
+    JSContext *context = [JSBScriptingSupport currentContext];
     
     if ([[self superclass] instancesRespondToSelector:invocation.selector]) {
         invokeSuper(invocation);
