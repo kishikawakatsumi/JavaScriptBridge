@@ -71,7 +71,7 @@ JSContext *context = [[JSContext alloc] init];
 ```
 
 2. Add `JSExports` adopted classes each framework if needed.
-  `Foundation`, `UIKit` and `QuartzCore` frameworks MUST be added.
+  `Foundation`, `UIKit` and `QuartzCore` frameworks **MUST** be added.
 
   ```objc
 [context addScriptingSupport:@"Foundation"];
