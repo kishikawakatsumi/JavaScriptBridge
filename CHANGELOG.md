@@ -1,5 +1,8 @@
 # JavaScriptBridge CHANGELOG
 
+## 0.2.0
+- Support to redefine Objective-C class from JavaScript.
+
 ## 0.1.7
 - Fix duplicate named methods/properties from all framework support files.
 
