@@ -25,7 +25,7 @@ task :test, :workspace, :schemes do |t, args|
   schemes = args[:schemes].gsub(/'/, '').split(' ')
   schemes.each do |scheme|
     DESTINATIONS.each do |destination|
-      sh "xcodebuild test -workspace #{args[:workspace]} -scheme #{scheme} -configuration Debug -sdk iphonesimulator -destination \"#{destination}\" | xcpretty -c"
+      sh "xcodebuild test -workspace #{args[:workspace]} -scheme #{scheme} -configuration Debug -sdk iphonesimulator -destination \"#{destination}\" | xcpretty -tc"
     end
   end
 end
