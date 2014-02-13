@@ -37,20 +37,23 @@ JSContext *context = [JSBScriptingSupport globalContext];
 ```
 
 1. Retrieve the `JSContext` instance from `JSBScriptingSupport`.
-The context includes a lot of system classes that has been `JSExports` adopted.
-```objc
+  The context includes a lot of system classes that has been `JSExports` adopted.
+
+  ```objc
 JSContext *context = [JSBScriptingSupport globalContext];
 ```
 
 2. Add `JSExports` adopted classes each framework if needed.
-By default, `Foundation`, `UIKit`, `QuartzCore` frameworks are included.
-```objc
+  By default, `Foundation`, `UIKit`, `QuartzCore` frameworks are included.
+
+  ```objc
 [context addScriptingSupport:@"MapKit"];
 [context addScriptingSupport:@"MessageUI"];
 ```
 
 3. It is ready to use, writing appliction code and evaluate in JavaScript.
-```
+
+  ```objc
 [context evaluateScript:
  @"var window = UIWindow.new();"
  @"window.frame = UIScreen.mainScreen().bounds;"
@@ -58,6 +61,26 @@ By default, `Foundation`, `UIKit`, `QuartzCore` frameworks are included.
  @"window.makeKeyAndVisible();"
 ];
 ```
+
+#### Manually setting up a new JSContext instance
+1. Create new `JSContext` instance instead using `globalContext`.
+  You can separate JavaScript environments to use multiple contexts.
+
+  ```objc
+JSContext *context = [[JSContext alloc] init];
+```
+
+2. Add `JSExports` adopted classes each framework if needed.
+  `Foundation`, `UIKit` and `QuartzCore` frameworks MUST be added.
+
+  ```objc
+[context addScriptingSupport:@"Foundation"];
+[context addScriptingSupport:@"UIKit"];
+[context addScriptingSupport:@"QuartzCore"];
+[context addScriptingSupport:@"Accounts"];
+[context addScriptingSupport:@"Social"];
+```
+
 
 ### Syntax / Naming conventions
 
