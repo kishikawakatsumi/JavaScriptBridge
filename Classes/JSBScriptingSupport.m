@@ -14,12 +14,12 @@
 
 @import ObjectiveC;
 
-static JSContext *globalContext;
-
 @implementation JSBScriptingSupport
 
-+ (void)initialize
++ (JSContext *)globalContext
 {
+    static JSContext *globalContext;
+    
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         globalContext = [[JSContext alloc] init];
@@ -30,15 +30,8 @@ static JSContext *globalContext;
         [globalContext addScriptingSupport:@"Foundation"];
         [globalContext addScriptingSupport:@"UIKit"];
         [globalContext addScriptingSupport:@"QuartzCore"];
-        
-        [self setupSupportFunctionsToContext:globalContext];
     });
-}
-
-#pragma mark -
-
-+ (JSContext *)globalContext
-{
+    
     return globalContext;
 }
 

@@ -27,6 +27,9 @@
 {
     static NSHashTable *initializedContext;
     if (!initializedContext) {
+        initializedContext = [NSHashTable hashTableWithOptions:NSPointerFunctionsWeakMemory];
+    }
+    if (![initializedContext containsObject:context]) {
         context[@"__JSB_JSBScriptingSupport"] = self;
         [context evaluateScript:
          @"JSB = (function() {\n"

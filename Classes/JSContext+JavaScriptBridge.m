@@ -7,11 +7,14 @@
 //
 
 #import "JSContext+JavaScriptBridge.h"
+#import "JSBScriptingSupport+Private.h"
 
 @implementation JSContext (JavaScriptBridge)
 
 - (void)addScriptingSupport:(NSString *)framework
 {
+    [JSBScriptingSupport setupSupportFunctionsToContext:self];
+    
     static NSMapTable *hashTables;
     if (!hashTables) {
         hashTables = [NSMapTable mapTableWithKeyOptions:NSPointerFunctionsWeakMemory valueOptions:NSPointerFunctionsWeakMemory];
