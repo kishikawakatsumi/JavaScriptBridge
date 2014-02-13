@@ -14,8 +14,6 @@
 @protocol JSBScriptingSupport <JSExport>
 
 @required
-+ (JSContext *)globalContext;
-
 JSExportAs(defineClass,
 + (id)defineClass:(NSString *)declaration instanceMembers:(JSValue *)instanceMembers staticMembers:(JSValue *)staticMembers);
 

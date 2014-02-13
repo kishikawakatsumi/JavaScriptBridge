@@ -75,6 +75,7 @@
 		14B5CD301875C3740019A135 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B5CD2F1875C3740019A135 /* AppDelegate.m */; };
 		14B5CD321875C3740019A135 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14B5CD311875C3740019A135 /* Images.xcassets */; };
 		14D6C30C18793F12005C7018 /* collectionViewController.js in Resources */ = {isa = PBXBuildFile; fileRef = 14D6C30B18793F12005C7018 /* collectionViewController.js */; };
+		14E28D8718AD1BF30084F84A /* JSBScriptingSupport+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E28D8618AD1BF30084F84A /* JSBScriptingSupport+Private.m */; };
 		14F55CFB18A1882E008B798E /* gradientViewController.js in Resources */ = {isa = PBXBuildFile; fileRef = 14F55CFA18A1882E008B798E /* gradientViewController.js */; };
 /* End PBXBuildFile section */
 
@@ -816,6 +817,8 @@
 		14B5CD311875C3740019A135 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		14B5CD381875C3750019A135 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		14D6C30B18793F12005C7018 /* collectionViewController.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = collectionViewController.js; path = js/collectionViewController.js; sourceTree = "<group>"; };
+		14E28D8518AD1BF30084F84A /* JSBScriptingSupport+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "JSBScriptingSupport+Private.h"; path = "../../../Classes/Private/JSBScriptingSupport+Private.h"; sourceTree = "<group>"; };
+		14E28D8618AD1BF30084F84A /* JSBScriptingSupport+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "JSBScriptingSupport+Private.m"; path = "../../../Classes/Private/JSBScriptingSupport+Private.m"; sourceTree = "<group>"; };
 		14F55CFA18A1882E008B798E /* gradientViewController.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = gradientViewController.js; path = js/gradientViewController.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1804,6 +1807,8 @@
 		14A0451F18781837004831E8 /* Private */ = {
 			isa = PBXGroup;
 			children = (
+				14E28D8518AD1BF30084F84A /* JSBScriptingSupport+Private.h */,
+				14E28D8618AD1BF30084F84A /* JSBScriptingSupport+Private.m */,
 				14A0451B18781832004831E8 /* JSBMessageForwarding.h */,
 				149A45E0187961AB007C2CA7 /* JSBMessageForwarding.m */,
 				1448F2CD189EAAC7005BC527 /* NSObject+JavaScriptBridge.h */,
@@ -1999,6 +2004,7 @@
 				140E223A18A2B19300A9F9EF /* NSMutableString+JavaScriptBridge.m in Sources */,
 				1448F2D2189EAAC7005BC527 /* UIBarButtonItem+JavaScriptCore.m in Sources */,
 				149C56731875C5BB0003EE16 /* JSBCoreMotion.m in Sources */,
+				14E28D8718AD1BF30084F84A /* JSBScriptingSupport+Private.m in Sources */,
 				149A4606187972FF007C2CA7 /* SLComposeViewController+JavaScriptBridge.m in Sources */,
 				149C566C1875C5BB0003EE16 /* JSBAddressBookUI.m in Sources */,
 				140E223D18A2B19300A9F9EF /* UIAlertView+JavaScriptBridge.m in Sources */,

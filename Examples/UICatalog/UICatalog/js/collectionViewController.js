@@ -17,12 +17,14 @@ var CollectionViewController = JSB.defineClass('CollectionViewController : UICol
     self.library.enumerateGroupsWithTypesUsingBlockFailureBlock(
       0xFFFFFFFF, 
       function(group, stop) {
-        group.enumerateAssetsUsingBlock(function(result, index, stop) {
-          if ('' + result != '[object NSNull]') {
-            self.assets.push(result);
-            self.collectionView.reloadData();
-          }
-        });
+        if (group != NSNull.null()) {
+          group.enumerateAssetsUsingBlock(function(result, index, stop) {
+            if (result != NSNull.null()) {
+              self.assets.push(result);
+              self.collectionView.reloadData();
+            }
+          });
+        }
       },
       function(error) {
         JSB.dump(error);
