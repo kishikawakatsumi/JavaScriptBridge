@@ -8,7 +8,7 @@ desc "build"
 task :build, :workspace, :schemes do |t, args|
   schemes = args[:schemes].gsub(/'/, '').split(' ')
   schemes.each do |scheme|
-    sh "xcodebuild -workspace #{args[:workspace]} -scheme #{scheme} CODE_SIGN_IDENTITY=\"\" CODE_SIGNING_REQUIRED=NO | xcpretty -c"
+    sh "xcodebuild -workspace #{args[:workspace]} -scheme #{scheme} CODE_SIGN_IDENTITY=\"\" CODE_SIGNING_REQUIRED=NO | xcpretty -c; exit ${PIPESTATUS[0]}"
   end
 end
 
@@ -16,7 +16,7 @@ desc "clean"
 task :clean, :workspace, :schemes do |t, args|
   schemes = args[:schemes].gsub(/'/, '').split(' ')
   schemes.each do |scheme|
-    sh "xcodebuild clean -workspace #{args[:workspace]} -scheme #{scheme} CODE_SIGN_IDENTITY=\"\" CODE_SIGNING_REQUIRED=NO | xcpretty -c"
+    sh "xcodebuild clean -workspace #{args[:workspace]} -scheme #{scheme} CODE_SIGN_IDENTITY=\"\" CODE_SIGNING_REQUIRED=NO | xcpretty -c; exit ${PIPESTATUS[0]}"
   end
 end
 
@@ -25,7 +25,7 @@ task :test, :workspace, :schemes do |t, args|
   schemes = args[:schemes].gsub(/'/, '').split(' ')
   schemes.each do |scheme|
     DESTINATIONS.each do |destination|
-      sh "xcodebuild test -workspace #{args[:workspace]} -scheme #{scheme} -configuration Debug -sdk iphonesimulator -destination \"#{destination}\" | xcpretty -tc"
+      sh "xcodebuild test -workspace #{args[:workspace]} -scheme #{scheme} -configuration Debug -sdk iphonesimulator -destination \"#{destination}\" | xcpretty -tc; exit ${PIPESTATUS[0]}"
     end
   end
 end
