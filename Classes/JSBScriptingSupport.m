@@ -55,6 +55,7 @@
     [scanner scanUpToString:@">" intoString:&protocols];
     
     className = [className stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    className = [NSString stringWithFormat:@"%@$%@", className, [[[NSUUID UUID] UUIDString] stringByReplacingOccurrencesOfString:@"-" withString:@""]];
     parentClassName = [parentClassName stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     if (!parentClassName) {
         parentClassName = @"NSObject";
