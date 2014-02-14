@@ -235,7 +235,6 @@
 		144884AF18AE3EFC008ACFA9 /* JSBSKView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSBSKView.h; path = SpriteKit/JSBSKView.h; sourceTree = "<group>"; };
 		144884B018AE3EFC008ACFA9 /* JSBSpriteKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSBSpriteKit.h; path = SpriteKit/JSBSpriteKit.h; sourceTree = "<group>"; };
 		144884B118AE3EFC008ACFA9 /* JSBSpriteKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSBSpriteKit.m; path = SpriteKit/JSBSpriteKit.m; sourceTree = "<group>"; };
-		144884B218AE3EFC008ACFA9 /* JSBUITouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSBUITouch.h; path = SpriteKit/JSBUITouch.h; sourceTree = "<group>"; };
 		1448852C18AE4012008ACFA9 /* JSBSpriteKitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSBSpriteKitTest.m; path = ../SpriteKit/JSBSpriteKitTest.m; sourceTree = "<group>"; };
 		1448F2C5189EA56F005BC527 /* NSObject+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+JavaScriptBridge.h"; path = "../../../Classes/Private/NSObject+JavaScriptBridge.h"; sourceTree = "<group>"; };
 		1448F2C6189EA56F005BC527 /* NSObject+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+JavaScriptBridge.m"; path = "../../../Classes/Private/NSObject+JavaScriptBridge.m"; sourceTree = "<group>"; };
@@ -1282,7 +1281,6 @@
 				144884AF18AE3EFC008ACFA9 /* JSBSKView.h */,
 				144884B018AE3EFC008ACFA9 /* JSBSpriteKit.h */,
 				144884B118AE3EFC008ACFA9 /* JSBSpriteKit.m */,
-				144884B218AE3EFC008ACFA9 /* JSBUITouch.h */,
 			);
 			name = SpriteKit;
 			sourceTree = "<group>";

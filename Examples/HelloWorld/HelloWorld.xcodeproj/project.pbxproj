@@ -105,7 +105,6 @@
 		1448850918AE3FA9008ACFA9 /* JSBSKView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKView.h; sourceTree = "<group>"; };
 		1448850A18AE3FA9008ACFA9 /* JSBSpriteKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSpriteKit.h; sourceTree = "<group>"; };
 		1448850B18AE3FA9008ACFA9 /* JSBSpriteKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBSpriteKit.m; sourceTree = "<group>"; };
-		1448850C18AE3FA9008ACFA9 /* JSBUITouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBUITouch.h; sourceTree = "<group>"; };
 		1448F2D3189EAAFA005BC527 /* NSObject+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JavaScriptBridge.h"; sourceTree = "<group>"; };
 		1448F2D4189EAAFA005BC527 /* NSObject+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JavaScriptBridge.m"; sourceTree = "<group>"; };
 		1448F2D5189EAAFA005BC527 /* UIBarButtonItem+JavaScriptCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+JavaScriptCore.h"; sourceTree = "<group>"; };
@@ -873,7 +872,6 @@
 				1448850918AE3FA9008ACFA9 /* JSBSKView.h */,
 				1448850A18AE3FA9008ACFA9 /* JSBSpriteKit.h */,
 				1448850B18AE3FA9008ACFA9 /* JSBSpriteKit.m */,
-				1448850C18AE3FA9008ACFA9 /* JSBUITouch.h */,
 			);
 			path = SpriteKit;
 			sourceTree = "<group>";
