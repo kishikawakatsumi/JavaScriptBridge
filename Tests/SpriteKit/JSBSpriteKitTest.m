@@ -126,6 +126,14 @@
     value = context[@"skscene"];
     XCTAssertTrue(value && !value.isUndefined);
     
+    [context evaluateScript:@"var skcolor1 = SKColor.whiteColor;"];
+    value = context[@"skcolor1"];
+    XCTAssertTrue(value && !value.isUndefined);
+    
+    [context evaluateScript:@"var skcolor2 = SKColor.colorWithRedGreenBlueAlpha(0.15, 0.15, 0.3, 1.0);"];
+    value = context[@"skcolor2"];
+    XCTAssertTrue(value && !value.isUndefined);
+    
 }
 
 @end
