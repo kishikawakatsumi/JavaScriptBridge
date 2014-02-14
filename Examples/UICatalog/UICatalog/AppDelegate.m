@@ -23,6 +23,7 @@
     [context addScriptingSupport:@"Accounts"];
     [context addScriptingSupport:@"Social"];
     [context addScriptingSupport:@"MapKit"];
+    [context addScriptingSupport:@"SpriteKit"];
     [context evaluateScript:script];
     
     return YES;

@@ -11,6 +11,7 @@
 		140E224718A2B1AE00A9F9EF /* NSString+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 140E224118A2B1AE00A9F9EF /* NSString+JavaScriptBridge.m */; };
 		140E224818A2B1AE00A9F9EF /* UIActionSheet+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 140E224318A2B1AE00A9F9EF /* UIActionSheet+JavaScriptBridge.m */; };
 		140E224918A2B1AE00A9F9EF /* UIAlertView+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 140E224518A2B1AE00A9F9EF /* UIAlertView+JavaScriptBridge.m */; };
+		1448850D18AE3FA9008ACFA9 /* JSBSpriteKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1448850B18AE3FA9008ACFA9 /* JSBSpriteKit.m */; };
 		1448F2D7189EAAFA005BC527 /* NSObject+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 1448F2D4189EAAFA005BC527 /* NSObject+JavaScriptBridge.m */; };
 		1448F2D8189EAAFA005BC527 /* UIBarButtonItem+JavaScriptCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1448F2D6189EAAFA005BC527 /* UIBarButtonItem+JavaScriptCore.m */; };
 		144BD83618938E2C00C7E217 /* UIView+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 144BD83518938E2C00C7E217 /* UIView+JavaScriptBridge.m */; };
@@ -78,6 +79,32 @@
 		140E224318A2B1AE00A9F9EF /* UIActionSheet+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+JavaScriptBridge.m"; sourceTree = "<group>"; };
 		140E224418A2B1AE00A9F9EF /* UIAlertView+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+JavaScriptBridge.h"; sourceTree = "<group>"; };
 		140E224518A2B1AE00A9F9EF /* UIAlertView+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+JavaScriptBridge.m"; sourceTree = "<group>"; };
+		144884F218AE3FA9008ACFA9 /* JSBSKAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKAction.h; sourceTree = "<group>"; };
+		144884F318AE3FA9008ACFA9 /* JSBSKCropNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKCropNode.h; sourceTree = "<group>"; };
+		144884F418AE3FA9008ACFA9 /* JSBSKEffectNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKEffectNode.h; sourceTree = "<group>"; };
+		144884F518AE3FA9008ACFA9 /* JSBSKEmitterNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKEmitterNode.h; sourceTree = "<group>"; };
+		144884F618AE3FA9008ACFA9 /* JSBSKKeyframeSequence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKKeyframeSequence.h; sourceTree = "<group>"; };
+		144884F718AE3FA9008ACFA9 /* JSBSKLabelNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKLabelNode.h; sourceTree = "<group>"; };
+		144884F818AE3FA9008ACFA9 /* JSBSKNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKNode.h; sourceTree = "<group>"; };
+		144884F918AE3FA9008ACFA9 /* JSBSKPhysicsBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKPhysicsBody.h; sourceTree = "<group>"; };
+		144884FA18AE3FA9008ACFA9 /* JSBSKPhysicsContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKPhysicsContact.h; sourceTree = "<group>"; };
+		144884FB18AE3FA9008ACFA9 /* JSBSKPhysicsJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKPhysicsJoint.h; sourceTree = "<group>"; };
+		144884FC18AE3FA9008ACFA9 /* JSBSKPhysicsJointFixed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKPhysicsJointFixed.h; sourceTree = "<group>"; };
+		144884FD18AE3FA9008ACFA9 /* JSBSKPhysicsJointLimit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKPhysicsJointLimit.h; sourceTree = "<group>"; };
+		144884FE18AE3FA9008ACFA9 /* JSBSKPhysicsJointPin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKPhysicsJointPin.h; sourceTree = "<group>"; };
+		144884FF18AE3FA9008ACFA9 /* JSBSKPhysicsJointSliding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKPhysicsJointSliding.h; sourceTree = "<group>"; };
+		1448850018AE3FA9008ACFA9 /* JSBSKPhysicsJointSpring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKPhysicsJointSpring.h; sourceTree = "<group>"; };
+		1448850118AE3FA9008ACFA9 /* JSBSKPhysicsWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKPhysicsWorld.h; sourceTree = "<group>"; };
+		1448850218AE3FA9008ACFA9 /* JSBSKScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKScene.h; sourceTree = "<group>"; };
+		1448850318AE3FA9008ACFA9 /* JSBSKShapeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKShapeNode.h; sourceTree = "<group>"; };
+		1448850418AE3FA9008ACFA9 /* JSBSKSpriteNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKSpriteNode.h; sourceTree = "<group>"; };
+		1448850518AE3FA9008ACFA9 /* JSBSKTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKTexture.h; sourceTree = "<group>"; };
+		1448850618AE3FA9008ACFA9 /* JSBSKTextureAtlas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKTextureAtlas.h; sourceTree = "<group>"; };
+		1448850718AE3FA9008ACFA9 /* JSBSKTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKTransition.h; sourceTree = "<group>"; };
+		1448850818AE3FA9008ACFA9 /* JSBSKVideoNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKVideoNode.h; sourceTree = "<group>"; };
+		1448850918AE3FA9008ACFA9 /* JSBSKView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKView.h; sourceTree = "<group>"; };
+		1448850A18AE3FA9008ACFA9 /* JSBSpriteKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSpriteKit.h; sourceTree = "<group>"; };
+		1448850B18AE3FA9008ACFA9 /* JSBSpriteKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBSpriteKit.m; sourceTree = "<group>"; };
 		1448F2D3189EAAFA005BC527 /* NSObject+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JavaScriptBridge.h"; sourceTree = "<group>"; };
 		1448F2D4189EAAFA005BC527 /* NSObject+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JavaScriptBridge.m"; sourceTree = "<group>"; };
 		1448F2D5189EAAFA005BC527 /* UIBarButtonItem+JavaScriptCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+JavaScriptCore.h"; sourceTree = "<group>"; };
@@ -816,6 +843,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		144884F118AE3FA9008ACFA9 /* SpriteKit */ = {
+			isa = PBXGroup;
+			children = (
+				144884F218AE3FA9008ACFA9 /* JSBSKAction.h */,
+				144884F318AE3FA9008ACFA9 /* JSBSKCropNode.h */,
+				144884F418AE3FA9008ACFA9 /* JSBSKEffectNode.h */,
+				144884F518AE3FA9008ACFA9 /* JSBSKEmitterNode.h */,
+				144884F618AE3FA9008ACFA9 /* JSBSKKeyframeSequence.h */,
+				144884F718AE3FA9008ACFA9 /* JSBSKLabelNode.h */,
+				144884F818AE3FA9008ACFA9 /* JSBSKNode.h */,
+				144884F918AE3FA9008ACFA9 /* JSBSKPhysicsBody.h */,
+				144884FA18AE3FA9008ACFA9 /* JSBSKPhysicsContact.h */,
+				144884FB18AE3FA9008ACFA9 /* JSBSKPhysicsJoint.h */,
+				144884FC18AE3FA9008ACFA9 /* JSBSKPhysicsJointFixed.h */,
+				144884FD18AE3FA9008ACFA9 /* JSBSKPhysicsJointLimit.h */,
+				144884FE18AE3FA9008ACFA9 /* JSBSKPhysicsJointPin.h */,
+				144884FF18AE3FA9008ACFA9 /* JSBSKPhysicsJointSliding.h */,
+				1448850018AE3FA9008ACFA9 /* JSBSKPhysicsJointSpring.h */,
+				1448850118AE3FA9008ACFA9 /* JSBSKPhysicsWorld.h */,
+				1448850218AE3FA9008ACFA9 /* JSBSKScene.h */,
+				1448850318AE3FA9008ACFA9 /* JSBSKShapeNode.h */,
+				1448850418AE3FA9008ACFA9 /* JSBSKSpriteNode.h */,
+				1448850518AE3FA9008ACFA9 /* JSBSKTexture.h */,
+				1448850618AE3FA9008ACFA9 /* JSBSKTextureAtlas.h */,
+				1448850718AE3FA9008ACFA9 /* JSBSKTransition.h */,
+				1448850818AE3FA9008ACFA9 /* JSBSKVideoNode.h */,
+				1448850918AE3FA9008ACFA9 /* JSBSKView.h */,
+				1448850A18AE3FA9008ACFA9 /* JSBSpriteKit.h */,
+				1448850B18AE3FA9008ACFA9 /* JSBSpriteKit.m */,
+			);
+			path = SpriteKit;
+			sourceTree = "<group>";
+		};
 		14A0452018782920004831E8 = {
 			isa = PBXGroup;
 			children = (
@@ -969,6 +1029,7 @@
 				14A0477C187829CB004831E8 /* QuickLook */,
 				14A04780187829CB004831E8 /* SafariServices */,
 				14A04784187829CB004831E8 /* Social */,
+				144884F118AE3FA9008ACFA9 /* SpriteKit */,
 				14A04789187829CB004831E8 /* StoreKit */,
 				14A04797187829CB004831E8 /* Twitter */,
 				14A0479C187829CB004831E8 /* UIKit */,
@@ -1977,6 +2038,7 @@
 				14A04838187829CB004831E8 /* JSBFoundation.m in Sources */,
 				14A0482A187829CB004831E8 /* JSBAVFoundation.m in Sources */,
 				14A0483A187829CB004831E8 /* JSBJavaScriptCore.m in Sources */,
+				1448850D18AE3FA9008ACFA9 /* JSBSpriteKit.m in Sources */,
 				140E224718A2B1AE00A9F9EF /* NSString+JavaScriptBridge.m in Sources */,
 				14A04842187829CB004831E8 /* JSBQuickLook.m in Sources */,
 				14A04832187829CB004831E8 /* JSBCoreLocation.m in Sources */,

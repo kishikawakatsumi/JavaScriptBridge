@@ -11,6 +11,8 @@
 		140E223B18A2B19300A9F9EF /* NSString+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 140E223518A2B19300A9F9EF /* NSString+JavaScriptBridge.m */; };
 		140E223C18A2B19300A9F9EF /* UIActionSheet+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 140E223718A2B19300A9F9EF /* UIActionSheet+JavaScriptBridge.m */; };
 		140E223D18A2B19300A9F9EF /* UIAlertView+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 140E223918A2B19300A9F9EF /* UIAlertView+JavaScriptBridge.m */; };
+		1448852A18AE3FB3008ACFA9 /* JSBSpriteKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1448852818AE3FB3008ACFA9 /* JSBSpriteKit.m */; };
+		144885B418AE5478008ACFA9 /* spritesViewController.js in Resources */ = {isa = PBXBuildFile; fileRef = 144885B318AE5478008ACFA9 /* spritesViewController.js */; };
 		1448F2D1189EAAC7005BC527 /* NSObject+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 1448F2CE189EAAC7005BC527 /* NSObject+JavaScriptBridge.m */; };
 		1448F2D2189EAAC7005BC527 /* UIBarButtonItem+JavaScriptCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1448F2D0189EAAC7005BC527 /* UIBarButtonItem+JavaScriptCore.m */; };
 		144BD83318938E1D00C7E217 /* UIView+JavaScriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 144BD83218938E1D00C7E217 /* UIView+JavaScriptBridge.m */; };
@@ -88,6 +90,33 @@
 		140E223718A2B19300A9F9EF /* UIActionSheet+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIActionSheet+JavaScriptBridge.m"; path = "../../../Classes/Private/UIActionSheet+JavaScriptBridge.m"; sourceTree = "<group>"; };
 		140E223818A2B19300A9F9EF /* UIAlertView+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+JavaScriptBridge.h"; path = "../../../Classes/Private/UIAlertView+JavaScriptBridge.h"; sourceTree = "<group>"; };
 		140E223918A2B19300A9F9EF /* UIAlertView+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+JavaScriptBridge.m"; path = "../../../Classes/Private/UIAlertView+JavaScriptBridge.m"; sourceTree = "<group>"; };
+		1448850F18AE3FB3008ACFA9 /* JSBSKAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKAction.h; sourceTree = "<group>"; };
+		1448851018AE3FB3008ACFA9 /* JSBSKCropNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKCropNode.h; sourceTree = "<group>"; };
+		1448851118AE3FB3008ACFA9 /* JSBSKEffectNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKEffectNode.h; sourceTree = "<group>"; };
+		1448851218AE3FB3008ACFA9 /* JSBSKEmitterNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKEmitterNode.h; sourceTree = "<group>"; };
+		1448851318AE3FB3008ACFA9 /* JSBSKKeyframeSequence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKKeyframeSequence.h; sourceTree = "<group>"; };
+		1448851418AE3FB3008ACFA9 /* JSBSKLabelNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKLabelNode.h; sourceTree = "<group>"; };
+		1448851518AE3FB3008ACFA9 /* JSBSKNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKNode.h; sourceTree = "<group>"; };
+		1448851618AE3FB3008ACFA9 /* JSBSKPhysicsBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKPhysicsBody.h; sourceTree = "<group>"; };
+		1448851718AE3FB3008ACFA9 /* JSBSKPhysicsContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKPhysicsContact.h; sourceTree = "<group>"; };
+		1448851818AE3FB3008ACFA9 /* JSBSKPhysicsJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKPhysicsJoint.h; sourceTree = "<group>"; };
+		1448851918AE3FB3008ACFA9 /* JSBSKPhysicsJointFixed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKPhysicsJointFixed.h; sourceTree = "<group>"; };
+		1448851A18AE3FB3008ACFA9 /* JSBSKPhysicsJointLimit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKPhysicsJointLimit.h; sourceTree = "<group>"; };
+		1448851B18AE3FB3008ACFA9 /* JSBSKPhysicsJointPin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKPhysicsJointPin.h; sourceTree = "<group>"; };
+		1448851C18AE3FB3008ACFA9 /* JSBSKPhysicsJointSliding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKPhysicsJointSliding.h; sourceTree = "<group>"; };
+		1448851D18AE3FB3008ACFA9 /* JSBSKPhysicsJointSpring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKPhysicsJointSpring.h; sourceTree = "<group>"; };
+		1448851E18AE3FB3008ACFA9 /* JSBSKPhysicsWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKPhysicsWorld.h; sourceTree = "<group>"; };
+		1448851F18AE3FB3008ACFA9 /* JSBSKScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKScene.h; sourceTree = "<group>"; };
+		1448852018AE3FB3008ACFA9 /* JSBSKShapeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKShapeNode.h; sourceTree = "<group>"; };
+		1448852118AE3FB3008ACFA9 /* JSBSKSpriteNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKSpriteNode.h; sourceTree = "<group>"; };
+		1448852218AE3FB3008ACFA9 /* JSBSKTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKTexture.h; sourceTree = "<group>"; };
+		1448852318AE3FB3008ACFA9 /* JSBSKTextureAtlas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKTextureAtlas.h; sourceTree = "<group>"; };
+		1448852418AE3FB3008ACFA9 /* JSBSKTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKTransition.h; sourceTree = "<group>"; };
+		1448852518AE3FB3008ACFA9 /* JSBSKVideoNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKVideoNode.h; sourceTree = "<group>"; };
+		1448852618AE3FB3008ACFA9 /* JSBSKView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSKView.h; sourceTree = "<group>"; };
+		1448852718AE3FB3008ACFA9 /* JSBSpriteKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBSpriteKit.h; sourceTree = "<group>"; };
+		1448852818AE3FB3008ACFA9 /* JSBSpriteKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBSpriteKit.m; sourceTree = "<group>"; };
+		144885B318AE5478008ACFA9 /* spritesViewController.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = spritesViewController.js; path = js/spritesViewController.js; sourceTree = "<group>"; };
 		1448F2CD189EAAC7005BC527 /* NSObject+JavaScriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+JavaScriptBridge.h"; path = "../../../Classes/Private/NSObject+JavaScriptBridge.h"; sourceTree = "<group>"; };
 		1448F2CE189EAAC7005BC527 /* NSObject+JavaScriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+JavaScriptBridge.m"; path = "../../../Classes/Private/NSObject+JavaScriptBridge.m"; sourceTree = "<group>"; };
 		1448F2CF189EAAC7005BC527 /* UIBarButtonItem+JavaScriptCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+JavaScriptCore.h"; path = "../../../Classes/Private/UIBarButtonItem+JavaScriptCore.h"; sourceTree = "<group>"; };
@@ -836,6 +865,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1448850E18AE3FB3008ACFA9 /* SpriteKit */ = {
+			isa = PBXGroup;
+			children = (
+				1448850F18AE3FB3008ACFA9 /* JSBSKAction.h */,
+				1448851018AE3FB3008ACFA9 /* JSBSKCropNode.h */,
+				1448851118AE3FB3008ACFA9 /* JSBSKEffectNode.h */,
+				1448851218AE3FB3008ACFA9 /* JSBSKEmitterNode.h */,
+				1448851318AE3FB3008ACFA9 /* JSBSKKeyframeSequence.h */,
+				1448851418AE3FB3008ACFA9 /* JSBSKLabelNode.h */,
+				1448851518AE3FB3008ACFA9 /* JSBSKNode.h */,
+				1448851618AE3FB3008ACFA9 /* JSBSKPhysicsBody.h */,
+				1448851718AE3FB3008ACFA9 /* JSBSKPhysicsContact.h */,
+				1448851818AE3FB3008ACFA9 /* JSBSKPhysicsJoint.h */,
+				1448851918AE3FB3008ACFA9 /* JSBSKPhysicsJointFixed.h */,
+				1448851A18AE3FB3008ACFA9 /* JSBSKPhysicsJointLimit.h */,
+				1448851B18AE3FB3008ACFA9 /* JSBSKPhysicsJointPin.h */,
+				1448851C18AE3FB3008ACFA9 /* JSBSKPhysicsJointSliding.h */,
+				1448851D18AE3FB3008ACFA9 /* JSBSKPhysicsJointSpring.h */,
+				1448851E18AE3FB3008ACFA9 /* JSBSKPhysicsWorld.h */,
+				1448851F18AE3FB3008ACFA9 /* JSBSKScene.h */,
+				1448852018AE3FB3008ACFA9 /* JSBSKShapeNode.h */,
+				1448852118AE3FB3008ACFA9 /* JSBSKSpriteNode.h */,
+				1448852218AE3FB3008ACFA9 /* JSBSKTexture.h */,
+				1448852318AE3FB3008ACFA9 /* JSBSKTextureAtlas.h */,
+				1448852418AE3FB3008ACFA9 /* JSBSKTransition.h */,
+				1448852518AE3FB3008ACFA9 /* JSBSKVideoNode.h */,
+				1448852618AE3FB3008ACFA9 /* JSBSKView.h */,
+				1448852718AE3FB3008ACFA9 /* JSBSpriteKit.h */,
+				1448852818AE3FB3008ACFA9 /* JSBSpriteKit.m */,
+			);
+			path = SpriteKit;
+			sourceTree = "<group>";
+		};
 		149C53A71875C59C0003EE16 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
@@ -889,6 +951,7 @@
 				149C55BB1875C5BA0003EE16 /* QuickLook */,
 				149C55BF1875C5BA0003EE16 /* SafariServices */,
 				149C55C31875C5BA0003EE16 /* Social */,
+				1448850E18AE3FB3008ACFA9 /* SpriteKit */,
 				149C55C81875C5BA0003EE16 /* StoreKit */,
 				149C55D61875C5BB0003EE16 /* Twitter */,
 				149C55DB1875C5BB0003EE16 /* UIKit */,
@@ -1800,6 +1863,7 @@
 				14A0450D1877E870004831E8 /* mapViewController.js */,
 				149ED65018A148230078236E /* gestureViewController.js */,
 				14F55CFA18A1882E008B798E /* gradientViewController.js */,
+				144885B318AE5478008ACFA9 /* spritesViewController.js */,
 			);
 			name = js;
 			sourceTree = "<group>";
@@ -1959,6 +2023,7 @@
 				14A045091877E7E3004831E8 /* mainViewController.js in Resources */,
 				14A0450A1877E7E3004831E8 /* buttonsViewController.js in Resources */,
 				14A0450B1877E7E3004831E8 /* controlsViewController.js in Resources */,
+				144885B418AE5478008ACFA9 /* spritesViewController.js in Resources */,
 				149A460F18797DDD007C2CA7 /* twitterViewController.js in Resources */,
 				14D6C30C18793F12005C7018 /* collectionViewController.js in Resources */,
 				14A0450C1877E7E3004831E8 /* webViewController.js in Resources */,
@@ -2024,6 +2089,7 @@
 				149C56741875C5BB0003EE16 /* JSBCoreTelephony.m in Sources */,
 				149C56751875C5BB0003EE16 /* JSBEventKit.m in Sources */,
 				149B874A1877D9440074B480 /* JSContext+JavaScriptBridge.m in Sources */,
+				1448852A18AE3FB3008ACFA9 /* JSBSpriteKit.m in Sources */,
 				140E223B18A2B19300A9F9EF /* NSString+JavaScriptBridge.m in Sources */,
 				149C567B1875C5BB0003EE16 /* JSBMediaPlayer.m in Sources */,
 				149C56841875C5BB0003EE16 /* JSBStoreKit.m in Sources */,
