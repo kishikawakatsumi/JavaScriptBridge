@@ -22,9 +22,6 @@
 - (void)testInstantiation
 {
     JSContext *context = [[JSContext alloc] init];
-    context.exceptionHandler = ^(JSContext *context, JSValue *value) {
-        NSLog(@"%@", value);
-    };
     [context addScriptingSupport:@"SpriteKit"];
     
     JSValue *value = nil;

@@ -33,10 +33,10 @@
 
 + (SKPhysicsBody *)bodyWithCircleOfRadius:(CGFloat)r;
 + (SKPhysicsBody *)bodyWithRectangleOfSize:(CGSize)s;
-+ (SKPhysicsBody *)bodyWithPolygonFromPath:(CGPathRef)path;
++ (SKPhysicsBody *)bodyWithPolygonFromPath:(id)path;
 + (SKPhysicsBody *)bodyWithEdgeFromPoint:(CGPoint)p1 toPoint:(CGPoint)p2;
-+ (SKPhysicsBody *)bodyWithEdgeChainFromPath:(CGPathRef)path;
-+ (SKPhysicsBody *)bodyWithEdgeLoopFromPath:(CGPathRef)path;
++ (SKPhysicsBody *)bodyWithEdgeChainFromPath:(id)path;
++ (SKPhysicsBody *)bodyWithEdgeLoopFromPath:(id)path;
 + (SKPhysicsBody *)bodyWithEdgeLoopFromRect:(CGRect)rect;
 
 - (void)applyForce:(CGVector)force;

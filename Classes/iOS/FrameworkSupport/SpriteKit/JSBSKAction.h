@@ -47,8 +47,8 @@
 + (SKAction *)playSoundFileNamed:(NSString *)soundFile waitForCompletion:(BOOL)wait;
 + (SKAction *)colorizeWithColor:(SKColor *)color colorBlendFactor:(CGFloat)colorBlendFactor duration:(NSTimeInterval)sec;
 + (SKAction *)colorizeWithColorBlendFactor:(CGFloat)colorBlendFactor duration:(NSTimeInterval)sec;
-+ (SKAction *)followPath:(CGPathRef)path duration:(NSTimeInterval)sec;
-+ (SKAction *)followPath:(CGPathRef)path asOffset:(BOOL)offset orientToPath:(BOOL)orient duration:(NSTimeInterval)sec;
++ (SKAction *)followPath:(id)path duration:(NSTimeInterval)sec;
++ (SKAction *)followPath:(id)path asOffset:(BOOL)offset orientToPath:(BOOL)orient duration:(NSTimeInterval)sec;
 + (SKAction *)speedBy:(CGFloat)speed duration:(NSTimeInterval)sec;
 + (SKAction *)speedTo:(CGFloat)speed duration:(NSTimeInterval)sec;
 + (SKAction *)waitForDuration:(NSTimeInterval)sec;

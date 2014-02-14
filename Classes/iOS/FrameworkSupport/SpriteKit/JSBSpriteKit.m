@@ -27,12 +27,38 @@
 
 @import ObjectiveC;
 
+BOOL _allowSleep(id self, SEL _cmd)
+{
+    return YES;
+}
+
+void set_allowSleep(id self, SEL _cmd, BOOL arg1)
+{
+    
+}
+
 @implementation JSBSpriteKit
 
 + (void)addScriptingSupportToContext:(JSContext *)context
 {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+    BOOL result;
+    NSString *types;
+    
+    Class cls = NSClassFromString(@"PKPhysicsBody");
+    Class metaClass = object_getClass(cls);
+    
+    types = [NSString stringWithFormat:@"%s%s%s", @encode(BOOL), @encode(id), @encode(SEL)];
+    result = class_addMethod(metaClass, @selector(_allowSleep), (IMP)_allowSleep, types.UTF8String);
+    
+    types = [NSString stringWithFormat:@"%s%s%s%s", @encode(void), @encode(id), @encode(SEL), @encode(BOOL)];
+    result = class_addMethod(metaClass, @selector(set_allowSleep:), (IMP)set_allowSleep, types.UTF8String);
+    
+    class_addProtocol([SKPhysicsBody class], @protocol(JSBSKPhysicsBody));
+    context[@"SKPhysicsBody"] = [SKPhysicsBody class];
+    
     class_addProtocol([SKAction class], @protocol(JSBSKAction));
     context[@"SKAction"] = [SKAction class];
 
@@ -41,9 +67,6 @@
 
     class_addProtocol([UITouch class], @protocol(JSBUITouch));
     context[@"UITouch"] = [UITouch class];
-
-    class_addProtocol([SKPhysicsBody class], @protocol(JSBSKPhysicsBody));
-    context[@"SKPhysicsBody"] = [SKPhysicsBody class];
 
     class_addProtocol([SKPhysicsContact class], @protocol(JSBSKPhysicsContact));
     context[@"SKPhysicsContact"] = [SKPhysicsContact class];
@@ -107,6 +130,8 @@
 
     class_addProtocol([SKScene class], @protocol(JSBSKScene));
     context[@"SKScene"] = [SKScene class];
+    
+    context[@"SKColor"] = [SKColor class];
 
 #pragma clang diagnostic pop
 }

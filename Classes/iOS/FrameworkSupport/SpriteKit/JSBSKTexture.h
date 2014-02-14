@@ -16,7 +16,7 @@
 
 + (SKTexture *)textureWithImageNamed:(NSString *)name;
 + (SKTexture *)textureWithRect:(CGRect)rect inTexture:(SKTexture *)texture;
-+ (SKTexture *)textureWithCGImage:(CGImageRef)image;
++ (SKTexture *)textureWithCGImage:(id)image;
 + (SKTexture *)textureWithImage:(UIImage *)image;
 + (SKTexture *)textureWithData:(NSData *)pixelData size:(CGSize)size;
 + (SKTexture *)textureWithData:(NSData *)pixelData size:(CGSize)size rowLength:(unsigned int)rowLength alignment:(unsigned int)alignment;
