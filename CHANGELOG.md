@@ -1,5 +1,8 @@
 # JavaScriptBridge CHANGELOG
 
+## 0.3.0
+- Support `SpriteKit.framework`
+
 ## 0.2.0
 - Support to redefine Objective-C class from JavaScript.
 
