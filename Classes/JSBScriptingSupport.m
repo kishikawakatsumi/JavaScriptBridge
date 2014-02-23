@@ -76,7 +76,7 @@
     NSString *types;
     BOOL result;
     
-    Class metaClass = objc_getClass(className.UTF8String);
+    Class metaClass = object_getClass(cls);
     
     types = [NSString stringWithFormat:@"%s%s%s%s", @encode(NSMethodSignature), @encode(id), @encode(SEL), @encode(SEL)];
     result = class_addMethod(cls, @selector(methodSignatureForSelector:), (IMP)methodSignatureForSelector, types.UTF8String);
