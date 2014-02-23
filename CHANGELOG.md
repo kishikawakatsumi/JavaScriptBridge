@@ -1,7 +1,7 @@
 # JavaScriptBridge CHANGELOG
 
 ## 0.3.1
-- Fix failed to call overrided class methods.
+- Fix failed to call overided class methods.
 
 ## 0.3.0
 - Support `SpriteKit.framework`
