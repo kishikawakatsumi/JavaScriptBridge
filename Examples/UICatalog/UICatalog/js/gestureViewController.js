@@ -1,6 +1,7 @@
 var GestureViewController = JSB.defineClass('GestureViewController : UIViewController', {
   viewDidLoad: function() {
     self.navigationItem.title = 'Gesture';
+    self.view.backgroundColor = UIColor.whiteColor();
 
     var swipeView = UIView.alloc().initWithFrame({x: 10, y: 300, width: 300, height: 120});
     swipeView.backgroundColor = UIColor.greenColor();
