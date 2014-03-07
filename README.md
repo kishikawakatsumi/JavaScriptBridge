@@ -352,7 +352,3 @@ kishikawa katsumi, kishikawakatsumi@mac.com
 [BSD]: http://opensource.org/licenses/bsd-license.php
 
 JavaScriptBridge is available under the [MIT license][MIT]. See the LICENSE file for more info.
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kishikawakatsumi/javascriptbridge/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
