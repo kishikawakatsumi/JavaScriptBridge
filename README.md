@@ -86,7 +86,7 @@ JSContext *context = [[JSContext alloc] init];
 
 **Class name**
 
-Same as Objectige-C
+Same as Objective-C
 
 
 **Variable declaration**
